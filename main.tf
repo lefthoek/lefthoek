@@ -10,6 +10,12 @@ terraform {
   }
 }
 
+provider "aws" {
+  version = "~> 2.0"
+  region  = "us-east-1"
+}
+
+
 variable "www_domain_name" {
   default = "brandbook.lefthoek.com"
 }
@@ -21,7 +27,7 @@ variable "root_domain_name" {
 
 
 resource "aws_s3_bucket" "www" {
-  bucket = "${var.www_domain_name}"
+  bucket = var.www_domain_name
   acl    = "public-read"
   // We also need to create a policy that allows anyone to view the content.
   // This is basically duplicating what we did in the ACL but it's required by
