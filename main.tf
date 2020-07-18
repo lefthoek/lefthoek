@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 
-variable "www_domain_name" {
+variable "subdomain_name" {
   default = "brandbook.lefthoek.com"
 }
 
@@ -26,7 +26,7 @@ variable "root_domain_name" {
 
 
 resource "aws_s3_bucket" "www" {
-  bucket = var.www_domain_name
+  bucket = var.subdomain_name
   acl    = "public-read"
   policy = <<POLICY
 {
@@ -37,7 +37,7 @@ resource "aws_s3_bucket" "www" {
       "Effect":"Allow",
       "Principal": "*",
       "Action":["s3:GetObject"],
-      "Resource":["arn:aws:s3:::${var.www_domain_name}/*"]
+      "Resource":["arn:aws:s3:::${var.subdomain_name}/*"]
     }
   ]
 }
@@ -51,6 +51,11 @@ POLICY
   }
 }
 
+resource "aws_route53_zone" "zone" {
+  name = var.root_domain_name
+}
+
+
 resource "aws_acm_certificate" "certificate" {
   domain_name               = "*.${var.root_domain_name}"
   validation_method         = "DNS"
@@ -60,7 +65,6 @@ resource "aws_acm_certificate" "certificate" {
 resource "aws_cloudfront_distribution" "www_distribution" {
   origin {
     custom_origin_config {
-      // These are all the defaults.
       http_port              = "80"
       https_port             = "443"
       origin_protocol_policy = "http-only"
@@ -68,7 +72,7 @@ resource "aws_cloudfront_distribution" "www_distribution" {
     }
 
     domain_name = aws_s3_bucket.www.website_endpoint
-    origin_id   = var.www_domain_name
+    origin_id   = var.subdomain_name
   }
 
   enabled             = true
@@ -79,7 +83,7 @@ resource "aws_cloudfront_distribution" "www_distribution" {
     compress               = true
     allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = var.www_domain_name
+    target_origin_id       = var.subdomain_name
     min_ttl                = 0
     default_ttl            = 86400
     max_ttl                = 31536000
@@ -92,7 +96,7 @@ resource "aws_cloudfront_distribution" "www_distribution" {
     }
   }
 
-  aliases = [var.www_domain_name]
+  aliases = [var.subdomain_name]
 
   restrictions {
     geo_restriction {
@@ -106,13 +110,9 @@ resource "aws_cloudfront_distribution" "www_distribution" {
   }
 }
 
-resource "aws_route53_zone" "zone" {
-  name = "${var.root_domain_name}"
-}
-
 resource "aws_route53_record" "www" {
   zone_id = "${aws_route53_zone.zone.zone_id}"
-  name    = "${var.www_domain_name}"
+  name    = var.subdomain_name
   type    = "A"
 
   alias {
