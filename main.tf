@@ -15,6 +15,7 @@ provider "aws" {
   region  = "us-east-1"
 }
 
+provider "null" {}
 
 variable "www_domain_name" {
   default = "brandbook.lefthoek.com"
@@ -29,9 +30,6 @@ variable "root_domain_name" {
 resource "aws_s3_bucket" "www" {
   bucket = var.www_domain_name
   acl    = "public-read"
-  // We also need to create a policy that allows anyone to view the content.
-  // This is basically duplicating what we did in the ACL but it's required by
-  // AWS. This post: http://amzn.to/2Fa04ul explains why.
   policy = <<POLICY
 {
   "Version":"2012-10-17",
@@ -45,15 +43,19 @@ resource "aws_s3_bucket" "www" {
     }
   ]
 }
-POLICY
 
-  // S3 understands what it means to host a website.
   website {
-    // Here we tell S3 what to use when a request comes in to the root
-    // ex. https://www.runatlantis.io
     index_document = "index.html"
-    // The page to serve up if a request results in an error or a non-existing
-    // page.
     error_document = "404.html"
   }
+}
+
+resource "aws_acm_certificate" "certificate" {
+  // We want a wildcard cert so we can host subdomains later.
+  domain_name       = "*.${var.root_domain_name}"
+  validation_method = "DNS"
+
+  // We also want the cert to be valid for the root domain even though we'll be
+  // redirecting to the www. domain immediately.
+  subject_alternative_names = ["${var.root_domain_name}"]
 }
