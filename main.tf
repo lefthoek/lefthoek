@@ -15,7 +15,6 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-provider "null" {}
 
 variable "www_domain_name" {
   default = "brandbook.lefthoek.com"
@@ -43,9 +42,12 @@ resource "aws_s3_bucket" "www" {
     }
   ]
 }
+POLICY
 
   website {
     index_document = "index.html"
+    // The page to serve up if a request results in an error or a non-existing
+    // page.
     error_document = "404.html"
   }
 }
@@ -53,7 +55,7 @@ resource "aws_s3_bucket" "www" {
 resource "aws_acm_certificate" "certificate" {
   // We want a wildcard cert so we can host subdomains later.
   domain_name       = "*.${var.root_domain_name}"
-  validation_method = "DNS"
+  validation_method = "EMAIL"
 
   // We also want the cert to be valid for the root domain even though we'll be
   // redirecting to the www. domain immediately.
