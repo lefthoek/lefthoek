@@ -31,10 +31,10 @@ resource "aws_acm_certificate" "certificate" {
 }
 
 module "website" {
-  source = "./infra/website"
+  source           = "./infra/website"
   subdomain_prefix = "brandbook"
   root_domain_name = var.root_domain_name
-  certificate_arn = aws_acm_certificate.certificate.arn
-  zone_id = aws_route53_zone.zone.zone_id
+  certificate_arn  = aws_acm_certificate.certificate.arn
+  zone_id          = aws_route53_zone.zone.zone_id
 }
 
