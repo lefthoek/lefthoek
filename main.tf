@@ -16,25 +16,16 @@ provider "aws" {
 }
 
 
-variable "root_domain_name" {
-  default = "lefthoek.com"
+module "lefthoek_domain" {
+  source           = "./infra/domain"
+  root_domain_name = "lefthoek.com"
 }
 
-resource "aws_route53_zone" "zone" {
-  name = var.root_domain_name
-}
-
-resource "aws_acm_certificate" "certificate" {
-  domain_name               = "*.${var.root_domain_name}"
-  validation_method         = "DNS"
-  subject_alternative_names = [var.root_domain_name]
-}
-
-module "website" {
+module "lefthoek_brandbook" {
   source           = "./infra/website"
   subdomain_prefix = "brandbook"
-  root_domain_name = var.root_domain_name
-  certificate_arn  = aws_acm_certificate.certificate.arn
-  zone_id          = aws_route53_zone.zone.zone_id
+  root_domain_name = module.lefthoek_domain.domain_name
+  certificate_arn  = module.lefthoek_domain.certificate_arn
+  zone_id          = module.lefthoek_domain.zone_id
 }
 
