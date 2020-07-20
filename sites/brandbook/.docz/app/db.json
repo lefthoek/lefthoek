@@ -250,28 +250,6 @@
           }
         }
       ]
-    },
-    {
-      "key": "src/gatsby-theme-docz/components/Layout/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Layout",
-          "methods": [],
-          "actualName": "Layout"
-        }
-      ]
-    },
-    {
-      "key": ".docz/src/gatsby-theme-docz/components/Layout/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Layout",
-          "methods": [],
-          "actualName": "Layout"
-        }
-      ]
     }
   ]
 }

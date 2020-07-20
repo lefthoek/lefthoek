@@ -9,6 +9,8 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
+    "predeploy": "yarn build",
+    "deploy": " aws s3 sync public s3://decks.lefthoek.com/  && aws cloudfront create-invalidation --distribution-id E11ET7L7G4ZMA5 --paths \"/*\"",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project ."
   },

@@ -1,6 +1,8 @@
 {
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "echo \"Work in Progress\""
+  },
   "workspaces": {
     "packages": [
       "sites/brandbook",
