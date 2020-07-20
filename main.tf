@@ -29,3 +29,11 @@ module "lefthoek_brandbook" {
   zone_id          = module.lefthoek_domain.zone_id
 }
 
+module "lefthoek_decks" {
+  source           = "./infra/website"
+  subdomain_prefix = "decks"
+  root_domain_name = module.lefthoek_domain.domain_name
+  certificate_arn  = module.lefthoek_domain.certificate_arn
+  zone_id          = module.lefthoek_domain.zone_id
+}
+

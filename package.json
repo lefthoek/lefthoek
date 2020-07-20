@@ -1,11 +1,10 @@
 {
   "private": true,
-  "scripts": {
-    "build": "yarn workspace @lefthoek/brandbook build"
-  },
+  "scripts": {},
   "workspaces": {
     "packages": [
-      "brandbook"
+      "sites/brandbook",
+      "sites/decks"
     ]
   }
 }
