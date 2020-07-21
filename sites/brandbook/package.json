@@ -11,9 +11,7 @@
   ],
   "scripts": {
     "dev": "docz dev",
-    "build": "docz build",
-    "predeploy": "yarn build",
-    "deploy": " aws s3 sync .docz/dist s3://brandbook.lefthoek.com/  && aws cloudfront create-invalidation --distribution-id E1VYC87CFMR9VH --paths \"/*\""
+    "build": "docz build"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
