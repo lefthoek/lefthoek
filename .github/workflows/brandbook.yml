@@ -10,29 +10,25 @@ on:
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2.1.0
       with:
         node-version: '12'
 
-    # Runs a single command using the runners shell
-    - run: yarn install
-    - run: yarn workspace @lefthoek/brandbook build
-    - name: Deploy
+    - name: Install Dependencies
+      run: yarn install
+    - name: Build Site
+      run: yarn workspace @lefthoek/brandbook build
+    - name: Deploy Site
       uses: reggionick/s3-deploy@v1
       with:
         folder: sites/brandbook/.docz/dist
