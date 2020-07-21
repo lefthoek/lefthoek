@@ -32,5 +32,5 @@ jobs:
       uses: reggionick/s3-deploy@v1
       with:
         folder: sites/brandbook/.docz/dist
-        bucket: brandbook.lefthoek.com
-        dist-id: E1VYC87CFMR9VH
+        bucket: ${{ secrets.BRANDBOOK_BUCKET }}
+        dist-id: ${{ secrets.BRANDBOOK_DISTRIBUTION_ID }}
