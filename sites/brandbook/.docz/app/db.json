@@ -112,27 +112,6 @@
   ],
   "props": [
     {
-      "key": "src/components/Logo/Logo.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Logo",
-          "methods": [],
-          "props": {
-            "href": {
-              "defaultValue": null,
-              "description": "optional href",
-              "name": "href",
-              "required": false,
-              "type": {
-                "name": "string | undefined"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/gatsby-theme-docz/theme/index.ts",
       "value": []
     }
