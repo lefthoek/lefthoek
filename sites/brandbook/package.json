@@ -11,11 +11,11 @@
   ],
   "scripts": {
     "dev": "docz dev",
-    "build": "docz build",
-    "predeploy": "yarn build",
-    "deploy": " aws s3 sync .docz/dist s3://brandbook.lefthoek.com/  && aws cloudfront create-invalidation --distribution-id E1VYC87CFMR9VH --paths \"/*\""
+    "build": "docz build"
   },
   "dependencies": {
+    "@lefthoek/atoms": "*",
+    "@lefthoek/ui-theme": "*",
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "@types/theme-ui": "^0.3.5",

@@ -21,6 +21,13 @@ module "lefthoek_domain" {
   root_domain_name = "lefthoek.com"
 }
 
+module "lefthoek_homepage" {
+  source           = "./infra/homepage"
+  root_domain_name = module.lefthoek_domain.domain_name
+  certificate_arn  = module.lefthoek_domain.certificate_arn
+  zone_id          = module.lefthoek_domain.zone_id
+}
+
 module "lefthoek_brandbook" {
   source           = "./infra/website"
   subdomain_prefix = "brandbook"
