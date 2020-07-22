@@ -21,6 +21,8 @@ jobs:
 
     - name: Install Dependencies
       run: yarn install
+    - name: Build Dependencies
+      run: yarn build
     - name: Build Site
       run: yarn workspace @lefthoek/brandbook build
     - name: Deploy Site
