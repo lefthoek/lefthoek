@@ -3,11 +3,16 @@ const innerWrapper = {
   alignContent: "center",
   dt: {
     fontWeight: 700,
+    fontSize: [4, 5],
     textAlign: "left",
     "&:first-of-type:": {},
+    mb: 4,
   },
   dd: {
+    fontSize: [3, 4],
     textAlign: "left",
+    mx: 0,
+    mb: 4,
   },
 };
 const outerWrapper = {

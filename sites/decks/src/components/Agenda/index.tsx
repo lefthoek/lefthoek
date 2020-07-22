@@ -7,13 +7,11 @@ import SlideMeta from "../SlideMeta";
 const Agenda: FunctionComponent<{
   children: ReactNodeArray;
   slideData: any;
-}> = ({ children, slideData }) => {
-  return (
-    <Box sx={outerWrapper}>
-      <div sx={innerWrapper}>{children}</div>
-      <SlideMeta slideData={slideData} />
-    </Box>
-  );
-};
+}> = ({ children, slideData }) => (
+  <Box sx={outerWrapper}>
+    <div sx={innerWrapper}>{children}</div>
+    <SlideMeta slideData={slideData} />
+  </Box>
+);
 
 export default Agenda;
