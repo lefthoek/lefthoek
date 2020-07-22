@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FunctionComponent, Fragment, ReactNodeArray, Children } from "react";
+import { FunctionComponent, ReactNodeArray } from "react";
 import { jsx, Box } from "theme-ui";
 import { outerWrapper, innerWrapper } from "./styles";
 import SlideMeta from "../SlideMeta";

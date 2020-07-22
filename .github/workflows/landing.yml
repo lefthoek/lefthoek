@@ -1,4 +1,4 @@
-name: brandbook
+name: landing
 on:
   push:
     branches: [ master ]
@@ -24,11 +24,11 @@ jobs:
     - name: Build Dependencies
       run: yarn build
     - name: Build Site
-      run: yarn workspace @lefthoek/brandbook build
+      run: yarn workspace @lefthoek/landing build
     - name: Deploy Site
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1
       with:
-        folder: sites/brandbook/.docz/dist
-        bucket: ${{ secrets.BRANDBOOK_BUCKET }}
-        dist-id: ${{ secrets.BRANDBOOK_DISTRIBUTION_ID }}
+        folder: sites/landing/public
+        bucket: ${{ secrets.DECKS_BUCKET }}
+        dist-id: ${{ secrets.DECKS_DISTRIBUTION_ID }}

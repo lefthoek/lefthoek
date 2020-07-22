@@ -11,7 +11,7 @@ const Cover: FunctionComponent<{ children: ReactNodeArray }> = ({
     <Box sx={outerWrapper}>
       <div sx={innerWrapper}>{children}</div>
       <Box sx={footerStyles}>
-        <Logo size="XXL" href="https://offcourse-studio.com" sx={logoStyles}>
+        <Logo href="https://offcourse-studio.com" sx={logoStyles}>
           Lefthoek
         </Logo>
       </Box>

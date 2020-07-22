@@ -10,5 +10,16 @@ var Logo = function (_a) {
     return href ? (jsx(Link, { sx: logoStyles, to: href }, children)) : (jsx(Box, { sx: logoStyles }, children));
 };
 
-export { Logo };
+var cardStyles = {
+    display: "grid",
+    boxShadow: "13px 10px 23px 13px rgba(230,225,230,1)",
+    p: "1rem",
+};
+
+var Card = function (_a) {
+    var children = _a.children, className = _a.className;
+    return (jsx("article", { sx: cardStyles, className: className }, children));
+};
+
+export { Card, Logo };
 //# sourceMappingURL=index.es.js.map
