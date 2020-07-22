@@ -6,7 +6,6 @@ const innerWrapper = {
   display: "grid",
   alignContent: "center",
   h1: {
-    textAlign: ["center", "center"],
     fontSize: [7, 8],
   },
 };

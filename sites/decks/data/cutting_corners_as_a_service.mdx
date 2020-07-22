@@ -1,4 +1,8 @@
-import { Agenda, Cover, DisplayText, Table, List, SectionCover, BackCover} from "../src/components"
+import { Agenda, Cover, DisplayText, Table, List, SectionCover, BackCover,
+UserStory } from "../src/components"
+import userStoryDiachronousCollaboration from "./user-story-diachronous-collaboration.yaml"
+import userStoryTestableValueProfile from "./user-story-testable-value-profile.yaml"
+import userStoryBrandImage from "./user-story-brand-image-damage-control.yaml"
 
 <Cover>
 
@@ -75,6 +79,17 @@ information rarely work</dd>
 
 <SectionCover>
 
+  ## Pleasure Drain 
+  ## Knowledge Spill +
+  ## -----------------
+  ## Talent Waste 
+
+</SectionCover>
+
+---
+
+<SectionCover>
+
   # How does Lefthoek solve this problem?
 
 </SectionCover>
@@ -112,6 +127,22 @@ information rarely work</dd>
 </List>
 
 ---
+
+<UserStory {...userStoryDiachronousCollaboration} />
+
+
+---
+
+<UserStory {...userStoryTestableValueProfile} />
+
+
+---
+
+<UserStory {...userStoryBrandImage} />
+
+
+---
+
 
 <SectionCover>
   <DisplayText>Brainstorm, Questions, and Discussion</DisplayText>

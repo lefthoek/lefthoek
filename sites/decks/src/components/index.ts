@@ -6,6 +6,7 @@ import Agenda from "./Agenda";
 import Layout from "./Layout";
 import Table from "./Table";
 import List from "./List";
+import UserStory from "./UserStory";
 
 export {
   Cover,
@@ -16,4 +17,5 @@ export {
   List,
   Layout,
   Table,
+  UserStory,
 };
