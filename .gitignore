@@ -107,4 +107,5 @@ dist
 sites/brandbook/.docz/
 sites/decks/public/
 sites/landing/public/
+packages/atoms/build/
 .terraform/
