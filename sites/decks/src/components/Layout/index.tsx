@@ -2,9 +2,13 @@
 import { FunctionComponent } from "react";
 import { jsx, Box } from "theme-ui";
 
-const Layout: FunctionComponent = ({ children }) => {
+const Layout: FunctionComponent<{ className?: string }> = ({
+  children,
+  className,
+}) => {
   return (
     <Box
+      className={className}
       sx={{
         display: "grid",
         p: ["1rem", "2rem"],

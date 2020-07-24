@@ -1,6 +1,7 @@
 const innerWrapper = {
   display: "grid",
   alignContent: "center",
+  px: "1rem",
   ul: {
     listStyle: "none",
     ml: 0,

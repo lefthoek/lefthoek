@@ -1,7 +1,10 @@
 export const cardStyles = {
   p: 0,
   maxWidth: "45rem",
+  minHeight: "30rem",
   maxHeight: "35rem",
+  alignSelf: "center",
+  justifySelf: "center",
 };
 
 export const titleStyles = {
