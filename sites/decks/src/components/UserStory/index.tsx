@@ -3,7 +3,7 @@ import { FunctionComponent } from "react";
 import { Card } from "@lefthoek/atoms";
 import { titleCase, capitalize } from "voca";
 import { jsx } from "theme-ui";
-import { cardStyles, titleStyles, ruleStyles} from "./styles";
+import { cardStyles, titleStyles, ruleStyles } from "./styles";
 
 const UserStory: FunctionComponent<{
   className?: string;
@@ -14,9 +14,7 @@ const UserStory: FunctionComponent<{
       <h1 sx={titleStyles}>{titleCase(title)}</h1>
       {Object.entries(props).map(([k, v]) => {
         return (
-          <p
-            sx={ruleStyles}
-          >
+          <p sx={ruleStyles}>
             <strong>{capitalize(k)}</strong> {v}
           </p>
         );

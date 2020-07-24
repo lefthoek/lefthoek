@@ -1,5 +1,6 @@
 export const cardStyles = {
   display: "grid",
-  boxShadow: "13px 10px 23px 13px rgba(230,225,230,1)",
+  bg: "white",
+  boxShadow: "13px 10px 60px 13px #3F1D3A",
   p: "1rem",
 };

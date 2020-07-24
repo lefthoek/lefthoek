@@ -16,7 +16,8 @@ const innerWrapper = {
   display: "grid",
   gridTemplateColumns: ["1fr", "2fr 1fr"],
   gridTemplateRows: ["3fr 1fr", "1fr"],
-  justifyContent: "stretch",
+  alignItems: "center",
+  px: "1rem",
   h1: {
     textAlign: ["left", "left"],
     fontSize: [7, 8],
@@ -25,7 +26,7 @@ const innerWrapper = {
 
 const imageStyles = {
   display: "grid",
-  justifyContent: "stretch",
+  justifyContent: "center",
   alignContent: "center",
 };
 

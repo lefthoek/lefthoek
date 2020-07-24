@@ -7,15 +7,18 @@ import { logoStyles } from "./styles";
 type LogoProps = {
   /** optional href */
   href?: string;
+  className?: string;
 };
 
-const Logo: FunctionComponent<LogoProps> = ({ children, href }) => {
+const Logo: FunctionComponent<LogoProps> = ({ children, href, className }) => {
   return href ? (
-    <Link sx={logoStyles} to={href}>
+    <Link sx={logoStyles} className={className} to={href}>
       {children}
     </Link>
   ) : (
-    <Box sx={logoStyles}>{children}</Box>
+    <Box sx={logoStyles} className={className}>
+      {children}
+    </Box>
   );
 };
 
