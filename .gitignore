@@ -104,9 +104,8 @@ dist
 .tern-port
 
 # project defined
-sites/brandbook/.docz/
-sites/decks/public/
-sites/landing/public/
-packages/atoms/build/
+**/.docz/
+**/public/
+**/build/
 
 .terraform/
