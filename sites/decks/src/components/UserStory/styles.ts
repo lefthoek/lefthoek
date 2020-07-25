@@ -1,23 +1,22 @@
 export const cardStyles = {
+  display: "block",
   p: 0,
   maxWidth: "45rem",
-  minHeight: "30rem",
-  maxHeight: "35rem",
+  minHeight: "35rem",
+  alignItems: "flex-start",
   alignSelf: "center",
   justifySelf: "center",
 };
 
-export const titleStyles = {
-  px: "1.5rem",
-  py: "1rem",
-  m: 0,
-  borderBottom: "1px solid lightgray",
-};
-
 export const ruleStyles = {
   m: 0,
-  px: "1.5rem",
-  py: "1rem",
-  borderBottom: "1px solid lightgray",
+  p: "1.5rem",
+  borderBottom: "2px solid black",
+  borderColor: "background",
   "&:last-of-type": { borderBottom: "none" },
+};
+
+export const titleStyles = {
+  ...ruleStyles,
+  borderColor: "primary",
 };

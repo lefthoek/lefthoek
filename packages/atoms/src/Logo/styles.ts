@@ -1,4 +1,5 @@
 export const logoStyles = {
+  display: "inline-block",
   fontSize: [3, 4, 5],
   fontWeight: "heading",
   color: "background",

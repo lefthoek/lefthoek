@@ -10,7 +10,6 @@ const Agenda: FunctionComponent<{
 }> = ({ children, slideData }) => (
   <Box sx={outerWrapper}>
     <div sx={innerWrapper}>{children}</div>
-    <SlideMeta slideData={slideData} />
   </Box>
 );
 

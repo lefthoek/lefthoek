@@ -1,8 +1,13 @@
-const outerWrapper = {
-  display: "grid",
+export const outerWrapper = {
+  display: "flex",
   gridRow: ["2/3"],
-  justifyContent: "end",
-  alignContent: "center",
+  alignSelf: "end",
+  justifyContent: "space-between",
 };
 
-export { outerWrapper };
+export const innerWrapper = {
+  display: "flex",
+  flex: 1,
+  justifyContent: "flex-end",
+  alignItems: "center",
+};

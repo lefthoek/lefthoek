@@ -14,7 +14,7 @@
   },
   "peerDependencies": {
     "@offcourse/interfaces": "*",
-    "gatsby": "^2.24.7",
+    "gatsby": "^2.24.11",
     "gatsby-plugin-typescript": "^2.4.16",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -33,7 +33,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
-    "gatsby": "^2.24.7",
+    "gatsby": "^2.24.11",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typescript": "^2.4.16",

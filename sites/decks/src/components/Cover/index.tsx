@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent, ReactNodeArray } from "react";
 import { jsx, Box } from "theme-ui";
-import { Logo } from "@lefthoek/atoms";
-import { logoStyles, outerWrapper, footerStyles, innerWrapper } from "./styles";
+import { outerWrapper, innerWrapper } from "./styles";
 
 const Cover: FunctionComponent<{ children: ReactNodeArray }> = ({
   children,
@@ -10,9 +9,6 @@ const Cover: FunctionComponent<{ children: ReactNodeArray }> = ({
   return (
     <Box sx={outerWrapper}>
       <div sx={innerWrapper}>{children}</div>
-      <Box sx={footerStyles}>
-        <Logo sx={logoStyles}>Lefthoek</Logo>
-      </Box>
     </Box>
   );
 };
