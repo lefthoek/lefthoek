@@ -11,7 +11,15 @@ const SlideMeta: FunctionComponent = () => {
   return (
     <Box sx={outerWrapper}>
       <Box sx={innerWrapper}>
-        <Logo>{showLogo ? "Lefthoek" : `${index}/${length}`}</Logo>
+        <Logo
+          sx={{
+            fontSize: showLogo ? [4, 5, 6] : [1, 2, 3],
+            py: showLogo ? 2 : 1,
+            px: showLogo ? 3 : 2,
+          }}
+        >
+          {showLogo ? "Lefthoek" : `${index < 10 ? 0 : ""}${index}/${length}`}
+        </Logo>
       </Box>
     </Box>
   );
