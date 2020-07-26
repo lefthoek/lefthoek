@@ -1,5 +1,6 @@
 const innerWrapper = {
   display: "grid",
+  p: "1rem",
   alignContent: "center",
   dt: {
     fontWeight: 700,

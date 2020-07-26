@@ -1,5 +1,3 @@
-import { Theme } from "theme-ui";
-
 const heading = {
   color: "text",
   fontFamily: "heading",
@@ -7,8 +5,24 @@ const heading = {
   fontWeight: "heading",
 };
 
-export const base: Theme = {
+export const base = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  cards: {
+    primary: {
+      display: "grid",
+      p: "1rem",
+      m: "1rem",
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      bg: "muted",
+    },
+    secondary: {
+      display: "grid",
+      p: "1rem",
+      m: "1rem",
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      bg: "background",
+    },
+  },
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
@@ -29,7 +43,9 @@ export const base: Theme = {
     text: "#3F1D3A",
     background: "#E8E6D4",
     primary: "#E37D7F",
-    muted: "#000",
+    muted: "#FFF",
+    accent: "#61C591",
+    highlight: "#61C591",
     secondary: "#367975",
   },
   styles: {

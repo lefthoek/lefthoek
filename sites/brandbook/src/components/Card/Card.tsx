@@ -1,3 +1,3 @@
-import { Card } from "@lefthoek/atoms";
+import { Card } from "theme-ui";
 
 export { Card };

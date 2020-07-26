@@ -4,7 +4,9 @@ const infoStyles = {
   display: "grid",
   alignContent: ["end", "end", "end"],
   justifyContent: ["end", "end"],
+  py: "2rem",
   p: {
+    m: 0,
     textAlign: ["right", "right"],
   },
 };

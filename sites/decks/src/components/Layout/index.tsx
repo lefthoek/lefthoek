@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx, Box } from "theme-ui";
+import SlideMeta from "../SlideMeta";
 
 const Layout: FunctionComponent<{ className?: string }> = ({
   children,
@@ -11,6 +12,7 @@ const Layout: FunctionComponent<{ className?: string }> = ({
       className={className}
       sx={{
         display: "grid",
+        gridTemplateRows: ["1fr 5rem"],
         p: ["1rem", "2rem"],
         width: "100%",
         height: "100%",
@@ -19,6 +21,7 @@ const Layout: FunctionComponent<{ className?: string }> = ({
       }}
     >
       {children}
+      <SlideMeta />
     </Box>
   );
 };

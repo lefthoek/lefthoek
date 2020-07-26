@@ -10,7 +10,7 @@
     "package.json"
   ],
   "scripts": {
-    "dev": "docz dev",
+    "develop": "docz dev",
     "build": "docz build"
   },
   "dependencies": {
