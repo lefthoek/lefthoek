@@ -44,12 +44,13 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@lefthoek/atoms": "*",
-    "@lefthoek/molecules": "*",
-    "@lefthoek/ui-theme": "*",
-    "@lefthoek/data": "*",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@lefthoek/atoms": "*",
+    "@lefthoek/data": "*",
+    "@lefthoek/molecules": "*",
+    "@lefthoek/ui-theme": "*",
+    "@theme-ui/style-guide": "^0.3.0",
     "d3-array": "^2.4.0",
     "gatsby-theme-mdx-deck": "^4.1.0",
     "mkdirp": "^1.0.4",

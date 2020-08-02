@@ -1,0 +1,21 @@
+---
+name: User Persona
+menu: Molecules
+---
+
+import { Playground, Props } from 'docz'
+import { UserPersona } from './UserPersona'
+import { userPersonae }from "@lefthoek/data"
+
+# User Persona
+
+## Properties
+
+<Props of={UserPersona} />
+
+## Basic usage
+
+<Playground>
+  <UserPersona {...userPersonae.jesse }/>
+</Playground>
+

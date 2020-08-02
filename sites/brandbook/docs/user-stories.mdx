@@ -3,10 +3,10 @@ name: User Stories
 route: /user-stories
 ---
 import { UserStory } from "@lefthoek/molecules"
-import { brandImageDamageControl, diachronousCollaboration,  testableValueProfile }from "@lefthoek/data"
+import { userStories} from "@lefthoek/data"
 
-<UserStory {...diachronousCollaboration} />
+<UserStory {...userStories.diachronousCollaboration} />
 
-<UserStory {...testableValueProfile} />
+<UserStory {...userStories.testableValueProfile} />
 
-<UserStory {...brandImageDamageControl} />
+<UserStory {...userStories.brandImageDamageControl} />

@@ -5,7 +5,7 @@ menu: Molecules
 
 import { Playground, Props } from 'docz'
 import { UserStory } from './UserStory'
-import { brandImageDamageControl }from "@lefthoek/data"
+import { userStories }from "@lefthoek/data"
 
 # User Story
 
@@ -16,6 +16,6 @@ import { brandImageDamageControl }from "@lefthoek/data"
 ## Basic usage
 
 <Playground>
-  <UserStory title={brandImageDamageControl.title} story={brandImageDamageControl.story}/>
+  <UserStory {...userStories.brandImageDamageControl }/>
 </Playground>
 
