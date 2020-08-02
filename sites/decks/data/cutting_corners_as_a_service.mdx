@@ -1,7 +1,6 @@
-import { Agenda, Cover, Layout, DisplayText, Equation, Table, List, SectionCover, BackCover, UserStory } from "../src/components"
-import userStoryDiachronousCollaboration from "./user-story-diachronous-collaboration.yaml"
-import userStoryTestableValueProfile from "./user-story-testable-value-profile.yaml"
-import userStoryBrandImage from "./user-story-brand-image-damage-control.yaml"
+import { Agenda, Cover, Layout, DisplayText, Equation, Table, List, SectionCover, BackCover } from "../src/components"
+import { UserStory } from "@lefthoek/molecules"
+import { userStories }from "@lefthoek/data"
 
 <Cover>
 
@@ -120,17 +119,17 @@ information rarely work</dd>
 
 ---
 
-<UserStory {...userStoryDiachronousCollaboration} />
+<UserStory {...userStories.diachronousCollaboration} />
 
 
 ---
 
-<UserStory {...userStoryTestableValueProfile} />
+<UserStory {...userStories.testableValueProfile} />
 
 
 ---
 
-<UserStory {...userStoryBrandImage} />
+<UserStory {...userStories.brandImageDamageControl} />
 
 
 ---

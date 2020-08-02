@@ -1,0 +1,21 @@
+---
+name: User Story
+menu: Molecules
+---
+
+import { Playground, Props } from 'docz'
+import { UserStory } from './UserStory'
+import { userStories }from "@lefthoek/data"
+
+# User Story
+
+## Properties
+
+<Props of={UserStory} />
+
+## Basic usage
+
+<Playground>
+  <UserStory {...userStories.brandImageDamageControl }/>
+</Playground>
+

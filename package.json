@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "yarn workspace @lefthoek/ui-theme build && yarn workspace @lefthoek/atoms build"
+    "build": "yarn workspace @lefthoek/data build && yarn workspace @lefthoek/ui-theme build && yarn workspace @lefthoek/atoms build && yarn workspace @lefthoek/molecules build"
   },
   "workspaces": {
     "packages": [
@@ -9,7 +9,9 @@
       "sites/decks",
       "sites/landing",
       "packages/ui-theme",
-      "packages/atoms"
+      "packages/atoms",
+      "packages/molecules",
+      "packages/data"
     ]
   }
 }
