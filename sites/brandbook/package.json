@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@lefthoek/atoms": "*",
+    "@lefthoek/molecules": "*",
     "@lefthoek/ui-theme": "*",
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",

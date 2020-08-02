@@ -9,7 +9,9 @@
       "sites/decks",
       "sites/landing",
       "packages/ui-theme",
-      "packages/atoms"
+      "packages/atoms",
+      "packages/molecules",
+      "packages/data"
     ]
   }
 }
