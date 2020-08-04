@@ -41,9 +41,9 @@ export const base = {
   },
   colors: {
     text: "#3F1D3A",
-    background: "#E8E6D4",
+    muted: "#E8E6D4",
     primary: "#E37D7F",
-    muted: "#FFF",
+    background: "#FFF",
     accent: "#61C591",
     highlight: "#61C591",
     secondary: "#367975",
