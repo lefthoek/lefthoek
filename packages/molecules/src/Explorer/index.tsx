@@ -5,7 +5,7 @@ import { jsx, Card, Text } from "theme-ui";
 import { cardStyles, ruleStyles } from "./styles";
 
 
-const UserPersona: FunctionComponent<{
+const Explorer: FunctionComponent<{
   className?: string;
 }> = ({ className, ...rest }) => {
   return (
@@ -23,4 +23,4 @@ const UserPersona: FunctionComponent<{
   );
 };
 
-export { UserPersona };
+export { Explorer };
