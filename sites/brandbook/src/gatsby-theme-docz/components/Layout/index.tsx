@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui";
+import { jsx, Box, useThemeUI } from "theme-ui";
 import { FunctionComponent } from "react";
 // todo: aliases
 // @ts-ignore
@@ -9,6 +9,7 @@ import { Sidebar } from "../Sidebar";
 
 const Layout: FunctionComponent = ({ children }) => {
   const menus = useMenus();
+  const { theme } = useThemeUI();
   return (
     <Box>
       <Global styles={{ body: { margin: 0 } }} />

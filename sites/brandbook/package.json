@@ -19,13 +19,13 @@
     "@lefthoek/atoms": "*",
     "@lefthoek/molecules": "*",
     "@lefthoek/ui-theme": "*",
+    "@theme-ui/style-guide": "^0.3.0",
     "@types/theme-ui": "^0.3.5",
     "docz": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@theme-ui/style-guide": "^0.3.0",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4"
   }

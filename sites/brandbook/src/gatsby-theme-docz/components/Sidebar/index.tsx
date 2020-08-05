@@ -76,8 +76,9 @@ const MenuItem: FunctionComponent<{
 export const Sidebar: FunctionComponent<{
   menus: Doc[];
   className?: string;
-}> = ({ menus, className}) => {
+}> = ({ menus, className }) => {
   const currentDoc = useCurrentDoc();
+
   return (
     <Box
       className={className}

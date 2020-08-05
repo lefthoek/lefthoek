@@ -12,7 +12,7 @@ export const ruleStyles = {
   m: 0,
   p: "1.5rem",
   borderBottom: "2px solid black",
-  borderColor: "background",
+  borderColor: "muted",
   "&:last-of-type": { borderBottom: "none" },
 };
 
