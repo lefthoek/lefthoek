@@ -1,9 +1,9 @@
 name: brandbook
 on:
   push:
-    branches: [ master ]
+    branches: [ master, brandbook ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, brandbook ]
 
 jobs:
   build:
