@@ -1,3 +1,3 @@
-import { Explorer} from "@lefthoek/molecules";
+import { Explorer } from "@lefthoek/molecules";
 
 export { Explorer };
