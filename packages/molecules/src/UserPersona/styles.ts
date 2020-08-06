@@ -1,23 +1,24 @@
-export const cardStyles = {
-  display: "block",
-  p: 0,
-  mb: 5,
-  maxWidth: "45rem",
-  minHeight: "35rem",
-  alignItems: "flex-start",
-  alignSelf: "center",
-  justifySelf: "center",
-};
-
-export const ruleStyles = {
+export const canvasStyles = {
+  display: ["flex", "grid"],
+  flexDirection: ["column"],
+  gridTemplateColumns: "repeat(10, 1fr)",
+  gridTemplateRow: "repeat(3, 10rem)",
+  p: 2,
   m: 0,
-  p: "1.5rem",
-  borderBottom: "2px solid black",
-  borderColor: "muted",
-  "&:last-of-type": { borderBottom: "none" },
+  mb: 5,
+  gridGap: 2,
+
+  ".personalia, .company": {
+    gridColumn: "span 5",
+  },
+  ".responsibilities, .information": {
+    gridRow: "span 2",
+    gridColumn: "span 2",
+  },
 };
 
-export const titleStyles = {
-  ...ruleStyles,
+export const cardStyles = {
   borderColor: "primary",
+  gridColumn: "span 3",
+  m: 0,
 };

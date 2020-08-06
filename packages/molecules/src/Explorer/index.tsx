@@ -4,7 +4,6 @@ import { capitalize } from "voca";
 import { jsx, Card, Text } from "theme-ui";
 import { cardStyles, ruleStyles } from "./styles";
 
-
 const Explorer: FunctionComponent<{
   className?: string;
 }> = ({ className, ...rest }) => {
