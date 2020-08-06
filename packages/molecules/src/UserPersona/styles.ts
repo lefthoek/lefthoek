@@ -19,7 +19,6 @@ export const canvasStyles = {
 
 export const cardStyles = {
   borderColor: "primary",
-  bg: "muted",
   gridColumn: "span 3",
   m: 0,
 };
