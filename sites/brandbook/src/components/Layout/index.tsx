@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Fragment, FunctionComponent, useState } from "react";
 // todo: aliases
 // @ts-ignore
+import { useBreakpointIndex } from "@theme-ui/match-media";
 import { useMenus } from "hooks";
 import { Global } from "@emotion/core";
 import { Sidebar } from "../Sidebar";
@@ -21,7 +22,9 @@ const variants = {
 
 const Layout: FunctionComponent = ({ children }) => {
   const menus = useMenus();
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const breakpointIndex = useBreakpointIndex();
+  const isMobile = breakpointIndex === 0;
+  const [isSidebarOpen, setSidebarOpen] = useState(isMobile ? false : true);
   const { theme } = useThemeUI();
   return (
     <Fragment>

@@ -10,6 +10,7 @@ export const outerWrapperStyles = {
 export const sidebarContainerStyles = {
   position: ["absolute", "relative"],
   width: "20rem",
+  maxWidth: "75vw",
 };
 
 export const innerWrapperStyles: SxStyleProp = {
