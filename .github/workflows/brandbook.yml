@@ -25,8 +25,15 @@ jobs:
       run: yarn build
     - name: Build Site
       run: yarn workspace @lefthoek/brandbook build
-    - name: Deploy Site
+    - name: Deploy Production
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      uses: reggionick/s3-deploy@v1
+      with:
+        folder: sites/brandbook/.docz/dist
+        bucket: ${{ secrets.BRANDBOOK_BUCKET }}
+        dist-id: ${{ secrets.BRANDBOOK_DISTRIBUTION_ID }}
+    - name: Deploy Development
+      if: github.ref == 'refs/heads/brandbook' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1
       with:
         folder: sites/brandbook/.docz/dist
