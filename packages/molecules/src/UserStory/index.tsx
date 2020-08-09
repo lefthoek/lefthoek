@@ -13,9 +13,11 @@ const UserStory: FunctionComponent<{
   className?: string;
   title: string;
   story: Story;
-}> = ({ className, title, story }) => {
+  status?: "rejected";
+  rating: number;
+}> = ({ className, title, story, status, rating }) => {
   return (
-    <Card sx={cardStyles} className={className}>
+    <Card sx={cardStyles({ status, rating })} className={className}>
       <section sx={titleStyles}>
         <Heading as="h1">{titleCase(title)}</Heading>
       </section>
