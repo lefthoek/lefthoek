@@ -5,8 +5,17 @@ const heading = {
   fontWeight: "heading",
 };
 
+const colors = {
+  white: "#FFFFFF",
+  pink: "#E5E5E5",
+  orange: "#D15B1B",
+  violet: "#784CFB",
+  darkBlue: "#32334E",
+  green: "#90FFCC",
+};
+
 export const base = {
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 24, 32, 48, 64, 80],
   cards: {
     primary: {
       display: "grid",
@@ -24,29 +33,28 @@ export const base = {
     },
   },
   fonts: {
-    body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12, 14, 16, 18, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
-    bold: 700,
+    bold: 600,
   },
   lineHeights: {
     body: 1.5,
     heading: 1.125,
   },
   colors: {
-    text: "#3F1D3A",
-    muted: "#E8E6D4",
-    primary: "#E37D7F",
-    background: "#FFF",
-    accent: "#61C591",
-    highlight: "#61C591",
-    secondary: "#367975",
+    text: colors.darkBlue,
+    muted: colors.pink,
+    primary: colors.violet,
+    background: colors.pink,
+    accent: colors.green,
+    highlight: colors.green,
+    secondary: colors.orange,
   },
   styles: {
     root: {
