@@ -18,8 +18,7 @@ export const Sidebar: FunctionComponent<{
 }> = ({ className }) => {
   const breakpointIndex = useBreakpointIndex();
   const isMobile = breakpointIndex === 0;
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
-  console.log("sxx", isSidebarOpen);
+  const [isSidebarOpen, setSidebarOpen] = useState(isMobile ? false : true);
   const currentDoc = useCurrentDoc();
   const menus = useMenus();
   return (
