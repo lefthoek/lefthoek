@@ -12,5 +12,17 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Lefthoek",
+        short_name: "Lefthoek",
+        description: "",
+        lang: `en`,
+        display: `standalone`,
+        icon: `../src/icon.png`,
+        start_url: `/`,
+      },
+    },
   ],
 };

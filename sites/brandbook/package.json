@@ -25,6 +25,7 @@
     "docz": "latest",
     "framer-motion": "^2.3.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-manifest": "^2.4.23",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
