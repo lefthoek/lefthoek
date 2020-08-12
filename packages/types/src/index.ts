@@ -1,4 +1,6 @@
-import { Entry } from "docz";
+import { Entry as DoczEntry } from "docz";
+
+export type Entry = DoczEntry;
 export type Doc =
   | Entry
   | {

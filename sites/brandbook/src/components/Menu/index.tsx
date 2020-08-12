@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 import { FunctionComponent } from "react";
-import { Doc } from "../../types";
-import { MenuEntry } from "./MenuEntry";
-import { SubMenu } from "./SubMenu";
+import { Doc } from "@lefthoek/types";
+import { NavLink } from "@lefthoek/atoms";
+import { SubMenu } from "@lefthoek/molecules";
 
 export const Menu: FunctionComponent<{
   menus: Doc[];
@@ -13,13 +13,14 @@ export const Menu: FunctionComponent<{
     <Box>
       {menus.map((menu) => {
         const hasNoSubEntries = !menu.entries || !menu.entries.length;
+        const isActive =
+          currentDoc.menu === menu.name ||
+          (!currentDoc.menu && menu.name === "Introduction");
         return hasNoSubEntries ? (
-          <MenuEntry
+          <NavLink
             to={menu.route || ""}
-            isActive={
-              currentDoc.menu === menu.name ||
-              (!currentDoc.menu && menu.name === "Introduction")
-            }
+            sx={{ color: isActive ? "accent" : "background" }}
+            isActive={isActive}
             isHeading
             title={menu.name}
           />

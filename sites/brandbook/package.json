@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "@lefthoek/types": "*",
     "@lefthoek/atoms": "*",
     "@lefthoek/molecules": "*",
     "@lefthoek/ui-theme": "*",

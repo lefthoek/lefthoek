@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { useState } from "react";
 import { jsx, Heading, Box } from "theme-ui";
-import { Entry } from "docz";
 import { FunctionComponent } from "react";
-import { MenuEntry } from "./MenuEntry";
+import { NavLink } from "@lefthoek/atoms";
+import { Doc, Entry } from "@lefthoek/types";
 import { SlideOpen } from "./animations";
 import { subMenuStyles, headingStyles } from "./styles";
-import { Doc } from "../../types";
 
 export const SubMenu: FunctionComponent<{
   level?: number;
@@ -21,10 +20,11 @@ export const SubMenu: FunctionComponent<{
       .includes(currentDoc.name);
 
   const [isOpen, setIsOpen] = useState(isCurrentDoc);
+  const headingVariant = level === 1 ? "subHeading" : "heading";
   return (
     <Box sx={subMenuStyles({ level })} className={className} key={menu.name}>
       <Heading
-        variant={level === 1 ? "subHeading" : "heading"}
+        variant={headingVariant}
         sx={headingStyles({ level: level + 1, isActive: isCurrentDoc })}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -32,6 +32,7 @@ export const SubMenu: FunctionComponent<{
       </Heading>
       <SlideOpen isOpen={isOpen}>
         {menu.entries.map((entry: Entry) => {
+          const isActive = currentDoc.name === entry.name;
           return entry.entries ? (
             <SubMenu
               level={level + 1}
@@ -40,10 +41,10 @@ export const SubMenu: FunctionComponent<{
               menu={entry}
             />
           ) : (
-            <MenuEntry
+            <NavLink
               title={entry.name}
+              sx={{ color: isActive ? "accent" : "background" }}
               to={entry.route}
-              isActive={currentDoc.name === entry.name}
             />
           );
         })}
