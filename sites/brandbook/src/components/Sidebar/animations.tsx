@@ -4,18 +4,20 @@ import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
 const variants = {
-  hidden: { transform: "translate(-100%)" },
-  visible: { transform: "translate(0%)" },
+  collapsed: { transform: "translate(-75%)" },
+  open: { transform: "translate(0%)" },
 };
 
 export const SlideOpen: FunctionComponent<{
   className?: string;
+  onClick: () => void;
   isSidebarOpen: boolean;
-}> = ({ className, children, isSidebarOpen }) => {
+}> = ({ className, children, onClick, isSidebarOpen }) => {
   return (
     <motion.div
+      onClick={onClick}
       className={className}
-      animate={isSidebarOpen ? "visible" : "hidden"}
+      animate={isSidebarOpen ? "open" : "collapsed"}
       transition={{ damping: 0 }}
       variants={variants}
     >

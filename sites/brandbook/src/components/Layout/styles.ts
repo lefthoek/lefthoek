@@ -9,10 +9,8 @@ export const outerWrapperStyles: SxStyleProp = {
 
 export const sidebarContainerStyles: SxStyleProp = {
   position: ["absolute", "relative"],
-  width: "21rem",
+  width: ["100%", "21rem"],
   zIndex: 999,
-  overflowY: "scroll",
-  maxWidth: "75vw",
 };
 
 export const innerWrapperStyles: SxStyleProp = {
