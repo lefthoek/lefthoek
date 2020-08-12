@@ -37,6 +37,21 @@ export const base = {
     heading: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
     monospace: "Menlo, monospace",
   },
+  buttons: {
+    menu: {
+      bg: "text",
+      color: "bg",
+      height: "3rem",
+      borderRadius: 0,
+      width: "3rem",
+      "> svg": {
+        fill: colors.pink,
+      },
+      "&:active, &:focus": {
+        outline: "none",
+      },
+    },
+  },
   text: {
     heading: {
       ...heading,

@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { useState } from "react";
-import { jsx, Box } from "theme-ui";
+import { jsx, Heading, Box } from "theme-ui";
 import { Entry } from "docz";
 import { FunctionComponent } from "react";
-import { MenuHeading } from "./MenuHeading";
 import { MenuEntry } from "./MenuEntry";
 import { SlideOpen } from "./animations";
-import { subMenuStyles } from "./styles";
+import { subMenuStyles, headingStyles } from "./styles";
 import { Doc } from "../../types";
 
 export const SubMenu: FunctionComponent<{
@@ -22,14 +21,15 @@ export const SubMenu: FunctionComponent<{
       .includes(currentDoc.name);
 
   const [isOpen, setIsOpen] = useState(isCurrentDoc);
-
   return (
     <Box sx={subMenuStyles({ level })} className={className} key={menu.name}>
-      <MenuHeading
-        level={level + 1}
+      <Heading
+        variant={level === 1 ? "subHeading" : "heading"}
+        sx={headingStyles({ level: level + 1, isActive: isCurrentDoc })}
         onClick={() => setIsOpen(!isOpen)}
-        title={menu.name}
-      />
+      >
+        {menu.name}
+      </Heading>
       <SlideOpen isOpen={isOpen}>
         {menu.entries.map((entry: Entry) => {
           return entry.entries ? (

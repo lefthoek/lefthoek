@@ -12,9 +12,9 @@ export const linkStyles = {
 };
 
 export const headingStyles: (args: {
-  level: number;
-  isActive: boolean;
-}) => SxStyleProp = ({ level, isActive }) => {
+  level?: number;
+  isActive?: boolean;
+}) => SxStyleProp = ({ level = 0, isActive = false }) => {
   return {
     userSelect: "none",
     color: isActive ? "accent" : "background",

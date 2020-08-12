@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { jsx, Text } from "theme-ui";
+import { jsx, Text, Heading } from "theme-ui";
 import { Link } from "docz";
 import { FunctionComponent } from "react";
-import { MenuHeading } from "./MenuHeading";
-import { linkStyles, entryStyles } from "./styles";
+import { linkStyles, entryStyles, headingStyles } from "./styles";
 
 export const MenuEntry: FunctionComponent<{
   title: string;
@@ -14,7 +13,7 @@ export const MenuEntry: FunctionComponent<{
   return (
     <Link key={title} sx={linkStyles} to={to}>
       {isHeading ? (
-        <MenuHeading isActive={isActive} level={0} title={title} />
+        <Heading sx={headingStyles({ level: 0, isActive })}>{title}</Heading>
       ) : (
         <Text sx={entryStyles({ isActive })}>{title}</Text>
       )}

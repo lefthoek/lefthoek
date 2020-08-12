@@ -14,7 +14,7 @@ export const sidebarContainerStyles: SxStyleProp = {
 };
 
 export const innerWrapperStyles: SxStyleProp = {
-  py: 7,
+  py: [8, 7],
   px: [5, 7],
   bg: "background",
   width: "100%",

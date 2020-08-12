@@ -1,27 +1,23 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui";
+import { jsx, Box, MenuButton } from "theme-ui";
 import { FunctionComponent } from "react";
 // todo: ts-aliases
 // @ts-ignore
 import { useAppState } from "hooks";
 import { Menu } from "../Menu";
-import { outerWrapperStyles, innerWrapperStyles } from "./styles";
+import {
+  outerWrapperStyles,
+  innerWrapperStyles,
+  menuButtonStyles,
+} from "./styles";
 import { SlideOpen } from "./animations";
-import { MenuButton } from "./MenuButton";
 
 export const Sidebar: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
-  const {
-    menus,
-    isSidebarOpen,
-    isMobile,
-    currentDoc,
-    setSidebarOpen,
-  } = useAppState();
+  const { menus, isSidebarOpen, currentDoc, setSidebarOpen } = useAppState();
   return (
     <SlideOpen
-      onClick={() => isMobile && isSidebarOpen && setSidebarOpen(!isSidebarOpen)}
       className={className}
       isSidebarOpen={isSidebarOpen}
       sx={outerWrapperStyles}
@@ -29,9 +25,10 @@ export const Sidebar: FunctionComponent<{
       <Box sx={innerWrapperStyles}>
         <Menu menus={menus} currentDoc={currentDoc} />
       </Box>
-      {isMobile && (
-        <MenuButton onClick={() => setSidebarOpen(!isSidebarOpen)} />
-      )}
+      <MenuButton
+        sx={menuButtonStyles}
+        onClick={() => setSidebarOpen(!isSidebarOpen)}
+      />
     </SlideOpen>
   );
 };

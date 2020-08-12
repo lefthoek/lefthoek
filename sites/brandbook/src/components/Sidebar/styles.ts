@@ -9,7 +9,7 @@ export const outerWrapperStyles: SxStyleProp = {
 
 export const innerWrapperStyles: SxStyleProp = {
   display: "flex",
-  width: ["75%", "100%"],
+  width: ["80%", "100%"],
   minHeight: "100vh",
   justifyContent: "flex-start",
   flexDirection: "column",
@@ -21,16 +21,4 @@ export const innerWrapperStyles: SxStyleProp = {
 
 export const menuButtonStyles: SxStyleProp = {
   display: ["flex", "none"],
-  justifyContent: "center",
-  alignItems: "center",
-  userSelect: "none",
-  borderRadius: 0,
-  bg: "text",
-  color: "bg",
-  p: 0,
-  height: "3rem",
-  width: "3rem",
-  "&:active, &:focus": {
-    outline: "none",
-  },
 };
