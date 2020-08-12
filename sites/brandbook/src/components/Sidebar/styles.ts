@@ -18,3 +18,19 @@ export const innerWrapperStyles: SxStyleProp = {
   px: [6, 7],
   py: 7,
 };
+
+export const menuButtonStyles: SxStyleProp = {
+  display: ["flex", "none"],
+  justifyContent: "center",
+  alignItems: "center",
+  userSelect: "none",
+  borderRadius: 0,
+  bg: "text",
+  color: "bg",
+  p: 0,
+  height: "3rem",
+  width: "3rem",
+  "&:active, &:focus": {
+    outline: "none",
+  },
+};

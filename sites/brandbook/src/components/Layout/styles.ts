@@ -14,7 +14,8 @@ export const sidebarContainerStyles: SxStyleProp = {
 };
 
 export const innerWrapperStyles: SxStyleProp = {
-  p: 7,
+  py: 7,
+  px: [5, 7],
   bg: "background",
   width: "100%",
   overflowY: "scroll",
