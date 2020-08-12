@@ -1,42 +1,25 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui";
-import { Entry, useCurrentDoc } from "docz";
+import { jsx } from "theme-ui";
+import { useCurrentDoc } from "docz";
 import { FunctionComponent } from "react";
-import { MenuItem } from "../MenuItem";
-
-type Doc =
-  | Entry
-  | {
-      name: string;
-      route?: string;
-      entries: Entry[] | Doc;
-    };
+import { useMenus } from "hooks";
+import { Menu } from "../Menu";
+import { sidebarStyles } from "./styles";
+import { SlideOpen } from "./animations";
 
 export const Sidebar: FunctionComponent<{
-  menus: Doc[];
+  isSidebarOpen: boolean;
   className?: string;
-}> = ({ menus, className }) => {
+}> = ({ isSidebarOpen, className }) => {
   const currentDoc = useCurrentDoc();
-
+  const menus = useMenus();
   return (
-    <Box
+    <SlideOpen
       className={className}
-      sx={{
-        display: "flex",
-        minHeight: "100vh",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        overflowY: "scroll",
-        bg: "text",
-        px: [6,7],
-        py: 7,
-      }}
+      isSidebarOpen={isSidebarOpen}
+      sx={sidebarStyles}
     >
-      <Box>
-        {menus.map((menu: Doc) => (
-          <MenuItem currentDoc={currentDoc} key={menu.name} menu={menu} />
-        ))}
-      </Box>
-    </Box>
+      <Menu menus={menus} currentDoc={currentDoc} />
+    </SlideOpen>
   );
 };

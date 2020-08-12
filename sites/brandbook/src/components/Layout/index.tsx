@@ -1,11 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, useThemeUI } from "theme-ui";
-import { motion } from "framer-motion";
+import { jsx, Box, Container } from "theme-ui";
 import { Fragment, FunctionComponent, useState } from "react";
+import { useAppState } from "hooks";
 // todo: aliases
 // @ts-ignore
 import { useBreakpointIndex } from "@theme-ui/match-media";
-import { useMenus } from "hooks";
 import { Global } from "@emotion/core";
 import { Sidebar } from "../Sidebar";
 import {
@@ -15,30 +14,14 @@ import {
   sidebarContainerStyles,
 } from "./styles";
 
-const variants = {
-  hidden: { transform: "translate(-100%)" },
-  visible: { transform: "translate(0%)" },
-};
-
 const Layout: FunctionComponent = ({ children }) => {
-  const menus = useMenus();
-  const breakpointIndex = useBreakpointIndex();
-  const isMobile = breakpointIndex === 0;
-  const [isSidebarOpen, setSidebarOpen] = useState(isMobile ? false : true);
-  const { theme } = useThemeUI();
+  const [isSidebarOpen, setSidebarOpen] = useAppState();
   return (
     <Fragment>
       <Global styles={{ body: { margin: 0 } }} />
       <Box sx={outerWrapperStyles}>
-        <motion.div
-          sx={sidebarContainerStyles}
-          animate={isSidebarOpen ? "visible" : "hidden"}
-          transition={{ damping: 0 }}
-          variants={variants}
-        >
-          <Sidebar menus={menus} />
-        </motion.div>
-        <Box sx={innerWrapperStyles}>
+        <Sidebar isSidebarOpen={isSidebarOpen} sx={sidebarContainerStyles} />
+        <Container sx={innerWrapperStyles}>
           <button
             sx={menuButtonStyles}
             onClick={() => setSidebarOpen(!isSidebarOpen)}
@@ -46,7 +29,7 @@ const Layout: FunctionComponent = ({ children }) => {
             {isSidebarOpen ? "Close" : "Open"} Sidebar
           </button>
           {children}
-        </Box>
+        </Container>
       </Box>
     </Fragment>
   );

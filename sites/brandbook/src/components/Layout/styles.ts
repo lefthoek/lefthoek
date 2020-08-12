@@ -1,15 +1,16 @@
 import { SxStyleProp } from "theme-ui";
 
-export const outerWrapperStyles = {
+export const outerWrapperStyles: SxStyleProp = {
   display: "grid",
   height: "100vh",
   overflow: "hidden",
   gridTemplateColumns: ["auto", "21rem 3fr"],
 };
 
-export const sidebarContainerStyles = {
+export const sidebarContainerStyles: SxStyleProp = {
   position: ["absolute", "relative"],
   width: "21rem",
+  zIndex: 999,
   overflowY: "scroll",
   maxWidth: "75vw",
 };
@@ -21,8 +22,7 @@ export const innerWrapperStyles: SxStyleProp = {
   overflowY: "scroll",
 };
 
-export const menuButtonStyles = {
+export const menuButtonStyles: SxStyleProp = {
   width: "100%",
   display: ["block", "none"],
 };
-

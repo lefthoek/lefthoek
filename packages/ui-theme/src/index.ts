@@ -34,8 +34,20 @@ export const base = {
   },
   fonts: {
     body: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
-    heading: "inherit",
+    heading: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
     monospace: "Menlo, monospace",
+  },
+  text: {
+    heading: {
+      ...heading,
+      fontSize: 4,
+    },
+    subHeading: {
+      ...heading,
+      fontSize: 3,
+      fontWeight: "bold",
+      lineHeight: "body",
+    },
   },
   fontSizes: [12, 14, 16, 18, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -46,6 +58,7 @@ export const base = {
   lineHeights: {
     body: 1.5,
     heading: 1.125,
+    subHeading: 2,
   },
   colors: {
     text: colors.darkBlue,
