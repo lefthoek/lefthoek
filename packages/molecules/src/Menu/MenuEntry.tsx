@@ -31,6 +31,7 @@ export const MenuEntry: FunctionComponent<{
         inverse
         variant={isHeading ? "heading" : hasEntries ? "subHeading" : "link"}
         isActive={isActive}
+        to={menu.route}
         onClick={() => {
           const menuName = isOpen ? null : menu.name;
           setOpenMenu({
