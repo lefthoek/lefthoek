@@ -13,8 +13,9 @@ export const useAppState = () => {
   const currentDoc = useCurrentDoc();
   const menus = useMenus();
   const { menu, submenu } = currentDoc;
+
   const context = {
-    breakpointIndex,
+    breakpointIndex: 999,
     currentDoc,
     menus,
     openMenu: { menu, submenu },
