@@ -56,12 +56,14 @@ export const base = {
     heading: {
       ...heading,
       fontSize: 4,
+      mb: 5,
     },
     subHeading: {
       ...heading,
       fontSize: 3,
       fontWeight: "bold",
       lineHeight: "body",
+      mb: 2,
     },
   },
   fontSizes: [12, 14, 16, 18, 24, 32, 48, 64, 96],

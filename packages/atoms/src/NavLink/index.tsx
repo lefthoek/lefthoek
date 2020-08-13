@@ -4,36 +4,67 @@ import { Link } from "gatsby";
 import { FunctionComponent } from "react";
 import { linkStyles, entryStyles, headingStyles } from "./styles";
 
-export const NavLink: FunctionComponent<{
+type InnerLinkProps = {
   title: string;
   className?: string;
-  isHeading?: boolean;
+  inverse?: boolean;
   isActive?: boolean;
-  closeMenus?: () => void;
-  to: string;
-}> = ({
+  variant?: "heading" | "subHeading" | "link";
+  onClick?: () => void;
+};
+
+const InnerLink: FunctionComponent<InnerLinkProps> = ({
+  className,
+  isActive = false,
+  variant = "link",
+  inverse = true,
+  onClick,
+  title,
+}) => {
+  return variant === "link" ? (
+    <Text className={className} sx={entryStyles({ isActive, inverse })}>
+      {title}
+    </Text>
+  ) : (
+    <Heading
+      className={className}
+      variant={variant}
+      sx={headingStyles({ isActive, inverse })}
+      onClick={onClick}
+    >
+      {title}
+    </Heading>
+  );
+};
+
+export const NavLink: FunctionComponent<InnerLinkProps & { to?: string }> = ({
   title,
   className,
   isActive = false,
-  closeMenus,
-  isHeading = false,
+  onClick,
+  inverse = false,
+  variant = "link",
   to,
 }) => {
-  return (
+  return to ? (
     <Link key={title} sx={linkStyles} to={to}>
-      {isHeading ? (
-        <Heading
-          className={className}
-          sx={headingStyles({ level: 0, isActive })}
-          onClick={closeMenus}
-        >
-          {title}
-        </Heading>
-      ) : (
-        <Text className={className} sx={entryStyles({ isActive })}>
-          {title}
-        </Text>
-      )}
+      <InnerLink
+        variant={variant}
+        inverse={inverse}
+        className={className}
+        isActive={isActive}
+        onClick={onClick}
+        title={title}
+      />
     </Link>
+  ) : (
+    <InnerLink
+      inverse={inverse}
+      variant={variant}
+      className={className}
+      isActive={isActive}
+      onClick={onClick}
+      title={title}
+    />
   );
 };

@@ -6,23 +6,27 @@ export const linkStyles = {
 };
 
 export const headingStyles: (args: {
-  level?: number;
   isActive?: boolean;
-}) => SxStyleProp = ({ isActive = false }) => {
+  inverse: boolean;
+}) => SxStyleProp = ({ isActive = false, inverse }) => {
+  const baseColor = inverse ? "background" : "text";
   return {
     userSelect: "none",
-    color: isActive ? "accent" : "text",
+    color: isActive ? "accent" : baseColor,
   };
 };
 
-export const entryStyles: (args: { isActive: boolean }) => SxStyleProp = ({
-  isActive,
-}) => {
+export const entryStyles: (args: {
+  isActive: boolean;
+  inverse: boolean;
+}) => SxStyleProp = ({ isActive, inverse }) => {
+  const baseColor = inverse ? "background" : "text";
   return {
     userSelect: "none",
     fontSize: 3,
+    mb: 2,
     fontWeight: "body",
     lineHeight: "body",
-    color: isActive ? "accent" : "text",
+    color: isActive ? "accent" : baseColor,
   };
 };

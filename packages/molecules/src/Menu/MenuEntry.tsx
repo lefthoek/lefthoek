@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import { jsx, Heading, Box } from "theme-ui";
+import { jsx, Box } from "theme-ui";
 import { FunctionComponent } from "react";
 import { NavLink } from "@lefthoek/atoms";
 import { Doc, Entry, OpenMenu } from "@lefthoek/types";
 import { SlideOpen } from "./animations";
-import { linkStyles } from "./styles";
 
 export const MenuEntry: FunctionComponent<{
   level?: number;
@@ -22,34 +21,24 @@ export const MenuEntry: FunctionComponent<{
   className,
 }) => {
   const isOpen = menu.name === openMenu.menu || menu.name === openMenu.submenu;
-  const isSubHeading = level === 1;
   const isHeading = level === 0;
-  const headingVariant = isSubHeading ? "subHeading" : "heading";
   const isActive = currentDoc.name === menu.name;
+  const hasEntries = !!menu.entries;
   return (
     <Box className={className} key={menu.name}>
-      {menu.route ? (
-        <NavLink
-          title={menu.name}
-          sx={linkStyles({ isActive, isHeading })}
-          isHeading={level === 0 ? true : false}
-          to={menu.route}
-        />
-      ) : (
-        <Heading
-          variant={headingVariant}
-          sx={linkStyles({ isActive, isHeading, isOpen })}
-          onClick={() => {
-            const menuName = isOpen ? null : menu.name;
-            setOpenMenu({
-              menu: isSubHeading ? null : menuName,
-              submenu: isSubHeading ? menuName : null,
-            });
-          }}
-        >
-          {menu.name}
-        </Heading>
-      )}
+      <NavLink
+        title={menu.name}
+        inverse
+        variant={isHeading ? "heading" : hasEntries ? "subHeading" : "link"}
+        isActive={isActive}
+        onClick={() => {
+          const menuName = isOpen ? null : menu.name;
+          setOpenMenu({
+            menu: isHeading ? menuName : null,
+            submenu: isHeading ? null : menuName,
+          });
+        }}
+      />
       <SlideOpen sx={{ mb: 5 }} isOpen={isOpen}>
         {menu.entries?.map((entry: Entry) => (
           <MenuEntry

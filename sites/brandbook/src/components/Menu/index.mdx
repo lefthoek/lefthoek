@@ -17,7 +17,8 @@ import { Menu } from './Menu'
 
 
 <Playground>
-   <Menu currentDoc={{menu: "something"}} menu={
+   <Menu currentDoc={{menu: "something"}} openMenu={{menu: "something"}}
+   setOpenMenu={(x) => alert(JSON.stringify(x, null,2))} menu={
      [
        {name: "something", entries: [
          {name: "one"},
