@@ -1,0 +1,30 @@
+---
+name: Menu
+menu: Components
+submenu: Molecules
+---
+
+import { Playground, Props } from 'docz'
+import { Menu } from './Menu'
+
+# Menu
+
+## Properties
+
+<Props of={Menu} />
+
+## Basic usage
+
+
+<Playground>
+   <Menu currentDoc={{menu: "something"}} menu={
+     [
+       {name: "something", entries: [
+         {name: "one"},
+         {name: "two"},
+         {name: "three"},
+         {name: "four"}
+         ]}
+     ]
+  } />
+</Playground>

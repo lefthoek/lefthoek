@@ -11,14 +11,13 @@ import { OpenMenu } from "@lefthoek/types";
 export const useAppState = () => {
   const breakpointIndex = useBreakpointIndex();
   const currentDoc = useCurrentDoc();
-  const menus = useMenus();
-  const { menu, submenu } = currentDoc;
+  const menu = useMenus();
 
   const context = {
     breakpointIndex: 999,
     currentDoc,
-    menus,
-    openMenu: { menu, submenu },
+    menu,
+    openMenu: currentDoc,
   };
 
   const [current, send] = useMachine(machine, {
@@ -42,7 +41,7 @@ export const useAppState = () => {
   return {
     openMenu: current.context.openMenu,
     setOpenMenu,
-    menus: current.context.menus,
+    menu: current.context.menu,
     currentDoc: current.context.currentDoc,
     isSidebarOpen,
     toggleSidebar,

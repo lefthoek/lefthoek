@@ -4,7 +4,7 @@ import { FunctionComponent } from "react";
 // todo: ts-aliases
 // @ts-ignore
 import { useAppState } from "hooks";
-import { Menu } from "../Menu";
+import { Menu } from "@lefthoek/molecules";
 import {
   outerWrapperStyles,
   innerWrapperStyles,
@@ -18,7 +18,7 @@ export const Sidebar: FunctionComponent<{
   const {
     toggleSidebar,
     isSidebarOpen,
-    menus,
+    menu,
     currentDoc,
     setOpenMenu,
     openMenu,
@@ -31,7 +31,7 @@ export const Sidebar: FunctionComponent<{
     >
       <Box sx={innerWrapperStyles}>
         <Menu
-          menus={menus}
+          menu={menu}
           setOpenMenu={setOpenMenu}
           currentDoc={currentDoc}
           openMenu={openMenu}

@@ -10,14 +10,15 @@ const variants = {
 
 const transition = { duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] };
 
-export const SlideOpen: FunctionComponent<{ isOpen: boolean }> = ({
-  isOpen,
-  children,
-}) => {
+export const SlideOpen: FunctionComponent<{
+  className?: string;
+  isOpen: boolean;
+}> = ({ isOpen, className, children }) => {
   return (
     <AnimatePresence initial={false}>
       {isOpen && (
         <motion.section
+          className={className}
           key="content"
           initial="collapsed"
           animate="open"

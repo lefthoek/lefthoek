@@ -4,7 +4,7 @@ import { CurrentDoc, OpenMenu, Doc } from "@lefthoek/types";
 
 export interface AppStateContext {
   breakpointIndex: number;
-  menus: Doc[];
+  menu: Doc[];
   currentDoc: CurrentDoc;
   openMenu: OpenMenu;
 }
