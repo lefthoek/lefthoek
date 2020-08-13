@@ -9,7 +9,11 @@ export const outerWrapperStyles: SxStyleProp = {
 
 export const sidebarContainerStyles: SxStyleProp = {
   position: ["absolute", "relative"],
-  width: ["100%", "21rem"],
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  width: ["auto", "21rem"],
   zIndex: 999,
 };
 

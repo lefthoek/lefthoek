@@ -9,14 +9,23 @@ export const NavLink: FunctionComponent<{
   className?: string;
   isHeading?: boolean;
   isActive?: boolean;
+  closeMenus?: () => void;
   to: string;
-}> = ({ title, className, isActive = false, isHeading = false, to }) => {
+}> = ({
+  title,
+  className,
+  isActive = false,
+  closeMenus,
+  isHeading = false,
+  to,
+}) => {
   return (
     <Link key={title} sx={linkStyles} to={to}>
       {isHeading ? (
         <Heading
           className={className}
           sx={headingStyles({ level: 0, isActive })}
+          onClick={closeMenus}
         >
           {title}
         </Heading>

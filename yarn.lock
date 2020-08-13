@@ -2468,6 +2468,16 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@xstate/immer@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@xstate/immer/-/immer-0.1.0.tgz#34123ff18c13553ae4ecc2498994180829d432b1"
+  integrity sha512-jiZf/ms4uZDUUz5UXqGUPEOXb/4VUjnawVsOIDPbXeiOKXhcTplNcJAyYWwxcXoo8to/VgKZm7nn8EBLhTJuAQ==
+
+"@xstate/react@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.npmjs.org/@xstate/react/-/react-0.8.1.tgz#df200547cca24c909572b7aef1ddab8bca3a0603"
+  integrity sha512-8voZm4GX3x70lNQVvoGedoObPYapkQIbgMhE+xOQEsm8Ait4Zto6R01SZ6WJD4qvLl8JPV6uq96OcFRdEsVESg==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -8723,6 +8733,11 @@ ignore@^5.0.0, ignore@^5.1.1:
   version "5.1.8"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
+
+immer@^6.0.3:
+  version "6.0.9"
+  resolved "https://registry.npmjs.org/immer/-/immer-6.0.9.tgz#b9dd69b8e69b3a12391e87db1e3ff535d1b26485"
+  integrity sha512-SyCYnAuiRf67Lvk0VkwFvwtDoEiCMjeamnHvRfnVDyc7re1/rQrNxuL+jJ7lA3WvdC4uznrvbmm+clJ9+XXatg==
 
 import-cwd@^2.0.0:
   version "2.1.0"

@@ -15,7 +15,14 @@ import { SlideOpen } from "./animations";
 export const Sidebar: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
-  const { menus, isSidebarOpen, currentDoc, setSidebarOpen } = useAppState();
+  const {
+    toggleSidebar,
+    isSidebarOpen,
+    menus,
+    currentDoc,
+    setOpenMenu,
+    openMenu,
+  } = useAppState();
   return (
     <SlideOpen
       className={className}
@@ -23,12 +30,14 @@ export const Sidebar: FunctionComponent<{
       sx={outerWrapperStyles}
     >
       <Box sx={innerWrapperStyles}>
-        <Menu menus={menus} currentDoc={currentDoc} />
+        <Menu
+          menus={menus}
+          setOpenMenu={setOpenMenu}
+          currentDoc={currentDoc}
+          openMenu={openMenu}
+        />
       </Box>
-      <MenuButton
-        sx={menuButtonStyles}
-        onClick={() => setSidebarOpen(!isSidebarOpen)}
-      />
+      <MenuButton sx={menuButtonStyles} onClick={toggleSidebar} />
     </SlideOpen>
   );
 };

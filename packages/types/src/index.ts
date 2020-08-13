@@ -8,3 +8,6 @@ export type Doc =
       route?: string;
       entries: Entry[] | Doc;
     };
+
+export type CurrentDoc = { name: string; menu: string; submenu?: string };
+export type OpenMenu = { menu: string | null; submenu?: string | null };

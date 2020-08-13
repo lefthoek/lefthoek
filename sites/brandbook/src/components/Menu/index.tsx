@@ -1,14 +1,16 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 import { FunctionComponent } from "react";
-import { Doc } from "@lefthoek/types";
+import { Doc, OpenMenu } from "@lefthoek/types";
 import { NavLink } from "@lefthoek/atoms";
 import { SubMenu } from "@lefthoek/molecules";
 
 export const Menu: FunctionComponent<{
   menus: Doc[];
   currentDoc: { name: string; menu: string };
-}> = ({ menus, currentDoc }) => {
+  setOpenMenu: (menu: OpenMenu) => void;
+  openMenu: OpenMenu;
+}> = ({ menus, currentDoc, setOpenMenu, openMenu }) => {
   return (
     <Box>
       {menus.map((menu) => {
@@ -22,10 +24,18 @@ export const Menu: FunctionComponent<{
             sx={{ color: isActive ? "accent" : "background" }}
             isActive={isActive}
             isHeading
+            closeMenus={() => {
+              setOpenMenu({ menu: null, submenu: null });
+            }}
             title={menu.name}
           />
         ) : (
-          <SubMenu currentDoc={currentDoc} menu={menu} />
+          <SubMenu
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            currentDoc={currentDoc}
+            menu={menu}
+          />
         );
       })}
     </Box>
