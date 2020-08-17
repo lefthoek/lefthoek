@@ -53,6 +53,13 @@ export const base = {
     },
   },
   text: {
+    smallBody: {
+      color: "text",
+      fontFamily: "body",
+      fontWeight: 400,
+      lineHeight: "25px",
+      fontSize: 1,
+    },
     heading: {
       ...heading,
       fontSize: 4,
@@ -66,7 +73,7 @@ export const base = {
       mb: 2,
     },
   },
-  fontSizes: [12, 14, 16, 18, 24, 32, 48, 64, 96],
+  fontSizes: [14, 16, 18, 20, 24, 34, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -94,33 +101,45 @@ export const base = {
     },
     h1: {
       ...heading,
-      fontSize: 5,
+      fontWeight: 500,
+      lineHeight: "70px",
+      fontSize: 7,
     },
     h2: {
       ...heading,
-      fontSize: 4,
+      fontWeight: 600,
+      lineHeight: "64px",
+      fontSize: 6,
     },
     h3: {
       ...heading,
-      fontSize: 3,
+      fontWeight: 600,
+      lineHeight: "38px",
+      fontSize: 5,
     },
     h4: {
       ...heading,
-      fontSize: 2,
+      fontWeight: 700,
+      lineHeight: "30px",
+      fontSize: 4,
     },
     h5: {
       ...heading,
+      fontWeight: 700,
+      color: "primary",
+      borderBottom: "1px solid lightgray",
+      pb: "0.5rem",
+      textTransform: "uppercase",
+      lineHeight: "20px",
+      letterSpacing: 1,
       fontSize: 1,
-    },
-    h6: {
-      ...heading,
-      fontSize: 0,
     },
     p: {
       color: "text",
       fontFamily: "body",
-      fontWeight: "body",
-      lineHeight: "body",
+      fontWeight: 500,
+      fontSize: 2,
+      lineHeight: "28px",
     },
     a: {
       color: "primary",
@@ -156,3 +175,4 @@ export const base = {
 };
 
 export default base;
+
