@@ -7,11 +7,11 @@ const heading = {
 
 const colors = {
   white: "#FFFFFF",
-  pink: "#E5E5E5",
-  orange: "#D15B1B",
-  violet: "#784CFB",
-  darkBlue: "#32334E",
-  green: "#90FFCC",
+  midnight: "#32334E",
+  cipria: "#FCF2F5",
+  lobster: "#D15B1B",
+  skyBlue: "#784CFB",
+  brightGreen: "#90FFCC",
 };
 
 export const base = {
@@ -45,7 +45,7 @@ export const base = {
       borderRadius: 0,
       width: "3rem",
       "> svg": {
-        fill: colors.pink,
+        fill: colors.cipria,
       },
       "&:active, &:focus": {
         outline: "none",
@@ -84,14 +84,21 @@ export const base = {
     heading: 1.125,
     subHeading: 2,
   },
+  primaryColors: [
+    colors.cipria,
+    colors.midnight,
+    colors.brightGreen,
+    colors.skyBlue,
+    colors.lobster,
+  ],
   colors: {
-    text: colors.darkBlue,
-    muted: colors.pink,
-    primary: colors.violet,
-    background: colors.pink,
-    accent: colors.green,
-    highlight: colors.green,
-    secondary: colors.orange,
+    text: colors.midnight,
+    muted: colors.cipria,
+    primary: colors.skyBlue,
+    background: colors.white,
+    accent: colors.brightGreen,
+    highlight: colors.brightGreen,
+    secondary: colors.lobster,
   },
   styles: {
     root: {
@@ -175,4 +182,3 @@ export const base = {
 };
 
 export default base;
-
