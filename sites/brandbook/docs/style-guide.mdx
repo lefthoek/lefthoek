@@ -4,21 +4,12 @@ menu: Branding
 route: /style-guide
 ---
 
-import { ColorSection } from "../src/components/ColorSection"
-import { TypographySection } from "../src/components/TypographySection"
-import { Styled, Heading, Text } from "theme-ui"
+import { StyleGuide } from "../src/components/StyleGuide"
+
 export const colorMessage = `
   Our primary brand colors are white and black. They are used to
   provide accessibility, simplicity, and consistency throughout all brand
   communications
 `
 
-##### Colors
-
-<ColorSection message={colorMessage} />
-
-
-##### Typography
-
-<TypographySection />
-
+<StyleGuide message={colorMessage}/>

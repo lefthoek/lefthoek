@@ -1,27 +1,28 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Box, useThemeUI, AspectRatio, Text } from "theme-ui";
+import { jsx, Box, Text } from "theme-ui";
 import { chain } from "voca";
+import { ColorSwatch } from "./ColorSwatch";
+import { captionStyles, gradientStyles, gradientsStyles } from "./styles";
 
 const ColorGradient: FunctionComponent<{ color: [string, string] }> = ({
   color: [name, colorValue],
 }) => {
   const values = [0.4, 0.6, 0.8, 1];
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
-      {values.map((value) => (
-        <AspectRatio
-          ratio={value === 1 ? 1 / 1 : 2 / 1}
-          sx={{ bg: colorValue, opacity: value }}
+    <Box sx={gradientStyles}>
+      {values.map((opacity) => (
+        <ColorSwatch
+          color={colorValue}
+          sx={{ opacity }}
+          ratio={opacity === 1 ? 1 / 1 : 2 / 1}
         />
       ))}
-      <Box sx={{ mt: "1rem" }}>
-        <Text variant="smallBody" sx={{ fontSize: [0, 1] }}>
+      <Box sx={captionStyles}>
+        <Text variant="smallBody">
           {chain(name).kebabCase().replaceAll("-", " ").titleCase().value()}
         </Text>
-        <Text variant="smallBody" sx={{ fontSize: [0, 1] }}>
-          {colorValue}
-        </Text>
+        <Text variant="smallBody">{colorValue}</Text>
       </Box>
     </Box>
   );
@@ -31,13 +32,7 @@ const ColorGradients: FunctionComponent<{ colors: Record<string, string> }> = ({
   colors,
 }) => {
   return (
-    <Box
-      sx={{
-        display: "grid",
-        gridGap: "2rem",
-        gridTemplateColumns: ["repeat(2, 1fr)", "repeat(5, 1fr)"],
-      }}
-    >
+    <Box sx={gradientsStyles}>
       {Object.entries(colors).map((color) => (
         <ColorGradient color={color} />
       ))}

@@ -7,11 +7,12 @@ export const linkStyles = {
 
 export const headingStyles: (args: {
   isActive?: boolean;
+  isSmallHeading?: boolean;
   inverse: boolean;
-}) => SxStyleProp = ({ isActive = false, inverse }) => {
+}) => SxStyleProp = ({ isActive = false, isSmallHeading = false, inverse }) => {
   const baseColor = inverse ? "background" : "text";
   return {
-    mb: 4,
+    mb: isSmallHeading ? 3 : 6,
     userSelect: "none",
     color: isActive ? "accent" : baseColor,
   };

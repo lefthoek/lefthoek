@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import { FunctionComponent } from "react";
 import { linkStyles, entryStyles, headingStyles } from "./styles";
 
-
 type InnerLinkProps = {
   title: string;
   className?: string;
@@ -30,7 +29,11 @@ const InnerLink: FunctionComponent<InnerLinkProps> = ({
     <Heading
       className={className}
       variant={variant}
-      sx={headingStyles({ isActive, inverse })}
+      sx={headingStyles({
+        isActive,
+        inverse,
+        isSmallHeading: variant === "smallHeading",
+      })}
       onClick={onClick}
     >
       {title}
