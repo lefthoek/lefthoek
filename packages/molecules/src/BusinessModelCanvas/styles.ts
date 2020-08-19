@@ -5,7 +5,7 @@ export const canvasStyles = {
   gridTemplateRow: "repeat(3, 10rem)",
   p: 0,
   m: 0,
-  gridGap: "1rem",
+  gridGap: 3,
 
   ".key-partnerships": {
     order: 1,

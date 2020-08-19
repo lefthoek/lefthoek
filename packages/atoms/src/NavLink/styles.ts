@@ -12,7 +12,7 @@ export const headingStyles: (args: {
 }) => SxStyleProp = ({ isActive = false, isSmallHeading = false, inverse }) => {
   const baseColor = inverse ? "background" : "text";
   return {
-    mb: isSmallHeading ? 2 : 6,
+    mb: isSmallHeading ? 2 : 5,
     userSelect: "none",
     color: isActive ? "accent" : baseColor,
   };
