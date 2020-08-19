@@ -26,7 +26,7 @@ export const lineStyles = {
 
 export const gradientsStyles: SxStyleProp = {
   display: ["grid"],
-  gridGap: [7],
+  gridGap: [3, 3, 3, 4, 5],
   gridTemplateColumns: ["repeat(2, 1fr)", "repeat(5, 1fr)"],
 };
 
@@ -44,7 +44,7 @@ export const paletteStyles = {
   display: "grid",
   width: "100%",
   gridTemplateColumns: ["repeat(2, 1fr)", "repeat(6, 1fr)"],
-  gridGap: ["2rem"],
+  gridGap: [3, 3, 3, 4, 5],
   gridTemplateRows: ["repeat(6, 1fr)", "repeat(2, 1fr)"],
   "> .color-0": {
     gridRow: ["1/3", "1/3"],
