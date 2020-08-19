@@ -11,6 +11,7 @@ export const headingStyles: (args: {
 }) => SxStyleProp = ({ isActive = false, inverse }) => {
   const baseColor = inverse ? "background" : "text";
   return {
+    mb: 4,
     userSelect: "none",
     color: isActive ? "accent" : baseColor,
   };

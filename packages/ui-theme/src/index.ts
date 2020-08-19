@@ -6,16 +6,16 @@ const heading = {
 };
 
 const colors = {
-  white: "#FFFFFF",
-  midnight: "#32334E",
   cipria: "#FCF2F5",
-  lobster: "#D15B1B",
-  skyBlue: "#784CFB",
+  midnight: "#32334E",
   brightGreen: "#90FFCC",
+  skyBlue: "#784CFB",
+  lobster: "#D15B1B",
 };
 
 export const base = {
   space: [0, 4, 8, 16, 24, 32, 48, 64, 80],
+  fontSizes: [14, 16, 18, 20, 24, 34, 48, 64, 96],
   cards: {
     primary: {
       display: "grid",
@@ -53,6 +53,50 @@ export const base = {
     },
   },
   text: {
+    displayText: {
+      fontSize: 7,
+      lineHeight: "70px",
+      fontWeight: 500,
+      fontFamily: "body",
+    },
+    extraLargeHeading: {
+      fontSize: 6,
+      lineHeight: "52px",
+      fontWeight: 600,
+      fontFamily: "body",
+    },
+    largeHeading: {
+      fontSize: 5,
+      lineHeight: "38px",
+      fontWeight: 600,
+      fontFamily: "body",
+    },
+    heading: {
+      fontSize: 4,
+      lineHeight: "30px",
+      fontWeight: 700,
+      fontFamily: "body",
+    },
+    smallHeading: {
+      fontSize: 3,
+      lineHeight: "26px",
+      fontWeight: 600,
+      fontFamily: "body",
+    },
+    sectionHeading: {
+      fontSize: 0,
+      lineHeight: "20px",
+      fontWeight: 700,
+      textTransform: "uppercase",
+      letterSpacing: 1,
+      fontFamily: "body",
+    },
+    body: {
+      fontSize: 2,
+      lineHeight: "28px",
+      fontWeight: 500,
+      fontFamily: "body",
+    },
     smallBody: {
       color: "text",
       fontFamily: "body",
@@ -60,20 +104,7 @@ export const base = {
       lineHeight: "25px",
       fontSize: 1,
     },
-    heading: {
-      ...heading,
-      fontSize: 4,
-      mb: 5,
-    },
-    subHeading: {
-      ...heading,
-      fontSize: 3,
-      fontWeight: "bold",
-      lineHeight: "body",
-      mb: 2,
-    },
   },
-  fontSizes: [14, 16, 18, 20, 24, 34, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -84,18 +115,12 @@ export const base = {
     heading: 1.125,
     subHeading: 2,
   },
-  primaryColors: [
-    colors.cipria,
-    colors.midnight,
-    colors.brightGreen,
-    colors.skyBlue,
-    colors.lobster,
-  ],
+  primaryColors: colors,
   colors: {
     text: colors.midnight,
     muted: colors.cipria,
     primary: colors.skyBlue,
-    background: colors.white,
+    background: "white",
     accent: colors.brightGreen,
     highlight: colors.brightGreen,
     secondary: colors.lobster,

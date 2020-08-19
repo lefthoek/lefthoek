@@ -4,12 +4,13 @@ import { Link } from "gatsby";
 import { FunctionComponent } from "react";
 import { linkStyles, entryStyles, headingStyles } from "./styles";
 
+
 type InnerLinkProps = {
   title: string;
   className?: string;
   inverse?: boolean;
   isActive?: boolean;
-  variant?: "heading" | "subHeading" | "link";
+  variant?: "heading" | "smallHeading" | "link";
   onClick?: () => void;
 };
 
