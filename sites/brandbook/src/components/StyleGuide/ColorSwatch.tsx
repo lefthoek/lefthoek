@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Box, AspectRatio } from "theme-ui";
+import { jsx, Box, Text,AspectRatio } from "theme-ui";
 import { swatchStyles } from "./styles";
 
 const ColorSwatch: FunctionComponent<{
@@ -8,11 +8,11 @@ const ColorSwatch: FunctionComponent<{
   isLarge?: boolean;
   ratio?: number;
   color: string;
-}> = ({ className, isLarge= true, color, ratio = 1 / 1, children }) => {
+}> = ({ className, isLarge = true, color, ratio = 1 / 1, children }) => {
   return (
     <Box className={className}>
-      <AspectRatio ratio={ratio} sx={swatchStyles({ color, isLarge})}>
-        {children}
+      <AspectRatio ratio={ratio} sx={swatchStyles({ color, isLarge })}>
+        <Text>{children}</Text>
       </AspectRatio>
     </Box>
   );

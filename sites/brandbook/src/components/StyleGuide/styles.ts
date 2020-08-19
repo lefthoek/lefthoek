@@ -50,31 +50,34 @@ export const paletteStyles = {
     gridRow: ["1/3", "1/3"],
     gridColumn: ["1/3", "1/3"],
     color: "secondary",
-    fontSize: 4,
+    fontSize: 2,
   },
   "> .color-1": {
     gridColumn: ["1/3", "3/5"],
     gridRow: ["3/5", "1/3"],
     color: "muted",
-    fontSize: 4,
+    fontSize: 2,
   },
   ">  .color-2": {
     gridColumn: ["1/2", "5/6"],
     gridRow: ["5/6", "1/2"],
     color: "primary",
     fontSize: "10px",
+    lineHeight: "14px",
   },
   "> .color-3": {
     gridColumn: ["2/3", "5/6"],
     gridRow: ["5/6", "2/3"],
     color: "accent",
     fontSize: "10px",
+    lineHeight: "14px",
   },
   "> .color-4": {
     gridColumn: ["1/2", "6/7"],
     gridRow: ["6/7", "1/2"],
     color: "text",
     fontSize: "10px",
+    lineHeight: "14px",
   },
 };
 
