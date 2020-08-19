@@ -12,7 +12,7 @@ export const headingStyles: (args: {
 }) => SxStyleProp = ({ isActive = false, isSmallHeading = false, inverse }) => {
   const baseColor = inverse ? "background" : "text";
   return {
-    mb: isSmallHeading ? 3 : 6,
+    mb: isSmallHeading ? 2 : 6,
     userSelect: "none",
     color: isActive ? "accent" : baseColor,
   };
@@ -25,10 +25,7 @@ export const entryStyles: (args: {
   const baseColor = inverse ? "background" : "text";
   return {
     userSelect: "none",
-    fontSize: 3,
     mb: 2,
-    fontWeight: "body",
-    lineHeight: "body",
     color: isActive ? "accent" : baseColor,
   };
 };

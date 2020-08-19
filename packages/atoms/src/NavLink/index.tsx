@@ -22,7 +22,7 @@ const InnerLink: FunctionComponent<InnerLinkProps> = ({
   title,
 }) => {
   return variant === "link" ? (
-    <Text className={className} sx={entryStyles({ isActive, inverse })}>
+    <Text variant="smallBody" className={className} sx={entryStyles({ isActive, inverse })}>
       {title}
     </Text>
   ) : (
