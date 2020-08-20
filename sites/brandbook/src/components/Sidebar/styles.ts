@@ -9,7 +9,7 @@ export const outerWrapperStyles: SxStyleProp = {
 
 export const innerWrapperStyles: SxStyleProp = {
   display: "flex",
-  width: ["80%", "100%"],
+  width: ["80%", "80%", "100%"],
   minHeight: "100vh",
   justifyContent: "flex-start",
   flexDirection: "column",
@@ -20,5 +20,5 @@ export const innerWrapperStyles: SxStyleProp = {
 };
 
 export const menuButtonStyles: SxStyleProp = {
-  display: ["flex", "none"],
+  display: ["flex", "flex", "none"],
 };

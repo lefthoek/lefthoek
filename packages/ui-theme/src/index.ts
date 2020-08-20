@@ -16,6 +16,7 @@ export const base = {
     "4rem",
     "8rem",
   ],
+  breakpoints: ["40rem", "64rem", "100rem"],
   fontSizes: [14, 16, 18, 20, 24, 34, 48, 64, 96],
   fontWeights: {
     body: 400,
