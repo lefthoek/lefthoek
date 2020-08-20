@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Box, Heading, useThemeUI, Text } from "theme-ui";
+import { jsx, Box, Button, Heading, useThemeUI, Text } from "theme-ui";
+import { useBreakpointIndex } from "@theme-ui/match-media";
 import { ColorGradients } from "./ColorGradient";
 import { ColorPalette } from "./ColorPalette";
 import { SampleLine } from "./Typography";
@@ -9,7 +10,7 @@ import { wrapperStyles, lineStyles, sectionStyles } from "./styles";
 const Section: FunctionComponent<{ title: string }> = ({ children, title }) => {
   return (
     <Box sx={sectionStyles}>
-      <Heading as="h1" variant="sectionHeading">
+      <Heading as="h2" variant="sectionHeading">
         {title}
       </Heading>
       {children}
@@ -18,12 +19,13 @@ const Section: FunctionComponent<{ title: string }> = ({ children, title }) => {
 };
 
 const StyleGuide: FunctionComponent<{ message: string }> = ({ message }) => {
+  const breakpointIndex = useBreakpointIndex();
   const { theme } = useThemeUI();
-  const { primaryColors, text, fontSizes, fonts } = theme;
+  const { primaryColors, text, buttons, fontSizes, fonts } = theme;
   return (
     <Box sx={wrapperStyles}>
       <Section title="colors">
-        <Text>{message}</Text>
+        <Text as="p">{message}</Text>
         <ColorPalette colors={primaryColors} />
         <ColorGradients colors={primaryColors} />
       </Section>
@@ -37,6 +39,32 @@ const StyleGuide: FunctionComponent<{ message: string }> = ({ message }) => {
             fontSizes={fontSizes}
           />
         ))}
+      </Section>
+      <Section title="buttons">
+        <Box sx={{ mb: 6 }}>
+          {Object.keys(primaryColors).map((color) => (
+            <Box
+              sx={{
+                display: "flex",
+                mb: 4,
+                flexDirection: "row",
+              }}
+            >
+              <Button sx={{ mr: 4 }} variant={color}>
+                button
+              </Button>
+
+              {breakpointIndex !== 0 && (
+                <Button className="hover" sx={{ mr: 4 }} variant={color}>
+                  button
+                </Button>
+              )}
+              <Button disabled variant={color}>
+                button
+              </Button>
+            </Box>
+          ))}
+        </Box>
       </Section>
     </Box>
   );

@@ -4,6 +4,7 @@ import { tint } from "@theme-ui/color";
 const midnight = {
   display: "flex",
   alignItems: "center",
+  justifySelf: "flex-start",
   textAlign: "center",
   bg: "text",
   color: "muted",
@@ -15,7 +16,7 @@ const midnight = {
   px: 5,
   letterSpacing: "0.02em",
   borderRadius: "3.5rem",
-  "&:hover": {
+  "&:hover, &.hover": {
     bg: tint("text", 0.2),
   },
   "&:disabled": {
@@ -30,7 +31,7 @@ const skyBlue = {
   ...midnight,
   bg: "primary",
   color: "accent",
-  "&:hover": {
+  "&:hover, &.hover": {
     bg: tint("primary", 0.2),
   },
   "&:disabled": {
@@ -42,7 +43,7 @@ const brightGreen = {
   ...midnight,
   bg: "accent",
   color: "primary",
-  "&:hover": {
+  "&:hover, &.hover": {
     bg: tint("accent", 0.4),
   },
   "&:disabled": {
@@ -54,7 +55,7 @@ const lobster = {
   ...midnight,
   bg: "secondary",
   color: "muted",
-  "&:hover": {
+  "&:hover, &.hover": {
     bg: tint("secondary", 0.2),
   },
   "&:disabled": {
@@ -66,7 +67,7 @@ const cipria = {
   ...midnight,
   bg: "muted",
   color: "secondary",
-  "&:hover": {
+  "&:hover, &.hover": {
     bg: tint("muted", 0.4),
   },
   "&:disabled": {

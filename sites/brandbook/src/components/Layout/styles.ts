@@ -22,6 +22,7 @@ export const innerWrapperStyles: SxStyleProp = {
   px: [5, 7],
   bg: "background",
   width: "100%",
+  maxWidth: "64rem",
   overflowY: "scroll",
 };
 

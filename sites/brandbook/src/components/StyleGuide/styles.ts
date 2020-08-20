@@ -3,15 +3,17 @@ import { SxStyleProp } from "theme-ui";
 export const wrapperStyles = {
   display: "grid",
   gridTemplateRows: "auto 1fr",
-  gridRowGap: [8],
-  maxWidth: "1024px",
+  gridRowGap: [9],
 };
 
 export const sectionStyles = {
   display: "grid",
   gridTemplateRows: "auto 1fr",
   gridRowGap: [7],
-  h1: {
+  "&:first-of-type": {
+    mt: 5,
+  },
+  h2: {
     color: "primary",
     borderBottom: "1px solid lightgray",
     borderColor: "muted",

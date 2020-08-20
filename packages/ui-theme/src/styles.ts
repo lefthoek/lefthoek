@@ -2,8 +2,8 @@ import { text } from "./typography";
 
 export const styles = {
   root: text.body,
-  h1: text.displayText,
-  h2: text.extraLargeHeading,
+  h1: { ...text.displayText, mb: 6 },
+  h2: { ...text.extraLargeHeading, mt: 8, mb: 4 },
   h3: text.largeHeading,
   h4: text.heading,
   h5: text.smallHeading,
@@ -14,7 +14,7 @@ export const styles = {
     borderColor: "muted",
     pb: 2,
   },
-  p: text.body,
+  p: { ...text.body, mb: 4 },
   a: {
     color: "primary",
   },
