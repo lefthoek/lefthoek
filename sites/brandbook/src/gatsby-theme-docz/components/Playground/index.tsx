@@ -23,7 +23,7 @@ const Playground: FunctionComponent<{
       theme={theme.prism.light}
     >
       <LiveEditor />
-      <Box sx={{ bg: "text", p: 4 }}>
+      <Box sx={{ bg: "white", p: 4, "> div *": { mb: 5 } }}>
         <LivePreview />
       </Box>
       <LiveError />

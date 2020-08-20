@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx, Box, Text } from "theme-ui";
+import { tint } from "@theme-ui/color";
 import { chain } from "voca";
 import { ColorSwatch } from "./ColorSwatch";
 import { captionStyles, gradientStyles, gradientsStyles } from "./styles";
@@ -8,14 +9,13 @@ import { captionStyles, gradientStyles, gradientsStyles } from "./styles";
 const ColorGradient: FunctionComponent<{ color: [string, string] }> = ({
   color: [name, colorValue],
 }) => {
-  const values = [0.4, 0.6, 0.8, 1];
+  const values = [0.6, 0.4, 0.2, 0];
   return (
     <Box sx={gradientStyles}>
       {values.map((opacity) => (
         <ColorSwatch
-          color={colorValue}
-          sx={{ opacity }}
-          ratio={opacity === 1 ? 1 / 1 : 2 / 1}
+          color={tint(colorValue, opacity)}
+          ratio={opacity === 0 ? 1 / 1 : 2 / 1}
         />
       ))}
       <Box sx={captionStyles}>
