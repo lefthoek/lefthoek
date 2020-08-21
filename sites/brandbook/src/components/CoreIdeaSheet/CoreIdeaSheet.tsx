@@ -18,8 +18,8 @@ const sectionStyle = {
 
 const sheetStyle = {
   display: "grid",
-  gridTemplateColumns: "3fr 4fr",
-  gridTemplateRows: "repeat(3, 1fr)",
+  gridTemplateColumns: ["1fr", "3fr 4fr"],
+  gridTemplateRows: ["auto", "repeat(3, 1fr)"],
   gridGap: 3,
   ".context": {
     gridRow: "2/4",
