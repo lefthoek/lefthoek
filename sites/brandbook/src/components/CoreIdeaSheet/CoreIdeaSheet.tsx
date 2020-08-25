@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Card, Box, Heading } from "theme-ui";
+import { jsx, Card, Box, Text, Heading } from "theme-ui";
 import { FunctionComponent } from "react";
 import { capitalize } from "voca";
 
@@ -12,14 +12,14 @@ type CoreIdea = {
 };
 
 const sectionStyle = {
-  p: 3,
+  p: 4,
   bg: "muted",
 };
 
 const sheetStyle = {
   display: "grid",
   gridTemplateColumns: ["1fr", "3fr 4fr"],
-  gridTemplateRows: ["auto", "repeat(3, 1fr)"],
+  gridTemplateRows: ["auto", "repeat(3, auto)"],
   gridGap: 3,
   ".context": {
     gridRow: "2/4",
@@ -36,11 +36,11 @@ const CoreIdeaSheet: FunctionComponent<CoreIdea> = (props) => {
               {capitalize(key)}
             </Heading>
             {typeof value === "string" ? (
-              value
+              <Text sx={{ fontSize: 1 }}>{value}</Text>
             ) : (
-              <ul>
+              <ul sx={{ listStyle: "none", fontSize: 1, m: 0, p: 0 }}>
                 {value.map((item) => {
-                  return <li>{item}</li>;
+                  return <li sx={{ mb: 3 }}>{item}</li>;
                 })}
               </ul>
             )}

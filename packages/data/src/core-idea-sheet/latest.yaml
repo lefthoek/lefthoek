@@ -1,0 +1,22 @@
+goal: |
+  Exponentially increase the collective intelligence of collaborative teams
+idea: |
+  A virtual team member that monitors, filters, contextualizes, and augments
+  the information that your employees share with each other.
+context:
+  - Teams that already heavily rely on online, collaborative, messaging apps
+    such as slack and microsoft teams
+  - Rapidly growing companies running into scaling issues
+  - Founders becoming nostalgic of the days before said scaling issues
+usps:
+  - Available 24/7
+  - Tailor-made for tasks that are impossible to fulfill for human team members
+    and/or for those that cannot be expected of them
+  - All data stays local to your organization
+requirements:
+  - Company or team already has a well-utilized, online, collaborative, messaging
+    platform
+  - 3 x €50.000 initial investment
+  - 3 x 6 months development time
+  - 2 backend developers, 1 fullstack developer, 1 UX designer
+  - 3 x closely involved, in-house product owner at customer

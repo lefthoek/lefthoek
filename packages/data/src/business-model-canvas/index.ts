@@ -1,4 +1,4 @@
 // @ts-ignore
-import canvas from "./latest.yml";
+import canvas from "./latest.yaml";
 
 export { canvas };
