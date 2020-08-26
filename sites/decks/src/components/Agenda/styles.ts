@@ -9,7 +9,7 @@ const innerWrapper = {
     li: {
       fontWeight: "heading",
       lineHeight: "heading",
-      fontSize: [5, 6],
+      fontSize: [4, 5],
       my: 4,
     },
   },

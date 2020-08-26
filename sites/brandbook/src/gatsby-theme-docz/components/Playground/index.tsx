@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, useThemeUI } from "theme-ui";
+import { jsx, Box, useThemeUI } from "theme-ui";
 import { LiveProvider, LiveError, LivePreview, LiveEditor } from "react-live";
 
 const transformCode = (code: string) => {
@@ -23,7 +23,9 @@ const Playground: FunctionComponent<{
       theme={theme.prism.light}
     >
       <LiveEditor />
-      <LivePreview />
+      <Box sx={{ bg: "white", p: 4, "> div *": { mb: 5 } }}>
+        <LivePreview />
+      </Box>
       <LiveError />
     </LiveProvider>
   );

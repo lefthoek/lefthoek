@@ -22,7 +22,6 @@ const UserPersona: FunctionComponent<{
   ambition: any;
   frustrations: any;
 }> = ({ className, ...rest }) => {
-  console.log(rest.personalia);
   return (
     <Card sx={canvasStyles} className={className}>
       {Object.entries(rest).map(([k, v]) => {

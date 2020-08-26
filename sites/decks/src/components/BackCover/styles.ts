@@ -35,8 +35,6 @@ const headlineStyles = {
   alignItems: ["center"],
   h1: {
     textAlign: ["left", "left"],
-    fontSize: ["4rem", "7rem"],
-    lineHeight: "4rem",
   },
 };
 

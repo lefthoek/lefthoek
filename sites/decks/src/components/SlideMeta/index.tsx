@@ -18,7 +18,9 @@ const SlideMeta: FunctionComponent = () => {
             px: showLogo ? 3 : 2,
           }}
         >
-          {showLogo ? "Lefthoek" : `${index < 10 ? 0 : ""}${index}/${length}`}
+          {showLogo
+            ? "Lefthoek"
+            : `${index < 10 ? 0 : ""}${index}/${length < 10 ? 0 : ""}${length}`}
         </Logo>
       </Box>
     </Box>

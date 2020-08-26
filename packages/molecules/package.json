@@ -17,6 +17,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@lefthoek/types": "*",
+    "@lefthoek/atoms": "*",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@types/jest": "^26.0.5",
@@ -49,9 +51,12 @@
     ]
   },
   "peerDependencies": {
+    "@lefthoek/types": "*",
+    "@lefthoek/atoms": "*",
     "formik": "^2.1.5",
     "gatsby": "^2.24.7",
     "ramda": "^0.27.0",
+    "framer-motion": "^2.3.0",
     "react": "^16",
     "react-dom": "^16",
     "theme-ui": "^0.3.1",

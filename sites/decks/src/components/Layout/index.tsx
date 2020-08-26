@@ -12,6 +12,7 @@ const Layout: FunctionComponent<{ className?: string }> = ({
       className={className}
       sx={{
         display: "grid",
+        bg: "muted",
         gridTemplateRows: ["1fr 5rem"],
         p: ["1rem", "2rem"],
         width: "100%",
