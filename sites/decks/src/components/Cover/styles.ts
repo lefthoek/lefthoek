@@ -20,7 +20,6 @@ const innerWrapper = {
   px: "1rem",
   h1: {
     textAlign: ["left", "left"],
-    fontSize: [7, 8],
   },
 };
 

@@ -25,8 +25,15 @@ jobs:
       run: yarn build
     - name: Build Site
       run: yarn workspace @lefthoek/decks build
-    - name: Deploy Site
+    - name: Deploy Production
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      uses: reggionick/s3-deploy@v1
+      with:
+        folder: sites/decks/public
+        bucket: ${{ secrets.DECKS_BUCKET }}
+        dist-id: ${{ secrets.DECKS_DISTRIBUTION_ID }}
+    - name: Deploy Development
+      if: github.ref == 'refs/heads/decks' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1
       with:
         folder: sites/decks/public

@@ -38,9 +38,9 @@ const CoreIdeaSheet: FunctionComponent<CoreIdea> = (props) => {
             {typeof value === "string" ? (
               <Text sx={{ fontSize: 1 }}>{value}</Text>
             ) : (
-              <ul sx={{ listStyle: "none", fontSize: 1, m: 0, p: 0 }}>
+              <ul sx={{ fontSize: 1 }}>
                 {value.map((item) => {
-                  return <li sx={{ mb: 3 }}>{item}</li>;
+                  return <li>{item}</li>;
                 })}
               </ul>
             )}
