@@ -50,6 +50,7 @@
     "@lefthoek/data": "*",
     "@lefthoek/molecules": "*",
     "@lefthoek/ui-theme": "*",
+    "@nivo/scatterplot": "^0.62.0",
     "@theme-ui/style-guide": "^0.3.0",
     "d3-array": "^2.4.0",
     "gatsby-theme-mdx-deck": "^4.1.0",

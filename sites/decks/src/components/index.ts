@@ -1,4 +1,5 @@
 import Cover from "./Cover";
+import CompetitionChart from "./CompetitionChart";
 import BackCover from "./BackCover";
 import Bullets from "./Bullets";
 import Equation from "./Equation";
@@ -9,8 +10,9 @@ import Table from "./Table";
 import List from "./List";
 
 export {
-  Cover,
   BackCover,
+  CompetitionChart,
+  Cover,
   Equation,
   SectionCover,
   Agenda,

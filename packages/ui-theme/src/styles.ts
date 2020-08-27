@@ -21,7 +21,7 @@ export const styles = {
     p: 0,
   },
   li: {
-    mb: 3,
+    mb: 4,
   },
   a: {
     color: "primary",

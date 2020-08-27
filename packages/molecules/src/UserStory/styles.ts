@@ -10,6 +10,8 @@ export const cardStyles: (args: {
     p: 0,
     maxWidth: "45rem",
     minHeight: "35rem",
+    maxHeight: "80vh",
+    overflowY: "scroll",
     alignItems: "flex-start",
     alignSelf: "center",
     justifySelf: "center",
@@ -28,4 +30,3 @@ export const titleStyles = {
   ...ruleStyles,
   borderColor: "primary",
 };
-

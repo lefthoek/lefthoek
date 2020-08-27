@@ -4,13 +4,14 @@ import { Box } from "theme-ui";
 import { Link } from "gatsby";
 
 const Decks: FunctionComponent = ({ decks, ...props }) => {
+  console.dir(decks);
   return (
     <Layout {...props}>
       <Box sx={{ m: 8, bg: "white" }}>
         <ul>
           {decks.map(({ title, slug }) => (
             <Link to={slug}>
-              <Box>{title}</Box>
+              <Box>{`${title} ${slug}`}</Box>
             </Link>
           ))}
         </ul>
