@@ -33,8 +33,8 @@ const CustomNode = ({
     return (
       <g transform={`translate(${x},${y}) rotate(0)`}>
         <text
-          x={0}
-          y={0}
+          x={size * 0}
+          y={size * 0}
           fill={"red"}
           style={{ mixBlendMode: blendMode }}
           onMouseEnter={onMouseEnter}
@@ -70,8 +70,8 @@ const CompetitionChart: FunctionComponent = () => {
   // @ts-ignore
   const colors = theme.primaryColors;
   return (
-    <Box sx={{ height: "100%", width: "100%", maxHeight: "80vh" }}>
-      <Heading sx={{ mb: 5 }} variant="heading">
+    <Box sx={{ height: "100%", width: "100%", maxHeight: "70vh" }}>
+      <Heading sx={{ mt: 4, mb: 6 }} variant="heading">
         Competition
       </Heading>
       <ResponsiveScatterPlot
