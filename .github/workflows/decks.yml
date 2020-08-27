@@ -1,9 +1,9 @@
 name: decks
 on:
   push:
-    branches: [ master ]
+    branches: [ master, decks ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, decks ]
 
 jobs:
   build:
