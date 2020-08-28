@@ -1,0 +1,10 @@
+- name: Hubot
+  automation: 0.8
+  importance: -0.8
+- name: Virtual PA
+  automation: -0.6
+  importance: 0.8
+- name: Lefthoek
+  automation: 0.7
+  highlight: true
+  importance: 0.7

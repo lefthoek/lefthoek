@@ -1,6 +1,6 @@
 import { Agenda, Cover, CompetitionChart, Layout, Equation, Table, Bullets, SectionCover, BackCover } from "../src/components"
 import { UserStory } from "@lefthoek/molecules"
-import { userStories }from "@lefthoek/data"
+import { userStories, competitiveAnalysis }from "@lefthoek/data"
 
 <Cover>
 
@@ -132,6 +132,6 @@ billion** by 2024[*](https://www.businessinsider.com/chatbot-market-stats-trends
 
 ---
 
-<CompetitionChart />
+<CompetitionChart data={competitiveAnalysis} />
 
 ---
