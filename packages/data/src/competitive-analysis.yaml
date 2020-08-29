@@ -1,10 +1,89 @@
-- name: Hubot
-  automation: 0.8
-  importance: -0.8
-- name: Virtual PA
-  automation: -0.6
-  importance: 0.8
-- name: Lefthoek
-  automation: 0.7
-  highlight: true
-  importance: 0.7
+lefthoek:
+  - name: Lefthoek
+    url: lefthoek.com
+    automation: 7
+    importance: 7
+    relevance: 10
+conversationalAI:
+  - name: Hubot
+    url: https://hubot.github.com/
+    automation: 3
+    importance: -1
+    relevance: 3
+  - name: Alexa
+    url: https://www.amazon.com/b?ie=UTF8&node=17934671011
+    automation: 6
+    importance: -2
+    relevance: 3
+  - name: Siri
+    url: https://www.apple.com/siri/
+    automation: 9
+    importance: -9
+    relevance: 3
+  - name: Nina
+    url: https://www.nuance.com/omni-channel-customer-engagement/digital/virtual-assistant/nina.html
+    automation: 8
+    importance: -2
+    relevance: 5
+  - name: Google Now
+    url: https://www.apple.com/siri/
+    automation: 7
+    importance: -6
+    relevance: 3
+knowledgeManagementTools:
+  - name: Bit.ai
+    url: https://bit.ai/
+    automation: -1
+    importance: 1
+    relevance: 7
+  - name: ZenDesk
+    url: https://bit.ai/
+    automation: 0
+    importance: -2
+    relevance: 7
+  - name: Guru
+    url: https://getguru.com/
+    automation: -1
+    importance: 4
+    relevance: 7
+  - name: MyHub
+    url: https://myhubintranet.com/
+    automation: -3
+    importance: 3
+    relevance: 3
+  - name: Confluence
+    url: https://tettra.com/
+    automation: 1
+    importance: 5
+    relevance: 8
+  - name: Tettra
+    url: https://tettra.com/
+    automation: 1
+    importance: 2
+    relevance: 3
+  - name: Tallium
+    url: https://www.tallyfox.com/
+    automation: 2
+    importance: 4
+    relevance: 7
+virtualAssistants:
+  - name: Mechanical Turk
+    url: https://mturk.com
+    automation: 0
+    importance: 0
+    relevance: 5
+  - name: MyOutDesk
+    url: myoutdesk.com
+    automation: -8
+    importance: -8
+    relevance: 6
+  - name: GetFriday
+    url: getfriday.com
+    automation: -6
+    importance: -2
+    relevance: 6
+  - name: Upwork
+    url: upwork.com
+    automation: -7
+    importance: 7
+    relevance: 8
