@@ -19,7 +19,7 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
   const { theme } = useThemeUI();
   // @ts-ignore
   const {
-    lefthoek,
+    virtualTeamMember,
     conversationalAI,
     knowledgeManagementTools,
     virtualAssistants,
@@ -30,7 +30,7 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
       sx={{
         height: "100%",
         width: "100%",
-        maxHeight: ["85vh", "100%"],
+        maxHeight: ["85vh"],
         display: "flex",
         flexDirection: "column",
       }}
@@ -44,7 +44,7 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
         <ScatterChart>
           <XAxis
             domain={[-10, 10]}
-            padding={{ left: 15, right: 15 }}
+            padding={{ left: 0, right: 0 }}
             hide={true}
             type="number"
             dataKey={"automation"}
@@ -52,22 +52,22 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
           />
           <YAxis
             domain={[-10, 10]}
-            padding={{ top: 15, bottom: 15 }}
+            padding={{ top: 30, bottom: 30 }}
             hide={true}
             type="number"
             dataKey={"importance"}
             name="importance"
           />
           <ZAxis dataKey={"relevance"} range={[500, 500]} name="scope" />
-
           <ReferenceArea
             x1={0}
             x2={10}
             y1={0}
             y2={10}
-            opacity={0.5}
+            opacity={0.25}
             fill={colors.secondary}
           />
+
           <ReferenceLine x={-10} opacity={0}>
             <Label value="manual" angle={-90} opacity={0.6} position="center" />
           </ReferenceLine>
@@ -85,11 +85,13 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
           <ReferenceLine y={-10} opacity={0}>
             <Label value="mundane tasks" opacity={0.6} position="center" />
           </ReferenceLine>
+
           <Scatter
             shape="star"
-            name="Lefthoek"
-            data={lefthoek}
-            fill={colors.accent}
+            legendType="star"
+            name="Virtual Team Member"
+            data={virtualTeamMember}
+            fill={colors.primary}
           >
             <LabelList offset={10} position="bottom" dataKey="name" />
           </Scatter>
@@ -107,7 +109,7 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
             shape="circle"
             name="Knowledge Management Tools"
             data={knowledgeManagementTools}
-            fill={colors.primary}
+            fill={colors.accent}
           >
             <LabelList offset={10} position="bottom" dataKey="name" />
           </Scatter>
