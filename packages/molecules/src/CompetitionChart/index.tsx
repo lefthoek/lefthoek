@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx } from "theme-ui";
-import { chain } from "voca";
 import {
   Legend,
   ScatterChart,
@@ -16,16 +15,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { outerWrapperStyles } from "./styles";
-
-type AreaData = {
-  shape: "circle" | "square" | "star" | "triangle";
-  name: string;
-  data: any;
-  color: string;
-};
-
-const processName = (name: string) =>
-  chain(name).kebabCase().replaceAll("-", " ").titleCase().value();
+import { createAreaData } from "./helpers";
 
 const CompetitionChart: FunctionComponent<{
   data: any;
@@ -36,24 +26,7 @@ const CompetitionChart: FunctionComponent<{
 }> = ({ data, dataLabels, domain = [-10, 10], colors, className }) => {
   const [minVal, maxVal] = domain;
   const avg = minVal + maxVal;
-  const visuals = [
-    ["star", colors.primary],
-    ["square", colors.text],
-    ["circle", colors.highlight],
-    ["triangle", colors.secondary],
-  ];
-
-  const areas: AreaData[] = Object.entries(data).map(([key, data], index) => {
-    const [shape, color] = visuals[index % visuals.length];
-    const name = processName(key);
-    return {
-      shape,
-      name,
-      data,
-      color,
-    };
-  });
-
+  const areas = Object.entries(data).map(createAreaData);
   const lines = [
     { x: avg, opacity: 0.5 },
     { y: avg, opacity: 0.5 },
@@ -66,6 +39,7 @@ const CompetitionChart: FunctionComponent<{
   return (
     <ResponsiveContainer className={className} sx={outerWrapperStyles}>
       <ScatterChart>
+
         <XAxis
           domain={domain}
           padding={{ left: 10, right: 10 }}
@@ -74,6 +48,7 @@ const CompetitionChart: FunctionComponent<{
           dataKey={dataLabels.x.dataKey}
           name={dataLabels.x.dataKey}
         />
+
         <YAxis
           domain={domain}
           padding={{ top: 10, bottom: 10 }}
@@ -82,6 +57,7 @@ const CompetitionChart: FunctionComponent<{
           dataKey={dataLabels.y.dataKey}
           name={dataLabels.y.dataKey}
         />
+
         <ZAxis
           dataKey={dataLabels.z.dataKey}
           range={[200, 200]}
@@ -118,7 +94,7 @@ const CompetitionChart: FunctionComponent<{
             legendType={shape}
             name={name}
             data={data}
-            fill={color}
+            fill={colors[color]}
           >
             <LabelList offset={10} position="bottom" dataKey="name" />
           </Scatter>
