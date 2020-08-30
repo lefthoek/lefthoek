@@ -58,7 +58,7 @@ const CompetitionChart: FunctionComponent<{ data: any }> = ({ data }) => {
             dataKey={"importance"}
             name="importance"
           />
-          <ZAxis dataKey={"relevance"} range={[500, 500]} name="scope" />
+          <ZAxis dataKey={"relevance"} range={[200, 200]} name="scope" />
           <ReferenceArea
             x1={0}
             x2={10}

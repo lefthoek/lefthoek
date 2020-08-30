@@ -1,17 +1,16 @@
 title: diachronous collaboration
 rating: 5
 story:
-  as a: |
-    project manager of a remote team with members in 
-    multiple time zones
+  As a: |
+    project manager of a remote team with members in multiple time zones who loses
+    too much time and money due to a lack of common availability of her team
+    members.
   I want: |
-    a team member who's available around the clock 
-    and provides my team members a concise overview 
-    of everything that is discussed and decided in 
-    their absence at the start of their shift
-  so that: |
-    an increase of 75% in information retention amongst
-    team members who are not working at the same time, 
-    thereby dramatically reducing the time I spend on 
-    manual handovers and crisis management by 90%
+    a team member who's available around the clock and provides my team members
+    a concise overview of everything that is discussed and decided in their
+    absence at the start of their shift.
+  So that: |
+    an increase of 75% in information retention amongst team members who are not
+    working at the same time, thereby dramatically reducing the time I spend on
+    manual handovers and crisis management by 90%.
 
