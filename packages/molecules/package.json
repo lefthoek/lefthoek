@@ -60,7 +60,8 @@
     "react": "^16",
     "react-dom": "^16",
     "theme-ui": "^0.3.1",
-    "voca": "^1.4.0"
+    "voca": "^1.4.0",
+    "recharts": "^1.8.5"
   },
   "dependencies": {}
 }
