@@ -11,3 +11,16 @@ export type Doc =
 
 export type CurrentDoc = { name: string; menu: string; submenu?: string };
 export type OpenMenu = { menu: string | null; submenu?: string | null };
+export type Measure = {
+  dataKey: string;
+  minName: string;
+  maxName: string;
+};
+
+export type CompetitionData = {
+  name: string;
+  url: string;
+  automation: number;
+  importance: number;
+  relevance: number;
+};

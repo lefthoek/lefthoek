@@ -1,5 +1,5 @@
 import Cover from "./Cover";
-import CompetitionChart from "./CompetitionChart";
+import CompetitiveAnalysis from "./CompetitiveAnalysis";
 import BackCover from "./BackCover";
 import Bullets from "./Bullets";
 import Equation from "./Equation";
@@ -11,7 +11,7 @@ import List from "./List";
 
 export {
   BackCover,
-  CompetitionChart,
+  CompetitiveAnalysis,
   Cover,
   Equation,
   SectionCover,
