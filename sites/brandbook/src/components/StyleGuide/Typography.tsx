@@ -17,6 +17,7 @@ const SampleLine: FunctionComponent<{
   fontSizes: any;
 }> = ({ className, name, style, fontSizes, fonts }) => {
   const fontWeights = {
+    900: "black",
     700: "bold",
     600: "semi bold",
     500: "medium",

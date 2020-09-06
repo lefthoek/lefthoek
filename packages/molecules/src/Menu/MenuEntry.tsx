@@ -29,7 +29,7 @@ export const MenuEntry: FunctionComponent<{
       <NavLink
         title={menu.name}
         inverse
-        variant={isHeading ? "heading" : hasEntries ? "smallHeading" : "link"}
+        variant={isHeading ? "abstract" : hasEntries ? "smallAbstract" : "link"}
         isActive={isActive}
         to={menu.route}
         onClick={() => {

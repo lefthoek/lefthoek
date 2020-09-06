@@ -2,13 +2,13 @@ import { text } from "./typography";
 
 export const styles = {
   root: text.body,
-  h1: { ...text.displayText, m: 0, mb: 6 },
-  h2: { ...text.extraLargeHeading, m: 0, mb: 4 },
-  h3: text.largeHeading,
-  h4: text.heading,
-  h5: text.smallHeading,
+  h1: { ...text.display, m: 0, mb: 6 },
+  h2: { ...text.eyelet, m: 0, mb: 4 },
+  h3: text.title,
+  h4: text.title,
+  h5: text.abstract,
   h6: {
-    ...text.sectionHeading,
+    ...text.titoletto,
     color: "primary",
     borderBottom: "1px solid lightgray",
     borderColor: "muted",

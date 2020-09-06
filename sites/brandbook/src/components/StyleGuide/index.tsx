@@ -5,13 +5,14 @@ import { useBreakpointIndex } from "@theme-ui/match-media";
 import { ColorGradients } from "./ColorGradient";
 import { ColorPalette } from "./ColorPalette";
 import { SampleLine } from "./Typography";
+import { titleCase } from "voca";
 import { wrapperStyles, lineStyles, sectionStyles } from "./styles";
 
 const Section: FunctionComponent<{ title: string }> = ({ children, title }) => {
   return (
     <Box sx={sectionStyles}>
-      <Heading as="h2" variant="sectionHeading">
-        {title}
+      <Heading as="h2" variant="smallAbstract">
+        {titleCase(title)}
       </Heading>
       {children}
     </Box>
