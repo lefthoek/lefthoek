@@ -17,8 +17,8 @@ const Layout: FunctionComponent<{ className?: string }> = ({
         p: ["1rem", "2rem"],
         width: "100%",
         height: "100%",
-        justifyContent: "stretch",
-        alignContent: "stretch",
+        justifyContent: "center",
+        alignContent: "center",
       }}
     >
       {children}

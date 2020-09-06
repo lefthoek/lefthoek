@@ -14,7 +14,7 @@ export const base = {
     "2rem",
     "3rem",
     "4rem",
-    "6rem",
+    "5rem",
     "8rem",
   ],
   breakpoints: ["40rem", "64rem", "100rem"],

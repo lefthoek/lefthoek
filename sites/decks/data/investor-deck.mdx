@@ -1,4 +1,5 @@
-import { Agenda, Cover, CompetitiveAnalysis, Layout, Equation, Table, Bullets, SectionCover, BackCover } from "../src/components"
+import { Agenda, Cover, CompetitiveAnalysis, Layout, Equation, Table, Bullets,
+Stat, Stats, SectionCover, BackCover } from "../src/components"
 import { UserStory } from "@lefthoek/molecules"
 import { userStories, competitiveAnalysis }from "@lefthoek/data"
 
@@ -49,39 +50,48 @@ the information that team members exchange with each other
 
 ---
 
-<Bullets>
+<Stats>
 
 ## Market Validation
 
-+ Average talent retention at tech companies **3 years**[*](https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-3-industries-with-the-highest-turnover-rates)
+<Stat figure="3 years" reference="https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-3-industries-with-the-highest-turnover-rates">Average talent retention at tech companies</Stat>
 
-+ Replacing key people costs up to **$200.000** per employee[*](https://www.businessknowhow.com/manage/loveem/numbers.htm)
+<Stat figure="$200.000"
+reference="https://www.businessknowhow.com/manage/loveem/numbers.htm">Cost of replacing key people</Stat>
 
-+ **67%** of these costs come from reduced productivity and lost knowledge[*](https://www.shrm.org/hr-today/news/all-things-work/pages/to-have-and-to-hold.aspx)
+<Stat figure="67%"
+reference="https://www.shrm.org/hr-today/news/all-things-work/pages/to-have-and-to-hold.aspx">Percentage
+due to reduced productivity and lost
+knowledge</Stat>
   
-</Bullets>
+</Stats>
 
 ---
 
-<Bullets>
+<Stats>
 
 ## Market Scale
 
-+ **91%** of companies use Slack, Microsoft Teams or
-both[*](https://www.computerworld.com/article/3403675/slack-or-teams-many-businesses-opt-for-both.html#:~:text=Mio%20polled%20200%20IT%20decision,hundreds%20of%20thousands%20of%20employees.&text=The%20company%20found%20that%2091,66%25%20of%20the%20organizations%20surveyed)
+<Stat figure="91%" reference="https://www.computerworld.com/article/3403675/slack-or-teams-many-businesses-opt-for-both.html#:~:text=Mio%20polled%20200%20IT%20decision,hundreds%20of%20thousands%20of%20employees.&text=The%20company%20found%20that%2091,66%25%20of%20the%20organizations%20surveyed">Percentage of companies that use Slack, Microsoft Teams or
+both</Stat>
 
-+ The chatbot market will reach by **$9.4
-billion** by 2024[*](https://www.businessinsider.com/chatbot-market-stats-trends?r=DE&IR=T)
+<Stat figure="$9.4 Billion"
+reference="https://www.businessinsider.com/chatbot-market-stats-trends?r=DE&IR=T">Size
+of chatbot market by 2024</Stat>
 
-+ Global Knowledge Management Market Will Reach **$1.2 trillion** by 2025[*](https://www.globenewswire.com/news-release/2018/05/11/1501037/0/en/Global-Knowledge-Management-Market-Will-Reach-USD-1-232-000-million-by-2025-Zion-Market-Research.html)
+<Stat figure="$1.2 Trillion"
+reference="https://www.globenewswire.com/news-release/2018/05/11/1501037/0/en/Global-Knowledge-Management-Market-Will-Reach-USD-1-232-000-million-by-2025-Zion-Market-Research.html">Size
+of Global Knowledge Management by 2025</Stat>
 
-</Bullets>
+</Stats>
 
 ---
 
 <UserStory {...userStories.onboardingNewStaff} />
 
 ---
+:qa
+
 
 <UserStory {...userStories.diachronousCollaboration} />
 

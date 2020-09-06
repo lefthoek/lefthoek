@@ -8,6 +8,8 @@ import Agenda from "./Agenda";
 import Layout from "./Layout";
 import Table from "./Table";
 import List from "./List";
+import Stat from "./Stat";
+import Stats from "./Stats";
 
 export {
   BackCover,
@@ -18,6 +20,8 @@ export {
   Agenda,
   List,
   Bullets,
+  Stat,
+  Stats,
   Layout,
   Table,
 };

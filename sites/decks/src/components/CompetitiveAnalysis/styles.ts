@@ -4,7 +4,9 @@ export const outerWrapperStyles: SxStyleProp = {
   height: "100%",
   width: "100%",
   maxHeight: ["85vh"],
+  minWidth: ["80vw"],
   display: "flex",
+  justifySelf: "stretch",
   flexDirection: "column",
 };
 
