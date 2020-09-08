@@ -4,6 +4,7 @@ export const statWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: ["column"],
   justifyContent: ["center"],
+  alignItems: ["center"],
   minWidth: "15rem",
   mb: [8],
   p: {
