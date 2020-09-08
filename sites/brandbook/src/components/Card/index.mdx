@@ -5,6 +5,7 @@ submenu: Atoms
 ---
 
 import { Playground, Props } from 'docz'
+import { Heading } from 'theme-ui'
 import { Card } from './Card'
 
 # Card
@@ -16,6 +17,13 @@ import { Card } from './Card'
 ## Basic usage
 
 <Playground>
-  <Card>Test</Card>
+  <Card title="Market Validation"/>
+</Playground>
+
+<Playground>
+  <Card variant="brightGreen" title="Market Validation"/>
+  <Card variant="skyBlue" title="Market Validation"/>
+  <Card variant="midnight" title="Market Validation"/>
+  <Card variant="lobster" title="Market Validation"/>
 </Playground>
 
