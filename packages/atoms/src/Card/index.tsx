@@ -6,12 +6,13 @@ import { titleCase } from "voca";
 const Card: FunctionComponent<{
   className?: string;
   title?: string;
+  onClick?: any;
   variant?: string;
-}> = ({ className, title, variant = "skyBlue", children }) => (
-  <ThemeCard className={className} variant={variant}>
+}> = ({ className, title, onClick, variant = "skyBlue", children }) => (
+  <ThemeCard onClick={onClick} className={className} variant={variant}>
     {title && (
       <Box className="heading">
-        <Heading as="h1" variant="title">
+        <Heading sx={{ maxWidth: "16rem" }} as="h1" variant="title">
           {titleCase(title)}
         </Heading>
       </Box>

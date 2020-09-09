@@ -10,15 +10,20 @@ import { CardModal } from './CardModal.tsx'
 
 # CardModal
 
+
+
 ## Properties
 
 <Props of={CardModal} />
 
 ## Basic usage
 
+You Can click on the cards to toggle the modal
+
 <Playground>
-<Box sx={{position: "relative"}}>
-  <CardModal title="Market Validation"/>
-  </Box>
+     <CardModal title="Market Validation"/>
+     <CardModal variant="lobster" title="Market Validation"/>
+     <CardModal variant="brightGreen" title="Market Validation"/>
+     <CardModal variant="midnight" title="Market Validation"/>
 </Playground>
 
