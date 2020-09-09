@@ -7,19 +7,17 @@ const Card: FunctionComponent<{
   className?: string;
   title?: string;
   variant?: string;
-}> = ({ className, children, title, variant = "primary" }) => {
-  return (
-    <ThemeCard className={className} variant={variant}>
-      {title && (
-        <Box className="heading">
-          <Heading as="h1" variant="title">
-            {titleCase(title)}
-          </Heading>
-        </Box>
-      )}
-      {children}
-    </ThemeCard>
-  );
-};
+}> = ({ className, title, variant = "skyBlue", children }) => (
+  <ThemeCard className={className} variant={variant}>
+    {title && (
+      <Box className="heading">
+        <Heading as="h1" variant="title">
+          {titleCase(title)}
+        </Heading>
+      </Box>
+    )}
+    {children}
+  </ThemeCard>
+);
 
 export { Card };

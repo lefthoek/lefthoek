@@ -1,13 +1,12 @@
 const base = {
   display: "grid",
   p: "2rem",
+  gridRow: 1,
+  gridColumn: 1,
+  width: "100%",
   bg: "#BCFFE0",
   color: "text",
-  boxShadow: "0px 16px 24px rgba(211, 255, 235, 0.2)",
   borderRadius: "20px",
-  ".heading": {
-    maxWidth: "16rem",
-  },
 };
 export const cards = {
   primary: base,
