@@ -29,7 +29,7 @@ export const snippet = `
   </DisplayContainer>
 </Playground>
 
-<Playground sx={{bg: "muted"}}>
+<Playground>
   <DisplayContainer>
     <Card variant="brightGreen" title="Market Validation">{snippet}</Card>
     <Card variant="skyBlue" title="Market Validation">{snippet}</Card>
@@ -38,4 +38,17 @@ export const snippet = `
   </DisplayContainer>
 </Playground>
 
-
+<Playground>
+  <DisplayContainer colorMode="accent">
+    <Card contrast variant="brightGreen" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer colorMode="primary">
+    <Card contrast variant="skyBlue" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer colorMode="text">
+    <Card contrast variant="midnight" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer colorMode="secondary">
+    <Card contrast variant="lobster" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+</Playground>

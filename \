@@ -18,8 +18,8 @@ import { userStories }from "@lefthoek/data"
 ## Basic usage
 
 <Playground>
-  <DisplayContainer colorMode="primary">
-    <UserStory {...userStories.diachronousCollaboration }/>
-  </DisplayContainer>
+<DisplayContainer>
+  <UserStory {...userStories.diachronousCollaboration }/>
+</DisplayContainer>
 </Playground>
 

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { capitalize, slugify } from "voca";
-import { jsx, Card, Heading } from "theme-ui";
+import { jsx, Card } from "theme-ui";
 import { cardStyles, canvasStyles } from "./styles";
 
 type Personalia = {
@@ -27,14 +27,6 @@ const UserPersona: FunctionComponent<{
       {Object.entries(rest).map(([k, v]) => {
         return (
           <Card className={slugify(k)} key={k} sx={cardStyles}>
-            <Heading
-              as="h4"
-              sx={{
-                mb: 3,
-              }}
-            >
-              {capitalize(k)}
-            </Heading>
             <ul sx={{ listStyle: "none", m: 0, p: 0 }}>
               {v.map ? (
                 v.map((i: string) => <li sx={{ mb: 2 }}>{capitalize(i)}</li>)

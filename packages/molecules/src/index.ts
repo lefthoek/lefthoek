@@ -1,5 +1,4 @@
 export * from "./UserStory";
-export * from "./CardModal";
 export * from "./CompetitionChart";
 export * from "./UserPersona";
 export * from "./Explorer";

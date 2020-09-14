@@ -5,8 +5,8 @@ export const cardStyles: (args: {
   rating?: number;
 }) => SxStyleProp = ({ rating = 1 }) => {
   return {
-    opacity: 0.2 * rating,
-    maxWidth: "45rem",
+    opacity: true ? 1 : 0.2 * rating,
+    maxWidth: ["80rem"],
     minHeight: "35rem",
     maxHeight: "80vh",
     overflowY: "scroll",
@@ -14,13 +14,10 @@ export const cardStyles: (args: {
 };
 
 export const ruleStyles: SxStyleProp = {
-  m: 0,
   borderBottom: "2px solid black",
   borderColor: "muted",
-  "&:last-of-type": { borderBottom: "none" },
+  pb: 6,
+  mb: 6,
+  "&:last-of-type": { pb: 0, mb: 0, borderBottom: "none" },
 };
 
-export const titleStyles = {
-  ...ruleStyles,
-  borderColor: "primary",
-};

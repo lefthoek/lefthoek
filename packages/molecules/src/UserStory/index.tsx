@@ -19,17 +19,16 @@ const UserStory: FunctionComponent<{
 }> = ({ className, title, story, status, rating }) => {
   return (
     <Card
+      contrast
       className={className}
       title={title}
       sx={cardStyles({ status, rating })}
     >
       {Object.entries(story).map(([k, v]) => {
         return (
-          <section key={k} sx={ruleStyles}>
-            <Text>
-              <strong>{capitalize(k)}</strong> {v}
-            </Text>
-          </section>
+          <Text sx={ruleStyles}>
+            <strong>{capitalize(k)}</strong> {v}
+          </Text>
         );
       })}
     </Card>

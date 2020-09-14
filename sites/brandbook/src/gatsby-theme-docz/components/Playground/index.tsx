@@ -11,9 +11,11 @@ const transformCode = (code: string) => {
 const Playground: FunctionComponent<{
   code: string;
   scope: any;
+  colorMode: string;
   language: any;
   className?: string;
-}> = ({ className, code, language, scope }) => {
+}> = ({ colorMode = "muted", code, language, scope, ...rest }) => {
+  console.log(rest);
   const { theme } = useThemeUI();
   return (
     <LiveProvider
@@ -27,7 +29,7 @@ const Playground: FunctionComponent<{
       <Box>
         <LivePreview
           sx={{
-            bg: "muted",
+            bg: colorMode,
             display: "flex",
             flexDirection: "column",
             alignItems: "stretch",
