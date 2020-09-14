@@ -1,6 +1,6 @@
 export const fonts = {
   body: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
-  heading: "Merriweather, DejaVu Serif, Georgia, serif",
+  heading: "Crimson Text, DejaVu Serif, Georgia, serif",
   monospace: "Menlo, monospace",
 };
 
@@ -8,7 +8,7 @@ export const text = {
   display: {
     fontSize: 7,
     lineHeight: "68px",
-    fontWeight: 700,
+    fontWeight: 400,
     fontFamily: "heading",
   },
   eyelet: {
@@ -38,7 +38,7 @@ export const text = {
   titoletto: {
     fontSize: 0,
     lineHeight: "20px",
-    fontWeight: 900,
+    fontWeight: 400,
     textTransform: "uppercase",
     letterSpacing: 1,
     fontFamily: "heading",

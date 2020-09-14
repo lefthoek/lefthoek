@@ -12,7 +12,8 @@ const Playground: FunctionComponent<{
   code: string;
   scope: any;
   language: any;
-}> = ({ code, language, scope }) => {
+  className?: string;
+}> = ({ className, code, language, scope }) => {
   const { theme } = useThemeUI();
   return (
     <LiveProvider
@@ -22,9 +23,16 @@ const Playground: FunctionComponent<{
       language={language}
       theme={theme.prism.light}
     >
-      <LiveEditor />
+      <LiveEditor sx={{ mb: 8 }} />
       <Box>
-        <LivePreview />
+        <LivePreview
+          sx={{
+            bg: "muted",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "stretch",
+          }}
+        />
       </Box>
       <LiveError />
     </LiveProvider>

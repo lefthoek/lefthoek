@@ -8,13 +8,14 @@ const Card: FunctionComponent<{
   title?: string;
   onClick?: any;
   variant?: string;
-}> = ({ className, title, onClick, variant = "skyBlue", children }) => (
+}> = ({ className, children, title, onClick, variant = "skyBlue" }) => (
   <ThemeCard onClick={onClick} className={className} variant={variant}>
     {title && (
       <Box className="heading">
-        <Heading sx={{ maxWidth: "16rem" }} as="h1" variant="title">
+        <Heading as="h1" variant="title">
           {titleCase(title)}
         </Heading>
+        {children}
       </Box>
     )}
     {children}
