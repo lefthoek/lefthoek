@@ -13,7 +13,7 @@ export const text = {
   },
   eyelet: {
     fontSize: 6,
-    lineHeight: "52px",
+    lineHeight: "42px",
     fontWeight: 600,
     fontFamily: "body",
   },

@@ -15,7 +15,6 @@ const Playground: FunctionComponent<{
   language: any;
   className?: string;
 }> = ({ colorMode = "muted", code, language, scope, ...rest }) => {
-  console.log(rest);
   const { theme } = useThemeUI();
   return (
     <LiveProvider

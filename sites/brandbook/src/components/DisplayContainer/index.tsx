@@ -12,6 +12,7 @@ const DisplayContainer: FunctionComponent<{ colorMode: string }> = ({
   const baseStyles = { bg: colorMode };
   return (
     <Background
+      onClick={() => setFullScreenMode((current) => !current)}
       sx={
         isFullScreen
           ? {
@@ -28,13 +29,13 @@ const DisplayContainer: FunctionComponent<{ colorMode: string }> = ({
       }
     >
       <Box
-        onClick={() => setFullScreenMode((current) => !current)}
         sx={{
           alignSelf: "center",
           display: ["grid"],
           gridTemplateColumns: ["1fr"],
-          py: ["16rem"],
-          gridRowGap: ["16rem"],
+          py: [5, "16rem"],
+          transform: ["scale(0.8)", "scale(1.0)"],
+          gridRowGap: [5, "16rem"],
         }}
       >
         {children}

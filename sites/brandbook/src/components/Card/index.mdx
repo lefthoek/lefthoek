@@ -24,17 +24,8 @@ export const snippet = `
 ## Basic usage
 
 <Playground>
-  <DisplayContainer>
+  <DisplayContainer colorMode="primary">
     <Card title="Market Validation">{snippet}</Card>
-  </DisplayContainer>
-</Playground>
-
-<Playground>
-  <DisplayContainer>
-    <Card variant="brightGreen" title="Market Validation">{snippet}</Card>
-    <Card variant="skyBlue" title="Market Validation">{snippet}</Card>
-    <Card variant="midnight" title="Market Validation">{snippet}</Card>
-    <Card variant="lobster" title="Market Validation">{snippet}</Card>
   </DisplayContainer>
 </Playground>
 
@@ -50,5 +41,20 @@ export const snippet = `
   </DisplayContainer>
   <DisplayContainer colorMode="secondary">
     <Card contrast variant="lobster" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+</Playground>
+
+<Playground>
+  <DisplayContainer>
+    <Card simple variant="brightGreen" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer>
+    <Card simple variant="skyBlue" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer>
+    <Card simple variant="midnight" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer>
+    <Card simple variant="lobster" title="Market Validation">{snippet}</Card>
   </DisplayContainer>
 </Playground>

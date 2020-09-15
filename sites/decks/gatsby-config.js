@@ -8,7 +8,7 @@ module.exports = {
       options: {
         fonts: [
           `spartan\:400,500,600,700`, // you can also specify font weights and styles
-          `crimsonText\:400`,
+          `crimson Text\:400`,
         ],
         display: "swap",
       },

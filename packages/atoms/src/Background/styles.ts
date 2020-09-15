@@ -5,7 +5,6 @@ export const outerWrapperStyles: (args: { variant: string }) => SxStyleProp = ({
 }) => {
   return {
     m: 0,
-    p: 5,
     display: "grid",
     alignItems: "center",
     justifyContent: "center",

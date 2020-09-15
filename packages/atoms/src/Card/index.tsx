@@ -6,20 +6,20 @@ import { overrideStyles } from "./styles";
 
 const Card: FunctionComponent<{
   className?: string;
-  contrast?: boolean;
+  simple?: boolean;
   title?: string;
   onClick?: any;
   variant?: string;
 }> = ({
   className,
-  contrast = false,
+  simple = false,
   children,
   title,
   onClick,
   variant = "skyBlue",
 }) => (
   <ThemeCard
-    sx={contrast ? overrideStyles({ variant }) : {}}
+    sx={simple ? overrideStyles({ variant }) : {}}
     onClick={onClick}
     className={className}
     variant={variant}
@@ -31,7 +31,7 @@ const Card: FunctionComponent<{
         </Heading>
       </Box>
     )}
-    {children}
+    <Box className="content">{children}</Box>
   </ThemeCard>
 );
 

@@ -1,40 +1,42 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx, Box, Text } from "theme-ui";
-import { tint } from "@theme-ui/color";
 import { chain } from "voca";
 import { ColorSwatch } from "./ColorSwatch";
 import { captionStyles, gradientStyles, gradientsStyles } from "./styles";
 
-const ColorGradient: FunctionComponent<{ color: [string, string] }> = ({
-  color: [name, colorValue],
+const ColorGradient: FunctionComponent<{ gradient: [string, string[]] }> = ({
+  gradient: [name, gradientValues],
 }) => {
-  const values = [0.6, 0.4, 0.2, 0];
   return (
     <Box sx={gradientStyles}>
-      {values.map((opacity) => (
-        <ColorSwatch
-          color={tint(colorValue, opacity)}
-          ratio={opacity === 0 ? 1 / 1 : 2 / 1}
-        />
-      ))}
+      {gradientValues.map((color, index) => {
+        return (
+          <ColorSwatch
+            color={color}
+            ratio={gradientValues.length - 1 === index ? 1 / 1 : 2 / 1}
+          />
+        );
+      })}
       <Box sx={captionStyles}>
         <Text variant="smallBody">
           {chain(name).kebabCase().replaceAll("-", " ").titleCase().value()}
         </Text>
-        <Text variant="smallBody">{colorValue}</Text>
+        <Text variant="smallBody">
+          {gradientValues[gradientValues.length - 1]}
+        </Text>
       </Box>
     </Box>
   );
 };
 
-const ColorGradients: FunctionComponent<{ colors: Record<string, string> }> = ({
-  colors,
-}) => {
+const ColorGradients: FunctionComponent<{
+  gradients: Record<string, string[]>;
+}> = ({ gradients }) => {
   return (
     <Box sx={gradientsStyles}>
-      {Object.entries(colors).map((color) => (
-        <ColorGradient color={color} />
+      {Object.entries(gradients).map((gradient) => (
+        <ColorGradient gradient={gradient} />
       ))}
     </Box>
   );
