@@ -6,6 +6,8 @@ import Layout from "../../components/Layout";
 import { Global } from "@emotion/core";
 
 const Slide = ({ slide, ...props }: any) => {
+  console.log(slide);
+  console.log(props);
   return (
     <Fragment>
       <Global
@@ -13,7 +15,7 @@ const Slide = ({ slide, ...props }: any) => {
           return { ...theme.globals, body: { margin: 0 } };
         }}
       />
-      <ParentSlide slide={<Layout>{slide}</Layout>} {...props} />
+      <ParentSlide slide={slide} {...props} />
     </Fragment>
   );
 };

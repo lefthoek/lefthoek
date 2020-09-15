@@ -12,14 +12,16 @@ type Story = {
 };
 const UserStory: FunctionComponent<{
   className?: string;
+  simple?: boolean;
   title: string;
   story: Story;
   status?: "rejected";
   rating: number;
-}> = ({ className, title, story, status, rating }) => {
+}> = ({ className, simple = false, title, story, status, rating }) => {
   return (
     <Card
-      variant="brightGreen"
+      simple={simple}
+      variant="lobster"
       className={className}
       title={title}
       sx={cardStyles({ status, rating })}
@@ -27,7 +29,7 @@ const UserStory: FunctionComponent<{
       {Object.entries(story).map(([k, v]) => {
         return (
           <Text sx={ruleStyles}>
-            <strong sx={{ color: "secondary" }}>{capitalize(k)}</strong> {v}
+            <strong sx={{ color: "primary" }}>{capitalize(k)}</strong> {v}
           </Text>
         );
       })}
