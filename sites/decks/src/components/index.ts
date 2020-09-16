@@ -1,4 +1,3 @@
-import Cover from "./Cover";
 import CompetitiveAnalysis from "./CompetitiveAnalysis";
 import BackCover from "./BackCover";
 import Bullets from "./Bullets";
@@ -14,7 +13,6 @@ import Stats from "./Stats";
 export {
   BackCover,
   CompetitiveAnalysis,
-  Cover,
   Equation,
   SectionCover,
   Agenda,

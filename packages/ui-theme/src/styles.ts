@@ -17,11 +17,23 @@ export const styles = {
   p: { ...text.body, mb: 4 },
   ul: {
     listStyle: "none",
-    m: 0,
     p: 0,
+    m: 0,
   },
   li: {
-    mb: 4,
+    display: "flex",
+    alignItems: "center",
+    p: { my: 1 },
+    "&::before": {
+      content: "'■'",
+      color: "secondary",
+      fontSize: "1.2rem",
+      display: "inline-block",
+      width: "1.2rem",
+      ml: "-1.2rem",
+      position: "relative",
+      top: "-0.2rem",
+    },
   },
   a: {
     color: "primary",
