@@ -34,7 +34,7 @@ const DisplayContainer: FunctionComponent<{ colorMode: string }> = ({
           display: ["grid"],
           gridTemplateColumns: ["1fr"],
           py: [5, "16rem"],
-          transform: ["scale(0.8)", "scale(1.0)"],
+            px: [4],
           gridRowGap: [5, "16rem"],
         }}
       >
