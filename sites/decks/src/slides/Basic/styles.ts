@@ -13,6 +13,7 @@ const innerWrapper = {
   p: {
     fontSize: [1, 2],
     lineHeight: ["25px", "28px"],
+    textAlign: ["center", "center"],
     my: [3, 1],
   },
   strong: {

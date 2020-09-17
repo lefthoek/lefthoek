@@ -29,16 +29,11 @@ export const base = {
     default: "20px",
   },
   breakpoints: ["40rem", "64rem", "100rem"],
-  fontSizes: [14, 16, 18, 20, 24, 34, 42, 60, 72],
+  fontSizes: [12, 14, 16, 18, 24, 34, 42, 60, 72],
   fontWeights: {
     body: 400,
     heading: 700,
     bold: 600,
-  },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-    subHeading: 2,
   },
   fonts,
   text,

@@ -6,37 +6,37 @@ export const fonts = {
 
 export const text = {
   display: {
-    fontSize: 7,
-    lineHeight: "68px",
+    fontSize: "58px",
+    lineHeight: "64px",
     fontWeight: 400,
     fontFamily: "heading",
   },
   eyelet: {
-    fontSize: 6,
+    fontSize: "42px",
     lineHeight: "48px",
     fontWeight: 600,
     fontFamily: "body",
   },
   title: {
-    fontSize: 5,
-    lineHeight: "38px",
+    fontSize: "32px",
+    lineHeight: "36px",
     fontWeight: 600,
     fontFamily: "body",
   },
   abstract: {
-    fontSize: 4,
+    fontSize: "24px",
     lineHeight: "30px",
     fontWeight: 700,
     fontFamily: "body",
   },
   smallAbstract: {
-    fontSize: 2,
+    fontSize: "18px",
     lineHeight: "26px",
     fontWeight: 600,
     fontFamily: "body",
   },
   titoletto: {
-    fontSize: 0,
+    fontSize: "14px",
     lineHeight: "20px",
     fontWeight: 400,
     textTransform: "uppercase",
@@ -44,7 +44,7 @@ export const text = {
     fontFamily: "heading",
   },
   body: {
-    fontSize: 2,
+    fontSize: "18px",
     lineHeight: "28px",
     fontWeight: 500,
     fontFamily: "body",
@@ -54,6 +54,6 @@ export const text = {
     fontFamily: "body",
     fontWeight: 400,
     lineHeight: "25px",
-    fontSize: 1,
+    fontSize: "14px",
   },
 };
