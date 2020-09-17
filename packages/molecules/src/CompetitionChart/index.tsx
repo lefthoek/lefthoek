@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx } from "theme-ui";
+import { jsx, useThemeUI } from "theme-ui";
 import {
   Legend,
   ScatterChart,
@@ -17,12 +17,15 @@ import {
 import { outerWrapperStyles } from "./styles";
 import { createAreaData } from "./helpers";
 import { Measure, CompetitionData } from "@lefthoek/types";
-
+type ChartColors = Record<
+  "primary" | "text" | "highlight" | "secondary",
+  string
+>;
 type CompetitionChartProps = {
   analysis: Record<string, CompetitionData>;
   domain?: [number, number];
   measures: Measure[];
-  colors?: Record<"primary" | "text" | "highlight" | "secondary", string>;
+  colors?: ChartColors;
   className?: string;
 };
 
@@ -30,10 +33,12 @@ const CompetitionChart: FunctionComponent<CompetitionChartProps> = ({
   analysis,
   measures,
   domain = [-10, 10],
-  colors = { primary: "red", text: "black", highlight: "black", secondary: "black" },
+  colors,
   className,
 }) => {
   const [minVal, maxVal] = domain;
+  const { theme } = useThemeUI();
+  const chartColors: ChartColors = colors || (theme.colors as ChartColors);
   const avg = minVal + maxVal;
   const areas = Object.entries(analysis).map(createAreaData);
   const [measureX, measureY, measureZ] = measures;
@@ -79,7 +84,7 @@ const CompetitionChart: FunctionComponent<CompetitionChartProps> = ({
           y1={avg}
           y2={maxVal}
           opacity={0.25}
-          fill={colors.secondary}
+          fill={chartColors.secondary}
         />
 
         <Legend height={70} verticalAlign="top" />
@@ -103,7 +108,7 @@ const CompetitionChart: FunctionComponent<CompetitionChartProps> = ({
             legendType={shape}
             name={name}
             data={data}
-            fill={colors[color]}
+            fill={chartColors[color]}
           >
             <LabelList offset={10} position="bottom" dataKey="name" />
           </Scatter>

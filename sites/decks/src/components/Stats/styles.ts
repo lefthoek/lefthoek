@@ -10,7 +10,7 @@ export const outerWrapperStyles: SxStyleProp = {
 
 export const headerStyles: SxStyleProp = {
   maxWidth: "18rem",
-  mb: [3, 5],
+  mb: [5],
   "> h2": {
     ...text.eyelet,
     textAlign: "center",

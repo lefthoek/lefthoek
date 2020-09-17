@@ -1,29 +1,23 @@
-const outerWrapper = {
-  bg: "muted",
+import { SxStyleProp } from "theme-ui";
+
+const outerWrapper: SxStyleProp = {
   height: "100%",
   width: "100%",
   display: "flex",
-  alignItems: "center",
+  flexDirection: "column",
+  alignItems: ["center", "center", "center", "center"],
   justifyContent: ["center", "center"],
   color: "text",
-  p: 6,
-};
-
-const innerWrapper = {
+  px: [6, 8],
+  py: [5, 8],
+  h1: {
+    textAlign: ["center", "center"],
+    mb: [5, 5],
+  },
   p: {
-    fontSize: [1, 2],
     lineHeight: ["25px", "28px"],
     textAlign: ["center", "center"],
-    my: [3, 1],
-  },
-  strong: {
-    color: "primary",
-  },
-  h1: {
-    fontSize: [6, 7],
-    textAlign: ["center", "center"],
-    mb: [4, 6],
   },
 };
 
-export { outerWrapper, innerWrapper };
+export { outerWrapper };

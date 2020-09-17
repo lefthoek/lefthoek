@@ -16,23 +16,13 @@ export const styles = {
   },
   p: { ...text.body, mb: 4 },
   ul: {
-    listStyle: "none",
+    listStyle: "square",
     p: 0,
     m: 0,
   },
   li: {
-    display: "flex",
-    alignItems: "center",
-    p: { my: 1 },
-    "&::before": {
-      content: "'■'",
-      color: "secondary",
-      fontSize: "1.2rem",
-      display: "inline-block",
-      width: "1.3rem",
-      ml: "-1.3rem",
-      position: "relative",
-      top: "-0.2rem",
+    p: {
+      textAlign: "left",
     },
   },
   a: {

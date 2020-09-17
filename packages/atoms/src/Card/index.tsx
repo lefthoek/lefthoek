@@ -17,22 +17,24 @@ const Card: FunctionComponent<{
   title,
   onClick,
   variant = "skyBlue",
-}) => (
-  <ThemeCard
-    sx={simple ? overrideStyles({ variant }) : {}}
-    onClick={onClick}
-    className={className}
-    variant={variant}
-  >
-    {title && (
-      <Box className="heading">
-        <Heading as="h1" variant="title">
-          {titleCase(title)}
-        </Heading>
-      </Box>
-    )}
-    <Box className="content">{children}</Box>
-  </ThemeCard>
-);
+}) => {
+  return (
+    <ThemeCard
+      sx={simple ? overrideStyles({ variant }) : {}}
+      onClick={onClick}
+      className={className}
+      variant={variant}
+    >
+      {title && (
+        <Box className="heading">
+          <Heading as="h1" variant="title">
+            {titleCase(title)}
+          </Heading>
+        </Box>
+      )}
+      <Box className="content">{children}</Box>
+    </ThemeCard>
+  );
+};
 
 export { Card };

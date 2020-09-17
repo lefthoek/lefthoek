@@ -14,14 +14,23 @@ const UserStory: FunctionComponent<{
   className?: string;
   simple?: boolean;
   title: string;
+  variant: string;
   story: Story;
   status?: "rejected";
   rating: number;
-}> = ({ className, simple = false, title, story, status, rating }) => {
+}> = ({
+  className,
+  variant = "skyBlue",
+  simple = false,
+  title,
+  story,
+  status,
+  rating,
+}) => {
   return (
     <Card
       simple={simple}
-      variant="lobster"
+      variant={variant}
       className={className}
       title={title}
       sx={cardStyles({ status, rating })}
@@ -29,7 +38,7 @@ const UserStory: FunctionComponent<{
       {Object.entries(story).map(([k, v]) => {
         return (
           <Text sx={ruleStyles}>
-            <strong sx={{ color: "primary" }}>{capitalize(k)}</strong> {v}
+            <strong>{capitalize(k)}</strong> {v}
           </Text>
         );
       })}

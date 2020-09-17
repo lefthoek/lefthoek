@@ -15,6 +15,5 @@ export const cardStyles: (args: {
 
 export const ruleStyles: SxStyleProp = {
   mb: 6,
-  "&:last-of-type": { pb: 0, mb: 0, borderBottom: "none" },
+  "&:last-of-type": { pb: 0, mb: [5, 0], borderBottom: "none" },
 };
-

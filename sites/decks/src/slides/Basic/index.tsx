@@ -1,17 +1,22 @@
 /** @jsx jsx */
 import { FunctionComponent, ReactNodeArray } from "react";
-import { jsx, Box } from "theme-ui";
-import { outerWrapper, innerWrapper } from "./styles";
+import { jsx } from "theme-ui";
+import { Background } from "@lefthoek/atoms";
+import { outerWrapper } from "./styles";
 
 const Basic: FunctionComponent<{
   children: ReactNodeArray;
   index: number;
+  variant?: string;
   className?: string;
-}> = ({ children }) => {
+}> = ({ children, variant = "cipria" }) => {
   return (
-    <Box sx={outerWrapper}>
-      <Box sx={innerWrapper}>{children}</Box>
-    </Box>
+    <Background
+      variant={variant}
+      sx={{ ...outerWrapper, color: variant === "midnight" ? "muted" : "text" }}
+    >
+      {children}
+    </Background>
   );
 };
 

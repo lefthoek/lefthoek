@@ -16,6 +16,6 @@ export const statWrapperStyles: SxStyleProp = {
 
 export const figureStyles: SxStyleProp = {
   color: "secondary",
-  mb: [5],
+  mb: [2, 5],
   textAlign: "center",
 };
