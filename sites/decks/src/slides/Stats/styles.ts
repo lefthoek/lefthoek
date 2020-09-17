@@ -1,6 +1,10 @@
 import { SxStyleProp } from "theme-ui";
 
-const innerWrapper: SxStyleProp = {
+const outerWrapperStyles: SxStyleProp = {
+  alignItems: ["center", "center", "center", "stretch"],
+};
+
+const innerWrapperStyles: SxStyleProp = {
   display: "flex",
   justifyContent: "center",
   "> ul": {
@@ -17,4 +21,4 @@ const innerWrapper: SxStyleProp = {
   },
 };
 
-export { innerWrapper };
+export { innerWrapperStyles, outerWrapperStyles };

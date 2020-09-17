@@ -9,10 +9,11 @@ const Basic: FunctionComponent<{
   index: number;
   variant?: string;
   className?: string;
-}> = ({ children, variant = "cipria" }) => {
+}> = ({ children, className, variant = "cipria" }) => {
   return (
     <Background
       variant={variant}
+      className={className}
       sx={{ ...outerWrapper, color: variant === "midnight" ? "muted" : "text" }}
     >
       {children}
