@@ -11,14 +11,17 @@ const outerWrapper = {
 
 const innerWrapper = {
   p: {
-    my: 0,
+    fontSize: [1, 2],
+    lineHeight: ["25px", "28px"],
+    my: [3, 1],
   },
   strong: {
     color: "primary",
   },
   h1: {
-    textAlign: ["left", "center"],
-    mb: "3rem",
+    fontSize: [6, 7],
+    textAlign: ["center", "center"],
+    mb: [4, 6],
   },
 };
 
