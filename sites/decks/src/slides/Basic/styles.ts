@@ -1,8 +1,6 @@
 import { SxStyleProp } from "theme-ui";
 
 const outerWrapper: SxStyleProp = {
-  height: "100%",
-  width: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: ["center", "center", "center", "center"],
@@ -12,7 +10,7 @@ const outerWrapper: SxStyleProp = {
   py: [5, 8],
   h1: {
     textAlign: ["center", "center"],
-    mb: [5, 5],
+    mb: [5, 6, 6, 8],
   },
   p: {
     lineHeight: ["25px", "28px"],

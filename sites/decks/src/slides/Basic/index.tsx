@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { FunctionComponent, ReactNodeArray } from "react";
+import { FunctionComponent, ReactNode, ReactNodeArray } from "react";
 import { jsx } from "theme-ui";
 import { Background } from "@lefthoek/atoms";
 import { outerWrapper } from "./styles";
 
 const Basic: FunctionComponent<{
-  children: ReactNodeArray;
+  children: ReactNode | ReactNodeArray;
   index: number;
   variant?: string;
   className?: string;

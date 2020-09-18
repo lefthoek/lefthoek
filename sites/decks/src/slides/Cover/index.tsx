@@ -1,18 +1,18 @@
 /** @jsx jsx */
 import { FunctionComponent, ReactNodeArray } from "react";
 import { jsx, Box } from "theme-ui";
+import { Basic } from "../Basic";
 import { outerWrapper, innerWrapper } from "./styles";
 
 const Cover: FunctionComponent<{
   children: ReactNodeArray;
   index: number;
   className?: string;
-}> = ({ children, ...props }) => {
-  console.log(props);
+}> = ({ children, index }) => {
   return (
-    <Box sx={outerWrapper}>
-      <div sx={innerWrapper}>{children}</div>
-    </Box>
+    <Basic index={index} sx={outerWrapper}>
+      <Box sx={innerWrapper}>{children}</Box>
+    </Basic>
   );
 };
 
