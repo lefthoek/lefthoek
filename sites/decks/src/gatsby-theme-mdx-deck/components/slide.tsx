@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { motion } from "framer-motion";
+import { Slide as ParentSlide } from "gatsby-theme-mdx-deck/src/components/slide";
 
-const Slide = ({ slide }) => {
+const AnimatedSlide = ({ slide }) => {
   return (
     <motion.div
       sx={{
@@ -15,6 +16,9 @@ const Slide = ({ slide }) => {
       {slide}
     </motion.div>
   );
+};
+const Slide = ({ slide, ...props }) => {
+  return <ParentSlide slide={<AnimatedSlide slide={slide} />} {...props} />;
 };
 
 export { Slide };
