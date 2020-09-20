@@ -1,9 +1,9 @@
 name: landing
 on:
   push:
-    branches: [ master ]
+    branches: [ master, landing ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, landing ]
 
 jobs:
   build:
@@ -30,5 +30,12 @@ jobs:
       uses: reggionick/s3-deploy@v1
       with:
         folder: sites/landing/public
+        bucket: ${{ secrets.LANDING_BUCKET }}
+        dist-id: ${{ secrets.LANDING_DISTRIBUTION_ID }}
+    - name: Deploy Development
+      if: github.ref == 'refs/heads/landing' && github.event_name == 'push'
+      uses: reggionick/s3-deploy@v1
+      with:
+        folder: sites/brandbook/.docz/dist
         bucket: ${{ secrets.LANDING_BUCKET }}
         dist-id: ${{ secrets.LANDING_DISTRIBUTION_ID }}

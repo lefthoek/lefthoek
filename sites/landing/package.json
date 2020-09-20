@@ -34,6 +34,7 @@
     "eslint-plugin-react": "^7.20.3",
     "gatsby": "^2.24.7",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typescript": "^2.4.16",
     "prettier": "^2.0.5",
@@ -43,11 +44,12 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@lefthoek/atoms": "*",
-    "@lefthoek/ui-theme": "*",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@lefthoek/atoms": "*",
+    "@lefthoek/ui-theme": "*",
     "d3-array": "^2.4.0",
+    "framer-motion": "^2.6.15",
     "mkdirp": "^1.0.4",
     "ramda": "^0.27.0",
     "theme-ui": "^0.3.1",
