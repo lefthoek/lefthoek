@@ -62,7 +62,8 @@ const HeroSection: FunctionComponent<{ className?: string }> = ({
   className,
 }) => {
   const { scrollY } = useViewportScroll();
-  const height = useTransform(scrollY, [0, 100], [100, 0]);
+  const height = useTransform(scrollY, [0, 300], [100, 0]);
+  const opacity = useTransform(scrollY, [250, 300], [1, 0]);
   const vh = useMotionTemplate`${height}vh`;
   return (
     <motion.section
@@ -82,12 +83,12 @@ const HeroSection: FunctionComponent<{ className?: string }> = ({
         width: "100vw",
       }}
     >
-      <Box sx={{ p: 6 }}>
+      <motion.div style={{ opacity }} sx={{ p: 6 }}>
         <Heading sx={{ textAlign: "left", mb: 3 }} variant="display">
           Lefthoek
         </Heading>
         <Text sx={{}}> Cutting Corners as a Service</Text>
-      </Box>
+      </motion.div>
     </motion.section>
   );
 };
@@ -113,7 +114,7 @@ const LandingPage: FunctionComponent = () => {
         display: "flex",
         top: 0,
         width: "100vw",
-        mt: 100,
+        mt: 300,
         flexDirection: "column",
       }}
     >
