@@ -7,7 +7,6 @@ const HeroSection: FunctionComponent = () => {
   return (
     <Section
       sx={{
-        boxShadow: "0 1px 20px rgba(0,0,0,0.7)",
         overflow: "hidden",
         bg: "primary",
         color: "muted",

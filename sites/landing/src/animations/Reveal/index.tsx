@@ -10,6 +10,8 @@ const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
     <motion.section
       style={{ height: vh }}
       sx={{
+
+        boxShadow: "0 1px 20px rgba(0,0,0,0.7)",
         overflow: "hidden",
         position: "fixed",
         display: "flex",
