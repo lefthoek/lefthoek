@@ -22,8 +22,3 @@ export const headerWrapper: SxStyleProp = {
     mb: 4,
   },
 };
-
-export const selectionWrapper: SxStyleProp = {
-  display: ["none", "flex"],
-  width: "50%",
-};

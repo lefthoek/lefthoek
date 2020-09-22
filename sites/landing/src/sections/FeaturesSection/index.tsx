@@ -1,14 +1,19 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
-import { jsx, Heading, Box, Text } from "theme-ui";
-import { Feature, Section } from "../../components";
-import {
-  outerWrapper,
-  featuresWrapper,
-  headerWrapper,
-  selectionWrapper,
-} from "./styles";
+import { jsx, Heading, Box } from "theme-ui";
+import { Section } from "../../components";
+import { FeatureSelector } from "./FeatureSelector";
+import { FeatureDetail } from "./FeatureDetail";
+import { outerWrapper, featuresWrapper, headerWrapper } from "./styles";
 import { texts } from "./sampleCopy";
+
+// @ts-ignore
+import filter from "./filter.png";
+// @ts-ignore
+import enhance from "./enhance.png";
+// @ts-ignore
+import contextualize from "./contextualize.png";
+const images = { filter, enhance, contextualize };
 
 const FeaturesSection: FunctionComponent = () => {
   const [selectedText, selectText] = useState("filter");
@@ -22,22 +27,21 @@ const FeaturesSection: FunctionComponent = () => {
         </Heading>
       </Box>
       <Box sx={featuresWrapper}>
-        {Object.entries(texts).map(([title, text]) => {
-          return (
-            <Feature
-              onSelect={onSelect}
-              isSelected={title === selectedText}
-              title={title}
+        {Object.entries(texts).map(([title, text]) => (
+          <FeatureSelector
+            onSelect={onSelect}
+            isSelected={title === selectedText}
+            title={title}
+          >
+            <FeatureDetail
+              image={images[title]}
+              sx={{ display: ["block", "none"] }}
               text={text}
-            >
-              <Text>{texts[selectedText]}</Text>
-            </Feature>
-          );
-        })}
+            />
+          </FeatureSelector>
+        ))}
       </Box>
-      <Box sx={selectionWrapper}>
-        <Text as="p">{texts[selectedText]}</Text>
-      </Box>
+      <FeatureDetail image={images[selectedText]} text={texts[selectedText]} />
     </Section>
   );
 };

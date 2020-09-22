@@ -11,6 +11,7 @@ const HeroSection: FunctionComponent = () => {
         bg: "primary",
         color: "muted",
         top: 0,
+        zIndex: 10,
         width: "100%",
         flex: 1,
       }}

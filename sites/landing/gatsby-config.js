@@ -20,6 +20,7 @@ module.exports = {
         modules: ["gatsby-theme-mdx-deck"],
       },
     },
+    `gatsby-plugin-react-helmet`,
     "gatsby-plugin-theme-ui",
   ],
 };

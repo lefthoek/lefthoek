@@ -1,6 +1,6 @@
 import { SxStyleProp } from "theme-ui";
 
-export const outerWrapperStyles: SxStyleProp = {
+export const featureWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   flex: 1,
@@ -20,14 +20,10 @@ export const selectorStyles: SxStyleProp = {
   },
 };
 
-export const selectionStyles: SxStyleProp = {
-  display: ["block", "none"],
-};
-
 export const selectedStyles: SxStyleProp = {
   ...selectorStyles,
-  borderWidth: "3px",
-  borderColor: "primary",
+  borderWidth: ["1px", "3px"],
+  borderColor: ["text", "primary"],
   "&:hover": {
     color: "text",
   },
