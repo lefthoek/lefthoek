@@ -9,7 +9,7 @@ const Container: FunctionComponent = ({ children }) => {
   const { theme } = useThemeUI();
   return (
     <Box as="article" sx={outerWrapperStyles}>
-      <Global styles={{ body: { background: theme.colors.primary } }} />
+      <Global styles={{ body: { background: theme.colors.text } }} />
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
