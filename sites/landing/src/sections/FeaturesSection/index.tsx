@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import { jsx, Heading, Box, Text } from "theme-ui";
-import { Section } from "../../components";
+import { Feature, Section } from "../../components";
 
 const textFilter = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,39 +38,17 @@ const textEnhance = `
   aliqua.  
 `;
 
-export const Feature = ({ title, text }) => {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 1,
-      }}
-    >
-      <Heading
-        variant="title"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          p: 4,
-          border: "1px solid black",
-          borderColor: "text",
-          textAlign: "center",
-          my: 4,
-        }}
-      >
-        {title}
-      </Heading>
-      <Text as="p" sx={{ display: ["block", "none"] }}>
-        {text}
-      </Text>
-    </Box>
-  );
+const texts = {
+  filter: textFilter,
+  contextualize: textContextualize,
+  enhance: textEnhance,
 };
 
 const FeaturesSection: FunctionComponent = () => {
+  const [selectedText, selectText] = useState("filter");
+  const onSelect = ({ title }) => selectText(title);
   return (
-    <Section sx={{ pt: 4 }}>
+    <Section sx={{ py: 5 }}>
       <Box
         sx={{
           display: "flex",
@@ -96,16 +74,23 @@ const FeaturesSection: FunctionComponent = () => {
           justifyContent: ["space-between", "space-between", "space-between"],
         }}
       >
-        <Feature title="Filter" text={textFilter} />
-        <Feature title="Contextualize" text={textContextualize} />
-        <Feature title="Enhance" text={textEnhance} />
+        {Object.entries(texts).map(([title, text]) => {
+          return (
+            <Feature
+              onSelect={onSelect}
+              isSelected={title === selectedText}
+              title={title}
+              text={text}
+            />
+          );
+        })}
       </Box>
       <Box
         sx={{
           display: ["none", "flex"],
         }}
       >
-        <Text sx={{ width: "50%" }}>{textEnhance}</Text>
+        <Text sx={{ width: "50%" }}>{texts[selectedText]}</Text>
       </Box>
     </Section>
   );

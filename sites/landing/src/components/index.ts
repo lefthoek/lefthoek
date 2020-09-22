@@ -1,4 +1,5 @@
 import { Section } from "./Section";
+import { Feature } from "./Feature";
 import { Container } from "./Container";
 
-export { Container, Section };
+export { Container, Feature, Section };
