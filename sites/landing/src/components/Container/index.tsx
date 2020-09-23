@@ -7,9 +7,12 @@ import { Helmet } from "react-helmet";
 
 const Container: FunctionComponent = ({ children }) => {
   const { theme } = useThemeUI();
+  const { colors, styles } = theme;
   return (
     <Box as="article" sx={outerWrapperStyles}>
-      <Global styles={{ body: { background: theme.colors.text } }} />
+      <Global
+        styles={{ ...(styles as any), body: { background: colors.text } }}
+      />
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
