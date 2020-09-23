@@ -46,6 +46,11 @@ export const base = {
       py: 2,
       width: "100%",
       mb: [4, 0],
+      border: "1px solid transparent",
+      borderTop: "none",
+      borderBottom: "1px solid #DDD",
+      boxShadow:
+        "inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF",
     },
   },
   fonts,
@@ -58,4 +63,5 @@ export const base = {
 };
 
 export default base;
+
 
