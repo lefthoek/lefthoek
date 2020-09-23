@@ -3,6 +3,7 @@ import { FunctionComponent } from "react";
 import { jsx, Box, Text, AspectImage } from "theme-ui";
 import { selectionWrapper } from "./styles";
 
+
 const FeatureDetail: FunctionComponent<{
   image: any;
   text: string[];

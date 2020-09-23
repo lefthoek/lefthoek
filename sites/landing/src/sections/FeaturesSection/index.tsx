@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
 import { jsx, Heading, Box } from "theme-ui";
+import { AnimatePresence, motion } from "framer-motion";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";
@@ -14,6 +15,12 @@ import enhance from "./enhance.png";
 // @ts-ignore
 import contextualize from "./contextualize.png";
 const images = { filter, enhance, contextualize };
+
+const variants = {
+  initial: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const FeaturesSection: FunctionComponent = () => {
   const [selectedText, selectText] = useState("filter");
@@ -41,7 +48,20 @@ const FeaturesSection: FunctionComponent = () => {
           </FeatureSelector>
         ))}
       </Box>
-      <FeatureDetail image={images[selectedText]} text={texts[selectedText]} />
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={selectedText}
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
+          <FeatureDetail
+            image={images[selectedText]}
+            text={texts[selectedText]}
+          />
+        </motion.div>
+      </AnimatePresence>
     </Section>
   );
 };
