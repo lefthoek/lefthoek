@@ -13,6 +13,7 @@ const Container: FunctionComponent = ({ children }) => {
       <Global styles={{ body: { background: colors.text } }} />
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <html lang="en" />
         <meta charSet="utf-8" />
         <title>Lefthoek</title>
       </Helmet>
