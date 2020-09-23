@@ -9,10 +9,11 @@ export const FeatureSelector: FunctionComponent<{
   isSelected: boolean;
   onSelect: (args: { title: string }) => void;
 }> = ({ title, children, onSelect, isSelected = false }) => {
+  const formattedTitle = titleCase(title);
   return (
     <Box onClick={() => onSelect({ title })} sx={featureWrapperStyles}>
       <Box sx={isSelected ? selectedStyles : selectorStyles}>
-        <Heading variant="title">{titleCase(title)}</Heading>
+        <Heading variant="title">{formattedTitle}</Heading>
       </Box>
       {children}
     </Box>

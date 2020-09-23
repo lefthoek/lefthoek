@@ -19,7 +19,7 @@ const HeroSection: FunctionComponent = () => {
       <Heading sx={{ textAlign: "left", mb: 3 }} variant="display">
         Lefthoek
       </Heading>
-      <Text sx={{}}> Cutting Corners as a Service</Text>
+      <Text as="p">Cutting Corners as a Service</Text>
     </Section>
   );
 };
