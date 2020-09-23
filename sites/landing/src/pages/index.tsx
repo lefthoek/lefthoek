@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx } from "theme-ui";
+import { jsx, Box } from "theme-ui";
 import { Section } from "../components";
-import { HeroSection, FeaturesSection } from "../sections";
+import { HeroSection, FeaturesSection, CallToActionSection } from "../sections";
 import { useViewportScroll } from "framer-motion";
 import { Reveal } from "../animations";
 import { Container } from "../components";
@@ -27,23 +27,9 @@ const FooterSection: FunctionComponent = () => {
 };
 
 const UniqueSellingPointsSection: FunctionComponent = () => {
-  return <Section>Unique Selling Points</Section>;
+  return <Section sx={{ bg: "white" }}>Unique Selling Points</Section>;
 };
 
-const CallToActionSection: FunctionComponent = () => {
-  return (
-    <Section
-      sx={{
-        bg: "primary",
-        color: "white",
-        minHeight: "20vh",
-        maxHeight: "40vh",
-      }}
-    >
-      Call To Action
-    </Section>
-  );
-};
 const LandingPage: FunctionComponent = () => {
   const { scrollY } = useViewportScroll();
   const heroSection = {
@@ -56,7 +42,7 @@ const LandingPage: FunctionComponent = () => {
         <HeroSection {...heroSection} />
       </Reveal>
       <FeaturesSection />
-      <DemoSection />
+      {false && <DemoSection />}
       <UniqueSellingPointsSection />
       <CallToActionSection />
       <FooterSection />

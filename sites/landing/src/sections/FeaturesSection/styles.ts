@@ -1,10 +1,11 @@
 import { SxStyleProp } from "theme-ui";
 
-export const outerWrapper: SxStyleProp = {
+export const outerWrapperStyles: SxStyleProp = {
   py: 5,
+  px: [5, 8],
 };
 
-export const featuresWrapper: SxStyleProp = {
+export const featuresWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: ["column", "row"],
   width: "100%",
@@ -12,7 +13,7 @@ export const featuresWrapper: SxStyleProp = {
   justifyContent: ["space-between", "space-between", "space-between"],
 };
 
-export const headerWrapper: SxStyleProp = {
+export const headerWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   alignItems: ["start", "center"],

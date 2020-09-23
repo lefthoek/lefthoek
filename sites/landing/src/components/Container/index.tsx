@@ -7,13 +7,15 @@ import { Helmet } from "react-helmet";
 
 const Container: FunctionComponent = ({ children }) => {
   const { theme } = useThemeUI();
-  const { colors } = theme;
+  const { colors, text } = theme;
   return (
     <Box as="article" sx={outerWrapperStyles}>
-      <Global styles={{ body: { background: colors.text } }} />
+      <Global
+        styles={{ root: text.body as any, body: { background: colors.text } }}
+      />
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <html lang="en" />
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Lefthoek</title>
       </Helmet>

@@ -1,4 +1,5 @@
-import { HeroSection } from "./HeroSection";
+import { CallToActionSection } from "./CallToActionSection";
 import { FeaturesSection } from "./FeaturesSection";
+import { HeroSection } from "./HeroSection";
 
-export { HeroSection, FeaturesSection };
+export { CallToActionSection, FeaturesSection, HeroSection };

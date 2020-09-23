@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Heading, Text } from "theme-ui";
-import { Section } from "../../components";
+import { jsx, Box, Heading, Text } from "theme-ui";
+import { Section, CallToAction } from "../../components";
+import { outerWrapperStyles, headingStyles } from "./styles";
 
 const HeroSection: FunctionComponent<{
   title: string;
@@ -9,22 +10,14 @@ const HeroSection: FunctionComponent<{
   className?: string;
 }> = ({ className, title, takeAway }) => {
   return (
-    <Section
-      className={className}
-      sx={{
-        overflow: "hidden",
-        bg: "primary",
-        color: "muted",
-        top: 0,
-        zIndex: 10,
-        width: "100%",
-        flex: 1,
-      }}
-    >
-      <Heading sx={{ textAlign: "left", mb: 3 }} variant="display">
-        {title}
-      </Heading>
-      <Text as="p">{takeAway}</Text>
+    <Section className={className} sx={outerWrapperStyles}>
+      <Box>
+        <Heading sx={headingStyles} variant="display">
+          {title}
+        </Heading>
+        <Text as="p">{takeAway}</Text>
+      </Box>
+      <CallToAction />
     </Section>
   );
 };

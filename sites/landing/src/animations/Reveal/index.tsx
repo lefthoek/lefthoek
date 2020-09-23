@@ -16,7 +16,7 @@ const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
         overflow: "hidden",
         position: "fixed",
         display: "flex",
-          zIndex:1,
+        zIndex: 1,
         top: 0,
         width: "100vw",
       }}

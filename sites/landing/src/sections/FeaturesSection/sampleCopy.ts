@@ -31,7 +31,7 @@ const textEnhance = [
 ];
 
 export const texts = {
-  filter: textFilter,
+  organize: textFilter,
   contextualize: textContextualize,
   enhance: textEnhance,
 };

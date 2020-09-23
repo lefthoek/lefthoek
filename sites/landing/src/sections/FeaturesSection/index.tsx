@@ -5,16 +5,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";
-import { outerWrapper, featuresWrapper, headerWrapper } from "./styles";
+import {
+  outerWrapperStyles,
+  featuresWrapperStyles,
+  headerWrapperStyles,
+} from "./styles";
 import { texts } from "./sampleCopy";
 
 // @ts-ignore
-import filter from "./filter.png";
+import organize from "./filter.png";
 // @ts-ignore
 import enhance from "./enhance.png";
 // @ts-ignore
 import contextualize from "./contextualize.png";
-const images = { filter, enhance, contextualize };
+const images = { organize, enhance, contextualize };
 
 const variants = {
   initial: { opacity: 0 },
@@ -23,17 +27,17 @@ const variants = {
 };
 
 const FeaturesSection: FunctionComponent = () => {
-  const [selectedText, selectText] = useState("filter");
+  const [selectedText, selectText] = useState("organize");
   const onSelect = ({ title }) => selectText(title);
   return (
-    <Section sx={outerWrapper}>
-      <Box sx={headerWrapper}>
+    <Section sx={outerWrapperStyles}>
+      <Box sx={headerWrapperStyles}>
         <Heading variant="display">An Amazing Slogan</Heading>
         <Heading as="h3" variant="abstract">
           Something Even Better
         </Heading>
       </Box>
-      <Box sx={featuresWrapper}>
+      <Box sx={featuresWrapperStyles}>
         {Object.entries(texts).map(([title, text]) => (
           <FeatureSelector
             onSelect={onSelect}

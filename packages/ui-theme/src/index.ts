@@ -35,6 +35,19 @@ export const base = {
     heading: 700,
     bold: 600,
   },
+  forms: {
+    input: {
+      bg: "muted",
+      flex: [1, 2],
+      mr: [0, 4],
+      fontFamily: "body",
+      borderRadius: "3px",
+      px: 3,
+      py: 2,
+      width: "100%",
+      mb: [4, 0],
+    },
+  },
   fonts,
   text,
   cards,
@@ -45,3 +58,4 @@ export const base = {
 };
 
 export default base;
+
