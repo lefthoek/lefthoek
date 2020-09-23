@@ -16387,6 +16387,16 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-crimson-text@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.npmjs.org/typeface-crimson-text/-/typeface-crimson-text-0.0.72.tgz#af492f355f1474ec185bebebf4b2aaaae6eec24d"
+  integrity sha512-CLDNCOJ05k1BIbgQ1eAPPaK4eVHls8Y+n5NTIwvlFmhCSLzCXWII4vQ2oV6Iyi3BOVogj/LsWq25IdQINrh5+Q==
+
+typeface-spartan@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/typeface-spartan/-/typeface-spartan-1.1.4.tgz#6ef0ee76a56950ffdb83db5d9fadc34d56910d3d"
+  integrity sha512-NyoeQ9E+80MG26ozA+hvf0NNVOIAC8hfKuZgqP4ojUAa5zvbdmL7P5jNBvQGgbRIz2yQQFKttChwsJg2z3q0gw==
+
 typescript@3.5.3:
   version "3.5.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
