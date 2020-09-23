@@ -46,10 +46,14 @@ const CallToActionSection: FunctionComponent = () => {
 };
 const LandingPage: FunctionComponent = () => {
   const { scrollY } = useViewportScroll();
+  const heroSection = {
+    title: "Lefthoek",
+    takeAway: "Cutting Corners as a Service",
+  };
   return (
     <Container>
       <Reveal scrollY={scrollY}>
-        <HeroSection />
+        <HeroSection {...heroSection} />
       </Reveal>
       <FeaturesSection />
       <DemoSection />

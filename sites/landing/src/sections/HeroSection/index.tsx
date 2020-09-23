@@ -3,9 +3,14 @@ import { FunctionComponent } from "react";
 import { jsx, Heading, Text } from "theme-ui";
 import { Section } from "../../components";
 
-const HeroSection: FunctionComponent = () => {
+const HeroSection: FunctionComponent<{
+  title: string;
+  takeAway: string;
+  className?: string;
+}> = ({ className, title, takeAway }) => {
   return (
     <Section
+      className={className}
       sx={{
         overflow: "hidden",
         bg: "primary",
@@ -17,9 +22,9 @@ const HeroSection: FunctionComponent = () => {
       }}
     >
       <Heading sx={{ textAlign: "left", mb: 3 }} variant="display">
-        Lefthoek
+        {title}
       </Heading>
-      <Text as="p">Cutting Corners as a Service</Text>
+      <Text as="p">{takeAway}</Text>
     </Section>
   );
 };
