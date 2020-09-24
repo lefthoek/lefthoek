@@ -31,41 +31,43 @@ const FeaturesSection: FunctionComponent = () => {
   const onSelect = ({ title }) => selectText(title);
   return (
     <Section sx={outerWrapperStyles}>
-      <Box sx={headerWrapperStyles}>
-        <Heading variant="display">An Amazing Slogan</Heading>
-        <Heading as="h3" variant="abstract">
-          Something Even Better
-        </Heading>
-      </Box>
-      <Box sx={featuresWrapperStyles}>
-        {Object.entries(texts).map(([title, text]) => (
-          <FeatureSelector
-            onSelect={onSelect}
-            isSelected={title === selectedText}
-            title={title}
+      <Box sx={{ maxWidth: "100rem" }}>
+        <Box sx={headerWrapperStyles}>
+          <Heading variant="display">An Amazing Slogan</Heading>
+          <Heading as="h3" variant="abstract">
+            Something Even Better
+          </Heading>
+        </Box>
+        <Box sx={featuresWrapperStyles}>
+          {Object.entries(texts).map(([title, text]) => (
+            <FeatureSelector
+              onSelect={onSelect}
+              isSelected={title === selectedText}
+              title={title}
+            >
+              <FeatureDetail
+                image={images[title]}
+                sx={{ display: ["block", "none"] }}
+                text={text}
+              />
+            </FeatureSelector>
+          ))}
+        </Box>
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            key={selectedText}
+            variants={variants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
           >
             <FeatureDetail
-              image={images[title]}
-              sx={{ display: ["block", "none"] }}
-              text={text}
+              image={images[selectedText]}
+              text={texts[selectedText]}
             />
-          </FeatureSelector>
-        ))}
+          </motion.div>
+        </AnimatePresence>
       </Box>
-      <AnimatePresence exitBeforeEnter>
-        <motion.div
-          key={selectedText}
-          variants={variants}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
-          <FeatureDetail
-            image={images[selectedText]}
-            text={texts[selectedText]}
-          />
-        </motion.div>
-      </AnimatePresence>
     </Section>
   );
 };

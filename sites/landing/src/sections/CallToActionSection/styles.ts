@@ -5,12 +5,9 @@ export const outerWrapperStyles: SxStyleProp = {
   color: "white",
   minHeight: "20vh",
   alignItems: ["center", "center"],
-  py: 6,
+  py: [6, 8],
 };
 
 export const callToActionStyles: SxStyleProp = {
-  my: 0,
-  mt: 6,
-  mb: 3,
+  my: [4, 6],
 };
-

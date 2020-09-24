@@ -1,13 +1,14 @@
 /** @jsx jsx */
-import { FunctionComponent } from "react";
+import { FunctionComponent, ElementType } from "react";
 import { jsx, Box } from "theme-ui";
 
-const Section: FunctionComponent<{ className?: string }> = ({
-  children,
-  className,
-}) => {
+const Section: FunctionComponent<{
+  as?: ElementType<any>;
+  className?: string;
+}> = ({ as = "div", children, className }) => {
   return (
     <Box
+      as={as}
       className={className}
       sx={{
         display: "flex",

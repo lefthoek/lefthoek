@@ -1,8 +1,10 @@
 import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
+  display: "flex",
   py: 5,
   px: [5, 8],
+  alignItems: ["center", "center"],
 };
 
 export const featuresWrapperStyles: SxStyleProp = {
@@ -16,10 +18,11 @@ export const featuresWrapperStyles: SxStyleProp = {
 export const headerWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
-  alignItems: ["start", "center"],
+  alignItems: ["center", "center"],
   my: 4,
   width: "100%",
   h2: {
+    textAlign: "center",
     mb: 4,
   },
 };

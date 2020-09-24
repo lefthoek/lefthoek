@@ -1,8 +1,13 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Box } from "theme-ui";
+import { jsx } from "theme-ui";
 import { Section } from "../components";
-import { HeroSection, FeaturesSection, CallToActionSection } from "../sections";
+import {
+  HeroSection,
+  FeaturesSection,
+  CallToActionSection,
+  UniqueSellingPointsSection,
+} from "../sections";
 import { useViewportScroll } from "framer-motion";
 import { Reveal } from "../animations";
 import { Container } from "../components";
@@ -24,10 +29,6 @@ const FooterSection: FunctionComponent = () => {
       Footer
     </Section>
   );
-};
-
-const UniqueSellingPointsSection: FunctionComponent = () => {
-  return <Section sx={{ bg: "white" }}>Unique Selling Points</Section>;
 };
 
 const LandingPage: FunctionComponent = () => {
