@@ -36,6 +36,7 @@
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typescript": "^2.4.20",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

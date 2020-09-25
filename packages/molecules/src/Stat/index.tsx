@@ -13,10 +13,7 @@ const Stat: FunctionComponent<{
   return (
     <Box as="li" className={className} sx={statWrapperStyles}>
       <Box sx={{ width: "100%" }}>
-        <AspectImage
-          src={imageURL}
-          ratio={1 / 1}
-        />
+        <AspectImage src={imageURL} ratio={1 / 1} />
       </Box>
       <Heading sx={figureStyles} variant="display">
         {figure}
