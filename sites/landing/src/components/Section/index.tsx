@@ -1,27 +1,29 @@
 /** @jsx jsx */
 import { FunctionComponent, ElementType } from "react";
-import { jsx, Box } from "theme-ui";
+import { jsx, Heading, Box } from "theme-ui";
+import { outerWrapperStyles, headerWrapperStyles } from "./styles";
 
 const Section: FunctionComponent<{
   as?: ElementType<any>;
+  title?: string;
+  takeAway?: string;
   className?: string;
-}> = ({ as = "div", children, className }) => {
+}> = ({ as = "div", children, className, title, takeAway }) => {
   return (
-    <Box
-      as={as}
-      className={className}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: ["center", "center"],
-        alignItems: ["start", "start"],
-        minHeight: "40vh",
-        p: [4, 6],
-        color: "text",
-        bg: "muted",
-      }}
-    >
-      {children}
+    <Box as={as} className={className} sx={outerWrapperStyles}>
+      <Box className="innerWrapper">
+        {title && (
+          <Box className="headerWrapper" sx={headerWrapperStyles}>
+            <Heading variant="display">{title}</Heading>
+            {takeAway && (
+              <Heading as="h3" variant="abstract">
+                {takeAway}
+              </Heading>
+            )}
+          </Box>
+        )}
+        {children}
+      </Box>
     </Box>
   );
 };

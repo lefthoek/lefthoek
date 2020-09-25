@@ -1,16 +1,15 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
-import { jsx, Heading, Box } from "theme-ui";
-import { AnimatePresence, motion } from "framer-motion";
+import { jsx, Box } from "theme-ui";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";
+import { Fade } from "../../animations";
 import {
   outerWrapperStyles,
+  featureDetailOverrideStyles,
   featuresWrapperStyles,
-  headerWrapperStyles,
 } from "./styles";
-import { texts } from "./sampleCopy";
 
 // @ts-ignore
 import organize from "./filter.png";
@@ -20,54 +19,43 @@ import enhance from "./enhance.png";
 import contextualize from "./contextualize.png";
 const images = { organize, enhance, contextualize };
 
-const variants = {
-  initial: { opacity: 0 },
-  enter: { opacity: 1 },
-  exit: { opacity: 0 },
+type FeaturesSectionProps = {
+  title: string;
+  takeAway: string;
+  features: { title: string; description: string[] }[];
 };
 
-const FeaturesSection: FunctionComponent = () => {
+const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
+  title,
+  takeAway,
+  features,
+}) => {
   const [selectedText, selectText] = useState("organize");
+  const selectedDescription = features.find(
+    ({ title }) => title === selectedText
+  ).description;
+  const selectedImage = images[selectedText];
   const onSelect = ({ title }) => selectText(title);
   return (
-    <Section sx={outerWrapperStyles}>
-      <Box sx={{ maxWidth: "100rem" }}>
-        <Box sx={headerWrapperStyles}>
-          <Heading variant="display">An Amazing Slogan</Heading>
-          <Heading as="h3" variant="abstract">
-            Something Even Better
-          </Heading>
-        </Box>
-        <Box sx={featuresWrapperStyles}>
-          {Object.entries(texts).map(([title, text]) => (
-            <FeatureSelector
-              onSelect={onSelect}
-              isSelected={title === selectedText}
-              title={title}
-            >
-              <FeatureDetail
-                image={images[title]}
-                sx={{ display: ["block", "none"] }}
-                text={text}
-              />
-            </FeatureSelector>
-          ))}
-        </Box>
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            key={selectedText}
-            variants={variants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
+    <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
+      <Box sx={featuresWrapperStyles}>
+        {features.map(({ title, description }) => (
+          <FeatureSelector
+            onSelect={onSelect}
+            isSelected={title === selectedText}
+            title={title}
           >
             <FeatureDetail
-              image={images[selectedText]}
-              text={texts[selectedText]}
+              image={images[title]}
+              sx={featureDetailOverrideStyles}
+              text={description}
             />
-          </motion.div>
-        </AnimatePresence>
+          </FeatureSelector>
+        ))}
       </Box>
+      <Fade id={selectedText}>
+        <FeatureDetail image={selectedImage} text={selectedDescription} />
+      </Fade>
     </Section>
   );
 };
