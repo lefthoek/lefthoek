@@ -7,6 +7,7 @@ export const outerWrapperStyles: SxStyleProp = {
   alignItems: ["start", "start"],
   px: [4, 6, 8],
   py: [6, 6, 8],
+  minHeight: "40vh",
   color: "text",
   bg: "muted",
   ".innerWrapper": {
