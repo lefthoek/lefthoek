@@ -8,10 +8,13 @@ export const outerWrapperStyles: SxStyleProp = {
   zIndex: 10,
   width: "100%",
   flex: 1,
+  ".innerWrapper": {
+    justifyItems: ["flex-start", "flex-start"],
+    justifyContent: ["flex-start", "flex-start"],
+    alignItems: ["flex-start", "flex-start"],
+    alignContent: ["flex-start", "flex-start"],
+  },
+  ".headerWrapper": {
+    alignItems: ["flex-start", "flex-start"],
+  },
 };
-
-export const headingStyles: SxStyleProp = {
-  textAlign: "left",
-  mb: 3,
-};
-

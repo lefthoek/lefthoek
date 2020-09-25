@@ -13,7 +13,7 @@ export const selectorStyles: SxStyleProp = {
   borderBottom: "1px solid black",
   borderColor: "text",
   textAlign: "center",
-  my: 4,
+  mb: 4,
   userSelect: "none",
   "&:hover": {
     color: "primary",

@@ -1,13 +1,15 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Heading } from "theme-ui";
+import { jsx } from "theme-ui";
 import { Section, CallToAction } from "../../components";
 import { outerWrapperStyles, callToActionStyles } from "./styles";
 
-const CallToActionSection: FunctionComponent = () => {
+const CallToActionSection: FunctionComponent<{
+  title: string;
+  takeAway?: string;
+}> = ({ title, takeAway }) => {
   return (
-    <Section sx={outerWrapperStyles}>
-      <Heading sx={{textAlign: "center"}} variant="display">Start Cutting Corners</Heading>
+    <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
       <CallToAction sx={callToActionStyles} />
     </Section>
   );

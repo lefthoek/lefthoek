@@ -11,21 +11,19 @@ import {
 import { useViewportScroll } from "framer-motion";
 import { Reveal } from "../animations";
 import { Container } from "../components";
+// @ts-ignore
+import content from "./content.yaml";
 
 const LandingPage: FunctionComponent = () => {
   const { scrollY } = useViewportScroll();
-  const heroSection = {
-    title: "Lefthoek",
-    takeAway: "Cutting Corners as a Service",
-  };
   return (
     <Container>
       <Reveal scrollY={scrollY}>
-        <HeroSection {...heroSection} />
+        <HeroSection {...content.heroSection} />
       </Reveal>
-      <FeaturesSection />
-      <UniqueSellingPointsSection />
-      <CallToActionSection />
+      <FeaturesSection {...content.featureSection} />
+      <UniqueSellingPointsSection {...content.uniqueSellingPointsSection} />
+      <CallToActionSection {...content.callToActionSection} />
       <FooterSection />
     </Container>
   );

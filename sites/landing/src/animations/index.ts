@@ -1,3 +1,2 @@
-import { Reveal } from "./Reveal";
-
-export { Reveal };
+export * from "./Reveal";
+export * from "./Fade";

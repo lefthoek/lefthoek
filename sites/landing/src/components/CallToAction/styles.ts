@@ -6,5 +6,4 @@ export const outerWrapperStyles: SxStyleProp = {
   alignItems: ["flex-start", "center"],
   width: "100%",
   maxWidth: "45rem",
-  my: 7,
 };
