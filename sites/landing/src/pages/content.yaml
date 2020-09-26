@@ -2,7 +2,7 @@ heroSection:
   title: Lefthoek
   takeAway: Cutting Corners as a Service
 featureSection:
-  title: All The Amazing Things We Do
+  title: Lefthoek Is Your Virtual Team Member
   takeAway: Something Even Better
   features:
     - title: organize
@@ -23,7 +23,7 @@ featureSection:
     - title: contextualize
       description: |
 
-        # Get the Full Picture
+        # Find, Don't Search
 
         Nunc lobortis mattis aliquam faucibus purus in. Velit
         sed ullamcorper morbi tincidunt ornare massa eget.
@@ -38,7 +38,7 @@ featureSection:
     - title: enhance
       description: |
 
-        # Do Something Else
+        # Get the Full Picture
 
         Maecenas pharetra convallis posuere morbi leo urna.
         Lacinia at quis risus sed vulputate odio ut enim blandit.
