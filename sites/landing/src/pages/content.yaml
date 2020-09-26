@@ -2,8 +2,8 @@ heroSection:
   title: Lefthoek
   takeAway: Cutting Corners as a Service
 featureSection:
-  title: Lefthoek Is Your Virtual Team Member
-  takeAway: Something Even Better
+  title: Your Next Employee of the Month
+  takeAway: Lefthoek is a virtual team member fully devoted to managing information
   features:
     - title: organize
       description: |
@@ -13,8 +13,8 @@ featureSection:
         Messaging apps play a valuable role in your work. But managing the
         constant streams of information often feels like a fulltime job.
 
-        People are online at different times and in different places. New
-        members constantly join and leave your team.  
+        People are online at different times and in different places. And the
+        hand-off usually comes down to you.
 
         Lefthoek uses artificial intelligence to keep track and organize all
         things said. Next time, the first day after your vacation won't start
@@ -24,6 +24,8 @@ featureSection:
       description: |
 
         # Find, Don't Search
+
+        New members constantly join and leave your team.  
 
         Nunc lobortis mattis aliquam faucibus purus in. Velit
         sed ullamcorper morbi tincidunt ornare massa eget.
