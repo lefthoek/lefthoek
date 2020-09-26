@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent, ElementType } from "react";
-import { jsx, Text, Box, AspectImage, Heading } from "theme-ui";
+import { jsx, Box, AspectImage, Heading } from "theme-ui";
+import { Markdown } from "../../components/Markdown";
 import { itemStyles } from "./styles";
 
 const SellingPoint: FunctionComponent<{
@@ -18,7 +19,7 @@ const SellingPoint: FunctionComponent<{
         />
       </Box>
       <Heading variant="display">{title}</Heading>
-      <Text as="p">{children}</Text>
+      <Markdown text={children} />
     </Box>
   );
 };

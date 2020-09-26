@@ -6,58 +6,89 @@ featureSection:
   takeAway: Something Even Better
   features:
     - title: organize
-      description:
-        - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu
-          volutpat odio facilisis mauris sit amet. Risus nec feugiat in fermentum.
-          Integer quis auctor elit sed. At imperdiet dui accumsan sit amet nulla
-          facilisi.
-        - Tempus iaculis urna id volutpat lacus. Semper
-          auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
-          senectus et netus et malesuada fames ac.
+      description: |
+
+        # Keep Track of All Things Said
+
+        Messaging apps play a valuable role in your work. But managing the
+        constant streams of information often feels like a fulltime job.
+
+        People are online at different times and in different places. New
+        members constantly join and leave your team.  
+
+        Lefthoek uses artificial intelligence to keep track and organize all
+        things said. Next time, the first day after your vacation won't start
+        with a backlog of thousands of messages.
+
     - title: contextualize
-      description:
-        - Nunc lobortis mattis aliquam faucibus purus in. Velit
-          sed ullamcorper morbi tincidunt ornare massa eget.
-        - Tempus iaculis urna id volutpat lacus. Semper
-          auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
-          senectus et netus et malesuada fames ac. Tortor vitae purus faucibus
-          ornare suspendisse sed nisi lacus sed. Maecenas pharetra convallis
-          posuere morbi leo urna. Lacinia at quis risus sed vulputate odio ut
-          enim blandit.
+      description: |
+
+        # Get the Full Picture
+
+        Nunc lobortis mattis aliquam faucibus purus in. Velit
+        sed ullamcorper morbi tincidunt ornare massa eget.
+
+        Tempus iaculis urna id volutpat lacus. Semper
+        auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
+        senectus et netus et malesuada fames ac. Tortor vitae purus faucibus
+        ornare suspendisse sed nisi lacus sed. Maecenas pharetra convallis
+        posuere morbi leo urna. Lacinia at quis risus sed vulputate odio ut
+        enim blandit.
+
     - title: enhance
-      description:
-        - Maecenas pharetra convallis posuere morbi leo urna.
-          Lacinia at quis risus sed vulputate odio ut enim blandit.
-        - Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.
-          Id aliquet risus feugiat in ante. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua.
-        - Tempus iaculis urna id volutpat lacus. Semper
-          auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
-          senectus et netus et malesuada fames ac.
+      description: |
+
+        # Do Something Else
+
+        Maecenas pharetra convallis posuere morbi leo urna.
+        Lacinia at quis risus sed vulputate odio ut enim blandit.
+
+        Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.
+        Id aliquet risus feugiat in ante. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.
+
+        Tempus iaculis urna id volutpat lacus. Semper
+        auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
+        senectus et netus et malesuada fames ac.
+
 uniqueSellingPointsSection:
   title: What Makes Us Different
   takeAway: We Do Everything Great
   sellingPoints:
-    "24/7": |
-      Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.
-      Id aliquet risus feugiat in ante. Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-      aliqua.
-    "Super Human": |
-      Nunc lobortis mattis aliquam faucibus purus in. Velit
-      sed ullamcorper morbi tincidunt ornare massa eget.
-    "Local AI": |
-      Tempus iaculis urna id volutpat lacus. Semper
-      auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
-      senectus et netus et malesuada fames ac.
-    "Bespoke": |
-      Maecenas pharetra convallis posuere morbi leo urna.
-      Lacinia at quis risus sed vulputate odio ut enim blandit.
-    "Auto Improve": |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu
-      volutpat odio facilisis mauris sit amet.
+    - title: 24/7
+      description: |
+
+        Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum
+        odio. Id aliquet risus feugiat in ante. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua.
+
+    - title: Super Human
+      description: |
+
+        Nunc lobortis mattis aliquam faucibus purus in. Velit sed ullamcorper
+        morbi tincidunt ornare massa eget.
+
+    - title: Local AI
+      description: |
+
+        Tempus iaculis urna id volutpat lacus. Semper auctor neque vitae tempus
+        quam pellentesque nec nam. Morbi tristique senectus et netus et
+        malesuada fames ac.
+
+    - title: Bespoke
+      description: |
+
+        Maecenas pharetra convallis posuere morbi leo urna. Lacinia at quis
+        risus sed vulputate odio ut enim blandit.
+
+    - title: Auto Improve
+      description: |
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu
+        volutpat odio facilisis mauris sit amet.
+
 callToActionSection:
   title: Start Cutting Corners

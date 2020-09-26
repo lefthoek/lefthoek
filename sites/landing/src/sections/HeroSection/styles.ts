@@ -15,6 +15,10 @@ export const outerWrapperStyles: SxStyleProp = {
     alignContent: ["flex-start", "flex-start"],
   },
   ".headerWrapper": {
+    h2: {
+      mb: [0, 3],
+    },
+    mb: [5, 6, 6],
     alignItems: ["flex-start", "flex-start"],
   },
 };

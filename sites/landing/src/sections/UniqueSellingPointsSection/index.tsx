@@ -8,7 +8,7 @@ import { outerWrapperStyles, listStyles } from "./styles";
 type UniqueSellingPointsSectionProps = {
   title: string;
   takeAway: string;
-  sellingPoints: Record<string, string>;
+  sellingPoints: Record<string, string>[];
 };
 
 const UniqueSellingPointsSection: FunctionComponent<UniqueSellingPointsSectionProps> = ({
@@ -19,14 +19,14 @@ const UniqueSellingPointsSection: FunctionComponent<UniqueSellingPointsSectionPr
   return (
     <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
       <Box as="ul" sx={listStyles}>
-        {Object.entries(sellingPoints).map(([title, text], index) => (
+        {sellingPoints.map(({ title, description }, index) => (
           <SellingPoint
             as="li"
             className={`stat-${index}`}
             key={title}
             title={title}
           >
-            {text}
+            {description}
           </SellingPoint>
         ))}
       </Box>

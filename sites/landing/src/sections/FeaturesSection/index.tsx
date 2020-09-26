@@ -22,7 +22,7 @@ const images = { organize, enhance, contextualize };
 type FeaturesSectionProps = {
   title: string;
   takeAway: string;
-  features: { title: string; description: string[] }[];
+  features: { title: string; description: string }[];
 };
 
 const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
