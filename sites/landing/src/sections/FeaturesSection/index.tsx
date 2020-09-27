@@ -17,7 +17,7 @@ import organize from "./filter.png";
 import enhance from "./enhance.png";
 // @ts-ignore
 import contextualize from "./contextualize.png";
-const images = { organize, enhance, contextualize };
+const images = [organize, enhance, contextualize];
 
 type FeaturesSectionProps = {
   title: string;
@@ -30,23 +30,26 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
   takeAway,
   features,
 }) => {
-  const [selectedText, selectText] = useState("organize");
+  const [selectedText, selectText] = useState(features[0].title);
   const selectedDescription = features.find(
     ({ title }) => title === selectedText
   ).description;
-  const selectedImage = images[selectedText];
+  const selectedIndex = features.findIndex(
+    ({ title }) => title === selectedText
+  );
+  const selectedImage = images[selectedIndex];
   const onSelect = ({ title }) => selectText(title);
   return (
     <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
       <Box sx={featuresWrapperStyles}>
-        {features.map(({ title, description }) => (
+        {features.map(({ title, description }, index) => (
           <FeatureSelector
             onSelect={onSelect}
             isSelected={title === selectedText}
             title={title}
           >
             <FeatureDetail
-              image={images[title]}
+              image={images[index]}
               sx={featureDetailOverrideStyles}
               text={description}
             />
