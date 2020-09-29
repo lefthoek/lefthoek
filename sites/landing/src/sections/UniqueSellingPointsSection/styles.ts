@@ -2,7 +2,8 @@ import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
   display: "flex",
-  bg: ["white"],
+  bg: ["text"],
+  color: "muted",
   alignItems: ["center", "center"],
 };
 

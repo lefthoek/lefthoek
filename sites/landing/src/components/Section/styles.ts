@@ -9,7 +9,7 @@ export const outerWrapperStyles: SxStyleProp = {
   py: [6, 6, 8],
   minHeight: "40vh",
   color: "text",
-  bg: "muted",
+  bg: ({ gradients }) => gradients.cipria[0],
   ".innerWrapper": {
     flexDirection: "column",
     maxWidth: "100rem",
@@ -24,7 +24,7 @@ export const headerWrapperStyles: SxStyleProp = {
   flexDirection: "column",
   alignItems: ["center", "center"],
   width: "100%",
-  mb: [4, 5, 6],
+  mb: [4, 6, 8],
   h2: {
     textAlign: "center",
     mb: 3,

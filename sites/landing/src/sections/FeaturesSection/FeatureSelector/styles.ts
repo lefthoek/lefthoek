@@ -4,14 +4,18 @@ export const featureWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   flex: 1,
+  mb: [8, 8, 0],
 };
 
 export const selectorStyles: SxStyleProp = {
   display: "flex",
+  flex: 1,
   flexDirection: "column",
-  p: 4,
-  borderBottom: "1px solid black",
-  borderColor: "text",
+  h2: {
+    fontWeight: [600, 600, 400],
+  },
+  color: "secondary",
+  py: 4,
   textAlign: "center",
   mb: 4,
   userSelect: "none",
@@ -22,8 +26,9 @@ export const selectorStyles: SxStyleProp = {
 
 export const selectedStyles: SxStyleProp = {
   ...selectorStyles,
-  borderWidth: ["1px", "3px"],
-  borderColor: ["text", "primary"],
+  h2: {
+    fontWeight: 600,
+  },
   "&:hover": {
     color: "text",
   },

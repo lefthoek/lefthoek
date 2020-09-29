@@ -2,13 +2,13 @@ heroSection:
   title: Lefthoek
   takeAway: Cutting Corners as a Service
 featureSection:
-  title: Your Next Employee of the Month
-  takeAway: Lefthoek is a virtual team member fully devoted to managing information
+  title: Meet your next employee of the month
+  takeAway: A virtual team member devoted to managing information
   features:
     - title: synchronize
       description: |
 
-        # Stay on the Same Page
+        # Keep everyone on the same page
 
         Messaging apps play a valuable role in your work. But managing the
         constant streams of information often feels like a fulltime job.
@@ -23,33 +23,27 @@ featureSection:
     - title: onboard
       description: |
 
-        # Don't Repeat Yourself
+        # Don't repeat yourself
 
-        New members constantly join and leave your team. You are growing and
-        that's great. But every new member asks the same questions. Asking
-        substantial time and resources from your most valuable senior staff
-        members
+        New members constantly join and leave your organization. You are growing
+        and that's great.
 
-        Lefthoek's virtual team member registers previous asked questions and
-        knows when they are relevant again. So you'll never lose time explaining
-        your new colleague where she can find the meeting room.
+        But there is a flipside: every new member seems to asks the same
+        questions. Requiring substantial time and resources from the rest of
+        your team.
+
+        What if you could hire a dedicated team member that registers previous
+        asked questions and recalls them when they pop up again? 
+
+        Lefthoek is that team member.
 
     - title: learn
       description: |
 
-        # Get A Broader Picture
+        # Get a broader picture
 
         Maecenas pharetra convallis posuere morbi leo urna.
         Lacinia at quis risus sed vulputate odio ut enim blandit.
-
-        Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.
-        Id aliquet risus feugiat in ante. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua.
-
-        Tempus iaculis urna id volutpat lacus. Semper
-        auctor neque vitae tempus quam pellentesque nec nam. Morbi tristique
-        senectus et netus et malesuada fames ac.
 
 uniqueSellingPointsSection:
   title: What Makes Us Different

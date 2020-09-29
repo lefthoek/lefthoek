@@ -2,6 +2,7 @@ import { text, fonts } from "./typography";
 import { styles } from "./styles";
 import { cards } from "./cards";
 import { buttons } from "./buttons";
+import { forms } from "./forms";
 import { gradients, colors, primaryColors } from "./colors";
 
 export const base = {
@@ -35,24 +36,7 @@ export const base = {
     heading: 700,
     bold: 600,
   },
-  forms: {
-    input: {
-      bg: "muted",
-      flex: [1, 2],
-      mr: [0, 4],
-      fontFamily: "body",
-      borderRadius: "3px",
-      px: 3,
-      py: 2,
-      width: "100%",
-      mb: [4, 0],
-      border: "1px solid transparent",
-      borderTop: "none",
-      borderBottom: "1px solid #DDD",
-      boxShadow:
-        "inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF",
-    },
-  },
+  forms,
   fonts,
   text,
   cards,
@@ -63,5 +47,4 @@ export const base = {
 };
 
 export default base;
-
 

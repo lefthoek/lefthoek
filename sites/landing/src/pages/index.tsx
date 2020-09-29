@@ -24,7 +24,7 @@ const LandingPage: FunctionComponent = () => {
       <FeaturesSection {...content.featureSection} />
       <UniqueSellingPointsSection {...content.uniqueSellingPointsSection} />
       <CallToActionSection {...content.callToActionSection} />
-      <FooterSection />
+      {false && <FooterSection />}
     </Container>
   );
 };

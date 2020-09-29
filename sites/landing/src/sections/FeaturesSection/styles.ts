@@ -10,7 +10,6 @@ export const featuresWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: ["column", "column", "row"],
   width: "100%",
-  mb: 4,
   justifyContent: ["space-between", "space-between", "space-between"],
 };
 

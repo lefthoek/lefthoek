@@ -13,6 +13,7 @@ const Fade: FunctionComponent<{ id: string }> = ({ id, children }) => {
     <AnimatePresence exitBeforeEnter>
       <motion.div
         key={id}
+        sx={{ width: "100%" }}
         variants={variants}
         initial="initial"
         animate="enter"

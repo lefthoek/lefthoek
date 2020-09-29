@@ -18,7 +18,7 @@ export const outerWrapperStyles: SxStyleProp = {
     h2: {
       mb: [0, 3],
     },
-    mb: [5, 6, 6],
+    mb: [5, 8, "5rem"],
     alignItems: ["flex-start", "flex-start"],
   },
 };

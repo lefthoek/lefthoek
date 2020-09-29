@@ -13,7 +13,7 @@ const midnight = {
   fontSize: "20px",
   lineHeight: "32px",
   fontWeight: 600,
-  height: "40px",
+  height: "48px",
   py: 2,
   px: 5,
   flex: 1,
