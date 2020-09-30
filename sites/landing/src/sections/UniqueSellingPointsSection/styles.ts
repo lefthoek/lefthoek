@@ -4,6 +4,7 @@ export const outerWrapperStyles: SxStyleProp = {
   display: "flex",
   bg: ["text"],
   color: "muted",
+  px: [5, 5, 7],
   alignItems: ["center", "center"],
 };
 
@@ -11,8 +12,8 @@ export const listStyles: SxStyleProp = {
   display: ["grid"],
   gridTemplateColumns: ["auto", "repeat(4, 1fr)", "repeat(6, 1fr)"],
   maxWidth: "120rem",
-  gridRowGap: [6, 6, 8],
-  gridColumnGap: [6, 6, 8],
+  gridRowGap: [6, 8, 8],
+  gridColumnGap: [6, 7, 7, 9],
   justifyContent: "start",
   p: [0],
   m: [0],

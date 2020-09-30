@@ -5,6 +5,7 @@ import { Section, CallToAction } from "../../components";
 import { LinkedIn, Email } from "./icons";
 import {
   outerWrapperStyles,
+  innerWrapperStyles,
   iconStyles,
   iconWrapperStyles,
   callToActionStyles,
@@ -16,15 +17,7 @@ const CallToActionSection: FunctionComponent<{
 }> = ({ title, takeAway }) => {
   return (
     <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: ["column", "row"],
-          justifyContent: "space-between",
-            alignItems: ["center"],
-          width: "100%",
-        }}
-      >
+      <Box sx={innerWrapperStyles}>
         <CallToAction variant="lobster" sx={callToActionStyles} />
         <Box sx={iconWrapperStyles}>
           <Email sx={iconStyles} />

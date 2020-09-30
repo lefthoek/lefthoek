@@ -8,7 +8,7 @@ featureSection:
     - title: synchronize
       description: |
 
-        # Keep everyone on the same page
+        # Everyone on the same page
 
         Messaging apps play a valuable role in your work. But managing the
         constant streams of information often feels like a fulltime job.
@@ -49,39 +49,40 @@ uniqueSellingPointsSection:
   title: What Makes Us Different
   takeAway: We Do Everything Great
   sellingPoints:
-    - title: 24/7
+    - title: Available
       description: |
 
-        Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum
-        odio. Id aliquet risus feugiat in ante. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua.
+        Our virtual team member is available all day everyday, does not go on
+        holidays, and does not have a sick day. Whenever you need it, it's
+        willing and able to help you out.
 
-    - title: Super Human
+    - title: Discrete
       description: |
 
-        Nunc lobortis mattis aliquam faucibus purus in. Velit sed ullamcorper
-        morbi tincidunt ornare massa eget.
+        You don't want all your team's conversation to end up somewhere in the
+        cloud. Of course! That's why, Lefthoek's AI runs on your own servers or
+        even a Raspberry PI.
 
-    - title: Local AI
+    - title: Different
       description: |
 
-        Tempus iaculis urna id volutpat lacus. Semper auctor neque vitae tempus
-        quam pellentesque nec nam. Morbi tristique senectus et netus et
-        malesuada fames ac.
+        Afraid that computers will take your job? Don't be! Automation is meant
+        to take over tasks that humans cannot or won't do. Lefthoek is designed
+        to make your work more meaningful.
 
     - title: Bespoke
       description: |
 
-        Maecenas pharetra convallis posuere morbi leo urna. Lacinia at quis
-        risus sed vulputate odio ut enim blandit.
+        Your company and domain knowledge are unique. Lefthoek understands. Talk
+        to us! We'll make sure that our virtual team member gets tailor-made to
+        your needs.
 
-    - title: Auto Improve
+    - title: Eager
       description: |
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu
-        volutpat odio facilisis mauris sit amet.
+        Lefthoek gets better continuously. Your virtual team member will learn
+        more and more about your business as time progresses. And you don't
+        have to do anything.
 
 callToActionSection:
   title: Start Cutting Corners

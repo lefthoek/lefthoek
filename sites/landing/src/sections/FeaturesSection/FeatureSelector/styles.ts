@@ -20,7 +20,7 @@ export const selectorStyles: SxStyleProp = {
   mb: 4,
   userSelect: "none",
   "&:hover": {
-    color: "primary",
+    color: "text",
   },
 };
 
@@ -28,8 +28,5 @@ export const selectedStyles: SxStyleProp = {
   ...selectorStyles,
   h2: {
     fontWeight: 600,
-  },
-  "&:hover": {
-    color: "text",
   },
 };

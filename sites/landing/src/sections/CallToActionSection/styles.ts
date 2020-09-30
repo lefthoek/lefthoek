@@ -5,20 +5,32 @@ export const outerWrapperStyles: SxStyleProp = {
   color: "white",
   minHeight: "0vh",
   ".innerWrapper": {
+    maxWidth: "100%",
     justifyItems: ["flex-start", "flex-start"],
     justifyContent: ["flex-start", "flex-start"],
     alignItems: ["center", "flex-start"],
     alignContent: ["flex-start", "flex-start"],
-    py: [0, 8, 8],
   },
   ".headerWrapper": {
     alignItems: ["flex-start", "flex-start"],
+    mb: 3,
   },
 };
 
+export const innerWrapperStyles: SxStyleProp = {
+  display: "flex",
+  flexDirection: ["column", "row"],
+  justifyContent: "space-between",
+  alignItems: ["center", "flex-end"],
+  width: "100%",
+};
+
 export const callToActionStyles: SxStyleProp = {
-  maxWidth: ["auto", "40rem"],
-  mb: 5,
+  maxWidth: ["auto", "25rem", "40rem"],
+  mb: 0,
+  input: {
+    mb: [5, 8],
+  },
 };
 
 export const iconWrapperStyles: SxStyleProp = {
@@ -28,13 +40,14 @@ export const iconWrapperStyles: SxStyleProp = {
   alignItems: ["center"],
   justifyItems: ["center"],
   width: ["116px", "auto"],
+  height: ["auto", "116px"],
+  mt: [6, 0],
   justifyContent: ["space-between"],
 };
 
 export const iconStyles = {
   fill: "muted",
   width: "50px",
-  mb: [2, 3],
   height: "50px",
   "&:hover": {
     fill: "accent",

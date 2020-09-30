@@ -10,6 +10,9 @@ const Circle: FunctionComponent<{ className?: string }> = ({ className }) => {
       <circle
         sx={{
           fill: ({ gradients }) => gradients.midnight[2],
+          "&:hover": {
+            fill: ({ gradients }) => gradients.midnight[0],
+          },
         }}
         cx="50"
         cy="50"
