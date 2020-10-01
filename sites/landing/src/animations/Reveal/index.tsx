@@ -9,7 +9,7 @@ const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
   const vh = useMotionTemplate`${height}vh`;
   const vy = useMotionTemplate`${y}vh`;
   return (
-    <motion.section
+    <motion.div
       style={{ height: vh }}
       sx={{
         boxShadow: "0 1px 20px rgba(0,0,0,0.7)",
@@ -21,7 +21,7 @@ const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
         width: "100vw",
       }}
     >
-      <motion.section
+      <motion.div
         style={{ y: vy }}
         sx={{
           position: "absolute",
@@ -33,8 +33,8 @@ const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
         }}
       >
         {children}
-      </motion.section>
-    </motion.section>
+      </motion.div>
+    </motion.div>
   );
 };
 

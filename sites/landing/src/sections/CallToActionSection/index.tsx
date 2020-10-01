@@ -13,12 +13,17 @@ import {
 
 const CallToActionSection: FunctionComponent<{
   title: string;
+  callToAction: string;
   takeAway?: string;
-}> = ({ title, takeAway }) => {
+}> = ({ title, takeAway, callToAction }) => {
   return (
     <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
       <Box sx={innerWrapperStyles}>
-        <CallToAction variant="lobster" sx={callToActionStyles} />
+        <CallToAction
+          callToAction={callToAction}
+          variant="lobster"
+          sx={callToActionStyles}
+        />
         <Box sx={iconWrapperStyles}>
           <Email sx={iconStyles} />
           <LinkedIn sx={iconStyles} />

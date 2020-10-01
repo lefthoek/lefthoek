@@ -6,7 +6,6 @@ export const outerWrapperStyles: SxStyleProp = {
   justifyContent: ["center", "flex-end"],
   minHeight: "0vh",
   px: [4, 6],
-  py: [5, 5],
   ".innerWrapper": {
     display: "flex",
     flexDirection: ["column", "column", "row"],

@@ -1,10 +1,28 @@
 heroSection:
-  title: Lefthoek
-  takeAway: Cutting Corners as a Service
+  title: Cutting Corners as a Service
+  takeAway: Virtual team members devoted to information management
+  callToAction: Go Lefthoek
 featureSection:
   title: Meet your next employee of the month
-  takeAway: A virtual team member devoted to managing information
+  takeAway: Adding Lefthoek to the team makes your work fun again
   features:
+    - title: onboard
+      description: |
+
+        # Don't repeat yourself
+
+        New members constantly join and leave your organization. You are growing
+        and that's awesome.
+
+        But there is a flipside: every new member seems to asks the same
+        questions. Requiring substantial time and resources from the rest of
+        your team.
+
+        What if you could hire a dedicated team member that registers previous
+        asked questions and recalls them when they pop up again? 
+
+        Lefthoek is that team member.
+
     - title: synchronize
       description: |
 
@@ -20,48 +38,44 @@ featureSection:
         things said. Meaning that first day after your next vacation won't start
         with a backlog of thousands of messages.
 
-    - title: onboard
-      description: |
+        Lefthoek already did it for you.
 
-        # Don't repeat yourself
-
-        New members constantly join and leave your organization. You are growing
-        and that's great.
-
-        But there is a flipside: every new member seems to asks the same
-        questions. Requiring substantial time and resources from the rest of
-        your team.
-
-        What if you could hire a dedicated team member that registers previous
-        asked questions and recalls them when they pop up again? 
-
-        Lefthoek is that team member.
-
-    - title: learn
+    - title: research
       description: |
 
         # Get a broader picture
 
-        Maecenas pharetra convallis posuere morbi leo urna.
-        Lacinia at quis risus sed vulputate odio ut enim blandit.
+        The best thing about a great team is that they constantly share exciting
+        articles and videos with each other. Problem is that no-one ever has
+        time to process them.
+
+        Our virtual team member solves this problem. All links posted are read,
+        contextualized, and augmented.  What are the most important keywords.
+        Lefthoek finds out. Want to read similar articles? Lefhoek has got you
+        too.
+
+        Your unique knowledge archive is thus gradually built over time. Without
+        anyone having to do any extra work. 
+
+        Anyone but Lefthoek of course.
 
 uniqueSellingPointsSection:
-  title: What Makes Us Different
-  takeAway: We Do Everything Great
+  title: No-one's quite like Lefthoek
+  takeAway: Our virtual team member is a great fit for every culture
   sellingPoints:
-    - title: Available
+    - title: Loyal
       description: |
 
         Our virtual team member is available all day everyday, does not go on
-        holidays, and does not have a sick day. Whenever you need it, it's
-        willing and able to help you out.
+        holidays, and never takes a sick day. Whenever you need it, it's willing
+        and able to help you out, and then some.
 
     - title: Discrete
       description: |
 
         You don't want all your team's conversation to end up somewhere in the
-        cloud. Of course! That's why, Lefthoek's AI runs on your own servers or
-        even a Raspberry PI.
+        cloud. Of course! That's why, Lefthoek's AI runs on your own servers
+        or even a Raspberry PI.
 
     - title: Different
       description: |
@@ -74,8 +88,8 @@ uniqueSellingPointsSection:
       description: |
 
         Your company and domain knowledge are unique. Lefthoek understands. Talk
-        to us! We'll make sure that our virtual team member gets tailor-made to
-        your needs.
+        to us! Tell us what you need, We'll make sure that your virtual team
+        member gets tailor-made.
 
     - title: Eager
       description: |
@@ -86,3 +100,4 @@ uniqueSellingPointsSection:
 
 callToActionSection:
   title: Start Cutting Corners
+  callToAction: Go Lefthoek

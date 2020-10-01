@@ -17,7 +17,9 @@ export const outerWrapperStyles: SxStyleProp = {
   ".headerWrapper": {
     h2: {
       mb: [0, 3],
+      textAlign: "left",
     },
+    maxWidth: "45rem",
     mb: [5, 8, "5rem"],
     alignItems: ["flex-start", "flex-start"],
   },

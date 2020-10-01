@@ -8,7 +8,7 @@ const Section: FunctionComponent<{
   title?: string;
   takeAway?: string;
   className?: string;
-}> = ({ as = "div", children, className, title, takeAway }) => {
+}> = ({ as = "section", children, className, title, takeAway }) => {
   return (
     <Box as={as} className={className} sx={outerWrapperStyles}>
       <Box className="innerWrapper">
@@ -16,7 +16,7 @@ const Section: FunctionComponent<{
           <Box className="headerWrapper" sx={headerWrapperStyles}>
             <Heading variant="display">{title}</Heading>
             {takeAway && (
-              <Heading as="h3" variant="abstract">
+              <Heading as="h3" variant="smallAbstract">
                 {takeAway}
               </Heading>
             )}

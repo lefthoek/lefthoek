@@ -7,8 +7,9 @@ import { outerWrapperStyles } from "./styles";
 const HeroSection: FunctionComponent<{
   title: string;
   takeAway: string;
+  callToAction: string;
   className?: string;
-}> = ({ className, title, takeAway }) => {
+}> = ({ className, title, takeAway, callToAction }) => {
   return (
     <Section
       className={className}
@@ -16,7 +17,7 @@ const HeroSection: FunctionComponent<{
       title={title}
       takeAway={takeAway}
     >
-      <CallToAction />
+      <CallToAction callToAction={callToAction} />
     </Section>
   );
 };

@@ -6,8 +6,7 @@ export const outerWrapperStyles: SxStyleProp = {
   justifyContent: ["center", "center"],
   alignItems: ["start", "start"],
   px: [4, 6, 8],
-  py: [6, 6, 8],
-  minHeight: "40vh",
+  py: [8, 9, 9],
   color: "text",
   bg: ({ gradients }) => gradients.cipria[0],
   ".innerWrapper": {
