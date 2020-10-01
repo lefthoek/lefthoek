@@ -17,7 +17,12 @@ const CallToActionSection: FunctionComponent<{
   takeAway?: string;
 }> = ({ title, takeAway, callToAction }) => {
   return (
-    <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
+    <Section
+      as="footer"
+      sx={outerWrapperStyles}
+      title={title}
+      takeAway={takeAway}
+    >
       <Box sx={innerWrapperStyles}>
         <CallToAction
           callToAction={callToAction}

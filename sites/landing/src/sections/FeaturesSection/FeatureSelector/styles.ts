@@ -5,6 +5,9 @@ export const featureWrapperStyles: SxStyleProp = {
   flexDirection: "column",
   flex: 1,
   mb: [8, 8, 0],
+  "&:last-of-type": {
+    mb: 0,
+  },
 };
 
 export const selectorStyles: SxStyleProp = {

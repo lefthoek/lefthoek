@@ -2,6 +2,7 @@
 import { FunctionComponent } from "react";
 import { jsx } from "theme-ui";
 import { useMotionTemplate, useTransform, motion } from "framer-motion";
+import { outerWrapperStyles, innerWrapperStyles } from "./styles";
 
 const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
   const height = useTransform(scrollY, [0, 600], [100, 0]);
@@ -9,29 +10,8 @@ const Reveal: FunctionComponent<{ scrollY: any }> = ({ children, scrollY }) => {
   const vh = useMotionTemplate`${height}vh`;
   const vy = useMotionTemplate`${y}vh`;
   return (
-    <motion.div
-      style={{ height: vh }}
-      sx={{
-        boxShadow: "0 1px 20px rgba(0,0,0,0.7)",
-        overflow: "hidden",
-        position: "fixed",
-        display: "flex",
-        zIndex: 1,
-        top: 0,
-        width: "100vw",
-      }}
-    >
-      <motion.div
-        style={{ y: vy }}
-        sx={{
-          position: "absolute",
-          top: 0,
-          display: "flex",
-          height: "100vh",
-          left: 0,
-          right: 0,
-        }}
-      >
+    <motion.div style={{ height: vh }} sx={outerWrapperStyles}>
+      <motion.div style={{ y: vy }} sx={innerWrapperStyles}>
         {children}
       </motion.div>
     </motion.div>

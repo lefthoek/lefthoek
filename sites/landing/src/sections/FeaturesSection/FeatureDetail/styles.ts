@@ -1,6 +1,6 @@
 import { SxStyleProp } from "theme-ui";
 
-export const selectionWrapper: SxStyleProp = {
+export const outerWrapperStyles: SxStyleProp = {
   display: ["none", "none", "flex"],
   flexDirection: ["column", "column", "row"],
   zIndex: 0,
@@ -11,3 +11,19 @@ export const selectionWrapper: SxStyleProp = {
     mb: 5,
   },
 };
+
+export const textWrapperStyles = {
+  flex: 2,
+  mr: [0, 6],
+};
+
+export const imageWrapperStyles: SxStyleProp = {
+  flex: 3,
+  bg: "muted",
+  border: "1px solid",
+  borderColor: ({ gradients }) => gradients.midnight[0],
+  "&:hover": {
+    bg: ({ gradients }) => gradients.lobster[0],
+  },
+};
+

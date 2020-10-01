@@ -5,7 +5,6 @@ import {
   CallToActionSection,
   HeroSection,
   FeaturesSection,
-  FooterSection,
   UniqueSellingPointsSection,
 } from "../sections";
 import { useViewportScroll } from "framer-motion";
@@ -24,7 +23,6 @@ const LandingPage: FunctionComponent = () => {
       <FeaturesSection {...content.featureSection} />
       <UniqueSellingPointsSection {...content.uniqueSellingPointsSection} />
       <CallToActionSection {...content.callToActionSection} />
-      {false && <FooterSection />}
     </Container>
   );
 };
