@@ -1,6 +1,6 @@
 heroSection:
   title: Cutting Corners as a Service
-  takeAway: Virtual team members that let you mix business with pleasure
+  takeAway: Virtual team members that mix business with pleasure
   callToAction: Go Lefthoek
 featureSection:
   title: Meet your next employee of the month
@@ -35,8 +35,8 @@ featureSection:
         hand-off usually comes down to you.
 
         Lefthoek uses artificial intelligence to keep track and organize all
-        things said. Meaning that first day after your next vacation won't start
-        with a backlog of thousands of messages.
+        things said. Meaning that the first day after your next vacation won't
+        start with a backlog of thousands of messages.
 
         Lefthoek already did it for you.
 
@@ -49,14 +49,14 @@ featureSection:
         articles and videos with each other. Problem is that no-one ever has
         time to process them.
 
-        Lefthoek solves this problem. All links posted are read,
-        contextualized, and augmented. 
+        Lefthoek solves this problem. All links posted are read, contextualized,
+        and augmented. 
 
-        What are the most important keywords. Your virtual team member will find
+        What are the most important keywords? Your virtual team member will find
         it out. Want to read similar articles? Lefhoek has got you covered too.
 
-        Your unique knowledge archive is thus gradually built over time. And
-        no-one has to do any extra work. 
+        Your tailor-made knowledge archive is thus gradually built over time.
+        And no-one has to do any extra work. 
 
         Anyone but Lefthoek of course.
 
@@ -75,8 +75,8 @@ uniqueSellingPointsSection:
       description: |
 
         You don't want all your team's conversation to end up somewhere in the
-        cloud. Of course! That's why, Lefthoek's AI runs on your own servers
-        or even a Raspberry PI.
+        cloud. Of course! That's why, Lefthoek's AI runs on your own servers or
+        even a Raspberry PI.
 
     - title: Different
       description: |
@@ -88,16 +88,16 @@ uniqueSellingPointsSection:
     - title: Bespoke
       description: |
 
-        Your company and domain knowledge are unique. Lefthoek understands. Talk
-        to us! Tell us what you need, We'll make sure that your virtual team
-        member gets tailor-made.
+        Your company and domain knowledge are unique. Lefthoek understands this.
+        Talk to us! Tell us what you need, We'll make sure that your virtual
+        team member gets tailor-made.
 
     - title: Eager
       description: |
 
         Lefthoek gets better continuously. Your virtual team member will learn
-        more and more about your business as time progresses. And you don't
-        have to do anything.
+        more and more about your business as time progresses. And you don't have
+        to do anything.
 
 callToActionSection:
   title: Start Cutting Corners
