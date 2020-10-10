@@ -6,6 +6,7 @@ submenu: Molecules
 
 import { Playground, Props } from 'docz'
 import { UserStory } from './UserStory'
+import { DisplayContainer } from '../DisplayContainer'
 import { userStories }from "@lefthoek/data"
 
 # User Story
@@ -17,6 +18,8 @@ import { userStories }from "@lefthoek/data"
 ## Basic usage
 
 <Playground>
-  <UserStory {...userStories.brandImageDamageControl }/>
+  <DisplayContainer colorMode="secondary">
+    <UserStory {...userStories.diachronousCollaboration }/>
+  </DisplayContainer>
 </Playground>
 

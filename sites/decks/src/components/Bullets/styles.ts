@@ -11,8 +11,13 @@ const outerWrapper = {
   "> h2": {
     ...text.heading,
   },
+
+  h3: {
+    ...text.smallHeading,
+  },
   "> ul > li > p": {
     ...text.body,
+    m: 0,
   },
 };
 

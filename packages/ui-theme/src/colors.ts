@@ -1,3 +1,6 @@
+// @ts-ignore
+import { tint } from "@theme-ui/color";
+
 export const primaryColors = {
   cipria: "#FCF2F5",
   midnight: "#32334E",
@@ -5,6 +8,15 @@ export const primaryColors = {
   skyBlue: "#784CFB",
   lobster: "#D15B1B",
 };
+
+const gradientPairs = Object.entries(primaryColors).map(([k, colorValue]) => {
+  const values = [0.6, 0.4, 0.2, 0];
+  const tints = values.map((opacity) => tint(colorValue, opacity)());
+  return [k, tints];
+});
+
+// @ts-ignore
+export const gradients = Object.fromEntries(gradientPairs);
 
 export const colors = {
   text: primaryColors.midnight,

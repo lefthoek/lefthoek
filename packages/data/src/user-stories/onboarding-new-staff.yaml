@@ -1,13 +1,15 @@
 title: Onboarding New Staff
-rating: 4
+rating: 5
 story:
   as a: |
-    COO of a fast-growing Scale-Up
+    COO of a fast-growing Scale-Up that currently onboards at least 20 new
+    employees a week, something that puts an enormous strain on both the 
+    work pleasure and effective productivity of senior staff members.
   I want: |
     a team member who is fully dedicated to onboarding new employees by 
     answering their question, pointing them to the best, and most up-to-date
     sources of information both on- and offline
   so that: |
-    new employees are productive in 50% of the times that it currently
+    new employees are productive in 50% of the times than it currently
     takes, while also taking 50% less of the team's time
 

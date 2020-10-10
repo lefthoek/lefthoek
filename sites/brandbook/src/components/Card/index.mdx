@@ -5,7 +5,15 @@ submenu: Atoms
 ---
 
 import { Playground, Props } from 'docz'
-import { Card } from './Card'
+import { Heading, Box } from 'theme-ui'
+import { DisplayContainer, Card } from './Card'
+
+export const snippet = `
+  As a COO of a fast-growing Scale-Up that currently onboards 
+  at least 20 new employees a week, something that puts an enormous 
+  strain on both the work pleasure and effective productivity of 
+  senior staff members.
+`
 
 # Card
 
@@ -16,6 +24,37 @@ import { Card } from './Card'
 ## Basic usage
 
 <Playground>
-  <Card>Test</Card>
+  <DisplayContainer colorMode="primary">
+    <Card title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
 </Playground>
 
+<Playground>
+  <DisplayContainer colorMode="accent">
+    <Card contrast variant="brightGreen" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer colorMode="primary">
+    <Card contrast variant="skyBlue" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer colorMode="text">
+    <Card contrast variant="midnight" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer colorMode="secondary">
+    <Card contrast variant="lobster" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+</Playground>
+
+<Playground>
+  <DisplayContainer>
+    <Card simple variant="brightGreen" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer>
+    <Card simple variant="skyBlue" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer>
+    <Card simple variant="midnight" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+  <DisplayContainer>
+    <Card simple variant="lobster" title="Market Validation">{snippet}</Card>
+  </DisplayContainer>
+</Playground>

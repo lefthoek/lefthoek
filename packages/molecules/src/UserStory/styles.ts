@@ -5,27 +5,15 @@ export const cardStyles: (args: {
   rating?: number;
 }) => SxStyleProp = ({ rating = 1 }) => {
   return {
-    opacity: 0.2 * rating,
-    display: "block",
-    p: 0,
-    maxWidth: "45rem",
+    opacity: true ? 1 : 0.2 * rating,
+    maxWidth: ["80rem"],
     minHeight: "35rem",
-    alignItems: "flex-start",
-    alignSelf: "center",
-    justifySelf: "center",
+    maxHeight: "80vh",
+    overflowY: "scroll",
   };
 };
 
 export const ruleStyles: SxStyleProp = {
-  m: 0,
-  p: "1.5rem",
-  borderBottom: "2px solid black",
-  borderColor: "muted",
-  "&:last-of-type": { borderBottom: "none" },
+  mb: 6,
+  "&:last-of-type": { pb: 0, mb: [5, 0], borderBottom: "none" },
 };
-
-export const titleStyles = {
-  ...ruleStyles,
-  borderColor: "primary",
-};
-

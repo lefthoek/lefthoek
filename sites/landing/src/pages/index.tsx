@@ -1,30 +1,30 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { Logo } from "@lefthoek/atoms";
-import { jsx, Box } from "theme-ui";
+import { jsx } from "theme-ui";
+import {
+  CallToActionSection,
+  HeroSection,
+  FeaturesSection,
+  UniqueSellingPointsSection,
+} from "../sections";
+import { useViewportScroll } from "framer-motion";
+import { Reveal } from "../animations";
+import { Container } from "../components";
+// @ts-ignore
+import content from "./content.yaml";
 
-//  #61C591
-//  #367975
-//
-//  #583A4F
-//
-//  #E88083
-//  #E8E6D4
-const LandingPage: FunctionComponent = () => (
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      height: "100vh",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <Logo sx={{ px: "2rem", py: "1rem", fontSize: ["4rem", "4rem", "8rem"] }}>
-      Lefthoek
-    </Logo>
-    <h2> Cutting Corners as a Service</h2>
-  </Box>
-);
+const LandingPage: FunctionComponent = () => {
+  const { scrollY } = useViewportScroll();
+  return (
+    <Container>
+      <Reveal scrollY={scrollY}>
+        <HeroSection {...content.heroSection} />
+      </Reveal>
+      <FeaturesSection {...content.featureSection} />
+      <UniqueSellingPointsSection {...content.uniqueSellingPointsSection} />
+      <CallToActionSection {...content.callToActionSection} />
+    </Container>
+  );
+};
 
 export default LandingPage;

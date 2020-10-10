@@ -13,6 +13,9 @@ export const sectionStyles = {
   "&:first-of-type": {
     mt: 5,
   },
+  "&:last-of-type": {
+    mb: 5,
+  },
   h2: {
     color: "primary",
     borderBottom: "1px solid lightgray",

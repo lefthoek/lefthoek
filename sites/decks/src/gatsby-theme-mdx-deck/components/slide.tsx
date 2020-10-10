@@ -1,21 +1,24 @@
-import { Fragment } from "react";
-//  @ts-ignore
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { motion } from "framer-motion";
 import { Slide as ParentSlide } from "gatsby-theme-mdx-deck/src/components/slide";
-import Layout from "../../components/Layout";
 
-import { Global } from "@emotion/core";
-
-const Slide = ({ slide, ...props }: any) => {
+const AnimatedSlide = ({ slide }) => {
   return (
-    <Fragment>
-      <Global
-        styles={(theme) => {
-          return { ...theme.globals, body: { margin: 0 } };
-        }}
-      />
-      <ParentSlide slide={<Layout>{slide}</Layout>} {...props} />
-    </Fragment>
+    <motion.div
+      sx={{
+        width: "100vw",
+        height: "100vh",
+      }}
+      initial={{ opacity: 0, scale: 0.8, x: 0 }}
+      animate={{ opacity: 1, scale: 1, x: 0 }}
+    >
+      {slide}
+    </motion.div>
   );
+};
+const Slide = ({ slide, ...props }) => {
+  return <ParentSlide slide={<AnimatedSlide slide={slide} />} {...props} />;
 };
 
 export { Slide };

@@ -1,51 +1,53 @@
 export const fonts = {
-  body: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
-  heading: 'Spartan, Roboto, "Helvetica Neue", sans-serif',
-  monospace: "Menlo, monospace",
+  body: 'GT Walsheim Pro, "Helvetica Neue", sans-serif',
+  heading: "GT Sectra Display, DejaVu Serif, Georgia, serif",
+  monospace: "IBM Plex Mono, Menlo, monospace",
 };
 
 export const text = {
-  displayText: {
-    fontSize: 7,
-    lineHeight: "70px",
+  display: {
+    fontSize: ["42px", "58px"],
+    lineHeight: ["48px", "62px"],
+    fontWeight: 900,
+    fontStyle: "super-italic",
+    fontFamily: "heading",
+  },
+  eyelet: {
+    fontSize: ["32px", "42px"],
+    lineHeight: ["36px", "48px"],
     fontWeight: 500,
     fontFamily: "body",
   },
-  extraLargeHeading: {
-    fontSize: 6,
-    lineHeight: "52px",
+  title: {
+    fontSize: ["24px", "32px"],
+    lineHeight: ["30px", "36px"],
+    fontWeight: 500,
+    fontFamily: "body",
+  },
+  abstract: {
+    fontSize: ["18px", "24px"],
+    lineHeight: ["26px", "30px"],
+    fontWeight: 500,
+    fontFamily: "body",
+  },
+  titoletto: {
+    fontSize: ["14px", "20px"],
+    lineHeight: ["20px", "36px"],
     fontWeight: 600,
-    fontFamily: "body",
-  },
-  largeHeading: {
-    fontSize: 5,
-    lineHeight: "38px",
-    fontWeight: 600,
-    fontFamily: "body",
-  },
-  heading: {
-    fontSize: 4,
-    lineHeight: "30px",
-    fontWeight: 700,
-    fontFamily: "body",
-  },
-  smallHeading: {
-    fontSize: 3,
-    lineHeight: "26px",
-    fontWeight: 600,
-    fontFamily: "body",
-  },
-  sectionHeading: {
-    fontSize: 0,
-    lineHeight: "20px",
-    fontWeight: 700,
     textTransform: "uppercase",
     letterSpacing: 1,
-    fontFamily: "body",
+    fontFamily: "monospace",
+  },
+  titolettoAlt: {
+    fontSize: ["14px", "20px"],
+    lineHeight: ["18px", "24px"],
+    fontWeight: 400,
+    textTransform: "uppercase",
+    fontFamily: "monospace",
   },
   body: {
-    fontSize: 2,
-    lineHeight: "28px",
+    fontSize: ["16px", "18px"],
+    lineHeight: ["25px", "28px"],
     fontWeight: 500,
     fontFamily: "body",
   },
@@ -53,7 +55,7 @@ export const text = {
     color: "text",
     fontFamily: "body",
     fontWeight: 400,
-    lineHeight: "25px",
-    fontSize: 1,
+    fontSize: ["14px", "16px"],
+    lineHeight: ["22px", "25px"],
   },
 };

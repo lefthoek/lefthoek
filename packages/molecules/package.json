@@ -17,8 +17,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@lefthoek/types": "*",
     "@lefthoek/atoms": "*",
+    "@lefthoek/types": "*",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@types/jest": "^26.0.5",
@@ -51,15 +51,17 @@
     ]
   },
   "peerDependencies": {
-    "@lefthoek/types": "*",
     "@lefthoek/atoms": "*",
+    "@lefthoek/types": "*",
     "formik": "^2.1.5",
+    "framer-motion": "^2.3.0",
     "gatsby": "^2.24.7",
     "ramda": "^0.27.0",
-    "framer-motion": "^2.3.0",
     "react": "^16",
     "react-dom": "^16",
+    "recharts": "^1.8.5",
     "theme-ui": "^0.3.1",
+    "@theme-ui/match-media": "^0.3.1",
     "voca": "^1.4.0"
   },
   "dependencies": {}

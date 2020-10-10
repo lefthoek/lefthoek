@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { titleCase, capitalize } from "voca";
-import { jsx, Card, Heading, Text } from "theme-ui";
-import { cardStyles, titleStyles, ruleStyles } from "./styles";
+import { capitalize } from "voca";
+import { Card } from "@lefthoek/atoms";
+import { jsx, Text } from "theme-ui";
+import { cardStyles, ruleStyles } from "./styles";
 
 type Story = {
   "as a": string;
@@ -11,23 +12,34 @@ type Story = {
 };
 const UserStory: FunctionComponent<{
   className?: string;
+  simple?: boolean;
   title: string;
+  variant: string;
   story: Story;
   status?: "rejected";
   rating: number;
-}> = ({ className, title, story, status, rating }) => {
+}> = ({
+  className,
+  variant = "skyBlue",
+  simple = false,
+  title,
+  story,
+  status,
+  rating,
+}) => {
   return (
-    <Card sx={cardStyles({ status, rating })} className={className}>
-      <section sx={titleStyles}>
-        <Heading as="h1">{titleCase(title)}</Heading>
-      </section>
+    <Card
+      simple={simple}
+      variant={variant}
+      className={className}
+      title={title}
+      sx={cardStyles({ status, rating })}
+    >
       {Object.entries(story).map(([k, v]) => {
         return (
-          <section key={k} sx={ruleStyles}>
-            <Text>
-              <strong>{capitalize(k)}</strong> {v}
-            </Text>
-          </section>
+          <Text sx={ruleStyles}>
+            <strong>{capitalize(k)}</strong> {v}
+          </Text>
         );
       })}
     </Card>

@@ -1,3 +1,4 @@
-import { Card } from "theme-ui";
+import { Card } from "@lefthoek/atoms";
+import { DisplayContainer } from "../DisplayContainer";
 
-export { Card };
+export { DisplayContainer, Card };

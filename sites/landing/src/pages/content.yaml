@@ -1,0 +1,104 @@
+heroSection:
+  title: Cutting Corners as a Service
+  takeAway: Virtual team members that mix business with pleasure
+  callToAction: Go Lefthoek
+featureSection:
+  title: Meet your next employee of the month
+  takeAway: Lefthoek offers virtual team members devoted to information management
+  features:
+    - title: onboard
+      description: |
+
+        # Don't repeat yourself
+
+        New members constantly join and leave your organization. You are growing
+        and that's awesome.
+
+        But there is a flipside: every new member seems to asks the same
+        questions. Requiring substantial time and resources from the rest of
+        your team.
+
+        What if you could hire a dedicated team member that registers previous
+        asked questions and recalls them when they pop up again? 
+
+        Lefthoek is that team member.
+
+    - title: synchronize
+      description: |
+
+        # Everyone on the same page
+
+        Messaging apps play a valuable role in your work. But managing the
+        constant streams of information often feels like a fulltime job.
+
+        People are online at different times and in different places. And the
+        hand-off usually comes down to you.
+
+        Lefthoek uses artificial intelligence to keep track and organize all
+        things said. Meaning that the first day after your next vacation won't
+        start with a backlog of thousands of messages.
+
+        Lefthoek already did it for you.
+
+    - title: research
+      description: |
+
+        # Get a broader picture
+
+        The best thing about a great team is that they constantly share exciting
+        articles and videos with each other. Problem is that no-one ever has
+        time to process them.
+
+        Lefthoek solves this problem. All links posted are read, contextualized,
+        and augmented. 
+
+        What are the most important keywords? Your virtual team member will find
+        it out. Want to read similar articles? Lefhoek has got you covered too.
+
+        Your tailor-made knowledge archive is thus gradually built over time.
+        And no-one has to do any extra work. 
+
+        Anyone but Lefthoek of course.
+
+uniqueSellingPointsSection:
+  title: No-one's quite like Lefthoek
+  takeAway: Our virtual team member is a great fit for every culture
+  sellingPoints:
+    - title: Loyal
+      description: |
+
+        Our virtual team member is available all day everyday, does not go on
+        holidays, and never takes a sick day. Whenever you need it, it's willing
+        and able to help you out, and then some.
+
+    - title: Discrete
+      description: |
+
+        You don't want all your team's conversation to end up somewhere in the
+        cloud. Of course! That's why, Lefthoek's AI runs on your own servers or
+        even a Raspberry PI.
+
+    - title: Different
+      description: |
+
+        Afraid that computers will take your job? Don't be! Automation is meant
+        to take over tasks that humans cannot or won't do. Lefthoek is designed
+        to make your work more meaningful.
+
+    - title: Bespoke
+      description: |
+
+        Your company and domain knowledge are unique. Lefthoek understands this.
+        Talk to us! Tell us what you need, We'll make sure that your virtual
+        team member gets tailor-made.
+
+    - title: Eager
+      description: |
+
+        Lefthoek gets better continuously. Your virtual team member will learn
+        more and more about your business as time progresses. And you don't have
+        to do anything.
+
+callToActionSection:
+  title: Start Cutting Corners
+  callToAction: Go Lefthoek

@@ -11,8 +11,10 @@ const transformCode = (code: string) => {
 const Playground: FunctionComponent<{
   code: string;
   scope: any;
+  colorMode: string;
   language: any;
-}> = ({ code, language, scope }) => {
+  className?: string;
+}> = ({ colorMode = "muted", code, language, scope, ...rest }) => {
   const { theme } = useThemeUI();
   return (
     <LiveProvider
@@ -22,9 +24,16 @@ const Playground: FunctionComponent<{
       language={language}
       theme={theme.prism.light}
     >
-      <LiveEditor />
-      <Box sx={{ bg: "white", p: 4, "> div *": { mb: 5 } }}>
-        <LivePreview />
+      <LiveEditor sx={{ mb: 8 }} />
+      <Box>
+        <LivePreview
+          sx={{
+            bg: colorMode,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "stretch",
+          }}
+        />
       </Box>
       <LiveError />
     </LiveProvider>
