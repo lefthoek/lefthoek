@@ -1,3 +1,1 @@
-import "typeface-spartan";
-import "typeface-crimson-text";
-
+import "./src/styles/global.css";

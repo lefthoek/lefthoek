@@ -109,6 +109,5 @@ dist
 **/.docz/
 **/public/
 **/build/
-**/static/fonts
 
 .terraform/
