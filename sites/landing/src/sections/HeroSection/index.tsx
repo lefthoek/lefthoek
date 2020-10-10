@@ -1,8 +1,14 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx } from "theme-ui";
+import { jsx, Box, Text, Heading } from "theme-ui";
 import { Section, CallToAction } from "../../components";
-import { outerWrapperStyles } from "./styles";
+import {
+  outerWrapperStyles,
+  rightPanelStyles,
+  leftPanelStyles,
+  rightHeadingStyles,
+  leftHeadingStyles,
+} from "./styles";
 
 const HeroSection: FunctionComponent<{
   title: string;
@@ -11,14 +17,20 @@ const HeroSection: FunctionComponent<{
   className?: string;
 }> = ({ className, title, takeAway, callToAction }) => {
   return (
-    <Section
-      className={className}
-      sx={outerWrapperStyles}
-      title={title}
-      takeAway={takeAway}
-    >
-      <CallToAction callToAction={callToAction} />
-    </Section>
+    <Box sx={outerWrapperStyles} className={className}>
+      <Box sx={rightPanelStyles}>
+        <Text sx={leftHeadingStyles}>Left</Text>
+      </Box>
+      <Box sx={leftPanelStyles}>
+        <Text sx={rightHeadingStyles}>Hoek</Text>
+        <Box>
+          <Heading sx={{ mb: 5 }} variant="display">
+            {title}
+          </Heading>
+          <CallToAction callToAction={callToAction} />
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
