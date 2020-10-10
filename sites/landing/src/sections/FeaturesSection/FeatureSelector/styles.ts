@@ -14,9 +14,6 @@ export const selectorStyles: SxStyleProp = {
   display: "flex",
   flex: 1,
   flexDirection: "column",
-  h2: {
-    fontWeight: [600, 600, 400],
-  },
   color: "secondary",
   py: 4,
   textAlign: "center",
@@ -27,9 +24,3 @@ export const selectorStyles: SxStyleProp = {
   },
 };
 
-export const selectedStyles: SxStyleProp = {
-  ...selectorStyles,
-  h2: {
-    fontWeight: 600,
-  },
-};

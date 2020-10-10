@@ -3,7 +3,7 @@ import { SxStyleProp } from "theme-ui";
 export const outerWrapperStyles: SxStyleProp = {
   overflow: "hidden",
   display: "flex",
-  flexDirection: ["column", "row"],
+  flexDirection: ["column-reverse", "column-reverse", "row"],
   bg: "primary",
   width: "100%",
   height: "100%",
@@ -14,43 +14,54 @@ export const outerWrapperStyles: SxStyleProp = {
 
 const panelStyles: SxStyleProp = {
   flex: 1,
+  overflowY: "visible",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
-  p: [5],
-  pb: [9],
 };
 
 const headingStyles: SxStyleProp = {
-  fontFamily: "heading",
-  fontWeight: 400,
-  position: "absolute",
-  fontSize: ["40vw", "20vw"],
-  lineHeight: ["40vw", "20vw"],
-  mx: "-2rem",
+  height: ["40vw", "20vw", "20vw", "22vw"],
+};
+
+export const leftHeadingStyles: SxStyleProp = {
+  ...headingStyles,
+  mt: ["-3rem", "-2.6rem", 0],
+  ml: [0, 0, "-7rem"],
+  mb: [0, "10rem"],
 };
 
 export const rightHeadingStyles: SxStyleProp = {
   ...headingStyles,
-  color: "accent",
-  top: 0,
-  right: 0,
-};
-export const leftHeadingStyles: SxStyleProp = {
-  ...headingStyles,
-  color: "muted",
-  left: 0,
-  bottom: 0,
-};
-
-export const rightPanelStyles: SxStyleProp = {
-  ...panelStyles,
-  bg: "text",
+  mb: ["-3rem", "-2.6rem", 0],
+  mr: [0, 0, "-6rem"],
+  mt: [0, "10rem"],
 };
 
 export const leftPanelStyles: SxStyleProp = {
   ...panelStyles,
-  flex: [3, 1],
+  bg: "text",
+  flex: [2, 2, 1],
+  justifyContent: ["flex-start", "flex-start", "flex-end"],
+  alignItems: ["center", "flex-start"],
+};
+
+export const rightPanelStyles: SxStyleProp = {
+  ...panelStyles,
+  justifyContent: ["flex-end", "flex-end", "flex-start"],
+  alignItems: ["center", "flex-end"],
   bg: "primary",
+};
+
+export const overlayStyles: SxStyleProp = {
+  position: "absolute",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-end",
+  py: [6, "10rem"],
+  top: 0,
+  px: [5, 8],
+  left: [0, 0, "55%"],
+  right: 0,
+  bottom: 0,
 };
