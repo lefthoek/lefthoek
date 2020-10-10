@@ -10,7 +10,7 @@ const outerWrapper: SxStyleProp = {
   py: [5, 8],
   h1: {
     textAlign: ["center", "center"],
-    mb: [5, 6, 6, 8],
+    mb: [5, 6, 6, 9],
   },
   p: {
     lineHeight: ["25px", "28px"],

@@ -7,10 +7,6 @@ const outerWrapperStyles: SxStyleProp = {
 const innerWrapperStyles: SxStyleProp = {
   display: "flex",
   justifyContent: "center",
-  "@media screen and (max-height: 768px)": {
-    transform: "scale(0.8)",
-    maxHeight: "500px",
-  },
   "> ul": {
     m: [0],
     p: [0],
