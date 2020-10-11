@@ -23,7 +23,7 @@ const panelStyles: SxStyleProp = {
 
 const headingStyles: SxStyleProp = {
   fontSize: ["9rem", "12rem", "14rem", "21rem"],
-  lineHeight: ["6.25rem", "8.375rem", "14rem", "21rem"],
+  lineHeight: ["6.25rem", "8.375rem", "10.5rem", "15.5rem"],
 };
 
 export const leftHeadingStyles: SxStyleProp = {
@@ -56,7 +56,7 @@ export const overlayStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-end",
-  py: [6, 6, 6, "10rem"],
+  py: [6, 6, "4rem", "10rem"],
   top: 0,
   px: [5, 8],
   left: [0, 0, "55%"],
