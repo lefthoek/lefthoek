@@ -16,32 +16,29 @@ const panelStyles: SxStyleProp = {
   flex: 1,
   overflowY: "visible",
   display: "flex",
+  py: [0, 0, "4rem", "10rem"],
   flexDirection: "column",
   justifyContent: "center",
 };
 
 const headingStyles: SxStyleProp = {
-  height: ["40vw", "20vw", "20vw", "22vw"],
+  fontSize: ["9rem", "12rem", "14rem", "18rem"],
+  lineHeight: ["6.25rem", "8.375rem", "11rem", "12.5rem"],
 };
 
 export const leftHeadingStyles: SxStyleProp = {
   ...headingStyles,
-  mt: ["-3rem", "-2.6rem", 0],
-  ml: [0, 0, "-7rem"],
-  mb: [0, "10rem"],
 };
 
 export const rightHeadingStyles: SxStyleProp = {
   ...headingStyles,
-  mb: ["-3rem", "-2.6rem", 0],
-  mr: [0, 0, "-6rem"],
-  mt: [0, "10rem"],
 };
 
 export const leftPanelStyles: SxStyleProp = {
   ...panelStyles,
   bg: "text",
   flex: [2, 2, 1],
+  ml: [0, "-5rem", "-5rem"],
   justifyContent: ["flex-start", "flex-start", "flex-end"],
   alignItems: ["center", "flex-start"],
 };
@@ -50,6 +47,7 @@ export const rightPanelStyles: SxStyleProp = {
   ...panelStyles,
   justifyContent: ["flex-end", "flex-end", "flex-start"],
   alignItems: ["center", "flex-end"],
+  mr: [0, "-5rem", "-5rem"],
   bg: "primary",
 };
 
@@ -58,7 +56,7 @@ export const overlayStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-end",
-  py: [6, "10rem"],
+  py: [6, 6, 6, "10rem"],
   top: 0,
   px: [5, 8],
   left: [0, 0, "55%"],

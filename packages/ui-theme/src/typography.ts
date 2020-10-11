@@ -28,7 +28,7 @@ export const text = {
     fontSize: ["24px", "24px"],
     lineHeight: ["24px", "28px"],
     fontWeight: 500,
-    fontFamily: "body",
+    fontFamily: "monospace",
   },
   titoletto: {
     fontSize: ["18px", "20px"],
