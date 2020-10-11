@@ -22,8 +22,8 @@ const panelStyles: SxStyleProp = {
 };
 
 const headingStyles: SxStyleProp = {
-  fontSize: ["9rem", "12rem", "14rem", "18rem"],
-  lineHeight: ["6.25rem", "8.375rem", "11rem", "12.5rem"],
+  fontSize: ["9rem", "12rem", "14rem", "21rem"],
+  lineHeight: ["6.25rem", "8.375rem", "14rem", "21rem"],
 };
 
 export const leftHeadingStyles: SxStyleProp = {
