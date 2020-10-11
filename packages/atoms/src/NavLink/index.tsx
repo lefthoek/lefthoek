@@ -9,7 +9,7 @@ type InnerLinkProps = {
   className?: string;
   inverse?: boolean;
   isActive?: boolean;
-  variant?: "abstract" | "smallAbstract" | "link";
+  variant?: "abstract" | "titolettoAlt" | "link";
   onClick?: () => void;
 };
 
@@ -36,7 +36,7 @@ const InnerLink: FunctionComponent<InnerLinkProps> = ({
       sx={headingStyles({
         isActive,
         inverse,
-        isSmallHeading: variant === "smallAbstract",
+        isSmallHeading: variant === "titolettoAlt",
       })}
       onClick={onClick}
     >
