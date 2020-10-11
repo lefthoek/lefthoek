@@ -10,6 +10,7 @@ const CallToAction: FunctionComponent<{
   variant?: string;
 }> = ({ className, callToAction, variant = "midnight" }) => {
   const buttonsVariants = {
+    skyBlue: "midnight",
     midnight: "skyBlue",
     lobster: "midnight",
   };

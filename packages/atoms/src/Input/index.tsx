@@ -11,7 +11,6 @@ const Input: FunctionComponent<{
     <ThemeInput
       className={className}
       variant={variant}
-      value=""
       placeholder={placeholder}
     />
   );

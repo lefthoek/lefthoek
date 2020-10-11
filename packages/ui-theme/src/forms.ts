@@ -10,9 +10,10 @@ const input = {
   py: 2,
   width: "100%",
   border: "1px solid black",
+  color: "accent",
   borderColor: "midnight",
   "::placeholder": {
-    color: "accent",
+    color: gradients.brightGreen[1],
   },
 };
 
@@ -22,8 +23,9 @@ export const forms = {
   lobster: {
     ...input,
     bg: "lobster",
+    color: "muted",
     "::placeholder": {
-      color: "muted",
+      color: gradients.lobster[0],
     },
     "&:hover": {
       bg: gradients.lobster[2],
@@ -31,9 +33,10 @@ export const forms = {
   },
   midnight: {
     ...input,
+    color: "muted",
     bg: "text",
     "::placeholder": {
-      color: "muted",
+      color: gradients.midnight[0],
     },
     "&:hover": {
       bg: gradients.midnight[2],
