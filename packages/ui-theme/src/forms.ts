@@ -1,7 +1,7 @@
 import { gradients } from "./colors";
 
 const input = {
-  bg: gradients.skyBlue[2],
+  bg: "primary",
   flex: [1, 2],
   mr: [0, 4],
   fontFamily: "body",
@@ -12,7 +12,7 @@ const input = {
   border: "1px solid black",
   borderColor: "midnight",
   "::placeholder": {
-    color: gradients.skyBlue[1],
+    color: "accent",
   },
 };
 
@@ -21,10 +21,22 @@ export const forms = {
   skyBlue: input,
   lobster: {
     ...input,
-    bg: gradients.lobster[2],
-    borderColor: gradients.midnight[2],
+    bg: "lobster",
     "::placeholder": {
-      color: gradients.lobster[0],
+      color: "muted",
+    },
+    "&:hover": {
+      bg: gradients.lobster[2],
+    },
+  },
+  midnight: {
+    ...input,
+    bg: "text",
+    "::placeholder": {
+      color: "muted",
+    },
+    "&:hover": {
+      bg: gradients.midnight[2],
     },
   },
 };

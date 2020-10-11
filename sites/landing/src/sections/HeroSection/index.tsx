@@ -2,6 +2,8 @@
 import { FunctionComponent } from "react";
 import { motion, MotionValue, useTransform } from "framer-motion";
 import { jsx, Box, Heading } from "theme-ui";
+//@ts-ignore
+import { useResponsiveValue } from "@theme-ui/match-media";
 import { CallToAction } from "../../components";
 import { Left, Hoek } from "./LeftHoek";
 import {
@@ -23,6 +25,7 @@ const HeroSection: FunctionComponent<{
   const leftX = useTransform(percentageVisible, [100, 0], [-75, 500]);
   const hoekX = useTransform(percentageVisible, [100, 0], [50, -525]);
   const ctaOpacity = useTransform(percentageVisible, [100, 90], [0, 1]);
+  const variant = useResponsiveValue(["midnight", "midnight", "skyBlue"]);
   return (
     <Box sx={outerWrapperStyles} className={className}>
       <Box sx={leftPanelStyles}>
@@ -37,13 +40,13 @@ const HeroSection: FunctionComponent<{
       </Box>
       <motion.div style={{ opacity: ctaOpacity }}>
         <Box sx={overlayStyles}>
-          <Heading sx={{ mb: 5 }} variant="abstract">
+          <Heading sx={{ mb: 5, maxWidth: "15rem" }} variant="abstract">
             {title}
           </Heading>
           <Heading sx={{ mb: 5, maxWidth: "20rem" }} variant="body">
             {takeAway}
           </Heading>
-          <CallToAction callToAction={callToAction} />
+          <CallToAction variant={variant} callToAction={callToAction} />
         </Box>
       </motion.div>
     </Box>
