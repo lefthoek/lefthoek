@@ -19,7 +19,7 @@ const CallToActionSection: FunctionComponent<{
   return (
     <Section as="footer" sx={outerWrapperStyles}>
       <Heading
-        sx={{ mb: 5, alignSelf: "flex-start", maxWidth: "20rem" }}
+        sx={{ mb: 5, alignSelf: "flex-start", maxWidth: ["25rem"] }}
         variant="abstract"
       >
         {title}

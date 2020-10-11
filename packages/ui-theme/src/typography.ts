@@ -25,8 +25,8 @@ export const text = {
     fontFamily: "body",
   },
   abstract: {
-    fontSize: ["24px", "24px"],
-    lineHeight: ["24px", "28px"],
+    fontSize: ["26px", "26px"],
+    lineHeight: ["33px", "33px"],
     fontWeight: 500,
     fontFamily: "monospace",
   },

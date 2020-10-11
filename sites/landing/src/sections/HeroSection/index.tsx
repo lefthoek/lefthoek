@@ -40,7 +40,10 @@ const HeroSection: FunctionComponent<{
       </Box>
       <motion.div style={{ opacity: ctaOpacity }}>
         <Box sx={overlayStyles}>
-          <Heading sx={{ mb: 5, maxWidth: "15rem" }} variant="abstract">
+          <Heading
+            sx={{ mb: 5, maxWidth: ["15rem", "100%"] }}
+            variant="abstract"
+          >
             {title}
           </Heading>
           <Heading sx={{ mb: 5, maxWidth: "20rem" }} variant="body">
