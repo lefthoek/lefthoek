@@ -1,19 +1,12 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { motion, MotionValue, useTransform } from "framer-motion";
+import { LefthoekPanels } from "@lefthoek/molecules";
 import { jsx, Box, Heading } from "theme-ui";
 //@ts-ignore
 import { useResponsiveValue } from "@theme-ui/match-media";
 import { CallToAction } from "../../components";
-import { Left, Hoek } from "./LeftHoek";
-import {
-  overlayStyles,
-  outerWrapperStyles,
-  rightPanelStyles,
-  leftPanelStyles,
-  rightHeadingStyles,
-  leftHeadingStyles,
-} from "./styles";
+import { overlayStyles } from "./styles";
 
 const HeroSection: FunctionComponent<{
   title: string;
@@ -22,22 +15,10 @@ const HeroSection: FunctionComponent<{
   callToAction: string;
   className?: string;
 }> = ({ className, title, takeAway, percentageVisible, callToAction }) => {
-  const leftX = useTransform(percentageVisible, [100, 0], [-75, 500]);
-  const hoekX = useTransform(percentageVisible, [100, 0], [50, -525]);
   const ctaOpacity = useTransform(percentageVisible, [100, 90], [0, 1]);
   const variant = useResponsiveValue(["midnight", "midnight", "skyBlue"]);
   return (
-    <Box sx={outerWrapperStyles} className={className}>
-      <Box sx={leftPanelStyles}>
-        <motion.div style={{ x: hoekX }} sx={{ zIndex: 100 }}>
-          <Hoek sx={leftHeadingStyles} />
-        </motion.div>
-      </Box>
-      <Box sx={rightPanelStyles}>
-        <motion.div style={{ x: leftX }} sx={{ zIndex: 100 }}>
-          <Left sx={rightHeadingStyles} />
-        </motion.div>
-      </Box>
+    <LefthoekPanels className={className} percentageVisible={percentageVisible}>
       <motion.div style={{ opacity: ctaOpacity }}>
         <Box sx={overlayStyles}>
           <Heading
@@ -52,7 +33,7 @@ const HeroSection: FunctionComponent<{
           <CallToAction variant={variant} callToAction={callToAction} />
         </Box>
       </motion.div>
-    </Box>
+    </LefthoekPanels>
   );
 };
 
