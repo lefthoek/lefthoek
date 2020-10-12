@@ -15,7 +15,7 @@ import {
 
 const LefthoekPanels: FunctionComponent<{
   percentageVisible: MotionValue;
-  className: string;
+  className?: string;
 }> = ({ percentageVisible, children, className }) => {
   const leftX = useTransform(percentageVisible, [100, 0], [-75, 500]);
   const hoekX = useTransform(percentageVisible, [100, 0], [50, -525]);

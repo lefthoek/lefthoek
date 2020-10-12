@@ -1,18 +1,19 @@
 /** @jsx jsx */
 import { FunctionComponent, ReactNodeArray } from "react";
+import { useMotionValue } from "framer-motion";
 import { jsx, Box } from "theme-ui";
-import { Basic } from "../Basic";
-import { outerWrapper, innerWrapper } from "./styles";
+import { LefthoekPanels } from "@lefthoek/molecules";
+import { overlayStyles } from "./styles";
 
 const Cover: FunctionComponent<{
   children: ReactNodeArray;
-  index: number;
   className?: string;
-}> = ({ children, index }) => {
+}> = ({ children }) => {
+  const percentageVisible = useMotionValue(100);
   return (
-    <Basic index={index} sx={outerWrapper}>
-      <Box sx={innerWrapper}>{children}</Box>
-    </Basic>
+    <LefthoekPanels percentageVisible={percentageVisible}>
+      <Box sx={overlayStyles}>{children}</Box>
+    </LefthoekPanels>
   );
 };
 
