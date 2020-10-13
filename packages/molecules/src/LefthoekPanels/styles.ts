@@ -15,6 +15,7 @@ export const outerWrapperStyles: SxStyleProp = {
 const panelStyles: SxStyleProp = {
   flex: 1,
   overflowY: "visible",
+  minHeight: 0,
   display: "flex",
   py: [0, 0, "4rem", "10rem"],
   flexDirection: "column",

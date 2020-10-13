@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { motion, MotionValue, useTransform } from "framer-motion";
+import { MotionValue } from "framer-motion";
 import { Background } from "@lefthoek/atoms";
 import { jsx, Box, Heading } from "theme-ui";
 //@ts-ignore
 import { useResponsiveValue } from "@theme-ui/match-media";
+import { Slide } from "./animations";
 import {
   outerWrapperStyles,
   rightPanelStyles,
@@ -17,21 +18,19 @@ const LefthoekPanels: FunctionComponent<{
   percentageVisible: MotionValue;
   className?: string;
 }> = ({ percentageVisible, children, className }) => {
-  const leftX = useTransform(percentageVisible, [100, 0], [-75, 500]);
-  const hoekX = useTransform(percentageVisible, [100, 0], [50, -525]);
   return (
     <Box sx={outerWrapperStyles} className={className}>
       <Background sx={leftPanelStyles}>
-        <motion.div style={{ x: hoekX }}>
+        <Slide direction={-1} offset={50} percentageVisible={percentageVisible}>
           <Heading sx={leftHeadingStyles}>Hoek</Heading>
-        </motion.div>
+        </Slide>
       </Background>
       <Background sx={rightPanelStyles}>
-        <motion.div style={{ x: leftX }}>
+        <Slide direction={1} offset={-80} percentageVisible={percentageVisible}>
           <Heading sx={rightHeadingStyles}>Left</Heading>
-        </motion.div>
+        </Slide>
+        {children}
       </Background>
-      {children}
     </Box>
   );
 };
