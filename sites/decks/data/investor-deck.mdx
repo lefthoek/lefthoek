@@ -1,3 +1,5 @@
+import { Card } from "@lefthoek/atoms"
+import { CardsContainer } from "../src/components";
 import { UserStory, Stat, CompetitionChart } from "@lefthoek/molecules"
 import { userStories, competitiveAnalysis }from "@lefthoek/data"
 import { Cover, Basic, Stats } from "../src/slides"
@@ -117,17 +119,23 @@ of Global Knowledge Management by 2025</Stat>
 
 # Business Model
 
-### Phase 1
+<CardsContainer>
+
+<Card simple variant="lobster" title="Phase 1">
 
 + 3 x tailormade MVP's for launching customers for **€50.000** each
 
+</Card>
 
-
-### Phase 2 
+<Card simple variant="lobster" title="Phase 2">
 
 + Monthly Subscription starting at **€3000** per month
 
 + Bespoke feature development for **€50.000** and up
+
+</Card>
+
+</CardsContainer>
 
 </Basic>
 
