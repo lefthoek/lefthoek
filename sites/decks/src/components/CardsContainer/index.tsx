@@ -7,7 +7,7 @@ const CardsContainer: FunctionComponent = ({ children }) => {
     <Box
       sx={{
         display: ["grid"],
-        gridTemplateColumns: ["auto","1fr 1fr"],
+        gridTemplateColumns: ["auto", "1fr 1fr"],
         gridGap: [5],
       }}
     >
