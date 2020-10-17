@@ -4,5 +4,6 @@ export * from "./UserPersona";
 export * from "./Explorer";
 export * from "./BusinessModelCanvas";
 export * from "./LefthoekPanels";
+export * from "./Message";
 export * from "./Stat";
 export * from "./Menu";

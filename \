@@ -1,0 +1,26 @@
+---
+name: Message
+menu: Components
+submenu: Molecules
+---
+
+import { Playground, Props } from 'docz'
+import { Box } from 'theme-ui'
+import { Card } from "@lefthoek/atoms"
+import { Message } from './Message'
+
+# Message
+
+## Properties
+
+<Props of={Message} />
+
+## Basic usage
+
+<Playground>
+  <Box sx={{ bg: "white", p: 5}}>
+  <Card simple variant="cipria">
+    <Message name="Lefthoek"/>
+    </Card>
+  </Box>
+</Playground>

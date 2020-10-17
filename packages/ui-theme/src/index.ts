@@ -28,6 +28,7 @@ export const base = {
   },
   radii: {
     default: "20px",
+    avatar: "0.25rem",
   },
   breakpoints: ["40rem", "64rem", "100rem"],
   fontSizes: [12, 14, 16, 18, 24, 34, 42, 60, 72],
@@ -47,4 +48,3 @@ export const base = {
 };
 
 export default base;
-
