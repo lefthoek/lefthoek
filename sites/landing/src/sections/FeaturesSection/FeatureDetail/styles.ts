@@ -20,6 +20,6 @@ export const textWrapperStyles = {
 
 export const imageWrapperStyles: SxStyleProp = {
   flex: 3,
-  px: 8,
+  px: [0, 8],
 };
 
