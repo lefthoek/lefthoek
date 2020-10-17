@@ -17,31 +17,43 @@ const Message: FunctionComponent<{
           10:00 AM
         </span>
       </Text>
-      <Text sx={{ color: (theme) => theme.gradients.midnight[0] }}>
+      <Text
+        sx={{ color: (theme) => theme.gradients.midnight[1], fontWeight: 400 }}
+      >
         Good Morning, Alicia!
       </Text>
-      <Text sx={{ color: (theme) => theme.gradients.midnight[0] }}>
+      <Text
+        sx={{ color: (theme) => theme.gradients.midnight[1], fontWeight: 400 }}
+      >
         Hope you enjoyed your break.
       </Text>
-      <Text sx={{ color: (theme) => theme.gradients.midnight[0] }}>
+      <Text
+        sx={{ color: (theme) => theme.gradients.midnight[1], fontWeight: 400 }}
+      >
         These things have been decided in your absence:
       </Text>
       <ul
         sx={{
           listStyle: "square",
           listStylePosition: "inside",
-          px: 0,
-          mx: 0,
-          color: (theme) => theme.gradients.midnight[0],
+          fontWeight: 400,
+          p: 0,
+          m: 0,
+          color: (theme) => theme.gradients.midnight[1],
         }}
       >
-        <li>Headings should be formatted in 'titlecase' from now on</li>
+        <li>
+          Headings should be formatted in{" "}
+          <span sx={{ fontWeight: 500 }}>Titlecase</span> from now on
+        </li>
         <li>
           all design changes should be tested on our brandbook site before
           updating them on the homepage
         </li>
       </ul>
-      <Text sx={{ color: (theme) => theme.gradients.midnight[0] }}>
+      <Text
+        sx={{ color: (theme) => theme.gradients.midnight[1], fontWeight: 400 }}
+      >
         The following proposal is waiting for your approval
       </Text>
 
@@ -49,9 +61,10 @@ const Message: FunctionComponent<{
         sx={{
           listStyle: "square",
           listStylePosition: "inside",
-          px: 0,
-          mx: 0,
-          color: (theme) => theme.gradients.midnight[0],
+          fontWeight: 400,
+          p: 0,
+          m: 0,
+          color: (theme) => theme.gradients.midnight[1],
         }}
       >
         <li>
@@ -59,7 +72,6 @@ const Message: FunctionComponent<{
           <span
             sx={{
               bg: (theme) => theme.gradients.skyBlue[0],
-              p: 1,
               color: "accent",
             }}
           >
@@ -69,7 +81,6 @@ const Message: FunctionComponent<{
           <span
             sx={{
               bg: (theme) => theme.gradients.brightGreen[0],
-              p: 1,
               color: "primary",
             }}
           >
