@@ -56,8 +56,25 @@ const Message: FunctionComponent<{
       >
         <li>
           change the primary brand color from{" "}
-          <span sx={{ color: "accent" }}>bright green</span> to{" "}
-          <span sx={{ color: "primary" }}>sky blue</span>
+          <span
+            sx={{
+              bg: (theme) => theme.gradients.skyBlue[0],
+              p: 1,
+              color: "accent",
+            }}
+          >
+            bright green
+          </span>{" "}
+          to{" "}
+          <span
+            sx={{
+              bg: (theme) => theme.gradients.brightGreen[0],
+              p: 1,
+              color: "primary",
+            }}
+          >
+            sky blue
+          </span>{" "}
         </li>
       </ul>
     </Box>
