@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
-import { jsx, Box } from "theme-ui";
+import { jsx, Box, Image } from "theme-ui";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";
@@ -39,13 +39,16 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
           >
             <FeatureDetail
               sx={featureDetailOverrideStyles}
-              text={description}
-            />
+              text={description}>
+          <Image src="images/onboard.png" />
+          </FeatureDetail>
           </FeatureSelector>
         ))}
       </Box>
       <Fade id={selectedText}>
-        <FeatureDetail text={selectedDescription} />
+        <FeatureDetail text={selectedDescription}>
+          <Image src="images/onboard.png" />
+        </FeatureDetail>
       </Fade>
     </Section>
   );

@@ -4,6 +4,9 @@ export const outerWrapperStyles: SxStyleProp = {
   display: "flex",
   px: [5, 8],
   alignItems: ["center", "center"],
+  ".innerWrapper": {
+    maxWidth: "80rem",
+  },
 };
 
 export const featuresWrapperStyles: SxStyleProp = {
