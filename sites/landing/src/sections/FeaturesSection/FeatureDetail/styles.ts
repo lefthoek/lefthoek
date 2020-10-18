@@ -1,8 +1,8 @@
 import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
-  display: ["none", "none", "flex"],
-  flexDirection: ["column", "column", "row"],
+  display: ["flex", "flex", "flex"],
+  flexDirection: ["column-reverse", "column-reverse", "row"],
   zIndex: 0,
   h1: {
     mt: 0,
@@ -21,6 +21,7 @@ export const textWrapperStyles = {
 export const imageWrapperStyles: SxStyleProp = {
   flex: 3,
   px: [0, 8],
+  pb: [5, 5, 0],
   img: {
     borderRadius: ["10px", "10px", "10px", "20px"],
     boxShadow: "simple",

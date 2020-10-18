@@ -12,8 +12,11 @@ export const FeatureSelector: FunctionComponent<{
   const formattedTitle = titleCase(title);
   return (
     <Box onClick={() => onSelect({ title })} sx={featureWrapperStyles}>
-      <Box sx={selectorStyles}>
-        <Heading variant={isSelected ? "titoletto" : "titolettoAlt"}>
+      <Box sx={{ ...selectorStyles }}>
+        <Heading
+          variant={"titoletto"}
+          sx={{ fontWeight: isSelected ? 600 : 40 }}
+        >
           {formattedTitle}
         </Heading>
       </Box>

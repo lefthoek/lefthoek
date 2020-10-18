@@ -4,7 +4,7 @@ export const featureWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   flex: 1,
-  mb: [8, 8, 0],
+  mb: [0, 0, 0],
   "&:last-of-type": {
     mb: 0,
   },
@@ -20,7 +20,6 @@ export const selectorStyles: SxStyleProp = {
   mb: 4,
   userSelect: "none",
   "&:hover": {
-    color: "text",
+    fontWeight: 600,
   },
 };
-

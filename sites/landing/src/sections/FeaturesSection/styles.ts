@@ -11,11 +11,7 @@ export const outerWrapperStyles: SxStyleProp = {
 
 export const featuresWrapperStyles: SxStyleProp = {
   display: "flex",
-  flexDirection: ["column", "column", "row"],
-  width: "100%",
+  flexDirection: ["row", "row", "row"],
+  width: ["150%", "120%", "100%"],
   justifyContent: ["space-between", "space-between", "space-between"],
-};
-
-export const featureDetailOverrideStyles: SxStyleProp = {
-  display: ["block", "block", "none"],
 };

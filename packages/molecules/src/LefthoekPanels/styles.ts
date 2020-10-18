@@ -40,7 +40,7 @@ export const leftPanelStyles: SxStyleProp = {
   ...panelStyles,
   bg: "text",
   flex: [2, 2, 1],
-  ml: [0, "-5rem", "-5rem"],
+  ml: [0, 0, "-5rem"],
   justifyContent: ["flex-start", "flex-start", "flex-end"],
   alignItems: ["center", "flex-start"],
 };
@@ -49,7 +49,7 @@ export const rightPanelStyles: SxStyleProp = {
   ...panelStyles,
   justifyContent: ["flex-end", "flex-end", "flex-start"],
   alignItems: ["center", "flex-end"],
-  mr: [0, "-5rem", "-5rem"],
+  mr: [0, 0, "-5rem"],
   bg: "primary",
 };
 
