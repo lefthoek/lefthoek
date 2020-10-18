@@ -19,7 +19,7 @@ export const metaStyles: SxStyleProp = {
 export const markdownStyles: SxStyleProp = {
   color: ({ gradients }) => gradients.midnight[1],
   fontWeight: 400,
-  a: { color: "primary" },
+  a: { color: "text" },
   strong: {
     fontWeight: 500,
   },
