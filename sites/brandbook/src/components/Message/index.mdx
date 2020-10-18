@@ -7,7 +7,8 @@ submenu: Molecules
 import { Playground, Props } from 'docz'
 import { Box } from 'theme-ui'
 import { Card } from "@lefthoek/atoms"
-import { Message } from './Message'
+import { Message, sampleMessage} from './Message'
+
 
 # Message
 
@@ -19,6 +20,6 @@ import { Message } from './Message'
 
 <Playground>
   <Box sx={{ bg: "white", p: 5, m: 5, maxWidth: "45rem", boxShadow: "simple", borderRadius: "default"}}>
-    <Message name="Lefthoek"/>
+    <Message message={sampleMessage} name="Lefthoek"/>
   </Box>
 </Playground>
