@@ -21,5 +21,8 @@ export const textWrapperStyles = {
 export const imageWrapperStyles: SxStyleProp = {
   flex: 3,
   px: [0, 8],
+  img: {
+    borderRadius: "default",
+    boxShadow: "simple",
+  },
 };
-
