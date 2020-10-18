@@ -22,7 +22,7 @@ export const imageWrapperStyles: SxStyleProp = {
   flex: 3,
   px: [0, 8],
   img: {
-    borderRadius: "default",
+    borderRadius: ["10px", "10px", "10px", "20px"],
     boxShadow: "simple",
   },
 };
