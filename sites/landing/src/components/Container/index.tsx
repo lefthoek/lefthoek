@@ -18,6 +18,9 @@ const Container: FunctionComponent = ({ children }) => {
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Lefthoek</title>
+        <link rel="preload" as="image" href="images/onboard.png" />
+        <link rel="preload" as="image" href="images/synchronize.png" />
+        <link rel="preload" as="image" href="images/research.png" />
       </Helmet>
       {children}
     </Box>
