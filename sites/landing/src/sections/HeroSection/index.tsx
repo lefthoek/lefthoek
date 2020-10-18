@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState, useEffect } from "react";
 import { motion, MotionValue, useTransform } from "framer-motion";
 import { LefthoekPanels } from "@lefthoek/molecules";
 import { jsx, Box, Heading } from "theme-ui";
@@ -16,7 +16,13 @@ const HeroSection: FunctionComponent<{
   className?: string;
 }> = ({ className, title, takeAway, percentageVisible, callToAction }) => {
   const ctaOpacity = useTransform(percentageVisible, [100, 90], [0, 1]);
-  const variant = useResponsiveValue(["midnight", "midnight", "skyBlue"]);
+  const [mounted, setMounted] = useState("notMounted");
+  const variant = useResponsiveValue(["midnight", "midnight", "skyBlue"], {
+    defaultIndex: 2,
+  });
+  useEffect(() => {
+    setMounted("mounted");
+  }, []);
   return (
     <LefthoekPanels className={className} percentageVisible={percentageVisible}>
       <motion.div style={{ opacity: ctaOpacity }}>
@@ -30,7 +36,11 @@ const HeroSection: FunctionComponent<{
           <Heading sx={{ mb: 5, maxWidth: "20rem" }} variant="body">
             {takeAway}
           </Heading>
-          <CallToAction variant={variant} callToAction={callToAction} />
+          <CallToAction
+            key={mounted}
+            variant={variant}
+            callToAction={callToAction}
+          />
         </Box>
       </motion.div>
     </LefthoekPanels>
