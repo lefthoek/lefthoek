@@ -9,6 +9,7 @@ const midnight = "#32334E";
 const white = "#FCF2F5";
 const whiteLight = "#FEFAFB";
 const skyBlue = "#784CFB";
+const skyBlueMedium = "#9370FC";
 const skyBlueLight = "#AE94FD";
 const skyBlueLightest = "#C9B7FD";
 const lobster = "#D15B1B";
@@ -19,6 +20,7 @@ const colors = {
   white,
   whiteLight,
   skyBlue,
+  skyBlueMedium,
   skyBlueLight,
   skyBlueLightest,
   lobster,
