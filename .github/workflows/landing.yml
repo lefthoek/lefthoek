@@ -12,6 +12,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      FORMSPREE_DEPLOY_KEY: ${{ secrets.FormspreeDeployKey }}
 
     steps:
     - uses: actions/checkout@v2
@@ -34,8 +35,6 @@ jobs:
         dist-id: ${{ secrets.LANDING_DISTRIBUTION_ID }}
     - name: Deploy Form
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-      env: 
-        - FORMSPREE_DEPLOY_KEY: ${{ secrets.FormspreeDeployKey }}
       run: yarn deploy:form
     - name: Deploy Development
       if: github.ref == 'refs/heads/landing' && github.event_name == 'push'
