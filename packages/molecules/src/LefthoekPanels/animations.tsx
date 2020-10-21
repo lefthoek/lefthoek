@@ -13,15 +13,22 @@ const variants = {
 const Slide: FunctionComponent<{
   direction: number;
   offset: number;
+  shouldStart?: boolean;
   percentageVisible: MotionValue;
-}> = ({ direction, offset, children, percentageVisible }) => {
+}> = ({
+  direction,
+  offset,
+  children,
+  shouldStart = false,
+  percentageVisible,
+}) => {
   const multiplier = useResponsiveValue([-100, 500]);
   const range = offset + direction * multiplier;
   const x = useTransform(percentageVisible, [100, 0], [offset, range]);
   return (
     <motion.div
       variants={variants}
-      initial="initial"
+      initial={shouldStart ? "initial" : "enter"}
       animate="enter"
       custom={{ direction, offset, range }}
       style={{ x }}
