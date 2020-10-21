@@ -1,26 +1,14 @@
 import { SxStyleProp } from "theme-ui";
 
-export const outerWrapperStyles: SxStyleProp = {
-  overflow: "hidden",
-  bg: "primary",
-  color: "muted",
+export const overlayStyles: SxStyleProp = {
+  position: "absolute",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-end",
+  py: ["4rem", "10rem"],
   top: 0,
-  zIndex: 10,
-  width: "100%",
-  flex: 1,
-  ".innerWrapper": {
-    justifyItems: ["flex-start", "flex-start"],
-    justifyContent: ["flex-start", "flex-start"],
-    alignItems: ["flex-start", "flex-start"],
-    alignContent: ["flex-start", "flex-start"],
-  },
-  ".headerWrapper": {
-    h2: {
-      mb: [0, 3],
-      textAlign: "left",
-    },
-    maxWidth: "45rem",
-    mb: [5, 8, "5rem"],
-    alignItems: ["flex-start", "flex-start"],
-  },
+  px: [5, 8],
+  left: [0, 0, "55%"],
+  right: 0,
+  bottom: 0,
 };

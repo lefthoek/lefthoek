@@ -9,7 +9,7 @@ export const outerWrapperStyles: SxStyleProp = {
 };
 
 export const buttonStyles: SxStyleProp = {
-  width: ["100%", "16rem"],
+  width: ["14rem"],
 };
 
 export const inputStyles: SxStyleProp = {

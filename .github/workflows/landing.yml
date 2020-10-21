@@ -32,6 +32,12 @@ jobs:
         folder: sites/landing/public
         bucket: ${{ secrets.LANDING_BUCKET }}
         dist-id: ${{ secrets.LANDING_DISTRIBUTION_ID }}
+    - name: Deploy Form
+      if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      env: 
+        - FORMSPREE_DEPLOY_KEY: ${{ secrets.FormspreeDeployKey }}
+      run: 
+        - yarn deploy:form
     - name: Deploy Development
       if: github.ref == 'refs/heads/landing' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1

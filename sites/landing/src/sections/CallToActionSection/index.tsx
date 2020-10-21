@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Box } from "theme-ui";
+import { jsx, Box, Heading } from "theme-ui";
 import { Section, CallToAction } from "../../components";
 import { LinkedIn, Email } from "./icons";
 import {
@@ -15,14 +15,15 @@ const CallToActionSection: FunctionComponent<{
   title: string;
   callToAction: string;
   takeAway?: string;
-}> = ({ title, takeAway, callToAction }) => {
+}> = ({ title, callToAction }) => {
   return (
-    <Section
-      as="footer"
-      sx={outerWrapperStyles}
-      title={title}
-      takeAway={takeAway}
-    >
+    <Section as="footer" sx={outerWrapperStyles}>
+      <Heading
+        sx={{ mb: 5, alignSelf: "flex-start", maxWidth: ["25rem"] }}
+        variant="abstract"
+      >
+        {title}
+      </Heading>
       <Box sx={innerWrapperStyles}>
         <CallToAction
           callToAction={callToAction}

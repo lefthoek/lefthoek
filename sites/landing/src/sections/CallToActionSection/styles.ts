@@ -29,7 +29,7 @@ export const callToActionStyles: SxStyleProp = {
   maxWidth: ["auto", "25rem", "40rem"],
   mb: 0,
   input: {
-    mb: [5, 8],
+    mb: [5, 5],
   },
 };
 

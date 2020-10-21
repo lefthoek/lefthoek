@@ -23,6 +23,7 @@ export const headerWrapperStyles: SxStyleProp = {
   flexDirection: "column",
   alignItems: ["center", "center"],
   width: "100%",
+  maxWidth: "40rem",
   mb: [4, 6, 8],
   h2: {
     textAlign: "center",

@@ -16,7 +16,11 @@ const Section: FunctionComponent<{
           <Box className="headerWrapper" sx={headerWrapperStyles}>
             <Heading variant="display">{title}</Heading>
             {takeAway && (
-              <Heading as="h3" variant="smallAbstract">
+              <Heading
+                sx={{ textAlign: ["center"], maxWidth: "25rem" }}
+                as="h3"
+                variant="body"
+              >
                 {takeAway}
               </Heading>
             )}

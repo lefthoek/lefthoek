@@ -1,7 +1,7 @@
 import { gradients } from "./colors";
 
 const input = {
-  bg: gradients.skyBlue[2],
+  bg: "primary",
   flex: [1, 2],
   mr: [0, 4],
   fontFamily: "body",
@@ -10,9 +10,13 @@ const input = {
   py: 2,
   width: "100%",
   border: "1px solid black",
+  color: "accent",
   borderColor: "midnight",
   "::placeholder": {
-    color: gradients.skyBlue[1],
+    color: gradients.brightGreen[1],
+  },
+  "&:hover, &.hover": {
+    bg: gradients.skyBlue[2],
   },
 };
 
@@ -21,10 +25,48 @@ export const forms = {
   skyBlue: input,
   lobster: {
     ...input,
-    bg: gradients.lobster[2],
-    borderColor: gradients.midnight[2],
+    bg: "secondary",
+    color: "muted",
     "::placeholder": {
       color: gradients.lobster[0],
+    },
+    "&:hover, &.hover": {
+      bg: gradients.lobster[2],
+    },
+  },
+  midnight: {
+    ...input,
+    color: "muted",
+    bg: "text",
+    borderColor: "muted",
+    "::placeholder": {
+      color: gradients.midnight[0],
+    },
+    "&:hover, &.hover": {
+      bg: gradients.midnight[2],
+    },
+  },
+  brightGreen: {
+    ...input,
+    color: "primary",
+    borderColor: "primary",
+    bg: "accent",
+    "::placeholder": {
+      color: gradients.skyBlue[0],
+    },
+    "&:hover, &.hover": {
+      bg: gradients.brightGreen[1],
+    },
+  },
+  cipria: {
+    ...input,
+    color: "secondary",
+    bg: "muted",
+    "::placeholder": {
+      color: gradients.lobster[0],
+    },
+    "&:hover, &.hover": {
+      bg: gradients.cipria[1],
     },
   },
 };

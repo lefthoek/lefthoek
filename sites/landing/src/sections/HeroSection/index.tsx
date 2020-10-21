@@ -1,24 +1,49 @@
 /** @jsx jsx */
-import { FunctionComponent } from "react";
-import { jsx } from "theme-ui";
-import { Section, CallToAction } from "../../components";
-import { outerWrapperStyles } from "./styles";
+import { FunctionComponent, useState, useEffect } from "react";
+import { motion, MotionValue, useTransform } from "framer-motion";
+import { LefthoekPanels } from "@lefthoek/molecules";
+import { jsx, Box, Heading } from "theme-ui";
+//@ts-ignore
+import { useResponsiveValue } from "@theme-ui/match-media";
+import { CallToAction } from "../../components";
+import { overlayStyles } from "./styles";
 
 const HeroSection: FunctionComponent<{
   title: string;
+  percentageVisible: MotionValue;
   takeAway: string;
   callToAction: string;
   className?: string;
-}> = ({ className, title, takeAway, callToAction }) => {
+}> = ({ className, title, takeAway, percentageVisible, callToAction }) => {
+  const ctaOpacity = useTransform(percentageVisible, [100, 90], [0, 1]);
+  const [mounted, setMounted] = useState("notMounted");
+  const variant = useResponsiveValue(["midnight", "midnight", "skyBlue"], {
+    defaultIndex: 2,
+  });
+  useEffect(() => {
+    setMounted("mounted");
+  }, []);
   return (
-    <Section
-      className={className}
-      sx={outerWrapperStyles}
-      title={title}
-      takeAway={takeAway}
-    >
-      <CallToAction callToAction={callToAction} />
-    </Section>
+    <LefthoekPanels className={className} percentageVisible={percentageVisible}>
+      <motion.div style={{ opacity: ctaOpacity }}>
+        <Box sx={overlayStyles}>
+          <Heading
+            sx={{ mb: 5, maxWidth: ["15rem", "100%"] }}
+            variant="abstract"
+          >
+            {title}
+          </Heading>
+          <Heading sx={{ mb: 5, maxWidth: "20rem" }} variant="body">
+            {takeAway}
+          </Heading>
+          <CallToAction
+            key={mounted}
+            variant={variant}
+            callToAction={callToAction}
+          />
+        </Box>
+      </motion.div>
+    </LefthoekPanels>
   );
 };
 
