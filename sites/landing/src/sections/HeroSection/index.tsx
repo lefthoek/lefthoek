@@ -41,6 +41,7 @@ const HeroSection: FunctionComponent<{
             {takeAway}
           </Heading>
           <CallToAction
+            sx={{ display: ["none", "flex"] }}
             key={mounted}
             variant={variant}
             callToAction={callToAction}
