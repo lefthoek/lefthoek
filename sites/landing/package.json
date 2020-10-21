@@ -48,6 +48,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@formspree/react": "^2.2.2",
     "@lefthoek/atoms": "*",
     "@lefthoek/ui-theme": "*",
     "@types/react-helmet": "^6.1.0",
