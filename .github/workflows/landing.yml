@@ -36,8 +36,7 @@ jobs:
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       env: 
         - FORMSPREE_DEPLOY_KEY: ${{ secrets.FormspreeDeployKey }}
-      run: 
-        - yarn deploy:form
+      run: yarn deploy:form
     - name: Deploy Development
       if: github.ref == 'refs/heads/landing' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1
