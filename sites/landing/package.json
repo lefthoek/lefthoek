@@ -9,6 +9,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
+    "deploy:form": "yarn formspree deploy",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project ."
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@formspree/cli": "^0.9.5",
     "@types/d3-array": "^2.0.0",
     "@types/ramda": "^0.27.18",
     "@types/react": "^16.9.49",
@@ -51,16 +53,17 @@
     "@types/react-helmet": "^6.1.0",
     "d3-array": "^2.8.0",
     "framer-motion": "^2.7.1",
+    "global": "^4.4.0",
     "mkdirp": "^1.0.4",
     "ramda": "^0.27.1",
     "react-helmet": "^6.1.0",
-    "unified": "^9.2.0",
     "rehype-react": "^6.1.0",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
     "theme-ui": "^0.3.1",
     "typeface-crimson-text": "^0.0.72",
     "typeface-spartan": "^1.1.4",
+    "unified": "^9.2.0",
     "voca": "^1.4.0"
   }
 }
