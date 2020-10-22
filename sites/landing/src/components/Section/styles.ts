@@ -24,7 +24,7 @@ export const headerWrapperStyles: SxStyleProp = {
   alignItems: ["center", "center"],
   width: "100%",
   maxWidth: "40rem",
-  mb: [4, 6, 8],
+  mb: [4, 6, 7],
   h2: {
     textAlign: "center",
     mb: 3,

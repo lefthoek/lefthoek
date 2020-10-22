@@ -15,12 +15,13 @@ export const outerWrapperStyles: SxStyleProp = {
 export const textWrapperStyles = {
   flex: 2,
   mr: [0, 6],
+  px: [4, 0],
   py: [0, 2],
 };
 
 export const imageWrapperStyles: SxStyleProp = {
   flex: 3,
-  pl: [0, 8],
+  pl: [0, 0, 0, 8],
   pb: [5, 5, 0],
   img: {
     borderRadius: ["10px", "10px", "10px", "20px"],
