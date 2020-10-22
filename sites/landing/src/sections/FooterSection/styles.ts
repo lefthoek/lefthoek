@@ -3,19 +3,34 @@ import { SxStyleProp } from "theme-ui";
 export const outerWrapperStyles: SxStyleProp = {
   bg: "text",
   color: "muted",
-  justifyContent: ["center", "flex-end"],
-  minHeight: "0vh",
-  px: [4, 6],
+  justifyContent: ["center", "center"],
+  alignItems: ["center", "center"],
+  px: [5, 8],
+  py: [6, 6, 6],
   ".innerWrapper": {
+    maxWidth: "100rem",
     display: "flex",
+    alignItems: ["flex-end"],
+    justifyContent: ["flex-end"],
     flexDirection: ["column", "column", "row"],
   },
 };
 
+export const iconWrapperStyles: SxStyleProp = {
+  display: "flex",
+  flexDirection: ["row", "column"],
+  alignContent: ["center"],
+  alignItems: ["center"],
+  justifyItems: ["center"],
+  width: ["7rem", "auto"],
+  height: ["auto", "7rem"],
+  justifyContent: ["space-between"],
+};
+
 export const iconStyles = {
   fill: "muted",
-  width: "100%",
-  height: "100%",
+  width: "50px",
+  height: "50px",
   "&:hover": {
     fill: "accent",
   },

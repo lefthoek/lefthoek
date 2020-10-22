@@ -20,7 +20,7 @@ export const textWrapperStyles = {
 
 export const imageWrapperStyles: SxStyleProp = {
   flex: 3,
-  px: [0, 8],
+  pl: [0, 8],
   pb: [5, 5, 0],
   img: {
     borderRadius: ["10px", "10px", "10px", "20px"],

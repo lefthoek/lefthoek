@@ -1,15 +1,17 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx } from "theme-ui";
+import { jsx, Box } from "theme-ui";
 import { Section } from "../../components";
 import { LinkedIn, Email } from "./icons";
-import { iconStyles, outerWrapperStyles } from "./styles";
+import { iconStyles, iconWrapperStyles, outerWrapperStyles } from "./styles";
 
 const FooterSection: FunctionComponent = () => {
   return (
     <Section sx={outerWrapperStyles}>
-      <Email sx={iconStyles} />
-      <LinkedIn sx={iconStyles} />
+      <Box sx={iconWrapperStyles}>
+        <Email email="contact@lefthoek.com" sx={iconStyles} />
+        <LinkedIn url="https://www.linkedin.com/in/yeehaa/" sx={iconStyles} />
+      </Box>
     </Section>
   );
 };

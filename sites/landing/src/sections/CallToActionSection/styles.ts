@@ -3,13 +3,16 @@ import { SxStyleProp } from "theme-ui";
 export const outerWrapperStyles: SxStyleProp = {
   bg: "secondary",
   color: "white",
+  display: "flex",
+  alignItems: ["center", "center"],
   minHeight: "0vh",
+  px: [5, 8],
   ".innerWrapper": {
-    maxWidth: "100%",
+    maxWidth: "100rem",
     justifyItems: ["flex-start", "flex-start"],
     justifyContent: ["flex-start", "flex-start"],
     alignItems: ["center", "flex-start"],
-    alignContent: ["flex-start", "flex-start"],
+    alignContent: ["center", "flex-start"],
   },
   ".headerWrapper": {
     alignItems: ["flex-start", "flex-start"],
@@ -30,26 +33,5 @@ export const callToActionStyles: SxStyleProp = {
   mb: 0,
   input: {
     mb: [5, 5],
-  },
-};
-
-export const iconWrapperStyles: SxStyleProp = {
-  display: "flex",
-  flexDirection: ["row", "column"],
-  alignContent: ["center"],
-  alignItems: ["center"],
-  justifyItems: ["center"],
-  width: ["116px", "auto"],
-  height: ["auto", "116px"],
-  mt: [6, 0],
-  justifyContent: ["space-between"],
-};
-
-export const iconStyles = {
-  fill: "muted",
-  width: "50px",
-  height: "50px",
-  "&:hover": {
-    fill: "accent",
   },
 };
