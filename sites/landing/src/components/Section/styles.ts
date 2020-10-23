@@ -5,6 +5,7 @@ export const outerWrapperStyles: SxStyleProp = {
   flexDirection: "column",
   justifyContent: ["center", "center"],
   alignItems: ["start", "start"],
+  zIndex: 1,
   px: [4, 6, 8],
   py: [8, 9, 9],
   color: "text",

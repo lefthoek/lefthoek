@@ -1,11 +1,11 @@
 import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
-  boxShadow: "0 1px 20px rgba(0,0,0,0.7)",
+  boxShadow: "0 0px 20px rgba(0,0,0,0.7)",
   overflow: "hidden",
   position: "fixed",
   display: "flex",
-  zIndex: 1,
+  zIndex: 10,
   top: 0,
   width: "100vw",
 };
