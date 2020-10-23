@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { jsx, Box } from "theme-ui";
+import { jsx, Box, SxStyleProp } from "theme-ui";
 import {
   CallToActionSection,
   FooterSection,
@@ -13,12 +13,23 @@ import { Reveal } from "../animations";
 import { Container } from "../components";
 // @ts-ignore
 import content from "./content.yaml";
-import { callToActionSectionStyles, footerContainerStyles } from "./styles";
+
+const callToActionSectionStyles: SxStyleProp = {
+  mb: ["9rem", "11rem"],
+  boxShadow: "0 1px 20px rgba(0,0,0,0.7)",
+};
+
+const footerContainerStyles: SxStyleProp = {
+  position: "fixed",
+  height: ["9rem", "12rem"],
+  bottom: 0,
+  left: 0,
+  right: 0,
+};
 
 const LandingPage: FunctionComponent = () => {
   const { scrollY } = useViewportScroll();
   const heroPercentageVisible = useTransform(scrollY, [0, 600], [100, 0]);
-
   return (
     <Container siteMeta={content.siteMeta}>
       <Reveal percentageVisible={heroPercentageVisible}>

@@ -9,14 +9,14 @@ import { Helmet } from "react-helmet";
 type SiteMeta = {
   title: string;
   description: string;
-  canonical: string;
+  url: string;
 };
 
 const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
   children,
   siteMeta,
 }) => {
-  const { title, description, canonical } = siteMeta;
+  const { title, description, url } = siteMeta;
   const { theme } = useThemeUI();
   const { colors, text } = theme;
   return (
@@ -32,10 +32,10 @@ const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
           <meta name="robots" content="index, follow" />
           <meta name="description" content={description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="canonical" href={canonical} />
+          <link rel="canonical" href={url} />
 
           <meta property="og:type" content={"website"} />
-          <meta property="og:url" content={canonical} />
+          <meta property="og:url" content={url} />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
 
