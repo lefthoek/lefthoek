@@ -48,7 +48,7 @@ export const text = {
   body: {
     fontSize: ["18px", "18px"],
     lineHeight: ["28px", "28px"],
-    fontWeight: 500,
+    fontWeight: 400,
     fontFamily: "body",
   },
   smallBody: {
