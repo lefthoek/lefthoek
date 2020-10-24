@@ -21,33 +21,33 @@ const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
   const { colors, text } = theme;
   return (
     <FormspreeProvider project="1529469839263924078">
-      <Box as="article" sx={outerWrapperStyles}>
-        <Global
-          styles={{ root: text.body as any, body: { background: colors.text } }}
-        />
-        <Helmet>
-          <html lang="en" />
-          <meta charSet="utf-8" />
-          <title>{title}</title>
-          <meta name="robots" content="index, follow" />
-          <meta name="description" content={description} />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="canonical" href={url} />
+      <Global
+        styles={{ root: text.body as any, body: { background: colors.text } }}
+      />
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>{title}</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={url} />
 
-          <meta property="og:type" content={"website"} />
-          <meta property="og:url" content={url} />
-          <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
+        <meta property="og:type" content={"website"} />
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
 
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={title} />
-          <meta name="twitter:creator" content={"yeehaa"} />
-          <meta name="twitter:description" content={description} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:creator" content={"yeehaa"} />
+        <meta name="twitter:description" content={description} />
 
-          <link rel="preload" as="image" href="images/onboard.png" />
-          <link rel="preload" as="image" href="images/synchronize.png" />
-          <link rel="preload" as="image" href="images/research.png" />
-        </Helmet>
+        <link rel="preload" as="image" href="images/onboard.png" />
+        <link rel="preload" as="image" href="images/synchronize.png" />
+        <link rel="preload" as="image" href="images/research.png" />
+      </Helmet>
+      <Box as="main" sx={outerWrapperStyles}>
         {children}
       </Box>
     </FormspreeProvider>
