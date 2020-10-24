@@ -24,7 +24,6 @@ export const imageWrapperStyles: SxStyleProp = {
   pl: [0, 0, 0, 8],
   pb: [5, 5, 0],
   img: {
-    borderRadius: ["10px", "10px", "10px", "20px"],
     boxShadow: "simple",
   },
 };
