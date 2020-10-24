@@ -9,7 +9,7 @@ const innerWrapper: SxStyleProp = {
   display: "grid",
   gridGap: [5],
   alignContent: "center",
-  maxWidth: "80%",
+  maxWidth: ["auto", "50%"],
   alignItems: "start",
   gridTemplateColumns: ["auto", "1fr 1fr"],
 };
