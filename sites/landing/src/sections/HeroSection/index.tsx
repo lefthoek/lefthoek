@@ -6,7 +6,7 @@ import { jsx, Box, Heading } from "theme-ui";
 //@ts-ignore
 import { useResponsiveValue } from "@theme-ui/match-media";
 import { CallToAction } from "../../components";
-import { overlayStyles } from "./styles";
+import { overlayStyles, callToActionStyles } from "./styles";
 
 const variants = {
   initial: { opacity: 0 },
@@ -37,11 +37,11 @@ const HeroSection: FunctionComponent<{
           >
             {title}
           </Heading>
-          <Heading sx={{ mb: 5, maxWidth: "20rem" }} variant="body">
+          <Heading sx={{ maxWidth: "20rem" }} variant="body">
             {takeAway}
           </Heading>
           <CallToAction
-            sx={{ display: ["none", "flex"] }}
+            sx={callToActionStyles}
             key={mounted}
             variant={variant}
             callToAction={callToAction}
