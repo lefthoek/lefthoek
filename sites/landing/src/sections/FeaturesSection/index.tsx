@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
-import { jsx, Box, Image } from "theme-ui";
+import { jsx, Image } from "theme-ui";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";

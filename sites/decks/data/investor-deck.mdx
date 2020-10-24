@@ -2,7 +2,7 @@ import { Card } from "@lefthoek/atoms"
 import { CardsContainer } from "../src/components";
 import { UserStory, Stat, CompetitionChart } from "@lefthoek/molecules"
 import { userStories, competitiveAnalysis }from "@lefthoek/data"
-import { Cover, Basic, Stats } from "../src/slides"
+import { Cover, Basic, Feature, Stats } from "../src/slides"
 
 <Cover>
 
@@ -91,27 +91,27 @@ of Global Knowledge Management by 2025</Stat>
 
 ---
 
-<Basic variant="skyBlue">
+<Feature before={`images/onboard-before.png`} after={`images/onboard-after.png`} >
 
-  <UserStory variant="skyBlue" {...userStories.testableValueProfile} />
+  # Feature: Onboard
 
-</Basic>
-
----
-
-<Basic variant="skyBlue">
-
-  <UserStory variant="skyBlue" {...userStories.onboardingNewStaff} />
-
-</Basic>
+</Feature>
 
 ---
 
-<Basic variant="skyBlue">
+<Feature before={`images/synchronize-before.png`} after={`images/synchronize-after.png`} >
 
-  <UserStory variant="skyBlue" {...userStories.diachronousCollaboration} />
+  # Feature: Synchronize
 
-</Basic>
+</Feature>
+
+---
+
+<Feature before={`images/onboard-before.png`} after={`images/onboard-after.png`} >
+
+  # Feature: Research 
+
+</Feature>
 
 ---
 
