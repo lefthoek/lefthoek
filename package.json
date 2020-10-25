@@ -9,6 +9,7 @@
       "sites/decks",
       "sites/landing",
       "packages/types",
+      "packages/icons",
       "packages/ui-theme",
       "packages/atoms",
       "packages/molecules",

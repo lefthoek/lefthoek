@@ -49,6 +49,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@lefthoek/atoms": "*",
+    "@lefthoek/icons": "*",
     "@lefthoek/data": "*",
     "@lefthoek/molecules": "*",
     "@lefthoek/ui-theme": "*",

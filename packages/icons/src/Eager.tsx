@@ -3,11 +3,9 @@ import { FunctionComponent } from "react";
 import { jsx } from "theme-ui";
 
 export const Eager: FunctionComponent<{
-  className: string;
-  gradients: Record<string, string[]>;
+  className?: string;
   colors: Record<string, string>;
-}> = ({ className, colors, gradients }) => {
-  console.log(gradients);
+}> = ({ className, colors }) => {
   const { midnight, lobsterLight, white, skyBlue } = colors;
   return (
     <svg className={className} viewBox="0 0 126 126" fill="none">
@@ -90,7 +88,7 @@ export const Eager: FunctionComponent<{
       <path
         d="M14.0068 107.27H45.6007V122.398H14.0068V107.27Z"
         fill={skyBlue}
-        stroke="#32334E"
+        stroke={midnight}
         stroke-width="2"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -113,7 +111,7 @@ export const Eager: FunctionComponent<{
         stroke-miterlimit="10"
         stroke-linecap="round"
       />
-      <path d="M57 4L63 18L69 4H57Z" fill="#E39D76" stroke="#32334E" />
+      <path d="M57 4L63 18L69 4H57Z" fill={lobsterLight} stroke={midnight} />
       <path
         d="M39 16.7385L53.307 21.9643L47.2243 8.00008L39 16.7385Z"
         fill={lobsterLight}

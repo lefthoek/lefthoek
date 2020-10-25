@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FunctionComponent, ReactNode, ReactNodeArray } from "react";
+import { FunctionComponent } from "react";
 import { jsx, Image, Box } from "theme-ui";
 import { Basic } from "../Basic";
 import { outerWrapper, innerWrapper } from "./styles";
