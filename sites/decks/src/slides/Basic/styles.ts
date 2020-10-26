@@ -10,7 +10,7 @@ const outerWrapper: SxStyleProp = {
   py: [8],
   h1: {
     textAlign: ["center", "center"],
-    mb: [6, 6, 8, 8],
+    mb: [6, 6, 7, 7],
   },
   p: {
     maxWidth: "25rem",

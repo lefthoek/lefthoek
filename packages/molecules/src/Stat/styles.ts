@@ -22,3 +22,11 @@ export const figureStyles: SxStyleProp = {
   mb: [3, 5],
   textAlign: "center",
 };
+
+export const referenceStyles: SxStyleProp = {
+  textDecoration: "none",
+  fontWeight: 700,
+  fontSize: "1.5rem",
+  baselineShift: "super",
+  color: "primary",
+};

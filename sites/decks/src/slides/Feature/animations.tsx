@@ -16,7 +16,7 @@ const Fade: FunctionComponent<{ showOverlay: boolean }> = ({
   return (
     <motion.div
       variants={variants}
-      transition={{ delay: 1 }}
+      transition={{ delay: 0.5 }}
       initial={showOverlay ? "intial" : "enter"}
       animate="enter"
       sx={overlayWrapperStyles}
