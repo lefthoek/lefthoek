@@ -4,6 +4,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Lefthoek Decks",
+        short_name: "Decks",
+        start_url: "/",
+        display: "standalone",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

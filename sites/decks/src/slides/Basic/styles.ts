@@ -16,7 +16,6 @@ const outerWrapper: SxStyleProp = {
     maxWidth: "25rem",
     lineHeight: ["25px", "28px"],
     my: 0,
-
     textAlign: ["center", "center"],
   },
   ul: {

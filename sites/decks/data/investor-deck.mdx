@@ -2,7 +2,7 @@ import { Card } from "@lefthoek/atoms"
 import { CardsContainer } from "../src/components";
 import { UserStory, Stat, SellingPoint, CompetitionChart } from "@lefthoek/molecules"
 import { userStories, competitiveAnalysis }from "@lefthoek/data"
-import { Cover, Basic, Feature, Icons, Stats } from "../src/slides"
+import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
 
 <Cover>
 
@@ -51,9 +51,17 @@ information from sources</SellingPoint>
 
 ---
 
+<SectionCover>
+
+# Features
+
+</SectionCover>
+
+---
+
 <Feature before={`images/onboard-before.png`} after={`images/onboard-after.png`} >
 
-  # Feature: Onboard
+  # Onboard
 
 </Feature>
 
@@ -61,7 +69,7 @@ information from sources</SellingPoint>
 
 <Feature before={`images/synchronize-before.png`} after={`images/synchronize-after.png`} >
 
-  # Feature: Synchronize
+  # Synchronize
 
 </Feature>
 
@@ -69,16 +77,23 @@ information from sources</SellingPoint>
 
 <Feature before={`images/research-before.png`} after={`images/research-after.png`} >
 
-  # Feature: Research 
+  # Research 
 
 </Feature>
 
+---
+
+<SectionCover variant="midnight">
+
+# Market
+
+</SectionCover>
 
 ---
 
 <Stats>
 
-# Market Validation
+# Validation
 
 <Stat figure="3 years" reference="https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-3-industries-with-the-highest-turnover-rates">Average talent retention at tech companies</Stat>
 
@@ -96,7 +111,7 @@ knowledge</Stat>
 
 <Stats>
 
-# Market Scale
+# Scale
 
 <Stat figure="91%"
 reference="https://www.computerworld.com/article/3403675/slack-or-teams-many-businesses-opt-for-both.html#:~:text=Mio%20polled%20200%20IT%20decision,hundreds%20of%20thousands%20of%20employees.&text=The%20company%20found%20that%2091,66%25%20of%20the%20organizations%20surveyed">Percentage
@@ -177,7 +192,7 @@ domain</SellingPoint>
 
 ##### Jan Hein Hoogstad
 
-yeehaa@offcourse.io
+yeehaa@lefthoek.com
 
 @yeehaa
 
