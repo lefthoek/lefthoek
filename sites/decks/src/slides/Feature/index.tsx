@@ -12,7 +12,7 @@ const Feature: FunctionComponent<{
   className?: string;
 }> = ({ before, children, after, index, className }) => {
   return (
-    <Basic index={index} sx={outerWrapper} className={className}>
+    <Basic variant="midnight" index={index} sx={outerWrapper} className={className}>
       {children}
       <Box sx={innerWrapper}>
         <Image src={before} />

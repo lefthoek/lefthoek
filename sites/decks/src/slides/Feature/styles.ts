@@ -3,6 +3,8 @@ import { SxStyleProp } from "theme-ui";
 const outerWrapper: SxStyleProp = {
   p: [6, 8],
   maxHeight: "100vh",
+  bg: "midnight",
+  color: "muted",
   justifyContent: "flex-start",
   overflowY: ["scroll", "none"],
 };
