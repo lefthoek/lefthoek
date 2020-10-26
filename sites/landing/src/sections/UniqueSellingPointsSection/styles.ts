@@ -28,3 +28,21 @@ export const listStyles: SxStyleProp = {
     gridColumn: ["1/3", "2/4", "4/6"],
   },
 };
+
+export const itemStyles: SxStyleProp = {
+  display: "flex",
+  flexDirection: ["column"],
+  justifyContent: ["flex-start"],
+  alignItems: ["center"],
+  minWidth: "15rem",
+  p: {
+    maxWidth: "18rem",
+    textAlign: "center",
+    m: 0,
+  },
+  h2: {
+    color: "secondary",
+    mb: [4, 5],
+    textAlign: "center",
+  },
+};
