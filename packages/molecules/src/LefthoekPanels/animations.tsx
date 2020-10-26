@@ -29,6 +29,7 @@ const Slide: FunctionComponent<{
     <motion.div
       variants={variants}
       initial={shouldStart ? "initial" : "enter"}
+      transition={{ type: "spring", stiffness: 100 }}
       animate="enter"
       custom={{ direction, offset, range }}
       style={{ x }}

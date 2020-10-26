@@ -11,7 +11,7 @@ const Cover: FunctionComponent<{
 }> = ({ children }) => {
   const percentageVisible = useMotionValue(100);
   return (
-    <LefthoekPanels percentageVisible={percentageVisible}>
+    <LefthoekPanels shouldStart percentageVisible={percentageVisible}>
       <Box sx={overlayStyles}>{children}</Box>
     </LefthoekPanels>
   );

@@ -18,8 +18,10 @@ const SellingPoint: FunctionComponent<{
       <Box sx={{ width: "70%" }}>
         <Icon iconName={displayTitle} />
       </Box>
-      <Heading variant="display">{displayTitle}</Heading>
-      <Markdown text={children} />
+      <Box>
+        <Heading variant="display">{displayTitle}</Heading>
+        <Markdown text={children} />
+      </Box>
     </Box>
   );
 };
