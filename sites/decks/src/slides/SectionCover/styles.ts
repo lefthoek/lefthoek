@@ -4,10 +4,10 @@ const outerWrapperStyles: SxStyleProp = {
   color: "accent",
 
   h1: {
-    fontSize: ["9rem", "12rem", "15rem", "25rem"],
+    fontSize: ["9rem", "12rem", "12rem", "15rem"],
     textAlign: "center",
     mb: 0,
-    lineHeight: ["9rem", "12rem", "15rem", "25rem"],
+    lineHeight: ["9rem", "12rem", "12rem", "15rem"],
 
     "@media screen and (orientation: portrait)": {
       transform: "rotate(90deg)",
