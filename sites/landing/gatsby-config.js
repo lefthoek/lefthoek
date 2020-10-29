@@ -1,8 +1,17 @@
 module.exports = {
   siteMetadata: {
-    siteName: `Generic Site`,
+    siteName: `Lefthoek`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Lefthoek - Cutting Corners as a Service",
+        short_name: "Lefthoek",
+        start_url: "/",
+        display: "standalone",
+      },
+    },
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-compile-es6-packages`,

@@ -2,6 +2,7 @@
 import { FunctionComponent } from "react";
 import { jsx, Box, SxStyleProp } from "theme-ui";
 import {
+  AboutSection,
   CallToActionSection,
   FooterSection,
   HeroSection,
@@ -38,6 +39,7 @@ const LandingPage: FunctionComponent = () => {
           {...content.heroSection}
         />
       </Reveal>
+      <AboutSection {...content.aboutSection}/>
       <FeaturesSection {...content.featureSection} />
       <UniqueSellingPointsSection {...content.uniqueSellingPointsSection} />
       <CallToActionSection

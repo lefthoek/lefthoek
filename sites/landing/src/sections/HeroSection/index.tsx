@@ -32,13 +32,10 @@ const HeroSection: FunctionComponent<{
       <motion.div variants={variants} initial="initial" animate="enter">
         <Box sx={overlayStyles}>
           <Heading
-            sx={{ mb: 5, maxWidth: ["15rem", "100%"] }}
+            sx={{ maxWidth: ["15rem", "29rem"] }}
             variant="abstract"
           >
             {title}
-          </Heading>
-          <Heading sx={{ maxWidth: "20rem" }} variant="body">
-            {takeAway}
           </Heading>
           <CallToAction
             sx={callToActionStyles}

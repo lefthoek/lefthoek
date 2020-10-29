@@ -1,3 +1,4 @@
+export * from "./AboutSection";
 export * from "./CallToActionSection";
 export * from "./FeaturesSection";
 export * from "./FooterSection";
