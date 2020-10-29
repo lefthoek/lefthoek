@@ -19,7 +19,7 @@ const HeroSection: FunctionComponent<{
   takeAway: string;
   callToAction: string;
   className?: string;
-}> = ({ className, title, takeAway, percentageVisible, callToAction }) => {
+}> = ({ className, title, percentageVisible, callToAction }) => {
   const [mounted, setMounted] = useState("notMounted");
   const variant = useResponsiveValue(["midnight", "midnight", "skyBlue"], {
     defaultIndex: 2,
@@ -32,7 +32,7 @@ const HeroSection: FunctionComponent<{
       <motion.div variants={variants} initial="initial" animate="enter">
         <Box sx={overlayStyles}>
           <Heading
-            sx={{ maxWidth: ["15rem", "29rem"] }}
+            sx={{ maxWidth: ["auto", "29rem"] }}
             variant="abstract"
           >
             {title}

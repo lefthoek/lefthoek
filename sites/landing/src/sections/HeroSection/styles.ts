@@ -5,7 +5,7 @@ export const overlayStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-end",
-  py: [6, 6, "4rem", "10rem"],
+  py: ["4rem", "4rem", "4rem", "10rem"],
   top: 0,
   px: [5, 8],
   left: [0, 0, "55%"],
