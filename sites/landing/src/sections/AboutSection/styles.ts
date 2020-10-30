@@ -17,7 +17,7 @@ export const outerWrapperStyles: SxStyleProp = {
 export const contentWrapperStyles: SxStyleProp = {
   display: "grid",
   gridGap: [4],
-  maxWidth: "35rem",
+  maxWidth: "45rem",
   gridTemplateColumns: ["auto", "1fr"],
 }
 
