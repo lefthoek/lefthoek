@@ -32,7 +32,6 @@ const HeroSection: FunctionComponent<{
       <motion.div variants={variants} initial="initial" animate="enter">
         <Box sx={overlayStyles}>
           <Heading
-            sx={{ maxWidth: ["auto", "29rem"] }}
             variant="abstract"
           >
             {title}

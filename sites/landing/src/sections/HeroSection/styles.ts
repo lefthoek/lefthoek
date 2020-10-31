@@ -11,6 +11,9 @@ export const overlayStyles: SxStyleProp = {
   left: [0, 0, "55%"],
   right: 0,
   bottom: 0,
+  h2: {
+    maxWidth: ["auto", "20rem"] 
+  }
 };
 
 export const callToActionStyles: SxStyleProp = {
