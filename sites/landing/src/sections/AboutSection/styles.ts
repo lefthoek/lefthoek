@@ -8,6 +8,9 @@ export const outerWrapperStyles: SxStyleProp = {
   pt: [0, 0],
   pb: [0, 0],
   alignItems: ["center", "center"],
+  h3: {
+    maxWidth: ["25rem"],
+  },
   h2: {
     maxWidth: "30rem",
   },
@@ -48,4 +51,5 @@ export const contentWrapperStyles: SxStyleProp = {
   display: "grid",
   maxWidth: "40rem",
   gridTemplateColumns: ["auto", "1fr"],
+  p: { m: 0, mb: 5 },
 };

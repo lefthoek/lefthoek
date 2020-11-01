@@ -6,7 +6,7 @@ import { jsx, Box, Heading } from "theme-ui";
 //@ts-ignore
 import { useResponsiveValue } from "@theme-ui/match-media";
 import { CallToAction } from "../../components";
-import { overlayStyles, callToActionStyles } from "./styles";
+import { overlayStyles, titleStyles, callToActionStyles } from "./styles";
 
 const variants = {
   initial: { opacity: 0 },
@@ -31,10 +31,7 @@ const HeroSection: FunctionComponent<{
     <LefthoekPanels className={className} percentageVisible={percentageVisible}>
       <motion.div variants={variants} initial="initial" animate="enter">
         <Box sx={overlayStyles}>
-          <Heading
-            sx={{ maxWidth: ["auto", "29rem"] }}
-            variant="abstract"
-          >
+          <Heading sx={titleStyles} variant="abstract">
             {title}
           </Heading>
           <CallToAction

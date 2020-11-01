@@ -19,18 +19,18 @@ aboutSection:
     Cutting corners is not about working less: it's about achieving results
     faster, more creative, more ambitious, and less wasteful. By design,
     computers are aligned with these goals. Alas, we often forget or refuse to
-    ask for their help. Not because we don’t want to, but because we don’t know
-    how.
+    ask for their help. 
 
     Lefthoek unleashes the full corner-cutting power of computers. We release
-    your team's untapped potential by adding an extra member to it. This new
-    colleague will take care of boring, laborious, and difficult tasks, so that
-    your team can be smarter, more creative, and more productive with far less
-    effort.
+    your team's untapped potential by adding an AI powered virtual team member
+    to it. This new colleague will take care of boring, laborious, and difficult
+    tasks, so that your team can be smarter, more creative, and more productive
+    with far less effort.
 
 featureSection:
   title: Meet your next employee of the month
-  takeAway: Lefthoek offers virtual team members devoted to information management
+  takeAway: |
+    Lefthoek offers AI powered virtual team members devoted to information management
   features:
     - title: onboard
       description: |
@@ -88,7 +88,8 @@ featureSection:
 
 uniqueSellingPointsSection:
   title: No-one's quite like Lefthoek
-  takeAway: Our virtual team member is a great fit for every culture
+  takeAway: |
+    Our virtual team member is a great fit for every culture
   sellingPoints:
     - title: Loyal
       description: |
