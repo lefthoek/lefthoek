@@ -3,6 +3,7 @@ import { SxStyleProp } from "theme-ui";
 export const outerWrapperStyles: SxStyleProp = {
   display: "flex",
   overflowX: "hidden",
+  bg: "muted",
   alignItems: ["center", "center"],
   ".innerWrapper": {
     maxWidth: "80rem",

@@ -1,7 +1,7 @@
 import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
-  bg: "text",
+  bg: ({ gradients }) => gradients.lobster[0],
   color: "muted",
   justifyContent: ["center", "center"],
   alignItems: ["center", "center"],
@@ -28,10 +28,10 @@ export const iconWrapperStyles: SxStyleProp = {
 };
 
 export const iconStyles = {
-  fill: "muted",
+  fill: "secondary",
   width: "50px",
   height: "50px",
   "&:hover": {
-    fill: "accent",
+    fill: "text",
   },
 };
