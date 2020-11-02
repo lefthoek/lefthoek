@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteName: `Lefthoek`,
+    siteUrl: `https://lefthoek.com`,
   },
   plugins: [
     {
@@ -26,6 +27,7 @@ module.exports = {
         modules: ["gatsby-theme-mdx-deck"],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-theme-ui",
   ],

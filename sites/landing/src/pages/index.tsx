@@ -71,7 +71,6 @@ const CutCornerWrapper: FunctionComponent<{ className?: string }> = ({
 const LandingPage: FunctionComponent = () => {
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scrollMargin = 350;
-  console.log(scrollYProgress);
   const heroPercentageVisible = useTransform(
     scrollY,
     [0, scrollMargin],
