@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `lefthoek.com`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Lefthoek - Cutting Corners as a Service",

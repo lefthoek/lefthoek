@@ -8362,6 +8362,15 @@ gatsby-plugin-page-creator@^2.3.28:
     graphql "^14.6.0"
     lodash "^4.17.20"
 
+gatsby-plugin-plausible@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/gatsby-plugin-plausible/-/gatsby-plugin-plausible-0.0.7.tgz#6f8c922bbc672a73bd8e9a39add61fb62ec96566"
+  integrity sha512-pWCXsrWal8lWMmZ1wJ2dolbwZZR1CZU1LVR/K1rYC8NeA+uqTLY8h3uH3hFgP5n8jmRRenOSJ9SjWM9OIdCjOA==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    minimatch "3.0.4"
+    react "^16.13.1"
+
 gatsby-plugin-react-helmet-async@^1.0.5:
   version "1.1.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-react-helmet-async/-/gatsby-plugin-react-helmet-async-1.1.0.tgz#680995b67588a4d4de1f63e41bd929e1f7fe1c86"
@@ -17907,16 +17916,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-crimson-text@^0.0.72:
-  version "0.0.72"
-  resolved "https://registry.npmjs.org/typeface-crimson-text/-/typeface-crimson-text-0.0.72.tgz#af492f355f1474ec185bebebf4b2aaaae6eec24d"
-  integrity sha512-CLDNCOJ05k1BIbgQ1eAPPaK4eVHls8Y+n5NTIwvlFmhCSLzCXWII4vQ2oV6Iyi3BOVogj/LsWq25IdQINrh5+Q==
-
-typeface-spartan@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.npmjs.org/typeface-spartan/-/typeface-spartan-1.1.4.tgz#6ef0ee76a56950ffdb83db5d9fadc34d56910d3d"
-  integrity sha512-NyoeQ9E+80MG26ozA+hvf0NNVOIAC8hfKuZgqP4ojUAa5zvbdmL7P5jNBvQGgbRIz2yQQFKttChwsJg2z3q0gw==
 
 typescript@3.5.3:
   version "3.5.3"

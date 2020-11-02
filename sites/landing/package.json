@@ -55,6 +55,7 @@
     "d3-array": "^2.8.0",
     "framer-motion": "^2.7.1",
     "gatsby-plugin-manifest": "^2.4.37",
+    "gatsby-plugin-plausible": "^0.0.7",
     "global": "^4.4.0",
     "mkdirp": "^1.0.4",
     "ramda": "^0.27.1",
