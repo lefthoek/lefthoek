@@ -7,6 +7,7 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `lefthoek.com`,
+        customDomain: "stats.lefthoek.com",
       },
     },
     {
