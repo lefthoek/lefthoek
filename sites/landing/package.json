@@ -65,8 +65,6 @@
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
     "theme-ui": "^0.3.1",
-    "typeface-crimson-text": "^0.0.72",
-    "typeface-spartan": "^1.1.4",
     "unified": "^9.2.0",
     "voca": "^1.4.0"
   }

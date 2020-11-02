@@ -11,9 +11,14 @@ type SiteMeta = {
   description: string;
   url: string;
 };
+type ContainerProps = {
+  className?: string;
+  siteMeta: SiteMeta;
+};
 
-const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
+const Container: FunctionComponent<ContainerProps> = ({
   children,
+  className,
   siteMeta,
 }) => {
   const { title, description, url } = siteMeta;
@@ -22,7 +27,7 @@ const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
   return (
     <FormspreeProvider project="1529469839263924078">
       <Global
-        styles={{ root: text.body as any, body: { background: colors.text } }}
+        styles={{ root: text.body as any, body: { background: colors.muted } }}
       />
       <Helmet>
         <html lang="en" />
@@ -47,7 +52,7 @@ const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
         <link rel="preload" as="image" href="images/synchronize.png" />
         <link rel="preload" as="image" href="images/research.png" />
       </Helmet>
-      <Box as="main" sx={outerWrapperStyles}>
+      <Box className={className} as="main" sx={outerWrapperStyles}>
         {children}
       </Box>
     </FormspreeProvider>
