@@ -16,3 +16,10 @@ export const featuresWrapperStyles: SxStyleProp = {
   width: ["150%", "120%", "100%"],
   justifyContent: ["space-between", "space-between", "space-between"],
 };
+
+export const featuresDetailStyles: SxStyleProp = {
+  display: "flex",
+  flexDirection: ["row", "row", "row"],
+  width: ["300%", "300%", "300%"],
+  justifyContent: ["space-between", "space-between", "space-between"],
+};

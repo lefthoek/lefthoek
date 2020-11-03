@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
-import { jsx, Image } from "theme-ui";
+import { jsx, Box, Image } from "theme-ui";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";
@@ -8,7 +8,11 @@ import { Fade } from "../../animations";
 //@ts-ignore
 import { motion } from "framer-motion";
 import { useResponsiveValue } from "@theme-ui/match-media";
-import { outerWrapperStyles, featuresWrapperStyles } from "./styles";
+import {
+  outerWrapperStyles,
+  featuresDetailStyles,
+  featuresWrapperStyles,
+} from "./styles";
 
 type FeaturesSectionProps = {
   title: string;
@@ -33,15 +37,13 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
   const selectedIndex = features.findIndex(
     ({ title }) => title === selectedText
   );
-  const selectedDescription = features.find(
-    ({ title }) => title === selectedText
-  ).description;
   const onSelect = ({ title }) => selectText(title);
   return (
     <Section sx={outerWrapperStyles} title={title} takeAway={takeAway}>
       <motion.div
         variants={variants}
         initial="initial"
+        transition={{ type: "spring", damping: 15, delay: 0.2 }}
         animate={shouldAnimate ? states[selectedIndex] : "normal"}
         sx={featuresWrapperStyles}
       >
@@ -56,11 +58,30 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
           );
         })}
       </motion.div>
-      <Fade id={selectedText}>
-        <FeatureDetail text={selectedDescription}>
-          <Image src={`images/${selectedText}.png`} />
-        </FeatureDetail>
-      </Fade>
+      <motion.div
+        variants={variants}
+        initial="initial"
+        transition={{ type: "spring", damping: 15, delay: 0.2 }}
+        animate={states[selectedIndex]}
+        sx={featuresDetailStyles}
+      >
+        {features.map(({ title, description }, index) => {
+          return (
+            <motion.div
+              sx={{
+                width: "33.333%",
+              }}
+              animate={{
+                opacity: selectedIndex === index ? 1 : 0,
+              }}
+            >
+              <FeatureDetail key={title} text={description}>
+                <Image src={`images/${title}.png`} />
+              </FeatureDetail>
+            </motion.div>
+          );
+        })}
+      </motion.div>
     </Section>
   );
 };
