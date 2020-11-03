@@ -22,7 +22,6 @@
     "@lefthoek/ui-theme": "*",
     "@theme-ui/color": "^0.3.1",
     "@theme-ui/match-media": "^0.3.1",
-    "@types/theme-ui": "^0.3.5",
     "@xstate/immer": "^0.1.0",
     "@xstate/react": "^0.8.1",
     "docz": "latest",
@@ -41,6 +40,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4"
+    "@types/react-dom": "^16.8.4",
+    "@types/theme-ui": "^0.3.5"
   }
 }

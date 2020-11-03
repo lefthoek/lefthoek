@@ -12,13 +12,6 @@
     "type-check": "tsc --noEmit",
     "lint": "tslint --project ."
   },
-  "peerDependencies": {
-    "@offcourse/interfaces": "*",
-    "gatsby": "^2.24.11",
-    "gatsby-plugin-typescript": "^2.4.16",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@types/d3-array": "^2.0.0",
