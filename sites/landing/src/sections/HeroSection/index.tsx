@@ -1,17 +1,12 @@
 /** @jsx jsx */
 import { FunctionComponent, useState, useEffect } from "react";
-import { motion, MotionValue } from "framer-motion";
+import { MotionValue } from "framer-motion";
 import { LefthoekPanels } from "@lefthoek/molecules";
 import { jsx, Box, Heading } from "theme-ui";
 //@ts-ignore
 import { useResponsiveValue } from "@theme-ui/match-media";
 import { CallToAction } from "../../components";
 import { overlayStyles, titleStyles, callToActionStyles } from "./styles";
-
-const variants = {
-  initial: { opacity: 0 },
-  enter: { opacity: 1 },
-};
 
 const HeroSection: FunctionComponent<{
   title: string;
@@ -29,19 +24,17 @@ const HeroSection: FunctionComponent<{
   }, []);
   return (
     <LefthoekPanels className={className} percentageVisible={percentageVisible}>
-      <motion.div variants={variants} initial="initial" animate="enter">
-        <Box sx={overlayStyles}>
-          <Heading sx={titleStyles} variant="abstract">
-            {title}
-          </Heading>
-          <CallToAction
-            sx={callToActionStyles}
-            key={mounted}
-            variant={variant}
-            callToAction={callToAction}
-          />
-        </Box>
-      </motion.div>
+      <Box sx={overlayStyles}>
+        <Heading sx={titleStyles} variant="abstract">
+          {title}
+        </Heading>
+        <CallToAction
+          sx={callToActionStyles}
+          key={mounted}
+          variant={variant}
+          callToAction={callToAction}
+        />
+      </Box>
     </LefthoekPanels>
   );
 };
