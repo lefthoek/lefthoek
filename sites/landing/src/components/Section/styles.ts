@@ -1,34 +1,5 @@
 import { SxStyleProp } from "theme-ui";
 
-export const effectsWrapperStyles: SxStyleProp = {
-  bg: "secondary",
-};
-
-export const cutCornerStyles: SxStyleProp = {
-  clipPath: [
-    `polygon(
-    0 0%,
-    100% 0,
-    100% 0,
-    100% 0,
-    100% calc(100% - 50px),
-    0 100%,
-    100% 100%,
-    0 calc(100% - 0px)
-  )`,
-    `polygon(
-    0 0%,
-    100% 0,
-    100% 0,
-    100% 0,
-    100% calc(100% - 100px),
-    0 100%,
-    100% 100%,
-    0 calc(100% - 0px)
-  )`,
-  ],
-};
-
 export const outerWrapperStyles: SxStyleProp = {
   display: "flex",
   flexDirection: "column",
