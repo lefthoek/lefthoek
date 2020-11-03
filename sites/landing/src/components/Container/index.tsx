@@ -23,11 +23,15 @@ const Container: FunctionComponent<ContainerProps> = ({
 }) => {
   const { title, description, url } = siteMeta;
   const { theme } = useThemeUI();
-  const { colors, text } = theme;
+  // @ts-ignore
+  const { gradients, text } = theme;
   return (
     <FormspreeProvider project="1529469839263924078">
       <Global
-        styles={{ root: text.body as any, body: { background: colors.muted } }}
+        styles={{
+          root: text.body as any,
+          body: { background: gradients.lobster[0] },
+        }}
       />
       <Helmet>
         <html lang="en" />

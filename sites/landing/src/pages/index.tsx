@@ -14,6 +14,7 @@ import { Reveal } from "../animations";
 import { Container } from "../components";
 // @ts-ignore
 import content from "./content.yaml";
+
 const effectsWrapperStyles: SxStyleProp = {
   bg: "secondary",
 };
@@ -69,7 +70,7 @@ const CutCornerWrapper: FunctionComponent<{ className?: string }> = ({
 };
 
 const LandingPage: FunctionComponent = () => {
-  const { scrollY, scrollYProgress } = useViewportScroll();
+  const { scrollY } = useViewportScroll();
   const scrollMargin = 350;
   const heroPercentageVisible = useTransform(
     scrollY,
