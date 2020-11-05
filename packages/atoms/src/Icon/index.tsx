@@ -7,6 +7,9 @@ const styles = {
   ".white": {
     fill: "#fcf2f5",
   },
+  cipriaMedium: {
+    fill: "#ffdcdc",
+  },
   ".lobsterMedium": {
     fill: "#da7c49",
   },
@@ -48,6 +51,9 @@ const styles = {
     stroke: "text",
     strokeWidth: "7px",
   },
+  ".transparent": {
+    opacity: 0.75,
+  },
   ".lineCap": {
     strokeLinecap: "round",
   },
@@ -88,6 +94,8 @@ const Icon: FunctionComponent<{
   const skyBlueMedium = gradients.skyBlue[2];
   const skyBlueLight = gradients.skyBlue[1];
   const skyBlueLightest = gradients.skyBlue[0];
+  //@ts-ignore
+  console.log(theme.gradients.cipria);
   const colors = {
     midnight,
     midnightMedium,
