@@ -79,7 +79,11 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
               }}
             >
               <FeatureDetail key={title} text={description}>
-                <Img fluid={images[title].childImageSharp.fluid} />
+                <Img
+                  title={title}
+                  alt={title}
+                  fluid={images[title].childImageSharp.fluid}
+                />
               </FeatureDetail>
             </motion.div>
           );
