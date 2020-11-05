@@ -1,9 +1,18 @@
 /** @jsx jsx */
-import { FunctionComponent } from "react";
+import { FunctionComponent, FormEvent } from "react";
 import { Input } from "@lefthoek/atoms";
 import { jsx, Button, Heading } from "theme-ui";
 import { useForm } from "@formspree/react";
 import { outerWrapperStyles, inputStyles, buttonStyles } from "./styles";
+
+const tagEvent = (tag: string) => {
+  // @ts-ignore
+  if (!window.plausible) {
+    console.log("DEV", tag);
+  }
+  // @ts-ignore
+  window.plausible(tag, { callback: console.log("PROD", tag) });
+};
 
 const CallToAction: FunctionComponent<{
   className?: string;
@@ -12,6 +21,10 @@ const CallToAction: FunctionComponent<{
   variant?: string;
 }> = ({ className, callToAction, variant = "midnight" }) => {
   const [state, handleSubmit] = useForm("contactForm");
+  const handleSubmitForm = (e: FormEvent) => {
+    handleSubmit(e);
+    tagEvent("SIGN UP");
+  };
   const buttonsVariants = {
     skyBlue: "midnight",
     midnight: "skyBlue",
@@ -22,7 +35,11 @@ const CallToAction: FunctionComponent<{
   }
 
   return (
-    <form onSubmit={handleSubmit} className={className} sx={outerWrapperStyles}>
+    <form
+      onSubmit={handleSubmitForm}
+      className={className}
+      sx={outerWrapperStyles}
+    >
       <Input
         type="email"
         name="email"

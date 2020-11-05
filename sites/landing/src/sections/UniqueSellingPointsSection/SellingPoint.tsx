@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { FunctionComponent, ElementType } from "react";
 import { jsx, Box, Heading } from "theme-ui";
+import { Icon } from "@lefthoek/atoms";
 import { Markdown } from "../../components/Markdown";
 import { itemStyles } from "./styles";
-import * as icons from "./icons";
+import * as icons from "@lefthoek/icons";
 
 const midnight = "#32334E";
 const white = "#FCF2F5";
@@ -36,11 +37,10 @@ const SellingPoint: FunctionComponent<{
   title: string;
   children: string;
 }> = ({ className, title, children, as }) => {
-  const Icon = icons[title] || icons["Bespoke"];
   return (
     <Box className={className} key={title} as={as} sx={itemStyles}>
       <Box sx={{ width: "70%" }}>
-        <Icon colors={colors} />
+        <Icon iconName={title} />
       </Box>
       <Heading variant="display">{title}</Heading>
       <Markdown text={children} />

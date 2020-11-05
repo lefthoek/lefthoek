@@ -6,6 +6,7 @@ export const outerWrapperStyles: SxStyleProp = {
   display: "flex",
   alignItems: ["center", "center"],
   minHeight: "0vh",
+  py: [8, 9, 9],
   px: [5, 8],
   ".innerWrapper": {
     maxWidth: "100rem",

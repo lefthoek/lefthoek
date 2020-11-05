@@ -15,18 +15,28 @@ import {
 
 const LefthoekPanels: FunctionComponent<{
   percentageVisible: MotionValue;
-  shouldStart?:boolean;
+  shouldStart?: boolean;
   className?: string;
 }> = ({ percentageVisible, shouldStart, children, className }) => {
   return (
     <Box sx={outerWrapperStyles} className={className}>
       <Background sx={leftPanelStyles}>
-        <Slide shouldStart={shouldStart} direction={-1} offset={50} percentageVisible={percentageVisible}>
+        <Slide
+          shouldStart={shouldStart}
+          direction={-1}
+          offset={50}
+          percentageVisible={percentageVisible}
+        >
           <Heading sx={leftHeadingStyles}>Hoek</Heading>
         </Slide>
       </Background>
       <Background sx={rightPanelStyles}>
-        <Slide shouldStart={shouldStart} direction={1} offset={-80} percentageVisible={percentageVisible}>
+        <Slide
+          shouldStart={shouldStart}
+          direction={1}
+          offset={-80}
+          percentageVisible={percentageVisible}
+        >
           <Heading sx={rightHeadingStyles}>Left</Heading>
         </Slide>
         {children}

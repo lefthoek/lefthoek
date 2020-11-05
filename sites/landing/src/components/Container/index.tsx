@@ -11,18 +11,26 @@ type SiteMeta = {
   description: string;
   url: string;
 };
+type ContainerProps = {
+  className?: string;
+  siteMeta: SiteMeta;
+};
 
-const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
+const Container: FunctionComponent<ContainerProps> = ({
   children,
+  className,
   siteMeta,
 }) => {
   const { title, description, url } = siteMeta;
   const { theme } = useThemeUI();
-  const { colors, text } = theme;
+  // @ts-ignore
+  const { text } = theme;
   return (
     <FormspreeProvider project="1529469839263924078">
       <Global
-        styles={{ root: text.body as any, body: { background: colors.text } }}
+        styles={{
+          root: text.body as any,
+        }}
       />
       <Helmet>
         <html lang="en" />
@@ -42,12 +50,8 @@ const Container: FunctionComponent<{ siteMeta: SiteMeta }> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:creator" content={"yeehaa"} />
         <meta name="twitter:description" content={description} />
-
-        <link rel="preload" as="image" href="images/onboard.png" />
-        <link rel="preload" as="image" href="images/synchronize.png" />
-        <link rel="preload" as="image" href="images/research.png" />
       </Helmet>
-      <Box as="main" sx={outerWrapperStyles}>
+      <Box className={className} as="main" sx={outerWrapperStyles}>
         {children}
       </Box>
     </FormspreeProvider>

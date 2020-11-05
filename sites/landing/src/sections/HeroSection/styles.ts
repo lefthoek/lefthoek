@@ -1,11 +1,17 @@
 import { SxStyleProp } from "theme-ui";
 
+export const titleStyles: SxStyleProp = {
+  fontSize: ["25px", "26px"],
+  lineHeight: ["31px", "33px"],
+  maxWidth: ["20rem", "20rem"],
+};
+
 export const overlayStyles: SxStyleProp = {
   position: "absolute",
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-end",
-  py: ["4rem", "4rem", "4rem", "10rem"],
+  py: ["6rem", "4rem", "4rem", "10rem"],
   top: 0,
   px: [5, 8],
   left: [0, 0, "55%"],

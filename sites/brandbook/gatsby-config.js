@@ -8,7 +8,7 @@ module.exports = {
       options: {
         name: "Lefthoek",
         short_name: "Lefthoek",
-        description: "",
+        description: "brandbook for lefthoek",
         lang: `en`,
         display: `standalone`,
         icon: `../src/icon.png`,

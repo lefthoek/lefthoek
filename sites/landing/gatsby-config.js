@@ -1,8 +1,25 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
     siteName: `Lefthoek`,
+    siteUrl: `https://lefthoek.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `lefthoek.com`,
+        customDomain: "stats.lefthoek.com",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `static`),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -19,6 +36,9 @@ module.exports = {
         modules: ["gatsby-theme-mdx-deck"],
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-theme-ui",
   ],

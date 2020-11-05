@@ -6,6 +6,9 @@ export const outerWrapperStyles: SxStyleProp = {
   color: "muted",
   px: [5, 5, 7],
   alignItems: ["center", "center"],
+  h3: {
+    maxWidth: ["20rem"],
+  },
 };
 
 export const listStyles: SxStyleProp = {
