@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FunctionComponent, useState } from "react";
-import { jsx, Box, Image } from "theme-ui";
+import { jsx } from "theme-ui";
+import Img from "gatsby-image";
 import { Section } from "../../components";
 import { FeatureSelector } from "./FeatureSelector";
 import { FeatureDetail } from "./FeatureDetail";
-import { Fade } from "../../animations";
 //@ts-ignore
 import { motion } from "framer-motion";
 import { useResponsiveValue } from "@theme-ui/match-media";
@@ -17,6 +17,7 @@ import {
 type FeaturesSectionProps = {
   title: string;
   takeAway: string;
+  images: any;
   features: { title: string; description: string }[];
 };
 
@@ -31,7 +32,9 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
   title,
   takeAway,
   features,
+  images,
 }) => {
+  console.log(images);
   const [selectedText, selectText] = useState(features[0].title);
   const shouldAnimate = useResponsiveValue([true, false]);
   const selectedIndex = features.findIndex(
@@ -76,7 +79,7 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
               }}
             >
               <FeatureDetail key={title} text={description}>
-                <Image src={`images/${title}.png`} />
+                <Img fluid={images[title].childImageSharp.fluid} />
               </FeatureDetail>
             </motion.div>
           );

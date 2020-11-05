@@ -50,10 +50,6 @@ const Container: FunctionComponent<ContainerProps> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:creator" content={"yeehaa"} />
         <meta name="twitter:description" content={description} />
-
-        <link rel="preload" as="image" href="images/onboard.png" />
-        <link rel="preload" as="image" href="images/synchronize.png" />
-        <link rel="preload" as="image" href="images/research.png" />
       </Helmet>
       <Box className={className} as="main" sx={outerWrapperStyles}>
         {children}

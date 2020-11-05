@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
     siteName: `Lefthoek`,
@@ -9,6 +11,13 @@ module.exports = {
       options: {
         domain: `lefthoek.com`,
         customDomain: "stats.lefthoek.com",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `static`),
       },
     },
     {
@@ -27,6 +36,8 @@ module.exports = {
         modules: ["gatsby-theme-mdx-deck"],
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-theme-ui",

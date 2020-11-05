@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx, Box, SxStyleProp } from "theme-ui";
+import { graphql } from "gatsby";
 import {
   AboutSection,
   CallToActionSection,
@@ -69,7 +70,7 @@ const CutCornerWrapper: FunctionComponent<{ className?: string }> = ({
   );
 };
 
-const LandingPage: FunctionComponent = () => {
+const LandingPage: FunctionComponent<{ data: any }> = ({ data }) => {
   const { scrollY } = useViewportScroll();
   const scrollMargin = 350;
   const heroPercentageVisible = useTransform(
@@ -89,7 +90,7 @@ const LandingPage: FunctionComponent = () => {
         <CutCornerWrapper sx={{ bg: "muted" }}>
           <AboutSection {...content.aboutSection} />
         </CutCornerWrapper>
-        <FeaturesSection {...content.featureSection} />
+        <FeaturesSection images={data} {...content.featureSection} />
         <CutCornerWrapper>
           <UniqueSellingPointsSection {...content.uniqueSellingPointsSection} />
         </CutCornerWrapper>
@@ -101,5 +102,30 @@ const LandingPage: FunctionComponent = () => {
     </Container>
   );
 };
+export const query = graphql`
+  query {
+    onboard: file(relativePath: { eq: "images/onboard.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    research: file(relativePath: { eq: "images/research.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    synchronize: file(relativePath: { eq: "images/synchronize.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default LandingPage;
