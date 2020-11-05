@@ -11,17 +11,20 @@ const Stat: FunctionComponent<{
 }> = ({ figure, reference, className, children }) => {
   return (
     <Box as="li" className={className} sx={statWrapperStyles}>
-      <Heading sx={figureStyles} variant="display">
-        {figure}
-      </Heading>
-      <Text as="p">
-        {children}
-        {reference && (
-          <Link target="_blank" sx={referenceStyles} href={reference}>
-            *
-          </Link>
-        )}
-      </Text>
+      <Link target="_blank" sx={referenceStyles} href={reference}>
+        <Heading
+          sx={{
+            ...figureStyles,
+            "&:hover": {
+              color: reference ? "primary" : "secondary",
+            },
+          }}
+          variant="display"
+        >
+          {figure}
+        </Heading>
+        <Text as="p">{children}</Text>
+      </Link>
     </Box>
   );
 };

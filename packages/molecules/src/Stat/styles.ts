@@ -21,12 +21,12 @@ export const figureStyles: SxStyleProp = {
   color: "secondary",
   mb: [3, 5],
   textAlign: "center",
+  "&:hover": {
+    color: "primary",
+  },
 };
 
 export const referenceStyles: SxStyleProp = {
   textDecoration: "none",
-  fontWeight: 700,
-  fontSize: "1.5rem",
-  baselineShift: "super",
-  color: "primary",
+  color: "text",
 };

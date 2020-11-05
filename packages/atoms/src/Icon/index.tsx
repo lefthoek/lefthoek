@@ -95,7 +95,6 @@ const Icon: FunctionComponent<{
   const skyBlueLight = gradients.skyBlue[1];
   const skyBlueLightest = gradients.skyBlue[0];
   //@ts-ignore
-  console.log(theme.gradients.cipria);
   const colors = {
     midnight,
     midnightMedium,

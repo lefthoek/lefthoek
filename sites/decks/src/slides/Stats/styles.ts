@@ -23,6 +23,9 @@ const innerWrapperStyles: SxStyleProp = {
     justifyContent: ["center", "center", "space-between"],
     alignItems: ["center", "center", "flex-start"],
     flexDirection: ["column", "column", "row"],
+    li: {
+      mb: [6, 7],
+    },
   },
 };
 
