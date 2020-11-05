@@ -2,7 +2,7 @@
 import { FunctionComponent } from "react";
 import { jsx, Box } from "theme-ui";
 import { Section } from "../../components";
-import { SellingPoint } from "./SellingPoint";
+import { SellingPoint } from "@lefthoek/molecules";
 import { outerWrapperStyles, listStyles } from "./styles";
 
 type UniqueSellingPointsSectionProps = {

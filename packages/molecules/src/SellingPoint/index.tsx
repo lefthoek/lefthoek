@@ -19,7 +19,7 @@ const SellingPoint: FunctionComponent<{
         <Icon iconName={displayTitle} />
       </Box>
       <Box>
-        <Heading variant="display">{displayTitle}</Heading>
+        <Heading variant="abstract">{displayTitle}</Heading>
         <Markdown text={children} />
       </Box>
     </Box>
