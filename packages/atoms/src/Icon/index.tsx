@@ -4,6 +4,7 @@ import { jsx, useThemeUI } from "theme-ui";
 import * as icons from "@lefthoek/icons";
 
 const styles = {
+  width: "100%",
   ".white": {
     fill: "#fcf2f5",
   },

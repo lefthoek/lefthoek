@@ -13,6 +13,7 @@
       "packages/ui-theme",
       "packages/atoms",
       "packages/molecules",
+      "packages/business-components",
       "packages/data"
     ]
   }
