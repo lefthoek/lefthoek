@@ -9,7 +9,7 @@ type InnerLinkProps = {
   className?: string;
   inverse?: boolean;
   isActive?: boolean;
-  variant?: "abstract" | "titolettoAlt" | "link";
+  variant?: "titoletto" | "titolettoAlt" | "link";
   onClick?: () => void;
 };
 
