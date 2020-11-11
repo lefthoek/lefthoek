@@ -40,6 +40,7 @@ const Layout: FunctionComponent = ({ children }) => {
       <motion.div
         style={{ top }}
         sx={{
+          boxShadow: "0 0px 20px rgba(0,0,0,0.7)",
           zIndex: 1000,
           position: "fixed",
           left: 0,

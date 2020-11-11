@@ -39,11 +39,11 @@ const openMenuUpdater = createUpdater<AppStateContext, OpenMenuUpdater>(
 
 export const machine = Machine<AppStateContext>({
   id: "toggle",
-  initial: "sidebar_open",
+  initial: "sidebar_closed",
   on: {
     [breakpointIndexUpdater.type]: [
       {
-        actions: [breakpointIndexUpdater.action, send("TOGGLE")],
+        actions: [breakpointIndexUpdater.action],
       },
     ],
     [currenDocUpdater.type]: [

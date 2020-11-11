@@ -2,6 +2,7 @@ import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
   display: "grid",
+  bg: "muted",
   height: "100vh",
   overflow: "hidden",
   gridTemplateColumns: ["auto", "auto", "21rem 3fr"],
