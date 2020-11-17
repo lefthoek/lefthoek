@@ -24,3 +24,20 @@ export type CompetitionData = {
   importance: number;
   relevance: number;
 };
+
+export interface IPost {
+  id: string;
+  slug: string;
+  title: string;
+  tags: string[];
+  author: string;
+  date: string;
+  excerpt: string;
+  body: string;
+  coverImage: any;
+  coverImageSrc: string;
+}
+
+export interface IThemeable {
+  className?: string;
+}

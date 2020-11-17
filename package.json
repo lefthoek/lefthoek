@@ -10,6 +10,8 @@
       "sites/brandbook",
       "sites/decks",
       "sites/landing",
+      "sites/landing",
+      "themes/blog",
       "packages/types",
       "packages/icons",
       "packages/ui-theme",
