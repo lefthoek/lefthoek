@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Sample: FunctionComponent<{
+export const OpenHand: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

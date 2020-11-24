@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Bespoke: FunctionComponent<{
+export const SewingMachine: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

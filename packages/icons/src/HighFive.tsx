@@ -2,7 +2,7 @@
 import { FunctionComponent } from "react";
 import { jsx } from "theme-ui";
 
-export const Eager: FunctionComponent<{
+export const HighFive: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

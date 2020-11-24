@@ -1,0 +1,28 @@
+---
+name: SellingPoint
+menu: Components
+route: /components/molecules/selling-point
+submenu: Molecules
+---
+
+import { Playground, Props } from 'docz'
+import { Box } from 'theme-ui'
+import { SellingPoint } from "./SellingPoint";
+
+
+# Selling Point
+
+## Properties
+
+
+<Props of={SellingPoint} />
+
+## Basic usage
+
+<Playground>
+  <Box m={5}>
+    <SellingPoint title="eager" iconName="HighFive">
+      Something impressive about something we try to sell
+    </SellingPoint>
+  </Box>
+</Playground>

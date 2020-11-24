@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Loyal: FunctionComponent<{
+export const Knot: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

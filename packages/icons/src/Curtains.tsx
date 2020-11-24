@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Discrete: FunctionComponent<{
+export const Curtains: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

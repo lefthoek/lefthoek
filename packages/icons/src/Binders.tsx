@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Organizes: FunctionComponent<{
+export const Binders: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

@@ -17,7 +17,7 @@ const Message: FunctionComponent<{
         <span className="name">{name}</span>{" "}
         <span className="time">10:00 AM</span>
       </Text>
-      <Markdown sx={markdownStyles} text={message} />
+      <Markdown sx={markdownStyles}>{message}</Markdown>
     </Box>
   </Box>
 );

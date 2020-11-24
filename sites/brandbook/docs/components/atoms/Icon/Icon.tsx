@@ -3,29 +3,17 @@ import { FunctionComponent } from "react";
 import { Icon } from "@lefthoek/atoms";
 import * as Icons from "@lefthoek/icons";
 import { jsx, Box, Text } from "theme-ui";
+import { IconName } from "@lefthoek/types";
+import { containerStyles, iconContainerStyles } from "./styles";
 
 const IconDisplay: FunctionComponent = () => {
   return (
-    <Box
-      sx={{
-        display: "grid",
-        p: [4],
-        gridGap: [4],
-        gridTemplateColumns: ["1fr 1fr", "1fr 1fr 1fr"],
-      }}
-    >
-      {Object.keys(Icons).map((iconName) => {
+    <Box sx={containerStyles}>
+      {Object.keys(Icons).map((iconName: IconName) => {
         return (
-          <Box
-            sx={{
-              display: "flex",
-              p: 4,
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <Box sx={iconContainerStyles}>
             <Icon sx={{ mb: 4 }} iconName={iconName} />
-            <Text variant="titoletto">{iconName}</Text>
+            <Text variant="abstract">{iconName}</Text>
           </Box>
         );
       })}
