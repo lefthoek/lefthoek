@@ -1,9 +1,10 @@
 import { Card } from "@lefthoek/atoms"
 import { CardsContainer } from "../src/components";
-import { Stat, SellingPoint } from "@lefthoek/molecules"
-import { UserStory, CompetitionChart, TechStack } from "@lefthoek/business-components"
-import { userStories, competitiveAnalysis }from "@lefthoek/data"
+import { Stat, SellingPoint, Stack } from "@lefthoek/molecules"
+import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
+import { userStories, competitiveAnalysis, techStack }from "@lefthoek/data"
 import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
+
 
 <Cover>
 
@@ -146,7 +147,7 @@ of Global Knowledge Management by 2025</Stat>
 
 # Stack
 
-<TechStack />
+<Stack stackData={techStack}/>
 
 </Basic>
 

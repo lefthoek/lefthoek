@@ -18,6 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "@lefthoek/atoms": "*",
+    "@lefthoek/molecules": "*",
     "@lefthoek/types": "*",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
@@ -42,6 +43,7 @@
     ]
   },
   "peerDependencies": {
+    "@lefthoek/molecules": "*",
     "@lefthoek/atoms": "*",
     "@lefthoek/types": "*",
     "@theme-ui/match-media": "^0.3.1",
