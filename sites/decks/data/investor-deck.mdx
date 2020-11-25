@@ -1,6 +1,7 @@
 import { Card } from "@lefthoek/atoms"
 import { CardsContainer } from "../src/components";
-import { UserStory, Stat, SellingPoint, CompetitionChart } from "@lefthoek/molecules"
+import { Stat, SellingPoint } from "@lefthoek/molecules"
+import { UserStory, CompetitionChart, TechStack } from "@lefthoek/business-components"
 import { userStories, competitiveAnalysis }from "@lefthoek/data"
 import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
 
@@ -50,12 +51,12 @@ information management
 
 # Virtual Team Member
 
-<SellingPoint title="moderates">your team's communication on messaging apps</SellingPoint>
+<SellingPoint iconName="Microphone" title="moderates">your team's communication on messaging apps</SellingPoint>
 
-<SellingPoint title="organizes">the valuable knowledge that these messages
+<SellingPoint iconName="Binders" title="organizes">the valuable knowledge that these messages
 contain</SellingPoint>
 
-<SellingPoint title="augments">this knowledge base with 
+<SellingPoint iconName="Hologram" title="augments">this knowledge base with 
 information from other sources</SellingPoint>
 
 </Icons>
@@ -134,6 +135,31 @@ of Global Knowledge Management by 2025</Stat>
 
 ---
 
+<SectionCover>
+
+# Technology
+
+</SectionCover>
+
+---
+<Basic>
+
+# Stack
+
+<TechStack />
+
+</Basic>
+
+---
+
+<SectionCover>
+
+# Market
+
+</SectionCover>
+
+---
+
 <Stats>
 
 # Business Model
@@ -152,24 +178,16 @@ of Global Knowledge Management by 2025</Stat>
 
 # Adoption Strategy
 
-<SellingPoint title="Chat">Reach out to maintainers of online start-up
+<SellingPoint iconName="Chat" title="Chat">Reach out to maintainers of online start-up
 communities that use messaging apps</SellingPoint>
 
-<SellingPoint title="Sample">Offer to run a scaled-down version of our virtual
+<SellingPoint iconName="OpenHand" title="Sample">Offer to run a scaled-down version of our virtual
 team member on said community messaging apps</SellingPoint>
 
-<SellingPoint title="Ration">Limiting the initial development of virtual team members to
+<SellingPoint iconName="Diamond" title="Ration">Limiting the initial development of virtual team members to
 launching 3 customers</SellingPoint>
 
 </Icons>
-
----
-
-<SectionCover>
-
-# Competition
-
-</SectionCover>
 
 ---
 
@@ -187,18 +205,18 @@ launching 3 customers</SellingPoint>
 
 # Competitive Advantages
 
-<SellingPoint title="loyal">Available 24/7</SellingPoint>
+<SellingPoint iconName="Knot" title="loyal">Available 24/7</SellingPoint>
 
-<SellingPoint title="different">Designed to fulfill tasks deemed impossible for
+<SellingPoint iconName="Different" title="different">Designed to fulfill tasks deemed impossible for
 humans</SellingPoint>
 
-<SellingPoint title="discrete">All data stays local to an
+<SellingPoint iconName="Curtains" title="discrete">All data stays local to an
 organization</SellingPoint>
 
-<SellingPoint title="bespoke">AI optimized for an organization's unique knowledge
+<SellingPoint iconName="SewingMachine" title="bespoke">AI optimized for an organization's unique knowledge
 domain</SellingPoint>
 
-<SellingPoint title="eager">Value increases over time</SellingPoint>
+<SellingPoint iconName="HighFive" title="eager">Value increases over time</SellingPoint>
 
 </Icons>
 

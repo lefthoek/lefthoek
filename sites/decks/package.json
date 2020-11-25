@@ -43,6 +43,7 @@
     "@lefthoek/data": "*",
     "@lefthoek/icons": "*",
     "@lefthoek/molecules": "*",
+    "@lefthoek/business-components": "*",
     "@lefthoek/ui-theme": "*",
     "@theme-ui/style-guide": "^0.3.0",
     "framer-motion": "^2.9.4",
