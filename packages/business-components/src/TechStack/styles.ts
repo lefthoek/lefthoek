@@ -14,8 +14,9 @@ export const layerStyles: SxStyleProp = {
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
-  color: "muted",
-  bg: "text",
+  color: "primary",
+  border: "5px solid black",
+  borderColor: "primary",
 };
 
 export const bottomLayerStyles: SxStyleProp = {
