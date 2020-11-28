@@ -1,9 +1,9 @@
-import { text, fonts } from "./typography";
-import { styles } from "./styles";
-import { cards } from "./cards";
-import { buttons } from "./buttons";
-import { forms } from "./forms";
-import { gradients, colors, primaryColors } from "./colors";
+import {text, fonts} from "./typography";
+import {styles} from "./styles";
+import {cards} from "./cards";
+import {buttons} from "./buttons";
+import {forms} from "./forms";
+import {gradients, colors, primaryColors} from "./colors";
 
 export const base = {
   gradients,

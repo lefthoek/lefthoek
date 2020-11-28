@@ -14,13 +14,13 @@
     "lint": "tslint --project ."
   },
   "devDependencies": {
-    "@lefthoek/blog-theme": "*",
     "@babel/core": "^7.12.3",
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "@formspree/cli": "^0.9.5",
     "@formspree/react": "^2.2.3",
     "@lefthoek/atoms": "*",
+    "@lefthoek/blog-theme": "*",
     "@lefthoek/ui-theme": "*",
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
@@ -57,6 +57,7 @@
     "voca": "^1.4.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.1",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-sharp": "^2.7.1",
     "gatsby-source-filesystem": "^2.4.1",

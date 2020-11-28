@@ -1,9 +1,23 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui";
+import { jsx, Box, useThemeUI, ThemeProvider } from "theme-ui";
 import { FunctionComponent } from "react";
+import { Global } from "@emotion/react";
 import { IPost } from "@lefthoek/types";
+import { theme } from "../../gatsby-plugin-theme-ui";
 
-const ParentLayout: FunctionComponent<any> = Box;
+const ParentLayout: FunctionComponent<any> = ({ children }) => {
+  const { theme } = useThemeUI();
+  return (
+    <Box>
+      <Global
+        styles={{
+          body: { background: theme.colors.text },
+        }}
+      />
+      {children}
+    </Box>
+  );
+};
 
 const PageLayout: FunctionComponent<{ post: IPost }> = ({ children, post }) => {
   const siteMetaData = {
@@ -22,10 +36,18 @@ const PageLayout: FunctionComponent<{ post: IPost }> = ({ children, post }) => {
       email: "TEST",
     },
   };
+  // @ts-ignore
   return (
-    <ParentLayout path="/" siteMetaData={siteMetaData} post={post}>
-      {children}
-    </ParentLayout>
+    <ThemeProvider theme={theme as any}>
+      <ParentLayout
+        sx={{ bg: "text" }}
+        path="/"
+        siteMetaData={siteMetaData}
+        post={post}
+      >
+        {children}
+      </ParentLayout>
+    </ThemeProvider>
   );
 };
 
