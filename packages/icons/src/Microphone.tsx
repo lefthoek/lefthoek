@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Moderates: FunctionComponent<{
+export const Microphone: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

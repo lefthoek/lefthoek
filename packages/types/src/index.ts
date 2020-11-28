@@ -1,16 +1,16 @@
-import { Entry as DoczEntry } from "docz";
+import {Entry as DoczEntry} from "docz";
 
 export type Entry = DoczEntry;
 export type Doc =
   | Entry
   | {
-      name: string;
-      route?: string;
-      entries: Entry[] | Doc;
-    };
+    name: string;
+    route?: string;
+    entries: Entry[] | Doc;
+  };
 
-export type CurrentDoc = { name: string; menu: string; submenu?: string };
-export type OpenMenu = { menu: string | null; submenu?: string | null };
+export type CurrentDoc = {name: string; menu: string; submenu?: string};
+export type OpenMenu = {menu: string | null; submenu?: string | null};
 export type Measure = {
   dataKey: string;
   minName: string;
@@ -41,3 +41,16 @@ export interface IPost {
 export interface IThemeable {
   className?: string;
 }
+export type IconName =
+  | "Binders"
+  | "Chat"
+  | "Curtains"
+  | "Diamond"
+  | "Different"
+  | "HighFive"
+  | "Hologram"
+  | "Knot"
+  | "Microphone"
+  | "OpenHand"
+  | "Placeholder"
+  | "SewingMachine";

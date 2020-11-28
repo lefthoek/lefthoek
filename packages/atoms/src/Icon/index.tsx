@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx, useThemeUI } from "theme-ui";
+import { IconName } from "@lefthoek/types";
 import * as icons from "@lefthoek/icons";
 
 const styles = {
@@ -75,7 +76,7 @@ const styles = {
 
 const Icon: FunctionComponent<{
   className?: string;
-  iconName: string;
+  iconName: IconName;
 }> = ({ className, iconName = "Bespoke" }) => {
   const Icon = icons[iconName] || icons["Placeholder"];
   const { theme } = useThemeUI();
@@ -112,6 +113,7 @@ const Icon: FunctionComponent<{
     skyBlueLightest,
     lobster,
   };
+
   return <Icon sx={styles} className={className} colors={colors} />;
 };
 

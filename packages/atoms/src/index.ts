@@ -1,5 +1,6 @@
 export * from "./Avatar";
 export * from "./Background";
+export * from "./Brick";
 export * from "./Button";
 export * from "./Card";
 export * from "./Icon";

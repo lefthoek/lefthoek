@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Ration: FunctionComponent<{
+export const Diamond: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (

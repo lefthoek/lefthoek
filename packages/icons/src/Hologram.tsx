@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { FunctionComponent } from "react";
 
-export const Augments: FunctionComponent<{
+export const Hologram: FunctionComponent<{
   className?: string;
 }> = ({ className }) => {
   return (
