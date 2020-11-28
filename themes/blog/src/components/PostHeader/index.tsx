@@ -8,7 +8,11 @@ import { outerWrapperStyles, innerWrapperStyles } from "./styles";
 type PostHeaderProps = Pick<
   IPost,
   "slug" | "title" | "coverImage" | "excerpt" | "author" | "date" | "tags"
-> & { isOdd?: boolean; isFullPost?: boolean };
+> & {
+  isOdd?: boolean;
+  isFullPost?: boolean;
+  highlightLevel: "high" | "low" | "off";
+};
 
 const PostHeader: FunctionComponent<PostHeaderProps> = ({
   slug,
@@ -21,7 +25,8 @@ const PostHeader: FunctionComponent<PostHeaderProps> = ({
         <Heading
           sx={{
             "&:hover": {
-              color: "accent",
+              color: ({ gradients }) =>
+                highlightLevel === "off" ? gradients.midnight[2] : "accent",
             },
             color: ({ gradients }) =>
               highlightLevel === "high"

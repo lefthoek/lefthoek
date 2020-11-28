@@ -6,7 +6,7 @@ import { logoStyles } from "./styles";
 
 type LogoProps = {
   /** optional href */
-  href?: string;
+  to?: string;
   variant?: string;
   className?: string;
 };
@@ -27,12 +27,12 @@ const InnerLogo: FunctionComponent<{
 };
 
 const Logo: FunctionComponent<LogoProps> = ({
-  href,
+  to,
   className,
   variant = "brightGreen",
 }) => {
-  return href ? (
-    <Link sx={logoStyles} className={className} to={href}>
+  return to ? (
+    <Link sx={logoStyles} className={className} to={to}>
       <InnerLogo variant={variant} />
     </Link>
   ) : (

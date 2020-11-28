@@ -1,3 +1,1 @@
-export const logoStyles = {
-  width: "100px",
-};
+export const logoStyles = {};
