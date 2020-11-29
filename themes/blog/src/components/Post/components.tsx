@@ -1,18 +1,23 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 
-const comp = (as = "div", sx: any) => (props: any) => (
-  <Box as={as} sx={sx} {...props} />
-);
+const comp = (as = "div", sx: any) => (props: any) => {
+  return <Box as={as} sx={sx} {...props} />;
+};
 
 const blockquoteStyles = {
+  "&:first-of-type": {
+    textAlign: "right",
+    px: [0],
+  },
   m: 0,
   my: [4, 4],
-  textAlign: "right",
+  px: [4, 6],
+  color: ({ gradients }) => gradients.midnight[2],
   "> p": {
     margin: 0,
     "&:last-child": {
-      mt: [2, 4],
+      mt: [2],
     },
   },
 };

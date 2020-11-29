@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { FunctionComponent, useEffect, useState } from "react";
 import { useViewportScroll } from "framer-motion";
-import { jsx, Box } from "theme-ui";
+import { jsx } from "theme-ui";
 import Layout from "../../templates/Page";
-import PostHeader from "../../components/PostHeader";
+import PostListing from "../../components/PostListing";
 import { graphql } from "gatsby";
 
 type PostPageProps = {
@@ -55,27 +55,7 @@ const posts: FunctionComponent<PostPageProps> = ({ data, ...props }) => {
   }));
   return (
     <Layout {...props}>
-      <Box
-        sx={{
-          py: ["30vh", "40vh"],
-          width: "100%",
-          height: "100%",
-          overflow: "scroll",
-        }}
-      >
-        {entries.map(({ id, ...entry }: any, index: number) => (
-          <PostHeader
-            {...entry}
-            highlightLevel={
-              index === currentPost
-                ? "high"
-                : index === currentPost + 1 || index === currentPost - 1
-                ? "low"
-                : "off"
-            }
-          />
-        ))}
-      </Box>
+      <PostListing entries={entries} currentPost={currentPost} />
     </Layout>
   );
 };

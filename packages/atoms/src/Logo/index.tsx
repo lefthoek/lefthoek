@@ -13,11 +13,14 @@ type LogoProps = {
 const InnerLogo: FunctionComponent<{
   variant?: string;
   className?: string;
-}> = ({ variant = "skyBlue", className }) => {
+}> = ({ className }) => {
   return (
     <svg
       className={className}
-      sx={{ fill: ({ primaryColors }) => primaryColors[variant] }}
+      sx={{
+        fill: ({ gradients }) => gradients.midnight[1],
+        "&:hover": { fill: "primary" },
+      }}
       viewBox="0 0 62 84"
     >
       <path d="M18.6 81.5L32.5 2.4L29.6 0L12 4.7L0 74.5L18.6 81.5Z" />

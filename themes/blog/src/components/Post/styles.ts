@@ -2,17 +2,22 @@ import { SxStyleProp } from "theme-ui";
 
 const wrapperStyles: SxStyleProp = {
     bg: "white",
+    p: [4, 6],
+    display: "flex",
+    justifyContent: ["center"],
 };
 
 const innerWrapperStyles: SxStyleProp = {
     display: "grid",
-    gridTemplateColumns: "minmax(auto, 60rem)",
-    justifyContent: "center",
-    justifyItems: "bottom",
+    py: 9,
+    gridTemplateColumns: "minmax(auto, 52rem)",
 };
 
 const textContainerStyles: SxStyleProp = {
-    p: [4, 4],
+    borderTop: "2px solid",
+    borderBottom: "2px solid",
+    borderColor: "text",
+    py: [4],
     ".footnotes": {
         mt: 8,
     },

@@ -5,6 +5,7 @@ import { Global } from "@emotion/react";
 import { Logo } from "@lefthoek/atoms";
 import { IPost } from "@lefthoek/types";
 import { theme } from "../../gatsby-plugin-theme-ui";
+import { topBarStyles, logoStyles } from "./styles";
 
 const ParentLayout: FunctionComponent<any> = ({ children }) => {
   const { theme } = useThemeUI();
@@ -15,10 +16,9 @@ const ParentLayout: FunctionComponent<any> = ({ children }) => {
           body: { background: theme.colors.text },
         }}
       />
-      <Logo
-        to="/"
-        sx={{ position: "fixed", width: "4rem", top: 0, left: 0, m: 6 }}
-      />
+      <Box sx={topBarStyles}>
+        <Logo to="/" variant="skyBlue" sx={logoStyles} />
+      </Box>
       {children}
     </Box>
   );
@@ -41,15 +41,9 @@ const PageLayout: FunctionComponent<{ post: IPost }> = ({ children, post }) => {
       email: "TEST",
     },
   };
-  // @ts-ignore
   return (
     <ThemeProvider theme={theme as any}>
-      <ParentLayout
-        sx={{ bg: "text" }}
-        path="/"
-        siteMetaData={siteMetaData}
-        post={post}
-      >
+      <ParentLayout path="/" siteMetaData={siteMetaData} post={post}>
         {children}
       </ParentLayout>
     </ThemeProvider>

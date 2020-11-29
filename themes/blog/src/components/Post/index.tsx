@@ -4,20 +4,20 @@ import { jsx, Box } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import * as components from "./components";
-import { IPost } from "@lefthoek/types";
-import PostHeader from "../PostHeader";
+import { IPost } from "@lefthoek/types/src";
+import PostHeader from "./PostHeader";
 import {
   wrapperStyles,
   innerWrapperStyles,
   textContainerStyles,
 } from "./styles";
 
-const Post: FunctionComponent<IPost> = ({ body, ...headerProps }) => {
+const Post: FunctionComponent<IPost> = ({ body, title, excerpt }) => {
   return (
     <MDXProvider components={components}>
       <Box sx={wrapperStyles} as={"article"}>
-        <PostHeader {...headerProps} />
         <Box sx={innerWrapperStyles}>
+          <PostHeader title={title} excerpt={excerpt} />
           <Box sx={textContainerStyles}>
             <MDXRenderer>{body}</MDXRenderer>
           </Box>
