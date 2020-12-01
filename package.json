@@ -17,6 +17,7 @@
       "packages/ui-theme",
       "packages/atoms",
       "packages/molecules",
+      "packages/layouts",
       "packages/business-components",
       "packages/data"
     ]
