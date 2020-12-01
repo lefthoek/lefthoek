@@ -5,10 +5,10 @@ import { Global } from "@emotion/core";
 import { Logo } from "@lefthoek/atoms";
 import { topBarStyles, logoStyles } from "./styles";
 
-const Base: FunctionComponent<any> = ({ children }) => {
+const Base: FunctionComponent<any> = ({ children, className }) => {
   const { theme }: any = useThemeUI();
   return (
-    <Box>
+    <Box className={className}>
       <Global
         styles={{
           body: { background: theme.colors.text },

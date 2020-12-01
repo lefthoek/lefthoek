@@ -77,6 +77,13 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       fields: {
         id: { type: `ID!` },
         order: { type: `Int!`, resolve: resolveFrontmatterField("order") },
+        author: { type: `String!`, resolve: resolveFrontmatterField("author") },
+        tags: { type: `[String]!`, resolve: resolveFrontmatterField("tags") },
+        date: {
+          type: `Date!`,
+          extensions: { dateformat: {} },
+          resolve: resolveFrontmatterField("date"),
+        },
         slug: {
           type: `String!`,
         },
@@ -108,6 +115,9 @@ exports.createPages = async ({ graphql, actions, reporter, pathPrefix }) => {
           node {
             id
             slug
+            date(formatString: "MMMM, D YYYY")
+            tags
+            author
             excerpt
             title
             order
