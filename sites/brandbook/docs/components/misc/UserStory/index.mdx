@@ -1,0 +1,23 @@
+---
+name: User Story
+menu: Components
+submenu: Various
+---
+
+import { Playground, Props } from 'docz'
+import { UserStory } from './UserStory'
+import { DisplayContainer } from '../../../../src/components/DisplayContainer'
+import { userStories }from "@lefthoek/data"
+
+# User Story
+
+## Properties
+
+<Props of={UserStory} />
+
+## Basic usage
+
+<Playground>
+    <UserStory {...userStories.diachronousCollaboration }/>
+</Playground>
+

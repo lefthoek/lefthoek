@@ -16,13 +16,13 @@ var processor = unified()
   .use(remark2rehype)
   .use(rehype2react, { createElement, Fragment });
 
-const Markdown: FunctionComponent<{ text: string; className?: string }> = ({
-  text,
+const Markdown: FunctionComponent<{ children: string; className?: string }> = ({
+  children,
   className,
 }) => {
   return (
     <Box className={className} as="section">
-      {processor.processSync(text).result as ReactNode}
+      {processor.processSync(children).result as ReactNode}
     </Box>
   );
 };

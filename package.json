@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "yarn workspace @lefthoek/types build && yarn workspace @lefthoek/data build && yarn workspace @lefthoek/ui-theme build && yarn workspace @lefthoek/icons build && yarn workspace @lefthoek/atoms build && yarn workspace @lefthoek/molecules build"
+    "build:deps": "yarn workspace @lefthoek/types build && yarn workspace @lefthoek/data build && yarn workspace @lefthoek/ui-theme build && yarn workspace @lefthoek/icons build",
+    "build:packages": "yarn workspace @lefthoek/atoms build && yarn workspace @lefthoek/molecules build && yarn workspace @lefthoek/business-components build",
+    "build": "yarn build:deps && yarn build:packages"
   },
   "workspaces": {
     "packages": [
@@ -13,6 +15,7 @@
       "packages/ui-theme",
       "packages/atoms",
       "packages/molecules",
+      "packages/business-components",
       "packages/data"
     ]
   }

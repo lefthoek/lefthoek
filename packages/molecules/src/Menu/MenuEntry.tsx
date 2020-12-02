@@ -3,7 +3,6 @@ import { jsx, Box } from "theme-ui";
 import { FunctionComponent } from "react";
 import { NavLink } from "@lefthoek/atoms";
 import { Doc, Entry, OpenMenu } from "@lefthoek/types";
-import { SlideOpen } from "./animations";
 
 export const MenuEntry: FunctionComponent<{
   level?: number;
@@ -29,7 +28,7 @@ export const MenuEntry: FunctionComponent<{
       <NavLink
         title={menu.name}
         inverse
-        variant={isHeading ? "abstract" : hasEntries ? "titolettoAlt" : "link"}
+        variant={isHeading ? "titoletto" : hasEntries ? "titolettoAlt" : "link"}
         isActive={isActive}
         to={menu.route}
         onClick={() => {
@@ -40,20 +39,22 @@ export const MenuEntry: FunctionComponent<{
           });
         }}
       />
-      <SlideOpen sx={{ mb: 5 }} isOpen={isOpen}>
-        {menu.entries?.map((entry: Entry) => (
-          <MenuEntry
-            level={level + 1}
-            openMenu={openMenu}
-            setOpenMenu={({ submenu }) =>
-              setOpenMenu({ menu: menu.name, submenu })
-            }
-            currentDoc={currentDoc}
-            key={entry.name}
-            menu={entry}
-          />
-        ))}
-      </SlideOpen>
+      {menu.entries?.map((entry: Entry) => (
+        <MenuEntry
+          level={level + 1}
+          sx={{
+            display: isOpen ? "block" : "none",
+            "&:last-child": { mb: isOpen && level === 1 ? 5 : 2 },
+          }}
+          openMenu={openMenu}
+          setOpenMenu={({ submenu }) =>
+            setOpenMenu({ menu: menu.name, submenu })
+          }
+          currentDoc={currentDoc}
+          key={entry.name}
+          menu={entry}
+        />
+      ))}
     </Box>
   );
 };

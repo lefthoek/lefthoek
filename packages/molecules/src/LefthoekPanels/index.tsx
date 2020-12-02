@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
-import { MotionValue } from "framer-motion";
+import { MotionValue, useMotionValue } from "framer-motion";
 import { Background } from "@lefthoek/atoms";
 import { jsx, Box, Heading } from "theme-ui";
 //@ts-ignore
@@ -14,10 +14,12 @@ import {
 } from "./styles";
 
 const LefthoekPanels: FunctionComponent<{
-  percentageVisible: MotionValue;
+  percentageVisible?: MotionValue;
   shouldStart?: boolean;
   className?: string;
 }> = ({ percentageVisible, shouldStart, children, className }) => {
+  const defaultVisible = useMotionValue("100%");
+  const visible = percentageVisible ? percentageVisible : defaultVisible;
   return (
     <Box sx={outerWrapperStyles} className={className}>
       <Background sx={leftPanelStyles}>
@@ -25,7 +27,7 @@ const LefthoekPanels: FunctionComponent<{
           shouldStart={shouldStart}
           direction={-1}
           offset={50}
-          percentageVisible={percentageVisible}
+          percentageVisible={visible}
         >
           <Heading sx={leftHeadingStyles}>Hoek</Heading>
         </Slide>
@@ -35,7 +37,7 @@ const LefthoekPanels: FunctionComponent<{
           shouldStart={shouldStart}
           direction={1}
           offset={-80}
-          percentageVisible={percentageVisible}
+          percentageVisible={visible}
         >
           <Heading sx={rightHeadingStyles}>Left</Heading>
         </Slide>

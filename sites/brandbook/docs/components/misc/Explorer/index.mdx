@@ -1,0 +1,22 @@
+---
+name: Explorer
+menu: Components
+submenu: Various
+---
+
+import { Playground, Props } from 'docz'
+import { Explorer } from './Explorer'
+import { userPersonae }from "@lefthoek/data"
+
+# Explorer
+
+## Properties
+
+<Props of={Explorer} />
+
+## Basic usage
+
+<Playground>
+  <Explorer {...userPersonae.jesse }/>
+</Playground>
+
