@@ -92,6 +92,7 @@ uniqueSellingPointsSection:
     Our virtual team member is a great fit for every culture
   sellingPoints:
     - title: Loyal
+      iconName: Knot
       description: |
 
         Our virtual team member is available all day everyday, does not go on
@@ -99,6 +100,7 @@ uniqueSellingPointsSection:
         and able to help you out, and then some.
 
     - title: Discrete
+      iconName: Curtains
       description: |
 
         You don't want all your team's conversation to end up somewhere in the
@@ -106,6 +108,7 @@ uniqueSellingPointsSection:
         even a Raspberry PI.
 
     - title: Different
+      iconName: Different
       description: |
 
         Afraid that computers will take your job? Don't be! Automation is meant
@@ -113,6 +116,7 @@ uniqueSellingPointsSection:
         to make your work more meaningful.
 
     - title: Bespoke
+      iconName: SewingMachine
       description: |
 
         Your company and domain knowledge are unique. Lefthoek understands this.
@@ -120,6 +124,7 @@ uniqueSellingPointsSection:
         team member gets tailor-made.
 
     - title: Eager
+      iconName: HighFive
       description: |
 
         Lefthoek gets better continuously. Your virtual team member will learn
