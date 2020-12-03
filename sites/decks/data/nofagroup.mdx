@@ -11,9 +11,10 @@ tags:
   - Knowledge Management
   - Collaboration
 ---
-import { Card } from "@lefthoek/atoms"
+import { Box, Heading } from "theme-ui";
+import { Card, Checkbox } from "@lefthoek/atoms"
 import { CardsContainer } from "../src/components";
-import { Stat, SellingPoint, Stack } from "@lefthoek/molecules"
+import { Stat, SellingPoint, Stack, Toggle} from "@lefthoek/molecules"
 import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
 import { userStories, competitiveAnalysis, techStack } from "@lefthoek/data"
 import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
@@ -178,8 +179,8 @@ engagement</SellingPoint>
 # Your Advantages
 
 <SellingPoint iconName="Hand" title="Focus on Content">Lefthoek takes care of
-your knowledge management, freeing up your time to focus on the issues that
-matter most to you</SellingPoint>
+your team's knowledge management, freeing up your time to focus on the issues
+that matter most to you</SellingPoint>
 
 <SellingPoint iconName="Heart" title="Less Management">Your virtual team member
 informs your coworkers of important appointments and decisions, so that you
@@ -197,11 +198,11 @@ strengthen your relation</SellingPoint>
 
 # Challenges Solved
 
-<SellingPoint iconName="Hand" title="Siloed Knowledge"/>
+<Toggle label="Siloed Knowledge" />
 
-<SellingPoint iconName="Heart" title="Hidden Expertise"/>
+<Toggle label="Hidden Expertise" />
 
-<SellingPoint iconName="Something" title="Compassion Deficit"/>
+<Toggle label="Compassion Deficit" />
 
 </Icons>
 
