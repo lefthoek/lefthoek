@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build:deps": "yarn workspace @lefthoek/types build && yarn workspace @lefthoek/data build && yarn workspace @lefthoek/ui-theme build && yarn workspace @lefthoek/icons build",
-    "build:packages": "yarn workspace @lefthoek/atoms build && yarn workspace @lefthoek/molecules build && yarn workspace @lefthoek/business-components build",
+    "build:packages": "yarn workspace @lefthoek/atoms build && yarn workspace @lefthoek/molecules build && yarn workspace @lefthoek/business-components build && yarn workspace @lefthoek/layouts build",
     "build": "yarn build:deps && yarn build:packages"
   },
   "workspaces": {
@@ -12,6 +12,7 @@
       "sites/landing",
       "sites/landing",
       "themes/blog",
+      "themes/password-protect",
       "packages/types",
       "packages/icons",
       "packages/ui-theme",

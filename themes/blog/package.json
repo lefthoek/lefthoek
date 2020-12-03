@@ -13,6 +13,13 @@
     "lint": "tslint --project ."
   },
   "peerDependencies": {
+    "@lefthoek/atoms": "*",
+    "@lefthoek/data": "*",
+    "@lefthoek/icons": "*",
+    "@lefthoek/molecules": "*",
+    "@lefthoek/layouts": "*",
+    "@lefthoek/business-components": "*",
+    "@lefthoek/ui-theme": "*",
     "@mdx-js/react": "^1.6.21",
     "gatsby": "^2.26.1",
     "gatsby-plugin-typescript": "^2.6.0",

@@ -4,6 +4,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "@lefthoek/password-protect",
+      options: {
+        password: "nofagroup123",
+        partialMatching: true,
+        pagePaths: ["/nofagroup"],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Lefthoek Decks",
