@@ -2,10 +2,11 @@
 import { FunctionComponent } from "react";
 import { jsx, Heading, Text, Box } from "theme-ui";
 
-const PostHeader: FunctionComponent<{ title: string; excerpt: string }> = ({
-  title,
-  excerpt,
-}) => {
+const PostHeader: FunctionComponent<{
+  title: string;
+  order: number;
+  excerpt: string;
+}> = ({ title, order, excerpt }) => {
   return (
     <Box
       sx={{
@@ -24,7 +25,7 @@ const PostHeader: FunctionComponent<{ title: string; excerpt: string }> = ({
           lineHeight: ["34px", "42px"],
         }}
       >
-        001
+        {`00${order}`}
       </Heading>
       <Heading variant="display">{title}</Heading>
       <Box sx={{ py: 5, pb: 8, maxWidth: "29rem" }}>

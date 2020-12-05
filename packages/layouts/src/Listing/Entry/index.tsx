@@ -6,14 +6,24 @@ import { Link } from "gatsby";
 import { itemStyles, titleStyles } from "./styles";
 import { IPost, IThemeable } from "@lefthoek/types/src";
 
-const Entry: FunctionComponent<IPost &
-  IThemeable & {
-    order: number;
-    highlightLevel: "high" | "low" | "off";
-  }> = ({ className, slug, order, title, highlightLevel }) => {
+const Entry: FunctionComponent<
+  IPost &
+    IThemeable & {
+      variant?: "skyBlue" | "midnight";
+      order: number;
+      highlightLevel: "high" | "low" | "off";
+    }
+> = ({
+  className,
+  variant = "skyBlue",
+  slug,
+  order,
+  title,
+  highlightLevel,
+}) => {
   return (
     <Link className={className} sx={itemStyles} to={slug}>
-      <Box sx={titleStyles({ highlightLevel })}>
+      <Box sx={titleStyles({ variant, highlightLevel })}>
         <Text
           sx={{
             fontWeight: 500,

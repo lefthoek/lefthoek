@@ -33,12 +33,11 @@ export const postQuery = graphql`
 `;
 
 const posts: FunctionComponent<PostPageProps> = ({ data }) => {
-  console.log(data);
   const { allBlogPost } = data;
   const entries = allBlogPost.edges.map(({ node }: any) => ({
     ...node,
   }));
-  return <Listing entries={entries} />;
+  return <Listing variant="skyBlue" entries={entries} />;
 };
 
 export default posts;

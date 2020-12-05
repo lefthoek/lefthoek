@@ -10,6 +10,7 @@ export const query = graphql`
     blogPost(id: { eq: $id }) {
       id
       excerpt
+      order
       author
       body
       slug
@@ -21,6 +22,7 @@ export const query = graphql`
     previous: blogPost(id: { eq: $previousId }) {
       id
       excerpt
+      order
       slug
       title
       date(formatString: "MMMM DD, YYYY")
@@ -28,6 +30,7 @@ export const query = graphql`
     next: blogPost(id: { eq: $nextId }) {
       id
       excerpt
+      order
       slug
       title
       date(formatString: "MMMM DD, YYYY")

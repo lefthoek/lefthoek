@@ -12,12 +12,12 @@ import {
   textContainerStyles,
 } from "./styles";
 
-const Post: FunctionComponent<IPost> = ({ body, title, excerpt }) => {
+const Post: FunctionComponent<IPost> = ({ body, title, excerpt, order }) => {
   return (
     <MDXProvider components={components}>
       <Box sx={wrapperStyles} as={"article"}>
         <Box sx={innerWrapperStyles}>
-          <PostHeader title={title} excerpt={excerpt} />
+          <PostHeader title={title} excerpt={excerpt} order={order} />
           <Box sx={textContainerStyles}>
             <MDXRenderer>{body}</MDXRenderer>
           </Box>
