@@ -1,9 +1,7 @@
 /** @jsx jsx */
-import { FunctionComponent, useEffect, useState } from "react";
-import { useViewportScroll } from "framer-motion";
+import { FunctionComponent } from "react";
 import { jsx } from "theme-ui";
-import Layout from "../../templates/Page";
-import PostListing from "../../components/PostListing";
+import { Listing } from "@lefthoek/layouts";
 import { graphql } from "gatsby";
 
 type PostPageProps = {
@@ -18,17 +16,11 @@ type PostPageProps = {
 };
 export const postQuery = graphql`
   query PostsQuery {
-    allBlogPost(sort: { fields: [date, title], order: DESC }, limit: 1000) {
+    allBlogPost(sort: { fields: [order], order: DESC }, limit: 1000) {
       edges {
         node {
           id
-          coverImage {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          order
           author
           date(formatString: "MMMM DD, YYYY")
           excerpt
@@ -40,24 +32,13 @@ export const postQuery = graphql`
   }
 `;
 
-const posts: FunctionComponent<PostPageProps> = ({ data, ...props }) => {
-  const [currentPost, setCurrentPost] = useState(0);
-  const { scrollYProgress } = useViewportScroll();
-  useEffect(() => {
-    scrollYProgress.onChange(() => {
-      setCurrentPost(Math.floor(entries.length * scrollYProgress.get()));
-    });
-  }, []);
+const posts: FunctionComponent<PostPageProps> = ({ data }) => {
+  console.log(data);
   const { allBlogPost } = data;
   const entries = allBlogPost.edges.map(({ node }: any) => ({
     ...node,
-    coverImage: node.coverImage.childImageSharp.fluid,
   }));
-  return (
-    <Layout {...props}>
-      <PostListing entries={entries} currentPost={currentPost} />
-    </Layout>
-  );
+  return <Listing entries={entries} />;
 };
 
 export default posts;

@@ -50,7 +50,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       id: ID!
       author: String!
       title: String!
-      coverImage: File!
+      order: Int!
       body: String!
       slug: String!
       date: Date! @dateformat
@@ -67,14 +67,12 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         title: {
           type: `String!`,
         },
+        order: { type: `Int!` },
         author: {
           type: `String!`,
         },
         slug: {
           type: `String!`,
-        },
-        coverImage: {
-          type: `File!`,
         },
         date: { type: `Date!`, extensions: { dateformat: {} } },
         tags: { type: `[String]!` },
@@ -102,10 +100,10 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 // Create fields for post slugs and source
 // This will change with schema customization with work
 exports.onCreateNode = async (
-  { node, actions, getNode, createNodeId },
+  { node, actions, getNode, createNodeId, reporter },
   themeOptions
 ) => {
-  const { createNode, createParentChildLink, createNodeField } = actions;
+  const { createNode, createParentChildLink } = actions;
   const { contentPath, basePath } = withDefaults(themeOptions);
 
   // Make sure it's an MDX node
@@ -141,8 +139,8 @@ exports.onCreateNode = async (
     const fieldData = {
       title: node.frontmatter.title,
       tags: node.frontmatter.tags || [],
-      coverImage: node.frontmatter.coverImage,
       author: node.frontmatter.author,
+      order: node.frontmatter.order,
       slug,
       date: node.frontmatter.date,
       keywords: node.frontmatter.keywords || [],

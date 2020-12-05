@@ -9,13 +9,6 @@ export const query = graphql`
   query PostPageQuery($id: String!, $previousId: String, $nextId: String) {
     blogPost(id: { eq: $id }) {
       id
-      coverImage {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       excerpt
       author
       body
@@ -43,11 +36,9 @@ export const query = graphql`
 `;
 
 const PostLayout: FunctionComponent = ({ data, ...props }: any) => {
-  const { coverImage, ...blogPost } = data.blogPost;
-  const post = { ...blogPost, coverImage: coverImage.childImageSharp.fluid };
   return (
-    <Layout pageData={post} {...props}>
-      <Post isFullPost {...post} />
+    <Layout pageData={data.blogPost} {...props}>
+      <Post isFullPost {...data.blogPost} />
     </Layout>
   );
 };
