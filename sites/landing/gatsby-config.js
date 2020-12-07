@@ -25,6 +25,7 @@ module.exports = {
       options: {
         name: "Lefthoek - Cutting Corners as a Service",
         short_name: "Lefthoek",
+        icon: path.join(__dirname, `static`, "images", "logo.png"),
         start_url: "/",
         display: "standalone",
       },
