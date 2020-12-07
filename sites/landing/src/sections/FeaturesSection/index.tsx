@@ -34,7 +34,6 @@ const FeaturesSection: FunctionComponent<FeaturesSectionProps> = ({
   features,
   images,
 }) => {
-  console.log(images);
   const [selectedText, selectText] = useState(features[0].title);
   const shouldAnimate = useResponsiveValue([true, false]);
   const selectedIndex = features.findIndex(

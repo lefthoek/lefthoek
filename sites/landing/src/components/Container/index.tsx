@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { FormspreeProvider } from "@formspree/react";
-import { jsx, Box, useThemeUI } from "theme-ui";
-import { Global } from "@emotion/core";
+import { jsx, Box } from "theme-ui";
 import { outerWrapperStyles } from "./styles";
 import { Helmet } from "react-helmet";
 
@@ -11,6 +10,7 @@ type SiteMeta = {
   description: string;
   url: string;
 };
+
 type ContainerProps = {
   className?: string;
   siteMeta: SiteMeta;
@@ -22,16 +22,8 @@ const Container: FunctionComponent<ContainerProps> = ({
   siteMeta,
 }) => {
   const { title, description, url } = siteMeta;
-  const { theme } = useThemeUI();
-  // @ts-ignore
-  const { text } = theme;
   return (
     <FormspreeProvider project="1529469839263924078">
-      <Global
-        styles={{
-          root: text.body as any,
-        }}
-      />
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
