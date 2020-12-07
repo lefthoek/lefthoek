@@ -15,8 +15,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@emotion/core": "^10.1.1",
-    "@emotion/styled": "^10.0.27",
     "@formspree/cli": "^0.9.5",
     "@formspree/react": "^2.2.3",
     "@lefthoek/atoms": "*",
