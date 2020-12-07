@@ -11,6 +11,7 @@ type SiteMeta = {
   description: string;
   url: string;
 };
+
 type ContainerProps = {
   className?: string;
   siteMeta: SiteMeta;
