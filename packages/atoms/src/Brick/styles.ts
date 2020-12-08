@@ -1,3 +1,4 @@
+import { Theme } from "@lefthoek/types";
 import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
@@ -7,7 +8,7 @@ export const outerWrapperStyles: SxStyleProp = {
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    bg: ({ gradients }) => gradients.skyBlue[0],
+    bg: ({ gradients }: Theme) => gradients.skyBlue[0],
     border: "4px solid black",
     borderColor: "primary",
 };

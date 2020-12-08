@@ -1,5 +1,4 @@
-// @ts-ignore
-import { tint } from "@theme-ui/color";
+import {tint} from "@theme-ui/color";
 
 export const primaryColors = {
   cipria: "#FCF2F5",
@@ -11,6 +10,7 @@ export const primaryColors = {
 
 const gradientPairs = Object.entries(primaryColors).map(([k, colorValue]) => {
   const values = [0.6, 0.4, 0.2, 0];
+  // @ts-ignore
   const tints = values.map((opacity) => tint(colorValue, opacity)());
   return [k, tints];
 });

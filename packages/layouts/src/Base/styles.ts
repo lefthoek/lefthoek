@@ -1,4 +1,5 @@
 import {SxStyleProp} from "theme-ui";
+import {Theme} from "@lefthoek/types";
 
 export const topBarStyles: SxStyleProp = {
   position: "fixed",
@@ -14,7 +15,7 @@ export const topBarStyles: SxStyleProp = {
 };
 
 export const logoStyles: SxStyleProp = {
-  color: ({gradients}) => gradients.midnight[1],
+  color: ({gradients}: Theme) => gradients.midnight[1],
   display: "block",
   width: ["2rem", "3rem"],
 };

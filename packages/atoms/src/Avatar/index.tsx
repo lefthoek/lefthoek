@@ -2,6 +2,7 @@
 import { FunctionComponent } from "react";
 import { jsx, Box, Heading } from "theme-ui";
 import { outerWrapperStyles } from "./styles";
+import { Theme } from "@lefthoek/types";
 
 const Circle: FunctionComponent<{
   className?: string;
@@ -57,7 +58,11 @@ const Avatar: FunctionComponent<{
           height: "12px",
         }}
       />
-      <Heading sx={{ color: (theme) => theme.primaryColors[variant] }}>
+      <Heading
+        sx={{
+          color: ({ primaryColors }: Theme) => primaryColors[variant],
+        }}
+      >
         {initial}
       </Heading>
     </Box>
