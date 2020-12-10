@@ -2328,7 +2328,7 @@
     "@theme-ui/css" "^0.3.4"
     deepmerge "^4.2.2"
 
-"@theme-ui/color@^0.3.1":
+"@theme-ui/color@^0.3.4":
   version "0.3.4"
   resolved "https://registry.npmjs.org/@theme-ui/color/-/color-0.3.4.tgz#d674470ed2305a3b37996ab2b6b45cafc24b6669"
   integrity sha512-scNDUoAc6qsYe3QPVNSK8L8Io3esjqQTYFmozqqCBBqKTcMbqfuLsKhFpHY8LGD/B54RzTunSeGd71Ro/o6MNg==
@@ -2362,7 +2362,7 @@
   resolved "https://registry.npmjs.org/@theme-ui/css/-/css-0.3.4.tgz#26ff7696f8a0d80b2d9093ff04913e3046971aeb"
   integrity sha512-/H9yxunPiAh2NENXp232OBTEnCzgz0N/KnF5RXgkncqNBeI6I1dzwMe/fE0GO4poH8sdzquc1nNRXuR3HgA3/w==
 
-"@theme-ui/match-media@^0.3.1":
+"@theme-ui/match-media@^0.3.1", "@theme-ui/match-media@^0.3.4":
   version "0.3.4"
   resolved "https://registry.npmjs.org/@theme-ui/match-media/-/match-media-0.3.4.tgz#75a2f9b384e6c8c2df1596abf53bef1e07b65fea"
   integrity sha512-um/bPUrmy8INcrXmnwEfsu1DapxNyC3uJBoLUxKPOm4NoWJOXriIZLU5p2vbVGpOj1sfmn62MYbyFWJGMYVSBg==
@@ -3219,7 +3219,7 @@
   resolved "https://registry.npmjs.org/@xstate/immer/-/immer-0.1.0.tgz#34123ff18c13553ae4ecc2498994180829d432b1"
   integrity sha512-jiZf/ms4uZDUUz5UXqGUPEOXb/4VUjnawVsOIDPbXeiOKXhcTplNcJAyYWwxcXoo8to/VgKZm7nn8EBLhTJuAQ==
 
-"@xstate/react@^1.0.1":
+"@xstate/react@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@xstate/react/-/react-1.1.0.tgz#f8e869d77c682cdd4fdeb30bd7269ba414334856"
   integrity sha512-ac5xAOFZ1AGsem0Y6uXG+zXWKXFDnZeJLBaXnJ84ReFHCWCCwF19JdtJgfu1t4I1r3jTnJR9W6eZKELVfvriqw==
@@ -10606,10 +10606,10 @@ imagemin@^7.0.1:
     p-pipe "^3.0.0"
     replace-ext "^1.0.0"
 
-immer@^7.0.14:
-  version "7.0.15"
-  resolved "https://registry.npmjs.org/immer/-/immer-7.0.15.tgz#dc3bc6db87401659d2e737c67a21b227c484a4ad"
-  integrity sha512-yM7jo9+hvYgvdCQdqvhCNRRio0SCXc8xDPzA25SvKWa7b1WVPjLwQs1VYU5JPXjcJPTqAa5NP5dqpORGYBQ2AA==
+immer@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.npmjs.org/immer/-/immer-8.0.0.tgz#08763549ba9dd7d5e2eb4bec504a8315bd9440c2"
+  integrity sha512-jm87NNBAIG4fHwouilCHIecFXp5rMGkiFrAuhVO685UnMAlOneEAnOyzPt8OnP47TC11q/E7vpzZe0WvwepFTg==
 
 import-cwd@3.0.0:
   version "3.0.0"
@@ -19881,10 +19881,15 @@ xss@^1.0.6:
     commander "^2.20.3"
     cssfilter "0.0.10"
 
-xstate@^4.11.0, xstate@^4.13.0, xstate@^4.14.0, xstate@^4.6.7, xstate@^4.9.1:
+xstate@^4.11.0, xstate@^4.14.0, xstate@^4.6.7, xstate@^4.9.1:
   version "4.15.0"
   resolved "https://registry.npmjs.org/xstate/-/xstate-4.15.0.tgz#4a27173666f7c8f0574a64b849f2da26f9641e7b"
   integrity sha512-VXmJgkh1u2ejpNBSqdQLTU9V0YIn7clJ+4a3P/G/AJGyXwpyf8Ykf+k7I7UptccpmQktcPHPzLTtLctp+8qURA==
+
+xstate@^4.15.1:
+  version "4.15.1"
+  resolved "https://registry.npmjs.org/xstate/-/xstate-4.15.1.tgz#0553453c1cd201fedaf35a3cc518fe56090dbc3a"
+  integrity sha512-8dD/GnTwxUuDr/cY42vi+Enu4mpbuUXWISYJ0a9BC+cIFvqufJsepyDLS6lLsznfUP0GS5Yx9m3IQWFhAoGt/A==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"

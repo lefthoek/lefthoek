@@ -1,15 +1,16 @@
-import {Theme} from "@lefthoek/types";
-import {SxStyleProp} from "theme-ui";
+import { Theme } from "@lefthoek/types";
+import { SxStyleProp } from "theme-ui";
 
 export const outerWrapperStyles = {};
 
-export const logoStyles: ({variant}: {variant?: string}) => SxStyleProp = ({
-  variant = "skyBlue",
+export const logoStyles: ({ variant }: { variant?: string }) => SxStyleProp = ({
+    variant = "skyBlue",
 }) => {
-  return {
-    fill: ({gradients}: Theme) => gradients[variant][3],
-    "&:hover": {
-      fill: ({gradients}: Theme) => gradients["cipria"][3],
-    },
-  };
+    return {
+        fill: ({ gradients }: Theme) => gradients[variant][3],
+        "&:hover": {
+            fill: ({ gradients }: Theme) =>
+                gradients[variant === "skyBlue" ? "midnight" : "cipria"][3],
+        },
+    };
 };

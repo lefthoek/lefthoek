@@ -17,7 +17,7 @@ const InnerLogo: FunctionComponent<{
   return (
     <svg className={className} sx={logoStyles({ variant })} viewBox="0 0 62 84">
       <path d="M18.6 81.5L32.5 2.4L29.6 0L12 4.7L0 74.5L18.6 81.5Z" />
-      <path d="M55.9 67.6L61.4 36.7L42.6 29.6L34.1 78.4L48.5 83.8L53.8 79.9L55.9 67.6Z" />
+      <path d="M55.9 67.6L61.4 36.7L42.6 29.6L34.1 78.4L48.5 83.8L53.8 79.9L55.9 67.6Z" />{" "}
     </svg>
   );
 };
