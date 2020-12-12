@@ -37,9 +37,9 @@ jobs:
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       run: yarn workspace @lefthoek/landing deploy:form
     - name: Deploy Development
-      if: github.ref == 'refs/heads/landing' && github.event_name == 'push'
+      if: github.ref == 'refs/heads/blog' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1
       with:
         folder: sites/landing/public
-        bucket: ${{ secrets.LANDING_BUCKET }}
-        dist-id: ${{ secrets.LANDING_DISTRIBUTION_ID }}
+        bucket: ${{ secrets.DEV_BUCKET }}
+        dist-id: ${{ secrets.DEV_DISTRIBUTION_ID }}
