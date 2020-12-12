@@ -1,9 +1,9 @@
 name: landing
 on:
   push:
-    branches: [ master, landing ]
+    branches: [ master, landing, blog]
   pull_request:
-    branches: [ master, landing ]
+    branches: [ master, landing, blog]
 
 jobs:
   build:
