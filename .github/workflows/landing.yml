@@ -36,7 +36,7 @@ jobs:
     - name: Deploy Form
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       run: yarn workspace @lefthoek/landing deploy:form
-    - name: Deploy Development
+    - name: Deploy Development Env
       if: github.ref == 'refs/heads/blog' && github.event_name == 'push'
       uses: reggionick/s3-deploy@v1
       with:
