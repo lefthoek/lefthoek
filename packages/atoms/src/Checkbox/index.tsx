@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { Theme } from "@lefthoek/types";
 import { FunctionComponent } from "react";
 import { jsx, Box } from "theme-ui";
 
@@ -15,7 +16,7 @@ const Checkbox: FunctionComponent<{
         height: "5rem",
         border: "0.5rem solid",
         borderColor: "text",
-        bg: ({ gradients }) => (isOn ? "accent" : gradients.cipria[3]),
+        bg: ({ gradients }: Theme) => (isOn ? "accent" : gradients.cipria[3]),
       }}
       onClick={onClick}
     />

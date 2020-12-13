@@ -10,13 +10,7 @@ const Layer: FunctionComponent<{ className?: string; layerData: string[] }> = ({
 }) => {
   const numberOfElements = layerData.length;
   return (
-    <Box
-      className={className}
-      sx={{
-        ...outerWrapperStyles,
-        gridTemplateColumns: `repeat(${numberOfElements}, 1fr)`,
-      }}
-    >
+    <Box className={className} sx={outerWrapperStyles({ numberOfElements })}>
       {layerData.map((title) => (
         <Brick>{title}</Brick>
       ))}

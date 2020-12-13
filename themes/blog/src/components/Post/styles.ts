@@ -14,10 +14,6 @@ const innerWrapperStyles: SxStyleProp = {
 };
 
 const textContainerStyles: SxStyleProp = {
-    borderTop: "2px solid",
-    borderBottom: "2px solid",
-    borderColor: "text",
-    py: [4],
     ".footnotes": {
         mt: 8,
     },

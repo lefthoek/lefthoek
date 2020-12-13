@@ -9,7 +9,8 @@ export const itemStyles: SxStyleProp = {
 
 export const titleStyles: (args: {
   highlightLevel: "high" | "low" | "off";
-}) => SxStyleProp = ({highlightLevel}) => {
+  variant: "skyBlue" | "midnight";
+}) => SxStyleProp = ({variant = "skyBlue", highlightLevel}) => {
   return {
     display: "grid",
     gridTemplateColumns: "auto 1fr",
@@ -19,13 +20,13 @@ export const titleStyles: (args: {
     userSelect: "none",
     "&:hover": {
       color: ({gradients}: any) =>
-        highlightLevel === "off" ? gradients.midnight[2] : "accent",
+        highlightLevel === "off" ? gradients[variant][2] : "accent",
     },
     color: ({gradients}: any) =>
       highlightLevel === "high"
         ? "muted"
         : highlightLevel === "low"
-          ? gradients.midnight[1]
-          : gradients.midnight[2],
+          ? gradients[variant][1]
+          : gradients[variant][2],
   };
 };

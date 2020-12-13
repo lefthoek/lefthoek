@@ -1,4 +1,6 @@
-export const canvasStyles = {
+import {SxStyleProp} from "theme-ui";
+
+export const canvasStyles: SxStyleProp = {
   display: ["flex", "grid"],
   flexDirection: ["column"],
   gridTemplateColumns: "repeat(10, 1fr)",
@@ -17,7 +19,7 @@ export const canvasStyles = {
   },
 };
 
-export const cardStyles = {
+export const cardStyles: SxStyleProp = {
   bg: "muted",
   gridColumn: "span 3",
   p: 4,
