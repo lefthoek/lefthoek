@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
     siteName: `Generic Site`,
@@ -16,6 +18,7 @@ module.exports = {
       options: {
         name: "Lefthoek Decks",
         short_name: "Decks",
+        icon: path.join(__dirname, `static`, "images", "logo.png"),
         start_url: "/",
         display: "standalone",
       },

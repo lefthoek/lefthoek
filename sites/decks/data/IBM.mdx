@@ -1,0 +1,201 @@
+---
+title: IBM
+excerpt: |
+  Presentation for Christopher Noessel and Nicholas Jayanti at IBM to do
+  a deep dive on the choices that underpin Lefthoek.
+order: 3
+author: Yeehaa
+date: 2020-12-13
+tags: 
+  - Text-based Interfaces
+---
+import { Card } from "@lefthoek/atoms"
+import { Flow } from "../src/components"
+import { Stat, SellingPoint, Stack } from "@lefthoek/molecules"
+import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
+import { userStories, competitiveAnalysis, techStack }from "@lefthoek/data"
+import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
+
+<Cover>
+
+Virtual team members that mix business with pleasure
+
+</Cover>
+
+---
+
+<Basic>
+
+# Goal
+
+Exponentially increase the **collective intelligence** of teams and organizations
+
+</Basic>
+
+---
+
+<Basic>
+
+# Opportunity
+
+Teams already share a lot of valuable information using collaborative
+**messaging apps**
+
+</Basic>
+
+---
+
+<Basic>
+
+# Solution
+
+An AI-powered **Virtual Team Member** for your messaging apps devoted to
+information management 
+
+</Basic>
+
+---
+
+<Icons>
+
+# Virtual Team Member
+
+<SellingPoint iconName="Microphone" title="moderates">your team's communication on messaging apps</SellingPoint>
+
+<SellingPoint iconName="Binders" title="organizes">the valuable knowledge that these messages
+contain</SellingPoint>
+
+<SellingPoint iconName="Hologram" title="augments">this knowledge base with 
+information from other sources</SellingPoint>
+
+</Icons>
+
+
+---
+
+<SectionCover>
+
+# Features
+
+</SectionCover>
+
+---
+
+<Feature showOverlay before={`/images/onboard-before.png`} after={`/images/onboard-after.png`} >
+
+  # Onboard
+
+</Feature>
+
+---
+
+<Feature before={`/images/synchronize-before.png`} after={`/images/synchronize-after.png`} >
+
+  # Synchronize
+
+</Feature>
+
+---
+
+<Feature before={`/images/research-before.png`} after={`/images/research-after.png`} >
+
+  # Research 
+
+</Feature>
+
+---
+
+<SectionCover>
+
+# Secret Sauce
+
+</SectionCover>
+
+---
+<Basic>
+
+# Flow
+
+<Flow input="text" blackbox="messaging app" output="text"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# Flow
+
+<Flow input="text" blackbox="lefthoek" output="text"/>
+
+</Basic>
+
+---
+<Basic>
+
+# Flow
+
+<Flow input="messaging apps" blackbox="lefthoek" output="messaging apps"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# Stack
+
+<Stack stackData={techStack}/>
+
+</Basic>
+
+---
+
+<SectionCover>
+
+# Market
+
+</SectionCover>
+
+---
+
+<Basic variant="midnight">
+
+# Competition
+
+  <CompetitionChart {...competitiveAnalysis} />
+
+</Basic>
+
+---
+
+<Icons>
+
+# Competitive Advantages
+
+<SellingPoint iconName="Knot" title="loyal">Available 24/7</SellingPoint>
+
+<SellingPoint iconName="Different" title="different">Designed to fulfill tasks deemed impossible for
+humans</SellingPoint>
+
+<SellingPoint iconName="Curtains" title="discrete">All data stays local to an
+organization</SellingPoint>
+
+<SellingPoint iconName="SewingMachine" title="bespoke">AI optimized for an organization's unique knowledge
+domain</SellingPoint>
+
+<SellingPoint iconName="HighFive" title="eager">Value increases over time</SellingPoint>
+
+</Icons>
+
+---
+
+<Cover>
+
+##### Jan Hein Hoogstad
+
+yeehaa@lefthoek.com
+
+@yeehaa
+
+</Cover>

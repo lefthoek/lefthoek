@@ -89,7 +89,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         },
         title: {
           type: "String!",
-          resolve: resolveTitle,
+          resolve: resolveFrontmatterField("title"),
         },
         excerpt: {
           type: "String!",
