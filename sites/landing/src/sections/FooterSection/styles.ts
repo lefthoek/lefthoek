@@ -22,7 +22,7 @@ export const iconWrapperStyles: SxStyleProp = {
     alignContent: ["center"],
     alignItems: ["center"],
     justifyItems: ["center"],
-    width: ["10rem"],
+    width: ["10.5rem"],
     height: ["auto", "7rem"],
     justifyContent: ["space-between"],
 };
