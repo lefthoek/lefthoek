@@ -10,11 +10,13 @@ import { IPost } from "@lefthoek/types/src";
 
 type ListingProps = {
   entries: IPost[];
+  className?: string;
   variant?: "skyBlue" | "midnight";
 };
 
 const Listing: FunctionComponent<ListingProps> = ({
   entries,
+  className,
   variant = "midnight",
 }) => {
   const [currentPost, setCurrentPost] = useState(0);
@@ -25,7 +27,7 @@ const Listing: FunctionComponent<ListingProps> = ({
     });
   }, [entries.length, scrollYProgress]);
   return (
-    <Base variant={variant} sx={outerWrapperStyles}>
+    <Base className={className} variant={variant} sx={outerWrapperStyles}>
       {entries.map(({ id, ...entry }: any, index: number) => {
         const isCurrentPost = index === currentPost;
         const isPreviousOrNext =
