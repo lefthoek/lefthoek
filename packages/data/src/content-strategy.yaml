@@ -1,0 +1,84 @@
+- genre: Essay
+  categories:
+    - Personal
+    - Philosophy
+    - Product
+  channel: Blog
+  frequency: Low
+  startDate: February
+  roles:
+    - Founder
+    - Editor
+  hasTeaser?: yes
+  needsSignOff?: yes
+- genre: Link
+  categories:
+    - Philosophy
+    - Product
+  channel: LinkedIn
+  frequency: High
+  startDate: January
+  roles:
+    - Editor
+  hasTeaser?: no
+  needsSignOff?: no
+- genre: Mock-Up
+  categories:
+    - Product
+    - Competition
+  channel: LinkedIn
+  frequency: Medium
+  startDate: March
+  roles:
+    - Content
+    - Designer
+  hasTeaser?: yes
+  needsSignOff?: yes
+- genre: Anecdote
+  categories:
+    - Personal
+    - Philosophy
+  channel: Blog
+  frequency: Medium
+  startDate: January
+  roles:
+    - Founder
+    - Editor
+  hasTeaser?: yes
+  needsSignOff?: yes
+- genre: Interview
+  categories:
+    - Personal
+    - Product
+  channel: Blog
+  frequency: Low
+  startDate: February
+  roles:
+    - Editor
+  hasTeaser?: yes
+  needsSignOff?: yes
+- genre: Teaser
+  categories:
+    - Personal
+    - Philosophy
+    - Product
+    - Competition
+  channel: LinkedIn
+  frequency: High
+  startDate: January
+  roles:
+    - Editor
+  hasTeaser?: no
+  needsSignOff?: no
+- genre: Quote
+  categories:
+    - Philosophy
+    - Product
+    - Competition
+  channel: LinkedIn
+  frequency: High
+  startDate: January
+  roles:
+    - Editor
+  hasTeaser?: no
+  needsSignOff?: no

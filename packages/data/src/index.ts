@@ -6,9 +6,12 @@ import * as sheets from "./core-idea-sheet";
 import techStack from "./tech-stack.yaml";
 // @ts-ignore
 import competitiveAnalysis from "./competitive-analysis.yaml";
+// @ts-ignore
+import contentStrategy from "./content-strategy.yaml";
 
 export {
   userStories,
+  contentStrategy,
   userPersonae,
   canvases,
   sheets,
