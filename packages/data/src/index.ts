@@ -7,7 +7,7 @@ import techStack from "./tech-stack.yaml";
 // @ts-ignore
 import competitiveAnalysis from "./competitive-analysis.yaml";
 // @ts-ignore
-import contentStrategy from "./content-strategy.yaml";
+import * as contentStrategy from "./content-strategy";
 
 export {
   userStories,

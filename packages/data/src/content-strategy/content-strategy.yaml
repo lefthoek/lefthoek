@@ -5,7 +5,7 @@
     - Product
   channel: Blog
   frequency: Low
-  startDate: February
+  startDate: 2021-02-01
   roles:
     - Founder
     - Editor
@@ -17,7 +17,7 @@
     - Product
   channel: LinkedIn
   frequency: High
-  startDate: January
+  startDate: 2021-01-01
   roles:
     - Editor
   hasTeaser?: no
@@ -28,7 +28,7 @@
     - Competition
   channel: LinkedIn
   frequency: Medium
-  startDate: March
+  startDate: 2021-03-01
   roles:
     - Content
     - Designer
@@ -40,7 +40,7 @@
     - Philosophy
   channel: Blog
   frequency: Medium
-  startDate: January
+  startDate: 2021-01-01
   roles:
     - Founder
     - Editor
@@ -52,7 +52,7 @@
     - Product
   channel: Blog
   frequency: Low
-  startDate: February
+  startDate: 2021-02-01
   roles:
     - Editor
   hasTeaser?: yes
@@ -65,7 +65,7 @@
     - Competition
   channel: LinkedIn
   frequency: High
-  startDate: January
+  startDate: 2021-01-01
   roles:
     - Editor
   hasTeaser?: no
@@ -77,7 +77,7 @@
     - Competition
   channel: LinkedIn
   frequency: High
-  startDate: January
+  startDate: 2021-01-01
   roles:
     - Editor
   hasTeaser?: no
