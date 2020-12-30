@@ -1,22 +1,52 @@
 /** @jsx jsx */
-import { FunctionComponent } from "react";
+import { FunctionComponent, Dispatch, SetStateAction, useState } from "react";
 import Table from "../Table";
 import { jsx, Heading, Box } from "theme-ui";
 import { format } from "date-fns";
 
-type Keys = "byStartDate" | "byGenre" | "byChannel" | "byFrequency";
+enum Keys {
+  BY_CATEGORY = "categories",
+  BY_START_DATE = "startDate",
+  BY_GENRE = "genre",
+  BY_ROLE = "roles",
+  BY_CHANNEL = "channel",
+  BY_FREQUENCY = "frequency",
+}
 
-const ContentStrategy: FunctionComponent<{ data: Record<Keys, any>[] }> = ({
-  data,
-}) => {
-  const indexKey = "byFrequency" as Keys;
+const groupBy = (data: any[], contentKey: Keys) => {
+  return data.reduce((acc: any, item: any) => {
+    const temp = { ...item };
+    if (Array.isArray(temp[contentKey])) {
+      return temp[contentKey].reduce((acc: any, key: any) => {
+        return {
+          ...acc,
+          [key]: acc[key] ? [...acc[key], temp] : [temp],
+        };
+      }, acc);
+    }
+    delete temp[contentKey];
+    const key = item[contentKey];
+    return {
+      ...acc,
+      [key]: acc[key] ? [...acc[key], temp] : [temp],
+    };
+  }, {});
+};
+
+const ContentStrategy: FunctionComponent<{
+  data: Record<Keys, any>[];
+  indexKey: Keys;
+}> = ({ data, indexKey }) => {
+  const d = groupBy(data, indexKey);
   return (
     <Box>
-      {Object.entries(data[indexKey])
+      {Object.entries(d)
         .sort()
-        .map(([date, entry]: any) => {
+        .map(([index, entry]: any) => {
           const d =
-            indexKey === "byStartDate" ? format(new Date(date), "MMMM") : date;
+            indexKey === Keys.BY_START_DATE
+              ? format(new Date(index), "MMMM")
+              : index;
           return (
             <Box sx={{ mb: 5 }}>
               <Heading sx={{ mb: 3 }}>{d}</Heading>
@@ -28,4 +58,42 @@ const ContentStrategy: FunctionComponent<{ data: Record<Keys, any>[] }> = ({
   );
 };
 
-export default ContentStrategy;
+const SelectionBar: FunctionComponent<{
+  currentIndex: Keys;
+  setIndexKey: Dispatch<SetStateAction<Keys>>;
+}> = ({ currentIndex, setIndexKey }) => {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        mb: 4,
+        flexDirection: ["column", "row"],
+        justifyContent: "space-between",
+      }}
+    >
+      {Object.values(Keys).map((k) => (
+        <Heading
+          sx={{ color: currentIndex === k ? "secondary" : "text" }}
+          variant="titoletto"
+          onClick={() => setIndexKey(k)}
+        >
+          {k}
+        </Heading>
+      ))}
+    </Box>
+  );
+};
+
+const ContentStrategyWrapper: FunctionComponent<{
+  data: Record<Keys, any>[];
+}> = ({ data }) => {
+  const [indexKey, setIndexKey] = useState<Keys>(Keys.BY_CATEGORY);
+  return (
+    <Box>
+      <SelectionBar currentIndex={indexKey} setIndexKey={setIndexKey} />
+      <ContentStrategy indexKey={indexKey} data={data} />
+    </Box>
+  );
+};
+
+export default ContentStrategyWrapper;

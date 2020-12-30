@@ -9,6 +9,7 @@
   roles:
     - Founder
     - Editor
+    - Designer
   hasTeaser?: yes
   needsSignOff?: yes
 - genre: Link
@@ -17,7 +18,7 @@
     - Product
   channel: LinkedIn
   frequency: High
-  startDate: 2021-01-01
+  startDate: 2021-01-05
   roles:
     - Editor
   hasTeaser?: no
@@ -30,7 +31,7 @@
   frequency: Medium
   startDate: 2021-03-01
   roles:
-    - Content
+    - Editor
     - Designer
   hasTeaser?: yes
   needsSignOff?: yes
@@ -40,19 +41,21 @@
     - Philosophy
   channel: Blog
   frequency: Medium
-  startDate: 2021-01-01
+  startDate: 2021-01-10
   roles:
     - Founder
+    - Designer
     - Editor
   hasTeaser?: yes
   needsSignOff?: yes
 - genre: Interview
   categories:
     - Personal
+    - Designer
     - Product
   channel: Blog
   frequency: Low
-  startDate: 2021-02-01
+  startDate: 2021-02-15
   roles:
     - Editor
   hasTeaser?: yes
@@ -64,8 +67,8 @@
     - Product
     - Competition
   channel: LinkedIn
-  frequency: High
-  startDate: 2021-01-01
+  frequency: None
+  startDate: 2021-01-22
   roles:
     - Editor
   hasTeaser?: no
@@ -77,7 +80,7 @@
     - Competition
   channel: LinkedIn
   frequency: High
-  startDate: 2021-01-01
+  startDate: 2021-01-05
   roles:
     - Editor
   hasTeaser?: no
