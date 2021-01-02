@@ -43,25 +43,34 @@ const ContentCalendar: FunctionComponent<{ data: Record<string, any>[] }> = ({
       const items = times(Math.floor(52 / divider[frequency]))
         .map((_, i) => {
           const multiplier = i * divider[frequency];
-          const date = addWeeks(startDate, multiplier);
+          const d = addWeeks(startDate, multiplier);
+          const date = startOfWeek(d, { weekStartsOn: 1 });
           const week = getWeek(date);
           if (getYear(date) !== 2021 || (week === 1 && getMonth(date) === 11)) {
             return null;
           }
-          return { week, date, genre };
+          return { week, date: format(date, "iii MMM dd"), genre };
         })
         .filter((i) => i);
       return [...acc, ...items];
     }, []);
   const grouped = groupBy(weeks, "week");
-  const asArray = Object.entries(grouped).map(
+  const asArray: any[][] = Object.entries(grouped).map(
     ([k, v]: [string, Record<string, any>[]]) => {
-      const date = startOfWeek(new Date(v[0].date), { weekStartsOn: 1 });
-      const genres = JSON.stringify(Object.keys(groupBy(v, "genre")));
-      return { nr: k, date: format(date, "iii MMM dd"), genres };
+      return v.map((s: any, index: number) => {
+        if (index === 0) {
+          return { week: k, ...s };
+        }
+        return {
+          week: "",
+          data: "",
+          genre: s.genre,
+        };
+      });
     }
   );
-  return <Table data={asArray} />;
+  // @ts-ignore
+  return <Table data={asArray.flat()} />;
 };
 
 export default ContentCalendar;

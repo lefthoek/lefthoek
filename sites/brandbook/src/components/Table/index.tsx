@@ -16,7 +16,9 @@ const Table: FunctionComponent<{ data: Record<string, any>[] }> = ({
         dataIndex: key,
         key,
         width: 200,
-        render: (x: any) => (isArray ? x.map((y: any) => <div>{y}</div>) : x),
+        render: (o: any) => {
+          return isArray ? o.map((i: string) => <div>{i}</div>) : o;
+        },
       };
     }
   );
