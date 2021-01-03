@@ -1,5 +1,5 @@
 import {startOfWeek, getWeek, getYear, getMonth, addWeeks} from "date-fns";
-import {ContentKeys, Frequency, ContentData} from "../types";
+import {Frequency, ContentData} from "../types";
 
 const times = (n: number) => Array(n).fill("");
 
@@ -39,7 +39,7 @@ const toCalendarData = (data: ContentData[]) => {
   }, []);
 };
 
-const groupBy = (data: any[], contentKey: ContentKeys) => {
+const groupBy = (data: any[], contentKey: string) => {
   return data.reduce((acc: any, item: any) => {
     const temp = {...item};
     if (Array.isArray(temp[contentKey])) {
