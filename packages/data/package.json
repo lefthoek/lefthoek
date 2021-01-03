@@ -33,6 +33,8 @@
       "build/"
     ]
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "date-fns": "^2.16.1"
+  },
   "dependencies": {}
 }

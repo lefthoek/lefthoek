@@ -7,14 +7,14 @@ import techStack from "./tech-stack.yaml";
 // @ts-ignore
 import competitiveAnalysis from "./competitive-analysis.yaml";
 // @ts-ignore
-import contentStrategy from "./content-strategy";
+import * as content from "./content";
 
 export {
-  userStories,
-  contentStrategy,
-  userPersonae,
-  canvases,
-  sheets,
-  techStack,
-  competitiveAnalysis,
+    userStories,
+    content,
+    userPersonae,
+    canvases,
+    sheets,
+    techStack,
+    competitiveAnalysis,
 };
