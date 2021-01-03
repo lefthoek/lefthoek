@@ -4,12 +4,13 @@ import RCTable from "rc-table";
 import { jsx } from "theme-ui";
 import { format } from "date-fns";
 
+const formatDate = (date: Date) => format(date, "iii MMM dd");
+
 const Table: FunctionComponent<{ data: Record<string, any>[] }> = ({
   data,
 }) => {
   const columns: Record<string, any>[] = Object.entries(data[0]).map(
     ([key, value]) => {
-      const isArray = Array.isArray(value);
       return {
         align: "left",
         title: key.toUpperCase(),
@@ -17,16 +18,19 @@ const Table: FunctionComponent<{ data: Record<string, any>[] }> = ({
         key,
         width: 200,
         render: (o: any) => {
-          return isArray ? o.map((i: string) => <div>{i}</div>) : o;
+          if (o instanceof Date) {
+            return formatDate(o);
+          }
+          if (Array.isArray(value)) {
+            return o.map((i: string) => <div>{i}</div>);
+          }
+          return o;
         },
       };
     }
   );
 
-  const d = data.map(({ startDate, ...x }) => {
-    return startDate ? { startDate: format(startDate, "MMMM"), ...x } : x;
-  });
-  return <RCTable tableLayout="auto" columns={columns} data={d} />;
+  return <RCTable tableLayout="auto" columns={columns} data={data} />;
 };
 
 export default Table;
