@@ -52,6 +52,7 @@ const groupBy = (data: any[], contentKey: string) => {
       }, acc);
     }
     const key = item[contentKey];
+    delete temp[contentKey];
     return {
       ...acc,
       [key]: acc[key] ? [...acc[key], temp] : [temp],

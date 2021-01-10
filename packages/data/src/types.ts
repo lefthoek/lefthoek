@@ -17,6 +17,7 @@ export type ContentData = {
 
 export type CalendarData = {
   week: number;
+  categories: string[];
   genre: string;
   date: Date;
 };
