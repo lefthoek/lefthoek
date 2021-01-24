@@ -1,4 +1,7 @@
 export * from "./A";
+export * from "./Focus";
+export * from "./Bubbles";
+export * from "./Wool";
 export * from "./Apple";
 export * from "./BasicShapes";
 export * from "./Hologram";
@@ -16,3 +19,6 @@ export * from "./SewingMachine";
 export * from "./OpenHand";
 export * from "./Diamond";
 export * from "./Wrench";
+export * from "./SwordAndShield";
+export * from "./MagicWand";
+export * from "./HandWithHeart";
