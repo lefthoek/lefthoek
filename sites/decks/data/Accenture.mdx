@@ -1,0 +1,238 @@
+---
+title: Accenture
+excerpt: |
+  Presentation for Christopher Noessel and Nicholas Jayanti at IBM to do
+  a deep dive on the choices that underpin Lefthoek.
+order: 7
+author: Yeehaa
+date: 2020-12-13
+tags: 
+  - Text-based Interfaces
+---
+import { Flow } from "../src/components"
+import { Stat, SellingPoint, Stack } from "@lefthoek/molecules"
+import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
+import { userStories, competitiveAnalysis, techStack }from "@lefthoek/data"
+import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
+
+
+<Cover>
+
+Virtual team members that mix business with pleasure
+
+## Narrow Minded
+
+</Cover>
+
+<Notes>
+
+Narrow Minded
+=============
+
+Mentioning 'Narrow AI' in a converstation will most likely result in an
+underwhelming response. Overloaded with news about self-driving cars and almost
+human-like virtual assistants, hardly anyone gets excited about projects that
+are actually defined by their limited reach.
+
+A similar attitude can be discerned when it comes to deep learning. Nowadays,
+both developers and entrepreneurs are quick to dismiss all other forms or AI and
+Machine Learning. Nonetheless, more often than not these 'antiquated'
+technologies are often more suited to solve the problem at hand.
+
+In my opinion, this narrow minded view on AI and its technologies leads to a lot
+of missed opportunities. 
+
+At Lefthoek we choose to focus on this low-hanging fruit. There's a lot of
+(relatively) simple real world problems that, are not deemed worthy by those
+only interested in moonshots.
+
+In this presentation, We use a combination of different Narrow AI (or not even)
+
+
+Some of the techniques and technologies that I'll discuss in this presentation
+are:
+
++ Local, client-based AI (TensorflowJS/Tensorflow Lite)   
++ Cellular Automata   
++ Rule-based AI   
++ Human in the Loop   
+
+</Notes>
+
+---
+
+<Basic>
+
+# Goal
+
+Exponentially increase the **collective intelligence** of teams and organizations
+
+</Basic>
+
+---
+
+<Basic>
+
+# Opportunity
+
+Teams already share a lot of valuable information using collaborative
+**messaging apps**
+
+</Basic>
+
+---
+
+<Basic>
+
+# Solution
+
+An AI-powered **Virtual Team Member** for your messaging apps devoted to
+information management 
+
+</Basic>
+
+---
+
+<Icons>
+
+# Virtual Team Member
+
+<SellingPoint iconName="Microphone" title="moderates">your team's communication on messaging apps</SellingPoint>
+
+<SellingPoint iconName="Binders" title="organizes">the valuable knowledge that these messages
+contain</SellingPoint>
+
+<SellingPoint iconName="Hologram" title="augments">this knowledge base with 
+information from other sources</SellingPoint>
+
+</Icons>
+
+
+---
+
+<SectionCover>
+
+# Features
+
+</SectionCover>
+
+---
+
+<Feature showOverlay before={`/images/onboard-before.png`} after={`/images/onboard-after.png`} >
+
+  # Onboard
+
+</Feature>
+
+---
+
+<Feature before={`/images/synchronize-before.png`} after={`/images/synchronize-after.png`} >
+
+  # Synchronize
+
+</Feature>
+
+---
+
+<Feature before={`/images/research-before.png`} after={`/images/research-after.png`} >
+
+  # Research 
+
+</Feature>
+
+---
+
+<SectionCover>
+
+# Secret Sauce
+
+</SectionCover>
+
+---
+<Basic>
+
+# Flow
+
+<Flow input="text" blackbox="messaging app" output="text"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# Flow
+
+<Flow input="text" blackbox="lefthoek" output="text"/>
+
+</Basic>
+
+---
+<Basic>
+
+# Flow
+
+<Flow input="messaging apps" blackbox="lefthoek" output="messaging apps"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# Stack
+
+<Stack stackData={techStack}/>
+
+</Basic>
+
+---
+
+<SectionCover>
+
+# Market
+
+</SectionCover>
+
+---
+
+<Basic variant="midnight">
+
+# Competition
+
+  <CompetitionChart {...competitiveAnalysis} />
+
+</Basic>
+
+---
+
+<Icons>
+
+# Competitive Advantages
+
+<SellingPoint iconName="Knot" title="loyal">Available 24/7</SellingPoint>
+
+<SellingPoint iconName="Different" title="different">Designed to fulfill tasks deemed impossible for
+humans</SellingPoint>
+
+<SellingPoint iconName="Curtains" title="discrete">All data stays local to an
+organization</SellingPoint>
+
+<SellingPoint iconName="SewingMachine" title="bespoke">AI optimized for an organization's unique knowledge
+domain</SellingPoint>
+
+<SellingPoint iconName="HighFive" title="eager">Value increases over time</SellingPoint>
+
+</Icons>
+
+---
+
+<Cover>
+
+##### Jan Hein Hoogstad
+
+yeehaa@lefthoek.com
+
+@yeehaa
+
+</Cover>
