@@ -9,15 +9,16 @@ tags:
   - Text-based Interfaces
 ---
 import { Flow } from "../src/components"
-import { Stat, SellingPoint, Stack } from "@lefthoek/molecules"
+import { Icon } from "@lefthoek/atoms"
+import { Markdown, Stat, SellingPoint, Stack } from "@lefthoek/molecules"
 import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
 import { userStories, competitiveAnalysis, techStack }from "@lefthoek/data"
-import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
+import { BigIcon, Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
 
 
 <Cover>
 
-## Narrow Minded
+## AI: Becoming Narrow Minded
 
 </Cover>
 
@@ -59,9 +60,9 @@ overarching 'human in the loop' environment.
 
 # Goal
 
-To show that combining many narrow AI's is a better approach to solve real world
-problems than to focus on general AI and moonshots. 
-
+To show that combining many single-purpose narrow AI's often is a better
+approach to solving real world problems than to focus on strong AI and
+moonshots
 
 </Basic>
 
@@ -71,11 +72,11 @@ problems than to focus on general AI and moonshots.
 
 # Agenda
 
-<Stat figure="1.">Introducion</Stat>
+<Stat figure="1.">What is Lefthoek?</Stat>
 
 <Stat figure="2.">The Low-End Theory</Stat>
 
-<Stat figure="3.">Swarm Agency</Stat>
+<Stat figure="3.">In Practice</Stat>
 
 
 </Stats>
@@ -84,7 +85,7 @@ problems than to focus on general AI and moonshots.
 
 <SectionCover>
 
-# Introducion
+# What is Lefthoek?
 
 </SectionCover>
 
@@ -140,6 +141,215 @@ information from other sources</SellingPoint>
 </Feature>
 
 ---
+
+<Basic variant="midnight">
+
+# Lefthoek Flow
+
+<img style={{maxHeight: "80vh"}} src="/images/human-in-the-loop.png"/>
+
+</Basic>
+
+---
+
+
+<SectionCover>
+
+# The Low-End Theory
+
+</SectionCover>
+
+---
+
+<Basic>
+
+# Goal
+
+To show that combining many single-purpose narrow AI's often is a better
+approach to solving real world problems than to focus on **general AI** and
+**moonshots**
+
+</Basic>
+
+---
+
+<Basic>
+
+# Narrow AI
+
+"[L]imited to the use of software to study or accomplish specific pre-learned
+problem solving or reasoning tasks"[*](https://en.wikipedia.org/wiki/Artificial_general_intelligence)
+
+</Basic>
+
+---
+
+<Basic>
+
+# General AI
+
+"[T]he hypothetical ability of an intelligent agent to understand or learn any
+intellectual task that a human being can"[*](https://en.wikipedia.org/wiki/Artificial_general_intelligence)
+
+</Basic>
+
+---
+
+<Basic>
+
+# Moonshot
+
+"[A]n extremely ambitious project or mission undertaken to achieve a monumental goal"[*](https://www.merriam-webster.com/dictionary/moon%20shot)
+</Basic>
+
+---
+
+<Basic>
+
+# Examples
+
+- WAYMO
+- SIRI
+- ...
+
+</Basic>
+
+---
+
+<Basic>
+
+# Problem
+
+The promise of general AI moonshots never panned out. It hasn't lead to the promised
+breakthroughs, whereas other, solvable, real-world problems are ignored.
+
+</Basic>
+
+---
+
+<Basic>
+
+# Goal
+
+To show that combining **many single-purpose narrow AI's** often is a better
+approach to solving real world problems than to focus on general AI and
+moonshots
+
+</Basic>
+
+---
+
+<Icons>
+
+# Proposition
+
+<SellingPoint iconName="Wrench" title="Radical Automation">Lefthoek aims to
+automate every laborious and boring chore that can be automated. Any missed
+opportunity to do so inevitably results in talent waste.</SellingPoint>
+
+<SellingPoint iconName="Apple" title="Low-Hanging Fruit">While hardly ever
+succesful, most AI initiatives focus on so-called moonshots. Lefthoek takes the
+opposite approach deliberatly tackling the 90% first.</SellingPoint>
+
+<SellingPoint iconName="BasicShapes" title="Complexly Simple">There is a common
+misconception in technology that complex solutions are superior. Lefthoek is
+based on the exact opposite. Simple is always better. </SellingPoint>
+
+</Icons>
+
+---
+
+<Basic variant="midnight">
+
+# Lefthoek Flow
+
+<img style={{maxHeight: "80vh"}} src="/images/feature-flow.png"/>
+
+</Basic>
+
+---
+
+<Icons>
+
+# Approach
+
+<SellingPoint iconName="A" title="A For Agency">Replicating human intelligence
+is both too ambitious and too restrictive as a goal for AI. Lefthoek chooses to
+focus on intelligence that has agency rather than being
+artificial.</SellingPoint>
+
+<SellingPoint iconName="Swarm" title="Swarm Agency">Rather than chasing the
+pipedream of an all-encompassing general AI, Lefthoek is growing a living ecosystem of
+many, narrow single-purpose services.</SellingPoint>
+
+<SellingPoint iconName="HamsterWheel" title="Human In The Loop">On collaborative
+messaging apps, it is childishly simple to put an AI in a continuous feedback
+loop with its users. Almost as if they were designed for
+Lefthoek.</SellingPoint>
+
+</Icons>
+
+
+---
+
+<Basic>
+
+# AI Stack
+
+<Stack stackData={techStack}/>
+
+</Basic>
+
+---
+
+<SectionCover>
+
+# In Practice
+
+</SectionCover>
+
+---
+
+<Icons>
+
+# Proposition
+
+<SellingPoint iconName="Wrench" title="Radical Automation">Lefthoek aims to
+automate every laborious and boring chore that can be automated. Any missed
+opportunity to do so inevitably results in talent waste.</SellingPoint>
+
+<SellingPoint iconName="Apple" title="Low-Hanging Fruit">While hardly ever
+succesful, most AI initiatives focus on so-called moonshots. Lefthoek takes the
+opposite approach deliberatly tackling the 90% first.</SellingPoint>
+
+<SellingPoint iconName="BasicShapes" title="Complexly Simple">There is a common
+misconception in technology that complex solutions are superior. Lefthoek is
+based on the exact opposite. Simple is always better. </SellingPoint>
+
+</Icons>
+
+---
+
+<Basic variant="midnight">
+
+# Lefthoek Flow
+
+<img style={{maxHeight: "80vh"}} src="/images/feature-flow.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# Demonstration
+
+</Basic>
+
+---
+
+
+
 
 <Cover>
 
