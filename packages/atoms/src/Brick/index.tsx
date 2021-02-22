@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from "react";
 import { jsx, Box, Text } from "theme-ui";
-import { outerWrapperStyles, textStyles } from "./styles";
+import { outerWrapperStyles } from "./styles";
 
 const Brick: FunctionComponent<{ className?: string; children: string }> = ({
   className,
@@ -9,9 +9,7 @@ const Brick: FunctionComponent<{ className?: string; children: string }> = ({
 }) => {
   return (
     <Box className={className} sx={outerWrapperStyles}>
-      <Text sx={textStyles} variant="smallBody">
-        {children}
-      </Text>
+      <Text>{children}</Text>
     </Box>
   );
 };

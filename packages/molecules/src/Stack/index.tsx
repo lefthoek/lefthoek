@@ -7,11 +7,12 @@ import { outerWrapperStyles } from "./styles";
 const Stack: FunctionComponent<{
   className?: string;
   stackData: string[][];
-}> = ({ className, stackData }) => {
+  variant?: "brightGreen" | "skyBlue" | "lobster";
+}> = ({ className, variant = "lobster", stackData }) => {
   return (
     <Box sx={outerWrapperStyles} className={className}>
-      {stackData.map((layerData) => (
-        <Layer layerData={layerData} />
+      {stackData.map((layerData, index) => (
+        <Layer variant={variant} layerData={layerData} index={index} />
       ))}
     </Box>
   );
