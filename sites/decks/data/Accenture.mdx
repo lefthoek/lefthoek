@@ -12,7 +12,7 @@ import { Flow } from "../src/components"
 import { Icon } from "@lefthoek/atoms"
 import { Markdown, Stat, SellingPoint, Stack } from "@lefthoek/molecules"
 import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
-import { userStories, competitiveAnalysis, techStack }from "@lefthoek/data"
+import { userStories, competitiveAnalysis, techStack, aiStack }from "@lefthoek/data"
 import { BigIcon, Cover, SectionCover, Basic, Feature, Icons, Quote, Stats } from "../src/slides"
 
 
@@ -74,7 +74,7 @@ moonshots
 
 <Stat figure="1.">What is Lefthoek?</Stat>
 
-<Stat figure="2.">Low-End Theory</Stat>
+<Stat figure="2.">Narrow AI</Stat>
 
 <Stat figure="3.">In Practice</Stat>
 
@@ -118,25 +118,10 @@ information from other sources</SellingPoint>
 
 ---
 
-<Feature showOverlay before={`/images/onboard-before.png`} after={`/images/onboard-after.png`} >
-
-  # Onboard
-
-</Feature>
-
----
 
 <Feature before={`/images/synchronize-before.png`} after={`/images/synchronize-after.png`} >
 
   # Synchronize
-
-</Feature>
-
----
-
-<Feature before={`/images/research-before.png`} after={`/images/research-after.png`} >
-
-  # Research 
 
 </Feature>
 
@@ -155,7 +140,7 @@ information from other sources</SellingPoint>
 
 <SectionCover>
 
-# Low-End Theory
+# Narrow AI
 
 </SectionCover>
 
@@ -177,11 +162,12 @@ approach to solving real world problems than to focus on **general AI** and
 
 # Narrow AI
 
->> "[L]imited to the use of software to study or accomplish specific pre-learned
->> problem solving or reasoning tasks"
+>> A term used to describe artificial intelligence 
+>> systems that are specified to handle a singular or limited task.
+
 
 &mdash;
-[wikipedia](https://en.wikipedia.org/wiki/Artificial_general_intelligence)
+[deepai.org](https://deepai.org/machine-learning-glossary-and-terms/narrow-ai)
 &mdash;
 
 </Quote>
@@ -192,7 +178,7 @@ approach to solving real world problems than to focus on **general AI** and
 
 # General AI
 
->> "[T]he hypothetical ability of an intelligent agent to understand or learn any
+>> "the hypothetical ability of an intelligent agent to understand or learn any
 >> intellectual task that a human being can"
 
 &mdash;
@@ -203,11 +189,19 @@ approach to solving real world problems than to focus on **general AI** and
 
 ---
 
+<Basic>
+
+<img style={{maxHeight: "800px"}} src="/images/narrow-ai-moonshots.png"/>
+
+</Basic>
+
+---
+
 <Quote>
 
 # Moonshot
 
->> "[A]n extremely ambitious project or mission undertaken to achieve a monumental goal"
+>> "an extremely ambitious project or mission undertaken to achieve a monumental goal"
 
 &mdash;
 [merriam-webster](https://www.merriam-webster.com/dictionary/moon%20shot)
@@ -216,11 +210,10 @@ approach to solving real world problems than to focus on **general AI** and
 </Quote>
 
 ---
+
 <Basic>
 
-# General AI Moonshots
-
-<img style={{maxHeight: "800px"}} src="/images/general-ai-moonshots.png"/>
+<img style={{maxHeight: "800px"}} src="/images/narrow-ai-moonshots.png"/>
 
 </Basic>
 
@@ -230,8 +223,9 @@ approach to solving real world problems than to focus on **general AI** and
 
 # Problem
 
-The promise of general AI moonshots never panned out. It hasn't lead to the promised
-breakthroughs, whereas other, solvable, real-world problems are ignored.
+The combined promise of general AI and moonshots never panned out. It hasn't
+lead to the promised breakthroughs, whereas other, solvable, real-world problems
+are being ignored.
 
 </Basic>
 
@@ -244,36 +238,6 @@ breakthroughs, whereas other, solvable, real-world problems are ignored.
 To show that combining **many single-purpose narrow AI's** often is a better
 approach to solving real world problems than to focus on general AI and
 moonshots
-
-</Basic>
-
----
-
-<Icons>
-
-# Proposition
-
-<SellingPoint iconName="Wrench" title="Radical Automation">Lefthoek aims to
-automate every laborious and boring chore that can be automated. Any missed
-opportunity to do so inevitably results in talent waste.</SellingPoint>
-
-<SellingPoint iconName="Apple" title="Low-Hanging Fruit">While hardly ever
-succesful, most AI initiatives focus on so-called moonshots. Lefthoek takes the
-opposite approach deliberatly tackling the 90% first.</SellingPoint>
-
-<SellingPoint iconName="BasicShapes" title="Complexly Simple">There is a common
-misconception in technology that complex solutions are superior. Lefthoek is
-based on the exact opposite. Simple is always better. </SellingPoint>
-
-</Icons>
-
----
-
-<Basic variant="midnight">
-
-# Development Flow
-
-<img style={{maxHeight: "80vh"}} src="/images/feature-flow.png"/>
 
 </Basic>
 
@@ -303,7 +267,7 @@ Lefthoek.</SellingPoint>
 
 <Basic variant="midnight">
 
-# Tech Stack
+# Instance Stack
 
 <Stack variant="brightGreen" stackData={techStack}/>
 
@@ -313,9 +277,19 @@ Lefthoek.</SellingPoint>
 
 <Basic variant="midnight">
 
-# AI Stack
+# Grid Stack
 
-<Stack variant="skyBlue" stackData={techStack}/>
+<Stack variant="skyBlue" stackData={aiStack}/>
+
+</Basic>
+
+---
+
+<Basic variant="midnight">
+
+# Lefthoek Flow
+
+<img style={{maxHeight: "70vh"}} src="/images/human-in-the-loop.png"/>
 
 </Basic>
 
@@ -326,6 +300,16 @@ Lefthoek.</SellingPoint>
 # In Practice
 
 </SectionCover>
+
+---
+
+<Basic variant="midnight">
+
+# Lefthoek Flow
+
+<img style={{maxHeight: "70vh"}} src="/images/feature-flow.png"/>
+
+</Basic>
 
 ---
 
@@ -349,26 +333,29 @@ based on the exact opposite. Simple is always better. </SellingPoint>
 
 ---
 
-<Basic variant="midnight">
+<Feature before={`/images/synchronize-before.png`} after={`/images/synchronize-after.png`} >
 
-# Lefthoek Flow
+  # Synchronize
 
-<img style={{maxHeight: "70vh"}} src="/images/feature-flow.png"/>
-
-</Basic>
+</Feature>
 
 ---
 
-<Basic>
+<Feature showOverlay before={`/images/onboard-before.png`} after={`/images/onboard-after.png`} >
 
-# Demonstration
+  # Onboard
 
-</Basic>
+</Feature>
 
 ---
 
+<Feature before={`/images/research-before.png`} after={`/images/research-after.png`} >
 
+  # Research 
 
+</Feature>
+
+---
 
 <Cover>
 

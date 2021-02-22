@@ -3,6 +3,8 @@ import * as userPersonae from "./user-personae";
 import * as canvases from "./business-model-canvas";
 import * as sheets from "./core-idea-sheet";
 // @ts-ignore
+import aiStack from "./ai-stack.yaml";
+// @ts-ignore
 import techStack from "./tech-stack.yaml";
 // @ts-ignore
 import competitiveAnalysis from "./competitive-analysis.yaml";
@@ -10,11 +12,12 @@ import competitiveAnalysis from "./competitive-analysis.yaml";
 import * as content from "./content";
 
 export {
-    userStories,
-    content,
-    userPersonae,
-    canvases,
-    sheets,
-    techStack,
-    competitiveAnalysis,
+  userStories,
+  content,
+  userPersonae,
+  canvases,
+  sheets,
+  aiStack,
+  techStack,
+  competitiveAnalysis,
 };
