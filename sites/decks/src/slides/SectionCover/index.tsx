@@ -9,7 +9,7 @@ const SectionCover: FunctionComponent<{
   index: number;
   variant?: string;
   className?: string;
-}> = ({ children, className, variant = "skyBlue", index }) => {
+}> = ({ children, className, variant = "lobster", index }) => {
   return (
     <Basic
       variant={variant}
@@ -17,7 +17,7 @@ const SectionCover: FunctionComponent<{
       index={index}
       sx={{
         ...outerWrapperStyles,
-        color: variant === "midnight" ? "muted" : "accent",
+        color: variant === "midnight" ? "muted" : "muted",
       }}
     >
       {children}
