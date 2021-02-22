@@ -1,4 +1,4 @@
-import { SxStyleProp } from "theme-ui";
+import {SxStyleProp} from "theme-ui";
 
 const outerWrapperStyles: SxStyleProp = {
   color: "accent",
@@ -7,11 +7,11 @@ const outerWrapperStyles: SxStyleProp = {
     fontSize: ["6rem", "9rem"],
     textAlign: "center",
     mb: 0,
-    lineHeight: ["6rem", "9rem"],
+    lineHeight: ["5rem", "9rem"],
     "@media screen and (orientation: portrait)": {
       transform: "rotate(90deg)",
     },
   },
 };
 
-export { outerWrapperStyles };
+export {outerWrapperStyles};

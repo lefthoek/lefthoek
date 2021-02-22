@@ -5,20 +5,27 @@ const outerWrapper: SxStyleProp = {
   flexDirection: "column",
   alignItems: ["center", "center", "center", "center"],
   justifyContent: ["center", "center"],
-  color: "text",
   px: [6, 8],
   py: [8],
   h1: {
     textAlign: ["center", "center"],
     mb: [6, 6, 7, 7],
   },
-  p: {
+  blockquote: {
+    margin: 0,
+    mb: "1rem",
     maxWidth: "40rem",
-    fontSize: ["42px"],
+    p: {
+      fontSize: ["34px", "42px"],
+      lineHeight: ["36px", "44px"],
+    },
+  },
+  p: {
+    color: "primary",
     fontWeight: 400,
-    lineHeight: ["44px"],
     my: 0,
-    textAlign: ["center", "center"],
+    textAlign: "center",
+    width: "100%",
   },
   ul: {},
 };
