@@ -10,24 +10,16 @@ const BigIcon: FunctionComponent<{
   variant?: string;
   className?: string;
 }> = ({ children, className, variant = "cipria" }) => {
-  const [title, icon, paragraph] = children;
   return (
     <Background
       variant={variant}
       className={className}
-      sx={{ ...outerWrapper, color: variant === "midnight" ? "muted" : "text" }}
+      sx={{
+        ...outerWrapper,
+        color: variant === "midnight" ? "muted" : "text",
+      }}
     >
-      {title}
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: ["1fr", "1fr", "2fr 1fr"],
-          alignItems: "center",
-        }}
-      >
-        <Box>{icon}</Box>
-        <Box sx={{ p: 6 }}>{paragraph}</Box>
-      </Box>
+      {children}
     </Background>
   );
 };
