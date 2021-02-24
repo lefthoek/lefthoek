@@ -1,9 +1,9 @@
-import { SxStyleProp } from "theme-ui";
+import {SxStyleProp} from "theme-ui";
 
 export const outerWrapperStyles: SxStyleProp = {
   p: [6, 8],
   maxHeight: "100vh",
-  justifyContent: "flex-start",
+  alignItems: "flex-start",
   overflowY: ["scroll", "none"],
 };
 
@@ -11,6 +11,7 @@ export const innerWrapperStyles: SxStyleProp = {
   display: "grid",
   gridGap: [5],
   alignContent: "center",
+  justifyContent: ["flex-start"],
   maxWidth: ["auto", "auto", "80%", "60%"],
   alignItems: "start",
   gridTemplateColumns: ["auto", "1fr 1fr"],

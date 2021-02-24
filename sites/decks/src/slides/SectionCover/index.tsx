@@ -17,7 +17,7 @@ const SectionCover: FunctionComponent<{
       index={index}
       sx={{
         ...outerWrapperStyles,
-        color: variant === "midnight" ? "muted" : "muted",
+        color: variant === "skyBlue" ? "accent" : "muted",
       }}
     >
       {children}

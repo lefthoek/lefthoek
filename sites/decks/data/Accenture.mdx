@@ -13,7 +13,7 @@ import { Icon } from "@lefthoek/atoms"
 import { Markdown, Stat, SellingPoint, Stack } from "@lefthoek/molecules"
 import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
 import { userStories, competitiveAnalysis, techStack, aiStack }from "@lefthoek/data"
-import { BigIcon, Cover, SectionCover, Basic, Feature, Icons, Quote, Stats } from "../src/slides"
+import { BigIcon, Cover, SectionCover, Basic, Feature, Icons, Quote, Agenda } from "../src/slides"
 
 
 <Cover>
@@ -61,25 +61,24 @@ overarching 'human in the loop' environment.
 # Goal
 
 To show that combining many single-purpose narrow AI's often is a better
-approach to solving real world problems than to focus on strong AI and
+approach to solving real world problems than to focus on strong AI 
 moonshots
 
 </Basic>
 
 ---
 
-<Stats>
+<Agenda>
 
 # Agenda
 
-<Stat figure="1.">What is Lefthoek?</Stat>
+1. What is Lefthoek?
 
-<Stat figure="2.">Low-End Theory</Stat>
+2. Low-End Theory
 
-<Stat figure="3.">In Practice</Stat>
+3. In Practice
 
-
-</Stats>
+</Agenda>
 
 ---
 
@@ -249,42 +248,21 @@ moonshots
 
 <Icons>
 
-# Proposition
-
-<SellingPoint iconName="Apple" title="Low-Hanging Fruit">While hardly ever
-succesful, most AI initiatives focus on so-called moonshots. Lefthoek takes the
-opposite approach deliberatly tackling the 90% first.</SellingPoint>
+# Approach
 
 <SellingPoint iconName="Wrench" title="Radical Automation">Lefthoek aims to
 automate every laborious and boring chore that can be automated. Any missed
 opportunity to do so inevitably results in talent waste.</SellingPoint>
 
-<SellingPoint iconName="BasicShapes" title="Complexly Simple">There is a common
-misconception in technology that complex solutions are superior. Lefthoek is
-based on the exact opposite. Simple is always better. </SellingPoint>
-
-</Icons>
-
----
-
-
-<Icons>
-
-# Approach
-
-<SellingPoint iconName="A" title="A For Agency">Replicating human intelligence
-is both too ambitious and too restrictive as a goal for AI. Lefthoek chooses to
-focus on intelligence that has agency rather than being
-artificial.</SellingPoint>
-
-<SellingPoint iconName="Swarm" title="Swarm Power">Rather than chasing the
-pipedream of an all-encompassing general AI, Lefthoek is growing a living ecosystem of
-many, narrow single-purpose services.</SellingPoint>
-
 <SellingPoint iconName="HamsterWheel" title="Human In The Loop">On collaborative
 messaging apps, it is childishly simple to put an AI in a continuous feedback
 loop with its users. Almost as if they were designed for
 Lefthoek.</SellingPoint>
+
+<SellingPoint iconName="Apple" title="Low-Hanging Fruit">While hardly ever
+succesful, most AI initiatives focus on so-called moonshots. Lefthoek takes the
+opposite approach deliberatly tackling the 90% first.</SellingPoint>
+
 
 </Icons>
 
@@ -308,6 +286,18 @@ Lefthoek.</SellingPoint>
 
 ---
 
+<Basic>
+
+# Goal
+
+To show that combining any single-purpose narrow AI's often is a better
+approach to solving **real world problems** than to focus on general AI
+moonshots
+
+</Basic>
+
+---
+
 <Basic variant="midnight">
 
 # Feature Flow
@@ -318,29 +308,162 @@ Lefthoek.</SellingPoint>
 
 ---
 
-<Feature before={`/images/synchronize-before.png`} after={`/images/synchronize-after.png`} >
+<SectionCover variant="skyBlue">
 
-  # Synchronize
+# Synchronize
 
-</Feature>
-
----
-
-<Feature showOverlay before={`/images/onboard-before.png`} after={`/images/onboard-after.png`} >
-
-  # Onboard
-
-</Feature>
+</SectionCover>
 
 ---
 
-<Feature before={`/images/research-before.png`} after={`/images/research-after.png`} >
+<Basic>
 
-  # Research 
+# 1. Isolate Problem
 
-</Feature>
+Poor decision making due to information overload after a period of absence on
+messaging apps
+
+</Basic>
 
 ---
+
+<Basic>
+
+# 2. Explore Existing Messages
+
+<img style={{maxHeight: "60vh"}} src="/images/synchronize-before.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# 3. Project Desired Messages
+
+<img style={{maxHeight: "60vh"}} src="/images/synchronize-after.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# 4. Determine Requirements
+
+</Basic>
+
+---
+
+<SectionCover variant="skyBlue">
+
+# Onboarding
+
+</SectionCover>
+
+---
+
+<Basic>
+
+
+# 1. Isolate Problem
+
+Miscommunications between new and existing team members because a lot
+of practical information is tacit and implicit and thus hard to grasp right
+away
+
+
+</Basic>
+
+---
+
+<Basic>
+
+# 2. Explore Existing Messages
+
+<img style={{maxHeight: "60vh"}} src="/images/onboard-before.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# 3. Project Desired Messages
+
+<img style={{maxHeight: "60vh"}} src="/images/onboard-after.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# 4. Determine Requirements
+
+</Basic>
+
+
+---
+
+<SectionCover variant="skyBlue">
+
+# Research
+
+</SectionCover>
+
+---
+
+<Basic>
+
+# 1. Isolate Problem
+
+
+</Basic>
+
+---
+
+<Basic>
+
+# 2. Explore Existing Messages
+
+<img style={{maxHeight: "60vh"}} src="/images/research-before.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# 3. Project Desired Messages
+
+<img style={{maxHeight: "60vh"}} src="/images/research-after.png"/>
+
+</Basic>
+
+---
+
+<Basic>
+
+# 4. Determine Requirements
+
+</Basic>
+
+
+---
+
+<Basic>
+
+# Goal
+
+To show that combining many single-purpose narrow AI's often is a better
+approach to solving real world problems than to focus on strong AI 
+moonshots
+
+</Basic>
+
+---
+
 
 <Cover>
 
@@ -351,3 +474,11 @@ yeehaa@lefthoek.com
 @yeehaa
 
 </Cover>
+
+---
+
+<Basic variant="midnight">
+
+<img style={{maxHeight: "80vh"}} src="/images/next-meetup.png"/>
+
+</Basic>
