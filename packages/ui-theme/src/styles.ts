@@ -1,10 +1,13 @@
 import {text} from "./typography";
-import {Theme} from "@lefthoek/types";
 
 export const styles = {
   root: {...text.body, bg: "text"},
   h1: {...text.display, m: 0, mb: 6},
-  h2: {...text.eyelet, m: 0, mb: 4, mt: 6},
+  h2: {
+    textAlign: "center",
+    ...text.eyelet,
+    mt: [8, 9],
+  },
   h3: text.title,
   h4: text.title,
   h5: text.abstract,
@@ -18,7 +21,7 @@ export const styles = {
   p: {...text.body, mb: 4},
   ul: {
     listStyleType: "'»'",
-    my: 6,
+    my: 4,
     p: 0,
     mx: 3,
   },
@@ -29,40 +32,29 @@ export const styles = {
   },
   li: {
     listStylePosition: "outside",
+    mx: [0, 6],
     "::marker": {
       color: "secondary",
     },
-    mb: 3,
     "> p": {
+      my: 0,
       position: "relative",
       textAlign: "left",
-      left: "1rem",
+      left: "0.5rem",
     },
   },
   blockquote: {
-    "&:first-of-type": {
-      textAlign: "right",
-      px: [0],
+    p: {
+      ...text.body,
+      fontFamily: "monospace",
     },
-    m: 0,
-    my: [4, 4],
-    px: [4, 6],
-    color: ({gradients}: Theme) => gradients["midnight"][2],
-    "> p": {
-      margin: 0,
-      "&:last-child": {
-        mt: [2],
-      },
-    },
+    textAlign: "center",
+    mb: 7,
   },
   a: {
-    color: ({gradients}: Theme) => gradients["skyBlue"][3],
-    textDecoration: "none",
-    "&:hover": {
-      color: ({gradients}: Theme) => gradients["skyBlue"][1],
-    },
-    "&:active": {},
-    "&:visited": {},
+    color: "text",
+    textDecorationThickness: "0.1rem",
+    textUnderlineOffset: "1.5px",
   },
   pre: {
     p: 6,

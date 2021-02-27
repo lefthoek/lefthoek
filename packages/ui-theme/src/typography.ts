@@ -46,8 +46,8 @@ export const text = {
     fontFamily: "monospace",
   },
   body: {
-    fontSize: ["18px", "18px"],
-    lineHeight: ["28px", "28px"],
+    fontSize: ["16px", "18px"],
+    lineHeight: ["26px", "28px"],
     fontWeight: 400,
     fontFamily: "body",
   },

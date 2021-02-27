@@ -5,14 +5,15 @@ export const outerWrapperStyles: SxStyleProp = {
     flexDirection: "column",
     alignItems: "center",
     textAlign: "center",
-    color: "primary",
+    color: "text",
+    mb: 4,
 };
 
 export const headingStyles: SxStyleProp = {
-    fontSize: ["32px", "42px"],
-    py: [5],
-    fontFamily: "heading",
-    lineHeight: ["34px", "42px"],
+    fontFamily: "monospace",
+    fontSize: ["21px", "26px"],
+    lineHeight: "62px",
+    letterSpacing: "0.2rem",
 };
 
 export const excerptStyles: SxStyleProp = {

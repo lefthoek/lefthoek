@@ -40,7 +40,7 @@ export const query = graphql`
 
 const PostLayout: FunctionComponent = ({ data }: any) => {
   return (
-    <Base sx={{ bg: "white" }}>
+    <Base sx={{ bg: "muted" }}>
       <Post {...data.blogPost} />
     </Base>
   );
