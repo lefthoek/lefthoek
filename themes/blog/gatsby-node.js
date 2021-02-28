@@ -168,9 +168,7 @@ exports.onCreateNode = async (
 };
 
 // These templates are simply data-fetching wrappers that import components
-const PostTemplate = require.resolve(
-  `./src/gatsby-theme-blog-core/components/post.tsx`
-);
+const PostTemplate = require.resolve(`./src/templates/PostLayout.tsx`);
 const PostsTemplate = require.resolve(
   `./src/gatsby-theme-blog-core/components/posts.tsx`
 );
