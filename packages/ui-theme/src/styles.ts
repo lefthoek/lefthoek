@@ -21,12 +21,12 @@ export const styles = {
   p: {...text.body, mb: 4},
   ul: {
     listStyleType: "'»'",
-    my: 4,
     p: 0,
+    my: 5,
     mx: 3,
   },
   ol: {
-    my: 6,
+    my: 5,
     p: 0,
     mx: 3,
   },
