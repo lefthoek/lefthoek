@@ -1,6 +1,6 @@
 ---
 excerpt: |
-  42 Workspace wanted to increase their online community engagement so that the 
+  42 Workspace wants to increase their online community engagement so that the 
   companies and agencies would optimally benefit from being part of this
   exceptional community
 title: "42"
@@ -16,7 +16,7 @@ tags:
   - Science
 ---
 import { Stat, SellingPoint, Stack } from "@lefthoek/molecules"
-import { UserStory, CompetitionChart  } from "@lefthoek/business-components"
+import { UserStory, CompetitionChart } from "@lefthoek/business-components"
 import { userStories, competitiveAnalysis, techStack }from "@lefthoek/data"
 import { Cover, SectionCover, Basic, Feature, Icons, Stats } from "../src/slides"
 
@@ -133,6 +133,58 @@ sources</SellingPoint>
 
 ---
 
+<Icons>
+
+# Proposition
+
+<SellingPoint iconName="Wrench" title="Radical Automation">Lefthoek aims to
+automate every laborious and boring chore that can be automated. Any missed
+opportunity to do so inevitably results in talent waste.</SellingPoint>
+
+<SellingPoint iconName="Apple" title="Low-Hanging Fruit">While hardly ever
+succesful, most AI initiatives focus on so-called moonshots. Lefthoek takes the
+opposite approach deliberatly tackling the 90% first.</SellingPoint>
+
+<SellingPoint iconName="BasicShapes" title="Complexly Simple">There is a common
+misconception in technology that complex solutions are superior. Lefthoek is
+based on the exact opposite. Simple is always better. </SellingPoint>
+
+</Icons>
+
+---
+
+<Icons>
+
+# Approach
+
+<SellingPoint iconName="A" title="A For Agency">Replicating human intelligence
+is both too ambitious and too restrictive as a goal for AI. Lefthoek chooses to
+focus on intelligence that has agency rather than being
+artificial.</SellingPoint>
+
+<SellingPoint iconName="Swarm" title="Swarm Agency">Rather than chasing the
+pipedream of an all-encompassing general AI, Lefthoek is growing a living ecosystem of
+many, narrow single-purpose services.</SellingPoint>
+
+<SellingPoint iconName="HamsterWheel" title="Human In The Loop">On collaborative
+messaging apps, it is childishly simple to put an AI in a continuous feedback
+loop with its users. Almost as if they were designed for
+Lefthoek.</SellingPoint>
+
+</Icons>
+
+---
+
+<Basic variant="midnight">
+
+# AI Stack
+
+<Stack variant="skyBlue" stackData={aiStack}/>
+
+</Basic>
+
+---
+
 <SectionCover> 
 
 # Features
@@ -226,6 +278,63 @@ prevent decisions from becoming technocratic.
   # Example - Research 
 
 </Feature>
+
+---
+
+<SectionCover>
+
+# Market
+
+</SectionCover>
+
+---
+
+<Stats>
+
+# Market Validation
+
+<Stat figure="3 years" reference="https://business.linkedin.com/talent-solutions/blog/trends-and-research/2018/the-3-industries-with-the-highest-turnover-rates">Average talent retention at tech companies</Stat>
+
+<Stat figure="$200K"
+reference="https://www.businessknowhow.com/manage/loveem/numbers.htm">Cost of replacing key people</Stat>
+
+<Stat figure="67%"
+reference="https://www.shrm.org/hr-today/news/all-things-work/pages/to-have-and-to-hold.aspx">
+Due to reduced productivity and lost
+knowledge</Stat>
+  
+</Stats>
+
+---
+
+<Stats>
+
+# Market Size
+
+<Stat figure="91%"
+reference="https://www.computerworld.com/article/3403675/slack-or-teams-many-businesses-opt-for-both.html#:~:text=Mio%20polled%20200%20IT%20decision,hundreds%20of%20thousands%20of%20employees.&text=The%20company%20found%20that%2091,66%25%20of%20the%20organizations%20surveyed">Percentage
+of companies that use Slack, Teams or
+both</Stat>
+
+<Stat figure="$9.4B"
+reference="https://www.businessinsider.com/chatbot-market-stats-trends?r=DE&IR=T">Size
+of chatbot market by 2024</Stat>
+
+<Stat figure="$1.2T"
+reference="https://www.globenewswire.com/news-release/2018/05/11/1501037/0/en/Global-Knowledge-Management-Market-Will-Reach-USD-1-232-000-million-by-2025-Zion-Market-Research.html">Size
+of Global Knowledge Management by 2025</Stat>
+
+</Stats>
+
+---
+
+<Basic variant="midnight">
+
+# Competition
+
+  <CompetitionChart {...competitiveAnalysis} />
+
+</Basic>
 
 ---
 
