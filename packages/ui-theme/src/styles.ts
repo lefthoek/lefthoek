@@ -89,6 +89,9 @@ export const styles = {
     my: [0, 4, 5],
     zIndex: -1,
   },
+  "img + span": {
+    color: "red",
+  },
   td: {
     textAlign: "left",
     borderBottomStyle: "solid",
