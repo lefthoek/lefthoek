@@ -86,8 +86,8 @@ export const styles = {
     left: "50%",
     right: "50%",
     mx: "-50vw",
-    my: 5,
-    zIndex: 0,
+    my: [0, 4, 5],
+    zIndex: -1,
   },
   td: {
     textAlign: "left",
