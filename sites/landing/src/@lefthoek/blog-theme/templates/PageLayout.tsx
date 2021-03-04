@@ -18,7 +18,6 @@ const footerContainerStyles: SxStyleProp = {
 const contentStyles: SxStyleProp = {
   mb: ["9rem", "12rem"],
   bg: "muted",
-  boxShadow: "0 0px 20px rgba(0,0,0,0.7)",
   zIndex: 1,
 };
 

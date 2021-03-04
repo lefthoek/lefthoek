@@ -79,11 +79,18 @@ export const styles = {
     textAlign: "left",
     borderBottomStyle: "solid",
   },
+  img: {
+    maxWidth: "100vw",
+    width: "100vw",
+    position: "relative",
+    left: "50%",
+    right: "50%",
+    mx: "-50vw",
+    my: 5,
+    zIndex: 0,
+  },
   td: {
     textAlign: "left",
     borderBottomStyle: "solid",
-  },
-  img: {
-    maxWidth: "100%",
   },
 };
