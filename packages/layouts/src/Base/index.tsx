@@ -7,14 +7,20 @@ import { topBarStyles, logoStyles } from "./styles";
 const Base: FunctionComponent<any> = ({
   children,
   className,
-  variant = "midnight",
+  variant = "skyBlue",
 }) => {
   return (
     <Background variant={variant} className={className}>
       <Box sx={topBarStyles}>
         <Logo
           to="/"
-          variant={variant === "midnight" ? "skyBlue" : "brightGreen"}
+          variant={
+            variant === "skyBlue"
+              ? "alternative"
+              : variant === "cipria"
+              ? "regular"
+              : "negative"
+          }
           sx={logoStyles}
         />
       </Box>

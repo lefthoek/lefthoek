@@ -24,7 +24,9 @@ const contentStyles: SxStyleProp = {
 const PageLayout: FunctionComponent = ({ children }: any) => {
   return (
     <Container siteMeta={content.siteMeta}>
-      <Base sx={contentStyles}>{children}</Base>
+      <Base variant="cipria" sx={contentStyles}>
+        {children}
+      </Base>
       <Box sx={footerContainerStyles}>
         <FooterSection />
       </Box>
