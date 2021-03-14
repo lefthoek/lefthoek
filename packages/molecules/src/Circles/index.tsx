@@ -14,8 +14,19 @@ const Circle: FunctionComponent<{
   );
 };
 
-const Dot: FunctionComponent<{ cx: number; cy: number }> = ({ cx, cy }) => {
-  return <Circle cx={cx} cy={cy} r={10} className="midnight noStroke" />;
+const Dot: FunctionComponent<{
+  className?: string;
+  cx: number;
+  cy: number;
+}> = ({ cx, cy, className }) => {
+  return (
+    <Circle
+      cx={cx}
+      cy={cy}
+      r={10}
+      className={`${className || "midnight"} noStroke`}
+    />
+  );
 };
 
 const distributePopulation: (args: {
@@ -50,6 +61,7 @@ const Team: FunctionComponent<{
   numberOfMembers?: number;
 }> = ({ className, cx, cy, r, numberOfMembers = 3 }) => {
   const members = distributePopulation({
+    offset: 0.6666,
     population: numberOfMembers,
     r,
     cx,
@@ -58,18 +70,21 @@ const Team: FunctionComponent<{
   return (
     <g>
       <Circle className={className} cx={cx} cy={cy} r={r} />
-      <text
-        x={cx}
-        y={cy}
-        fontSize={r / 4}
-        textAnchor="middle"
-        fontFamily="IBM Plex Mono"
-        fontWeight="400"
-        alignmentBaseline="middle"
-        fill="#32334E"
-      >
-        Slack
-      </text>
+      {false && (
+        <text
+          x={cx}
+          y={cy}
+          fontSize={r / 4}
+          textAnchor="middle"
+          fontFamily="IBM Plex Mono"
+          fontWeight="400"
+          alignmentBaseline="middle"
+          fill="#32334E"
+        >
+          Slack
+        </text>
+      )}
+      <Dot cx={cx} cy={cy} className="skyBlue" />
       {members.map(({ pointX, pointY }) => (
         <Dot cx={pointX} cy={pointY} />
       ))}
@@ -82,7 +97,7 @@ const Circles: FunctionComponent<{
   index: number;
   numberOfTeams?: number;
   variant?: "skyBlue" | "brightGreen" | "lobster";
-}> = ({ className, numberOfTeams = 3 }) => {
+}> = ({ className, numberOfTeams = 5 }) => {
   const size = 512;
   const cx = size / 2;
   const cy = size / 2;
@@ -101,12 +116,13 @@ const Circles: FunctionComponent<{
       fill="none"
     >
       <Circle cx={cx} cy={cy} r={r} />
+      <Dot cx={cx} cy={cy} className="skyBlue" />
       {teamsData.map(({ pointX, pointY }) => (
         <Team
           r={r / numberOfTeams}
           cx={pointX}
           cy={pointY}
-          numberOfMembers={3}
+          numberOfMembers={5}
         />
       ))}
     </svg>
