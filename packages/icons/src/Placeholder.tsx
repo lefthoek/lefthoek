@@ -7,7 +7,7 @@ export const Placeholder: FunctionComponent<{
 }> = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 126 126" fill="none">
-      <circle cx={63} cy={63} r={60} className="lobsterLightest" />
+      <circle cx={63} cy={63} r={60} className="lobster" />
     </svg>
   );
 };
