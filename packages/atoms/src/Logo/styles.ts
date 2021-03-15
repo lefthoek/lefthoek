@@ -1,16 +1,50 @@
-import { Theme } from "@lefthoek/types";
-import { SxStyleProp } from "theme-ui";
+import {SxStyleProp} from "theme-ui";
 
 export const outerWrapperStyles = {};
 
-export const logoStyles: ({ variant }: { variant?: string }) => SxStyleProp = ({
-    variant = "skyBlue",
-}) => {
-    return {
-        fill: ({ gradients }: Theme) => gradients[variant][3],
-        "&:hover": {
-            fill: ({ gradients }: Theme) =>
-                gradients[variant === "skyBlue" ? "midnight" : "cipria"][3],
-        },
-    };
+export const logoStyles: SxStyleProp = {
+  height: "3rem",
+  ".white": {
+    fill: "#fcf2f5",
+  },
+  ".cipriaMedium": {
+    fill: "#ffdcdc",
+  },
+  ".lobsterMedium": {
+    fill: "#da7c49",
+  },
+  ".lobsterLight": {
+    fill: "#e39d76",
+  },
+  ".lobsterLightest": {
+    fill: "#edbda4",
+  },
+  ".lobster": {
+    fill: "#d15b1b",
+  },
+
+  ".skyBlueLight": {
+    fill: "#ae94fd",
+  },
+
+  ".skyBlueMedium": {
+    fill: "#9370fc",
+  },
+  ".skyBlue": {
+    fill: "#784cfb",
+  },
+
+  ".midnightLight": {
+    fill: "#848595",
+  },
+  ".midnight": {
+    fill: "text",
+  },
+  ".midnightMedium": {
+    fill: "#5b5c71",
+  },
+
+  ".skyBlueLightest": {
+    fill: "#c9b7fd",
+  },
 };
