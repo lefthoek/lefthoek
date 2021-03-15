@@ -5,25 +5,39 @@ import { jsx } from "theme-ui";
 const Circle: FunctionComponent<{
   className?: string;
   r: number;
+  depth?: number;
   cx: number;
   cy: number;
-}> = ({ className, cx, cy, r }) => {
+}> = ({ className, cx, cy, r, depth = 0 }) => {
   return (
-    <circle cx={cx} cy={cy} r={r} className={`${className} thinnestStroke`} />
+    <circle
+      className={className}
+      sx={{
+        fill: ({ gradients }: any) => gradients!.lobster[depth < 4 ? depth : 3],
+      }}
+      cx={cx}
+      cy={cy}
+      r={r}
+    />
   );
 };
 
 const Dot: FunctionComponent<{
   className?: string;
   x: number;
+  depth?: number;
+  size: number;
   y: number;
-}> = ({ x, y, className }) => {
+}> = ({ x, y, className, depth = 0, size }) => {
+  const maxSize = 5;
   return (
     <Circle
       cx={x}
       cy={y}
-      r={5}
-      className={`${className || "midnight"} noStroke`}
+      depth={depth}
+      r={size < maxSize ? size : maxSize}
+      sx={{ fill: ({ gradients }: any) => gradients!.lobster[3] }}
+      className={className}
     />
   );
 };

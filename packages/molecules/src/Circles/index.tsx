@@ -13,18 +13,20 @@ const Circles: FunctionComponent<{
   const size = 512;
   const cx = size / 2;
   const cy = size / 2;
-  const r = cy * 0.95;
-  const x = [{}];
+  const x = [{ population: [{}, {}, {}, {}] }];
   const y = [
-    {},
-    { population: [{}, {}, {}, {}] },
+    { population: [{}, {}, {}, {}, {}, {}] },
+    { population: [{}, {}, {}] },
     { population: [{}, {}, {}] },
   ];
   const population = [
-    { population: x },
-    { population: x },
+    { population: [{}, {}, {}, {}, {}, {}] },
     {},
-    { population: [{}] },
+    { population: y },
+    { population: y },
+    { population: y },
+    { population: y },
+    { population: y },
   ];
   console.log(population, x, y);
   return (
@@ -34,7 +36,7 @@ const Circles: FunctionComponent<{
       viewBox={`0 0 ${size} ${size}`}
       fill="none"
     >
-      <Group x={cx} y={cy} size={r} population={x} />
+      <Group x={cx} y={cy} size={(size / 2) * 0.9} population={population} />
     </svg>
   );
 };

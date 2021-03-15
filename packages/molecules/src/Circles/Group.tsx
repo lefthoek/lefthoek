@@ -10,29 +10,28 @@ const Group: FunctionComponent<{
   size: number;
   x: number;
   y: number;
+  depth?: number;
   population: OrganizationalEntity[];
-}> = ({ className, x, y, size, population }) => {
+}> = ({ className, x, y, size, depth = 0, population }) => {
   const members = distributePopulation({
-    offset: 0.5,
     population,
     size,
+    depth,
     x,
     y,
   });
   return (
     <g>
-      <Circle className={className} cx={x} cy={y} r={size} />
-      {false && (
-        <Label x={x} y={y} fontSize={size / 4}>
-          Slack
-        </Label>
-      )}
+      <Circle depth={depth} className={className} cx={x} cy={y} r={size} />
+      <Label x={x} y={y} fontSize={size / 8}>
+        Slack
+      </Label>
       {members.map(({ population, ...member }) => {
-        console.log(member);
-        if (!population) {
-          return <Dot {...member} />;
-        }
-        return <Group population={population} {...member} />;
+        return !population ? (
+          <Dot {...member} />
+        ) : (
+          <Group population={population} {...member} />
+        );
       })}
     </g>
   );
