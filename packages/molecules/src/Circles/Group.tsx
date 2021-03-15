@@ -8,11 +8,12 @@ import { OrganizationalEntity } from "./types";
 const Group: FunctionComponent<{
   className?: string;
   size: number;
+  label?: string;
   x: number;
   y: number;
   depth?: number;
   population: OrganizationalEntity[];
-}> = ({ className, x, y, size, depth = 0, population }) => {
+}> = ({ className, label, x, y, size, depth = 0, population }) => {
   const members = distributePopulation({
     population,
     size,
@@ -23,9 +24,11 @@ const Group: FunctionComponent<{
   return (
     <g>
       <Circle depth={depth} className={className} cx={x} cy={y} r={size} />
-      <Label x={x} y={y} fontSize={size / 8}>
-        Slack
-      </Label>
+      {label && (
+        <Label x={x} y={y} fontSize={size / 8}>
+          {label}
+        </Label>
+      )}
       {members.map(({ population, ...member }) => {
         return !population ? (
           <Dot {...member} />
