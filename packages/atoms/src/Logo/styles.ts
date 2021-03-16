@@ -3,7 +3,8 @@ import {SxStyleProp} from "theme-ui";
 export const outerWrapperStyles = {};
 
 export const logoStyles: SxStyleProp = {
-  height: "3rem",
+  width: "4rem",
+  height: "4rem",
   ".white": {
     fill: "#fcf2f5",
   },
