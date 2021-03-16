@@ -17,5 +17,4 @@ export const topBarStyles: SxStyleProp = {
 export const logoStyles: SxStyleProp = {
   color: ({gradients}: Theme) => gradients.midnight[1],
   display: "block",
-  width: ["2rem", "3rem"],
 };

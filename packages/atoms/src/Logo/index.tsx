@@ -22,7 +22,6 @@ const InnerLogo: FunctionComponent<{
       : "midnight";
   const shade = variant === "negative" ? "skyBlue" : "white";
   const line = "lobster";
-  console.log(main, shade, line);
   return (
     <svg
       sx={logoStyles}
