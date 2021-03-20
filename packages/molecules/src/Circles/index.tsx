@@ -13,7 +13,7 @@ const Circles: FunctionComponent<{
   const size = 512;
   const cx = size / 2;
   const cy = size / 2;
-  const x = [{ population: [{}, {}, {}, {}] }];
+  const x = [{}, {}, {}, {}, { populationType: "lefthoek" }];
   const y = [
     { population: [{}, {}, {}, {}, {}, {}] },
     { population: [{}, {}, {}] },
@@ -21,8 +21,8 @@ const Circles: FunctionComponent<{
   ];
   const population = [
     { population: [{}, {}, {}, {}, {}, {}] },
-    {},
-    { population: y },
+    { population: [{ populationType: "lefthoek" }, {}] },
+    { population: x },
     { population: y },
     { population: y },
     { population: y },

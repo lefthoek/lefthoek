@@ -26,9 +26,10 @@ const Dot: FunctionComponent<{
   className?: string;
   x: number;
   depth?: number;
+  variant?: "highlight" | "normal";
   size: number;
   y: number;
-}> = ({ x, y, className, depth = 0, size }) => {
+}> = ({ x, y, variant, className, depth = 0, size }) => {
   const maxSize = 5;
   return (
     <Circle
@@ -36,7 +37,10 @@ const Dot: FunctionComponent<{
       cy={y}
       depth={depth}
       r={size < maxSize ? size : maxSize}
-      sx={{ fill: ({ gradients }: any) => gradients!.lobster[3] }}
+      sx={{
+        fill: ({ colors, gradients }: any) =>
+          variant === "highlight" ? colors.accent : gradients!.lobster[3],
+      }}
       className={className}
     />
   );

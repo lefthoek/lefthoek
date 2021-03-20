@@ -29,12 +29,15 @@ const Group: FunctionComponent<{
           {label}
         </Label>
       )}
-      {members.map(({ population, ...member }) => {
-        return !population ? (
-          <Dot {...member} />
-        ) : (
-          <Group population={population} {...member} />
-        );
+      {members.map(({ population, populationType, ...member }) => {
+        if (!population) {
+          return populationType === "lefthoek" ? (
+            <Dot {...member} x={x} y={y} variant="highlight" />
+          ) : (
+            <Dot {...member} variant="normal" />
+          );
+        }
+        return <Group population={population} {...member} />;
       })}
     </g>
   );

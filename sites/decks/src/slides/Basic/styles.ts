@@ -19,6 +19,15 @@ const outerWrapper: SxStyleProp = {
     textAlign: ["center", "center"],
   },
   ul: {},
+  img: {
+    maxHeight: "70vw",
+    width: "auto",
+    position: "relative",
+    left: 0,
+    right: 0,
+    mt: [0],
+    zIndex: 1,
+  },
 };
 
 export {outerWrapper};
