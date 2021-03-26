@@ -87,6 +87,7 @@ export const styles = {
     right: "50%",
     mx: "-50vw",
     mt: [0, 4, 5],
+    mb: [0, 4, 4],
     zIndex: -1,
   },
   "img + span": {
