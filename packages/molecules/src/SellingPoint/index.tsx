@@ -11,20 +11,27 @@ const SellingPoint: FunctionComponent<{
   className?: string;
   as?: ElementType<any>;
   title: string;
+  src?: string;
   iconName?: IconName;
   children: string;
 }> = ({
   className,
   title = "bespoke",
   iconName = "Placeholder",
+  src,
   children,
   as,
 }) => {
+  console.log(src);
   const displayTitle = capitalize(title);
   return (
     <Box className={className} key={title} as={as} sx={itemStyles}>
       <Box sx={{ width: "70%" }}>
-        <Icon iconName={iconName || displayTitle} />
+        {src ? (
+          <img sx={{ maxWidth: "100%" }} src={src} />
+        ) : (
+          <Icon iconName={iconName || displayTitle} />
+        )}
       </Box>
       <Box>
         <Heading variant="abstract">{displayTitle}</Heading>
