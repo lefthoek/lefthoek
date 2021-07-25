@@ -1,4 +1,4 @@
-import {SxStyleProp} from "theme-ui";
+import { SxStyleProp } from "theme-ui";
 
 const outerWrapper: SxStyleProp = {
   display: "flex",
@@ -15,9 +15,8 @@ const outerWrapper: SxStyleProp = {
     margin: 0,
     mb: "1rem",
     maxWidth: "40rem",
-    p: {
-      fontSize: ["34px", "42px"],
-      lineHeight: ["36px", "44px"],
+    strong: {
+      color: "secondary",
     },
   },
   p: {
@@ -30,4 +29,4 @@ const outerWrapper: SxStyleProp = {
   ul: {},
 };
 
-export {outerWrapper};
+export { outerWrapper };
